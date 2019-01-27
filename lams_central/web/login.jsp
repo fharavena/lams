@@ -29,9 +29,13 @@
 			<lams:css/>
 			<link rel="icon" href="/lams/favicon.ico" type="image/x-icon" />
 			<link rel="shortcut icon" href="/lams/favicon.ico" type="image/x-icon" />
+			<link rel="apple-touch-icon" href="/lams/favicon.ico"   type="image/x-icon"  sizes="76x76">
+
 			<script type="text/javascript" src="/lams/includes/javascript/browser_detect.js"></script>
 			<script type="text/javascript" src="/lams/includes/javascript/jquery.js"></script>
-			<script type="text/javascript" src="/lams/includes/javascript/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/lams/includes/javascript/popper.min.js"></script>
+			<script type="text/javascript" src="/lams/includes/javascript/bootstrap-material-design.min.js"></script>
+
 			<script type="text/javascript">
 				function submitForm() {
 					$('#loginButton').addClass('disabled');
@@ -54,13 +58,13 @@
 				}
 
 				$(document).ready(function() {
-					$('html').addClass('login-body');
+					$('html').addClass('index-page');
 					if (!isBrowserCompatible()) {
 						$('#browserNotCompatible').show();
 					}
 					$('#j_username').focus();
-					$('#news').load('/lams/www/news.html');
-
+/* 					$('#news').load('/lams/www/news.html');
+ */
 					//make a POST call to ForgotPasswordRequest
 					$("#forgot-password-link").click(function() {
 						var $form=$(document.createElement('form'))
@@ -73,90 +77,88 @@
 				});
 			</script>
 		</lams:head>
-		<body class="login-body">
+		<body class="index-page">
 		<div class="login-content">
 		
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-login">
+    <nav class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg navbar-transparent navbar-login">
 		<div class="container">
 	        <div class="navbar-header">
 	          <a class="navbar-brand navbar-brand-login" href="#"><%=Configuration.get(ConfigurationKeys.SITE_NAME)%></a>
 	        </div>
 			<div class="navbar-collapse collapse navbar-right">
-				<div class="pull-right login-logo" title="LAMS - Learning Activity Management System"></div>
+				<div class="login-logo" title="LAMS - Learning Activity Management System"></div>
 			</div>
 		</div>	
     </nav>
 		<!-- Close navbar -->
 
 		<!-- Start content  -->
-		<div class="container no-gutter">
-			<div id="news" class="col-sm-8 col-md-9 hidden-xs"></div>
-			<div id="login-panel" class="col-sm-4 col-md-3">
-      <div class="panel panel-default" >
-				<div class="panel-heading">
-				    <div class="panel-title"> <fmt:message key="button.login" /></div>
-				</div>     
-
-        <div class="panel-body" >
-            <div id="browserNotCompatible" class="panel panel-danger" style="display: none">
-                 <div class="panel-heading"><fmt:message key="msg.browser.compat"/></div>
+	<div class="page-header header-filter" style="background-image: url('<lams:LAMSURL/>www/images/login_background.jpg'); background-size: cover; background-position: top center;">
+     <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-login">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title"><img file="<lams:LAMSURL/>images/svg/lams_logo_white.svg"/> <fmt:message key="button.login" /></h4>
+              </div>
+  
+			<div id="browserNotCompatible" class="panel panel-danger" style="display: none">
+				 <p class="description text-center"><fmt:message key="msg.browser.compat"/></p>
             </div>
-						<c:if test="${!empty param.failed}">
-						<div class="panel panel-danger">
-							<div class="panel-heading">
-								<fmt:message key="error.login" />
-							</div>
-						</div>
-						</c:if>
-						<c:if test="${!empty param.lockedOut}">
-						<div class="panel panel-danger">
-							<div class="panel-heading">
-								<fmt:message key="error.lockedout" />
-							</div>
-						</div>
-						</c:if>
+			<c:if test="${!empty param.failed}">
+				<p class="description text-center text-danger"><fmt:message key="error.login" /></p>
+			</c:if>
+			<c:if test="${!empty param.lockedOut}">
+				<p class="description text-center text-danger"><fmt:message key="error.lockedout" /></p>
+			</c:if>
 
-						<form action="/lams/j_security_check" method="POST" name="loginForm" role="form" class="form-horizontal" id="loginForm" autocomplete="off">
-							<input type="hidden" name="redirectURL" value='<c:out value="${param.redirectURL}" 
-						  		 escapeXml="true" />' />
-             				 <div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-user"></i></span>
-								<input id="j_username" type="text" class="form-control" autocapitalize="off" name="j_username" value="" placeholder="<fmt:message key='label.username' />" onkeypress="onEnter(event)" tabindex="1">
-              				</div>
-
-							<div class="input-group voffset5">
-								<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-								<input id="j_password" type="password" class="form-control" name="j_password" placeholder="<fmt:message key='label.password' />" onkeypress="onEnter(event)" tabindex="2">
-							</div>
-							<div class="form-group voffset5" style="margin-bottom: 5px;">
-								<c:if test="${isForgotYourPasswordEnabled}">
-							   		<div class="col-md-12 control" style="font-size:75%">
-										<a id="forgot-password-link" href="#nogo"> <fmt:message key="label.forgot.password" /></a>
-							    	</div>
-							    </c:if>
-							    
-								<!-- Button -->
-								<div class="col-sm-12 controls voffset5">
-									<a id="loginButton" href="javascript:submitForm()" class="btn btn-primary btn-block" tabindex="3"><fmt:message key="button.login" /></a>
-								</div>
-							</div>
-						</form>     
-				</div>
-			</div>
-		</div>
-	</div>
-		<!--closes content-->
+			<form action="/lams/j_security_check" method="POST" name="loginForm" role="form" class="form-horizontal" id="loginForm" autocomplete="off">
+			<input type="hidden" name="redirectURL" value='<c:out value="${param.redirectURL}" escapeXml="true" />' />
+			
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">face</i>
+                    </span>
+                  </div>
+                  <input id="j_username" type="text" class="form-control" autocapitalize="off" name="j_username" value="" placeholder="<fmt:message key='label.username' />" onkeypress="onEnter(event)" tabindex="1">
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                  </div>
+                  <input id="j_password" type="password" class="form-control" name="j_password" placeholder="<fmt:message key='label.password' />" onkeypress="onEnter(event)" tabindex="2">
+                </div>
+              </div>
+				<c:if test="${isForgotYourPasswordEnabled}">
+			   		<p class="description text-center"><a id="forgot-password-link" href="#nogo"> <fmt:message key="label.forgot.password" /></a></p>
+			    </c:if>
+              <div class="footer text-center">
+              	<a id="loginButton" href="javascript:submitForm()" class="btn btn-primary  btn-wd  btn-lg" tabindex="3"><fmt:message key="button.login" /></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    		<!--closes content-->
 
 		<!-- starts footer -->
-		<div class="login-footer">
-			  <p class="text-muted text-center">
+    <footer class="footer">
+      <div class="container">
+ 		  	<p>
 					<fmt:message key="msg.LAMS.version" />:  <%=Configuration.get(ConfigurationKeys.VERSION)%>
 					<a href="/lams/www/copyright.jsp" target='copyright' onClick="openCopyRight()"> &copy; <fmt:message key="msg.LAMS.copyright.short" /></a>
 				</p>
-		</div>
 		<!--closes footer-->
-		<!--closes page-->
+		</div>
+	</footer>
+	
 		</div> <!--  close login-content -->
 		</body>
 	</c:when>
@@ -168,6 +170,8 @@
 			<lams:css />
 			<link rel="icon" href="<lams:LAMSURL/>favicon.ico" type="image/x-icon" />
 			<link rel="shortcut icon" href="<lams:LAMSURL/>favicon.ico" type="image/x-icon" />
+			<link rel="apple-touch-icon" href="/lams/favicon.ico"   type="image/x-icon"  sizes="76x76">
+			
 		</lams:head>
 		<body class="stripes">
 			<!-- A bit of content so the page is not completely blank -->

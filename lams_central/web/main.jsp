@@ -31,10 +31,11 @@
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-widgets.js"></script> 	
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.dialogextend.js"></script>	
 	<script type="text/javascript" src="${lams}includes/javascript/dialog.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/bootstrap.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-tour.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.ui.touch-punch.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.slimscroll.js"></script>
+	<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
+	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/main.js"></script>
 	<script type="text/javascript">
 		var LAMS_URL = '<lams:LAMSURL/>',	
@@ -144,7 +145,7 @@
 <body <c:if test="${not empty activeOrgId}">class="offcanvas-hidden"</c:if>>
 
 <!-- Offcanvas Bar -->
-    <nav id="offcanvas" role="navigation">
+ <%--    <nav id="offcanvas" role="navigation">
         <div class="offcanvas-scroll-area">
         
 			<div class="offcanvas-logo">
@@ -174,21 +175,71 @@
 			</div>
 			
         </div>
-    </nav>
+    </nav> --%>
 <!-- /Offcanvas Bar -->
 
-<div id="page-wrapper">
-
-	<!-- header -->
-	<div class="top-nav">
+<!-- header -->
+<header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+	<a class="navbar-brand navbar-brand-login" href="#"><%=Configuration.get(ConfigurationKeys.SITE_NAME)%></a>
+    
+<!-- 	<div class="top-nav">
 	
 		<div class="offcanvas-toggle offcanvas-toggle-header">
 			<i class="fa fa-bars tour-course-reveal"></i>
 		</div>
 
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<a href="javascript:;" id="index-profile" class="user-profile dropdown-toggle tour-user-profile" data-toggle="dropdown" aria-expanded="false">
+ -->
+ <div class="navbar-nav-scroll ml-md-auto ">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+
+			<li role="presentation" class="nav-item align-self-center">
+				<a href="javascript:;" id="index-tour" onclick="javascript:startTour();" class="nav-link info-number" data-toggle="dropdown" aria-expanded="false">
+					<i class="fa fa-question-circle"></i>
+					<span class="xs-hidden"><fmt:message key="label.tour"/></span>
+				</a>
+			</li>
+					
+			<li role="presentation" class="nav-item align-self-center">
+				<a href="javascript:;" onclick="javascript:showPrivateNotificationsDialog();" class="nav-link info-number tour-user-notifications" data-toggle="dropdown" aria-expanded="false">
+					<i class="fa fa-envelope-o"></i>
+               		<span id="notificationsPendingCount" class="btn-default"></span>
+				</a>
+			</li>
+					
+    
+			<c:forEach var="headerlink" items="${headerLinks}">
+				<c:choose>
+					<c:when test="${fn:startsWith(headerlink.name, 'index')}">
+						<c:set var="headerLinkName"><fmt:message key="${headerlink.name}" /></c:set>
+						<c:set var="headerLinkIcon">fa-edit</c:set>
+					</c:when>
+							
+					<c:otherwise>							
+						<c:set var="headerLinkName"><c:out value="${headerlink.name}" /></c:set>
+						<c:set var="headerLinkIcon">fa-at</c:set>
+					</c:otherwise>
+				</c:choose>
+						
+					<c:choose>
+					<c:when test="${fn:length(headerLinkName) > 12}">
+						<c:set var="headerLinkTitle" value="${headerLinkName}"/>
+						<c:set var="headerLinkName" value="${fn:substring(headerLinkName, 0, 12-2)}..."/>
+					</c:when>
+					<c:otherwise>
+						<c:set var="headerLinkName" value="${headerLinkName}"/>
+					</c:otherwise>
+				</c:choose>
+						
+				<li role="presentation" class="nav-item align-self-center" >
+					<a href="<c:out value='${headerlink.url}' />"  id="${headerlink.id}" class="nav-link  tour-${headerlink.id}" title="${headerLinkTitle}">
+						<i class="fa ${headerLinkIcon}"></i> 
+						<span class="xs-hidden"><c:out value='${headerLinkName}'/></span>
+					</a>
+				</li>
+			</c:forEach>
+
+	      <li class="nav-item dropdown align-self-center">
+			<a class="nav-link dropdown-toggle mr-md-2 user-profile tour-user-profile"  href="javascript:;" id="index-profile"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	           		<c:choose>
 	           			<c:when test="${not empty portraitUuid}">
 	           				<c:set var="portraitSrc">download/?uuid=${portraitUuid}&preferDownload=false&version=4</c:set>
@@ -208,17 +259,14 @@
 					<span class="xs-hidden">
 						<c:out value="${firstName}" escapeXml="true"/>&nbsp;<c:out value="${lastName}" escapeXml="true"/>								
 					</span>
-					<span class=" fa fa-angle-down"></span>
-				</a>
-						
-				<ul class="dropdown-menu dropdown-usermenu pull-right">
-					<li>
-						<a href="#" onclick="javascript:showMyProfileDialog(); return false;">
+				</a>        
+				
+  		      <div class="dropdown-menu">
+        	
+						<a href="#" class="dropdown-item" onclick="javascript:showMyProfileDialog(); return false;">
 							<i class="fa fa-user"></i> <fmt:message key="index.myprofile"/>
 						</a>
-					</li>
-							
-					<c:forEach var="adminlink" items="${adminLinks}">
+											<c:forEach var="adminlink" items="${adminLinks}">
 						
 						<c:choose>
 		               		<c:when test="${adminlink.name == 'index.courseman'}">
@@ -229,73 +277,25 @@
 		               		</c:when>
 		               	</c:choose>
 									
-						<li>
-							<a href="javascript:;" onclick="<c:out value="${adminlink.url}"/>">
-								<span><i class="fa ${iconClass}"></i> <fmt:message key="${adminlink.name}"/></span>
+							<a href="javascript:;"  class="dropdown-item" onclick="<c:out value="${adminlink.url}"/>">
+								<span><i class="fa ${iconClass}"></i>&nbsp;<fmt:message key="${adminlink.name}"/></span>
 							</a>
-						</li>
 					</c:forEach>
 							                  
-					<li>
-						<a href="#nogo" id="logoutButton" onclick="javascript:closeAllChildren(); document.location.href='home/logout.do?'">
-							<i class="fa fa-sign-out"></i> <fmt:message key="index.logout" />
+						<a href="#nogo" id="logoutButton"  class="dropdown-item"  onclick="javascript:closeAllChildren(); document.location.href='home/logout.do?'">
+							<i class="fa fa-sign-out"></i>&nbsp;<fmt:message key="index.logout" />
 						</a>
-					</li>
-				</ul>
-			</li>
-					
-			<c:forEach var="headerlink" items="${headerLinks}">
-				<c:choose>
-					<c:when test="${fn:startsWith(headerlink.name, 'index')}">
-						<c:set var="headerLinkName"><fmt:message key="${headerlink.name}" /></c:set>
-						<c:set var="headerLinkIcon">fa-edit</c:set>
-					</c:when>
-							
-					<c:otherwise>							
-						<c:set var="headerLinkName"><c:out value="${headerlink.name}" /></c:set>
-						<c:set var="headerLinkIcon">fa-at</c:set>
-					</c:otherwise>
-				</c:choose>
-						
-				<c:choose>
-					<c:when test="${fn:length(headerLinkName) > 12}">
-						<c:set var="headerLinkTitle" value="${headerLinkName}"/>
-						<c:set var="headerLinkName" value="${fn:substring(headerLinkName, 0, 12-2)}..."/>
-					</c:when>
-					<c:otherwise>
-						<c:set var="headerLinkName" value="${headerLinkName}"/>
-					</c:otherwise>
-				</c:choose>
-						
-				<li role="presentation">
-					<a href="<c:out value='${headerlink.url}' />"  id="${headerlink.id}" class="tour-${headerlink.id}" title="${headerLinkTitle}">
-						<i class="fa ${headerLinkIcon}"></i> 
-						<span class="xs-hidden"><c:out value='${headerLinkName}'/></span>
-					</a>
-				</li>
-			</c:forEach>
-
-			<li role="presentation" class="dropdown">
-				<a href="javascript:;" onclick="javascript:showPrivateNotificationsDialog();" class="dropdown-toggle info-number tour-user-notifications" data-toggle="dropdown" aria-expanded="false">
-					<i class="fa fa-envelope-o"></i>
-               		<span id="notificationsPendingCount" class="btn-default"></span>
-				</a>
-			</li>
-					
-			<li role="presentation" class="dropdown">
-				<a href="javascript:;" id="index-tour" onclick="javascript:startTour();" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-					<i class="fa fa-question-circle"></i>
-					<span class="xs-hidden"><fmt:message key="label.tour"/></span>
-				</a>
-			</li>
+        </div>
+      </li>
 					
 		</ul>
+		</div>
 
-	</div>
+	</header>
 	<!-- /header -->
 
-	<!-- content -->      
-	<div class="content">
+			<!-- content -->      
+	<main id="page-wrapper" class="content">
 		<div id="messageCell">
 			<%--
 				<div id="message">Important annoucements might be posted here...</div>
@@ -303,15 +303,15 @@
 		</div>
 		
 		<div class="row no-gutter">
-			<div class="col-xs-12">
+			<div class="col-sm-12">
 	        	<div id="org-container" class="tour-org-container"></div>
 			</div>
 		</div>
-	</div>
+	</main>
 	<!-- /content -->
 	        
 	<!-- footer -->
-	<footer>
+	<footer class="footer">
 		<div class="">
 			<p class="text-muted text-center">
 				<fmt:message key="msg.LAMS.version" />&nbsp;<%=Configuration.get(ConfigurationKeys.VERSION)%>

@@ -37,8 +37,11 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache, no-store">
     <meta http-equiv="Expires" content="0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="theme-color" content="#337ab7">
+    <!-- Required meta tags for Material Kit-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <!--  from Material Kit -->
+    
 	<jsp:doBody/>
 </head>
 

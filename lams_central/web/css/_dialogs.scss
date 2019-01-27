@@ -3,15 +3,33 @@
 	-webkit-overflow-scrolling: touch !important;
 }
 
+.modal-dialog .modal-header {
+    padding: 8px 15px 8px 15px;
+}    
+
+.modal .ui-resizable-handle.ui-resizable-s {
+	border-radius: $border-radius-lg;
+    border-bottom: 1px solid white;
+}
+
+.modal-header .close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem -1rem;
+}
+
+.dialogContainer .modal-title {
+	margin-top: 0px;
+}
+
 .dialogContainer .modal-body {
 	height : 100%;
-	max-height: calc(100% - 38px);
+	max-height: calc(100% - 3rem);
 	padding: 0;
 }
 
 .dialogContainer iframe {
 	width: 100%;
-	height: 100%;
+	height: 99.6%;
 	border: none;
 }
 

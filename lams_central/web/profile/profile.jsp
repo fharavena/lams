@@ -27,11 +27,11 @@
 </lams:head>
 <body>
 
-<div class="container">
-	<div class="row vertical-center-row">
-		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-			<div class="panel voffset20">
-				<div class="panel-body">
+<div class="container-fluid">
+	<div class="row vertical-center-row justify-content-center">
+		<div class="col-xs-12 col-sm-10">
+			<div class="card">
+				<div class="card-body card-plain">
 					<div class="text-center">
 						<c:choose>
 							<c:when test="${empty portraitUuid}">

@@ -25,7 +25,7 @@
 	<c:when test='${type == "navbar"}'>
 	<%-- Combined tab and navigation bar used in authoring and monitoring --%>
 		<div class="row no-gutter no-margin">
-		<div class="col-xs-12">
+		<div class="col-sm-12">
 		<div class="container" id="content">
 			<jsp:doBody />
 		</div>
@@ -357,14 +357,13 @@
 
 		<div id="navcontent" class="content">
 			<div class="row no-gutter no-margin">
-			<div class="col-xs-12">
+			<div class="col-sm-12">
 			<div class="container">
 				<c:choose>
 				<c:when test="${usePanel}">
-					<div class="panel panel-default panel-${type}-page">
+					<div class="card card-${type}-page">
 						<c:if test="${not empty title}">
-							<div class="panel-heading">
-								<div class="panel-title panel-${type}-title">
+							<div class="card-header primary-color white-text">
 									<c:out value="${title}" escapeXml="true" />
 									<c:if test="${not empty titleHelpURL}">
 										<span class="pull-right">${titleHelpURL}</span>
@@ -376,7 +375,7 @@
 							</div>
 						</c:if>
 						
-						<div class="panel-body panel-${type}-body">
+						<div class="card-body card-${type}-body">
 							<jsp:doBody />
 						</div>
 					</div>
@@ -398,40 +397,33 @@
 
 	<c:otherwise>
 	<!-- Standard Screens  --> 
-		<div class="row no-gutter no-margin">
-		<div class="col-xs-12">
-		<div class="container" id="content">
-
-		<c:choose>
-		<c:when test="${usePanel}">
-		<div class="panel panel-default panel-${type}-page">
-			<c:if test="${not empty title}">
-				<div class="panel-heading">
-					<div class="panel-title panel-${type}-title">
-						<c:out value="${title}" escapeXml="true" />
-						<c:if test="${not empty titleHelpURL}">
-							<span class="pull-right">${titleHelpURL}</span>
-						</c:if>
-					</div>
-					<c:if test="${not empty headingContent}">
-						<c:out value="${headingContent}" escapeXml="true" />
-					</c:if>
-				</div>
-			</c:if>
-			
-			<div class="panel-body panel-${type}-body">
+	
+		<header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+		<div class="container">
+	        <div class="navbar-header">
+	          <a class="navbar-brand navbar-brand-login" href="#"><%=Configuration.get(ConfigurationKeys.SITE_NAME)%></a>
+	        </div>
+		</div>	
+		<c:if test="${not empty titleHelpURL}">
+			<div class="navbar-nav-scroll ml-md-auto ">
+				<ul class="navbar-nav bd-navbar-nav flex-row">
+				<li class="nav-item">
+          			<!--  a class="nav-link" -->${titleHelpURL}<i class="material-icons">help_outline</i> Some Text Here<!--  /a  -->
+		        </li>
+		       </ul>
+		    </div>
+		</c:if>
+	  </header>
+  
+	  <div class="container-fluid">
+	    <div class="row flex-xl-nowrap">
+	    	<main class="col-sm-12">
+		 	<h4 class="bd-title" id="content">${title}</h4>
 				<jsp:doBody />
-			</div>
+			</main>
 		</div>
-		</c:when>
-
-		<c:otherwise>
-		<jsp:doBody />
-		</c:otherwise>
-		</c:choose>						
+	</div>
 		
-		</div>
-		</div>
-		</div>
+	<footer></footer>
 	</c:otherwise>
 </c:choose>

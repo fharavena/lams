@@ -21,7 +21,7 @@
    * are the right size and only the ones where the height is overridden does the size change.  */
   min-height: 60px;
  -webkit-appearance: textfield;
-  @include form-control-focus($input-border-focus);
+  @include form-control-focus();
 }
 
 .cke_reset_all {

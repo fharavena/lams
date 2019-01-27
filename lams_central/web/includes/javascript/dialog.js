@@ -1,17 +1,17 @@
 var dialogTemplate = $('<div class="modal fade dialogContainer" tabindex="-1" role="dialog">' +
-							'<div class="modal-dialog" role="document">' +
+							'<div class="modal-dialog modal-notify modal-dialog-centered modal-lg" role="document">' +
 								'<div class="modal-content">' +
 									'<div class="modal-header">' +
-										'<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-											'<i class="fa fa-times" aria-hidden="true"></i>' +
-										'</button>' + 
+										'<h4 class="modal-title"></h4>' +
+										'<button type="button" class="close dialogMinimise ml-auto" aria-label="Minimise">' +
+											'<i class="fa fa-minus" aria-hidden="true"></i>' +
+										'</button>' +
 										'<button type="button" class="close dialogMaximise" aria-label="Maximise">' +
 											'<i class="fa fa-plus" aria-hidden="true"></i>' +
 										'</button>' +
-										'<button type="button" class="close dialogMinimise" aria-label="Minimise">' +
-											'<i class="fa fa-minus" aria-hidden="true"></i>' +
-										'</button>' +
-										'<h4 class="modal-title"></h4>' +
+										'<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+											'<i class="fa fa-times" aria-hidden="true"></i>' +
+										'</button>' + 
 									'</div>' +
 									'<div class="modal-body">' +
 										'<iframe></iframe>' +
@@ -81,6 +81,7 @@ function showDialog(id, initParams, extraButtons, recreate) {
 	
 	if (initParams.width) {
 		modalDialog.width(initParams.width);
+		modalContent.width(initParams.width);
 	}
 	if (initParams.height) {
 		modalContent.height(initParams.height);
@@ -313,6 +314,7 @@ function moveDialogToTop(id) {
 
 //used by both /lams_central/web/main.jsp and /lams_central/web/lti/addlesson.jsp pages
 function showAuthoringDialog(learningDesignID, relaunchMonitorLessonID){
+	debugger;
 	var dialog = showDialog('dialogAuthoring', {
 		'height' : Math.max(300, $(window).height() - 30),
 		'width' : Math.max(600, Math.min(1280, $(window).width() - 60)),
@@ -397,11 +399,13 @@ function showNotificationsDialog(orgID, lessonID) {
 
 //used by Page.tag
 function showMyPortraitDialog() {
+	debugger;
 	showDialog("dialogMyProfile", {
 		'title' : "Portrait",
 		'modal' : true,
 		'width' : Math.max(380, Math.min(770, $(window).width() - 60)),
 		'open' : function() {
+			debugger;
 			var dialog = $(this);
 			// load contents after opening the dialog
 			$('iframe', dialog).attr('src', LAMS_URL + 'index.do?redirect=portrait&isReturnButtonHidden=true');
