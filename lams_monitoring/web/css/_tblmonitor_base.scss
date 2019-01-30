@@ -25,8 +25,8 @@
     height: 100%;
     margin-left:-154px;
     overflow-y: auto;
-    background: $main_offcanvas_background;
-    color: $main_offcanvas_color;
+//    background: $main_offcanvas_background;
+//    color: $main_offcanvas_color;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -84,21 +84,21 @@ table.tablesorter {
     overflow-y: hidden;
 }
 
-.tablesorter .active > a,
-.tablesorter .active > a:hover,
-.tablesorter .active > a:focus {
-	background: $main_offcanvas_link;
-}
-.tablesorter .active > a {
-    color: $main_offcanvas_link_color;
-}
-.tablesorter td.active {
-    border-right: 9px solid $brand-primary-bright;
-    background: $main_offcanvas_link;
-}
-.tablesorter a {
-    padding-left: 10px;
-}
+// .tablesorter .active > a,
+// .tablesorter .active > a:hover,
+// .tablesorter .active > a:focus {
+// 	background: $main_offcanvas_link;
+// }
+// .tablesorter .active > a {
+//     color: $main_offcanvas_link_color;
+// }
+// .tablesorter td.active {
+//     border-right: 9px solid $brand-primary-bright;
+//     background: $main_offcanvas_link;
+// }
+// .tablesorter a {
+//     padding-left: 10px;
+// }
 
 .sidebar-nav {
     position: absolute;
@@ -156,7 +156,7 @@ table.tablesorter {
     padding-top: 13px;
 }
 
-@media(min-width:768px) {
+@include media-breakpoint-up(md) {
     #wrapper {
         padding-left: 154px;
     }

@@ -721,14 +721,13 @@ GeneralInitLib = {
 	
 	 		dialog.modal('hide');
 		});
-		
+
 		// initalise Learning Design load/save dialog
 		layout.ldStoreDialog = showDialog('ldStoreDialog',{
 			'autoOpen'      : false,
 			'resizable'     : false,
 			'draggable'     : false,
 			'open' : function(){
-				
 				var dialog = $(this),
 					treeHeight = Math.max(90, $(window).height() - 325) + 'px';
 				$('.modal-dialog', dialog).width(Math.max(500, $(window).width() - 50));
@@ -1092,12 +1091,11 @@ GeneralInitLib = {
 		
 		$('.modal-body', layout.infoDialog).empty().append(infoDialogContents.show());
 		layout.dialogs.push(layout.infoDialog);
-		
-		
+
 		var weightsDialogContents = $('#weightsDialogContents');
 		layout.weightsDialog = showDialog('weightsDialog',{
 			'autoOpen'      : false,
-			'modal'			: true,
+//			'modal'			: true,
 			'resizable'     : false,
 			'draggable'     : true,
 			'width'			: 500,

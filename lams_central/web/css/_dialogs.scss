@@ -1,4 +1,10 @@
 /*DIALOGS*/
+
+// must make this bigger or it will restrict authoring to a width of 836px
+@include media-breakpoint-up(lg) {
+  .modal-lg { max-width: $authoring-width-lg; }
+}
+
 .dialogContainer {
 	-webkit-overflow-scrolling: touch !important;
 }

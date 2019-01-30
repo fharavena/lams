@@ -259,7 +259,7 @@ button {
 	display: none;
 }
 
-@media (min-width : $screen-md-min) {
+@include media-breakpoint-up(lg) {
 	#actionCell {
 		width: 350px;
 		height: 100vh;

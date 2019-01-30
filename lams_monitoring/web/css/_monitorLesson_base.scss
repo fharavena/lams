@@ -282,7 +282,7 @@ td.contributeEntryCell a {
 }
 
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
 #lessonActions {
 	display: inline-block;
 }
@@ -293,7 +293,7 @@ td.contributeEntryCell a {
 	}
 }
 
-@media (max-width: 767px) {
+@include media-breakpoint-down(md) {
 #lessonActions {
 	display: inline;
 }

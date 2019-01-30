@@ -348,7 +348,6 @@
 			<i class="fa fa-ban"></i> 
 			<span><fmt:message key="authoring.fla.cancel.button" /></span>
 		</button>
-		<div class="btn-group btn-group-sm desktopButton" role="group">
 		<button id="copyButton" class="btn btn-default" onClick="javascript:MenuLib.copyActivity()">
 			<i class="fa fa-copy"></i> 
 			<span><fmt:message key="authoring.fla.page.menu.copy" /></span>
@@ -357,7 +356,6 @@
 			<i class="fa fa-paste"></i> 
 			<span><fmt:message key="authoring.fla.page.menu.paste" /></span>
 		</button>
-		</div>	
 		
 		<button id="transitionButton" class="btn btn-default" onClick="javascript:MenuLib.addTransition()">
 			<i class="fa fa-long-arrow-right"></i> 

@@ -1,6 +1,6 @@
 @import "_lams_variables.scss";
 
-@media (max-width: 750px) {
+@include media-breakpoint-up(md) {
   	#aside {
     	float: none;
     	width: auto;

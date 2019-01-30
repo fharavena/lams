@@ -172,7 +172,6 @@ function toggleFavoriteOrganisation(orgId) {
 
 
 function showMyProfileDialog() {
-	debugger;
 	showDialog("dialogMyProfile", {
 		'title' : LABELS.MY_PROFILE,
 		'modal' : true,

@@ -19,13 +19,12 @@ var dialogTemplate = $('<div class="modal fade dialogContainer" tabindex="-1" ro
 								'</div>' +
 							'</div>' +
 						'</div>');
-
 	
 /**
  * Checks if the dialog is already opened.
  * If not, creates a new dialog with the given ID and init parameters.
  */
-function showDialog(id, initParams, extraButtons, recreate) {
+function showDialog(id, initParams, extraButtons, recreate, noFade) {
 	var dialog = $('#' + id);
 	// is it opened already?
 	if (dialog.length > 0) {
@@ -314,7 +313,6 @@ function moveDialogToTop(id) {
 
 //used by both /lams_central/web/main.jsp and /lams_central/web/lti/addlesson.jsp pages
 function showAuthoringDialog(learningDesignID, relaunchMonitorLessonID){
-	debugger;
 	var dialog = showDialog('dialogAuthoring', {
 		'height' : Math.max(300, $(window).height() - 30),
 		'width' : Math.max(600, Math.min(1280, $(window).width() - 60)),
@@ -399,13 +397,11 @@ function showNotificationsDialog(orgID, lessonID) {
 
 //used by Page.tag
 function showMyPortraitDialog() {
-	debugger;
 	showDialog("dialogMyProfile", {
 		'title' : "Portrait",
 		'modal' : true,
 		'width' : Math.max(380, Math.min(770, $(window).width() - 60)),
 		'open' : function() {
-			debugger;
 			var dialog = $(this);
 			// load contents after opening the dialog
 			$('iframe', dialog).attr('src', LAMS_URL + 'index.do?redirect=portrait&isReturnButtonHidden=true');
