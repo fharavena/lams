@@ -46,7 +46,7 @@
 	<script src="${lams}includes/javascript/jquery.timeago.js" type="text/javascript"></script>
 	<script src="${lams}includes/javascript/common.js" type="text/javascript"></script>
 	<script src="${lams}includes/javascript/rating.js" type="text/javascript"></script>
-	<script src="${lams}includes/javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="${lams}includes/javascript/bootstrap-material-design.min.js" type="text/javascript"></script>
 	<script src="${lams}includes/javascript/jquery.tablesorter-widgets.js" type="text/javascript"></script>
 	<c:set var="localeLanguage"><lams:user property="localeLanguage" /></c:set>
 	<script src="${lams}includes/javascript/timeagoi18n/jquery.timeago.${fn:toLowerCase(localeLanguage)}.js" type="text/javascript"></script>

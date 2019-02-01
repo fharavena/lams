@@ -3,7 +3,7 @@
 	<lams:WebAppURL />
 </c:set>
 <div id="topiclist">
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped table-sm">
 		<tr>
 			<th colspan="4"><fmt:message key="lable.topic.title.subject"/></th>
 		</tr>

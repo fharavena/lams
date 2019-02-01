@@ -24,7 +24,7 @@
 		<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter.js"></script>
 		<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-pager.js"></script>
 		<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-widgets.js"></script> 
-		<script type="text/javascript" src="${lams}includes/javascript/bootstrap.min.js"></script>
+		<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 	
 		<script type="text/javascript">
 	

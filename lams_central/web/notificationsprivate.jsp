@@ -9,7 +9,7 @@
 <lams:css suffix="main"/>
 
 <script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-<script type="text/javascript" src="${lams}/includes/javascript/bootstrap.min.js"></script>
+<script type="text/javascript" src="${lams}/includes/javascript/bootstrap-material-design.min.js"></script>
 <script type="text/javascript">
 
 	var LAMS_URL = '<lams:LAMSURL/>',

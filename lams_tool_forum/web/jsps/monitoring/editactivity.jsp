@@ -9,7 +9,7 @@
 </c:if>
 
 
-<table class="table table-condensed">
+<table class="table table-sm">
 	<tr>
 		<td class="field-name" width="10%" valign="top">
 			<fmt:message key="label.authoring.basic.title" />

@@ -33,7 +33,7 @@
 	
 	<script type="text/javascript" src="${lams}includes/javascript/common.js"></script>
 	<script src="${lams}includes/javascript/jquery.js" type="text/javascript"></script>
-	<script src="${lams}includes/javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="${lams}includes/javascript/bootstrap-material-design.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 

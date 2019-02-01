@@ -5,7 +5,7 @@
 <div id="conditionList">
 	<lams:WaitingSpinner id="conditionListArea_Busy" /></i>
 	
-	<table class="table table-striped table-condensed" id="conditionTable" >
+	<table class="table table-striped table-sm" id="conditionTable" >
 		<tr>
 			<th width="14%" align="left">
 				<fmt:message key="label.authoring.conditions.order" />

@@ -40,7 +40,7 @@
 	<c:set var="class">active</c:set>
 </c:if>
 
-<div role="tabpanel" class="tab-pane ${class}" id="t${id}">
+<div role="tabpanel" class="tab-pane ${class}" id="t${id}" aria-labelledby="${id}-tab">
 <c:choose>
 	<c:when test="${not empty page}">
 		<jsp:include page="${page}"/>

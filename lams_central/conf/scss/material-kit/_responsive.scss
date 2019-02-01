@@ -1,4 +1,9 @@
-@media all and (max-width: 991px) {
+// LAMS Modification - reduced from max-width: 991px to max-width: 767px
+// Lots of niggly issues with screens 768 to 991 such as the tabs nav bar loses the text 
+// but no hamburger icons appears when navbar-expand-md is used. Drop down menus in the 
+// nav bar lose their background.
+// So set this to kick in only on the smaller screens 
+@media all and (max-width: 767px) {
     [class*="navbar-expand-"] > .container,
     [class*="navbar-expand-"] > .container-fluid{
         padding-left: 15px;

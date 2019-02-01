@@ -8,9 +8,8 @@
 $authoring-width-lg: 1280px;
 
 // LAMS SASS Global Variables
-$gray-base: $black; // changed name in Bootstrap 4
-$gray-light-mid:  lighten($gray-base, 86.5%); // #dddddd
-$gray-lightest:  lighten($gray-base, 96%); // #f5f5f5 or whitesmoke
+$gray-light-mid:  $grey-300; // #dddddd
+$gray-lightest:  $grey-100; // #f5f5f5 or whitesmoke
 // 
 // Primary colour shades
 // $brand-primary-darkest: #072B57; // used for main page offcanvas course list
@@ -18,7 +17,7 @@ $gray-lightest:  lighten($gray-base, 96%); // #f5f5f5 or whitesmoke
 $brand-primary-mid: lighten($brand-primary, 12%); // #5798d0
 $brand-primary-light: lighten($brand-primary, 45%); // #dbe9f5
 // next one is to be removed!!!!
-$brand-primary-bright: #0E9AEF;   // used when we need a primary standout, such as the right hand bar indicating the current org in the offcanvas course list.
+$brand-primary-bright: $brand-rose;   // used when we need a primary standout, such as the right hand bar indicating the current org in the offcanvas course list.
 // 
 // a links
 $a-link-default: $brand-primary;
@@ -61,6 +60,20 @@ $current-activity-fill: #BB0000;
 $gate-activity-fill: #FF0000;
 $complex-activity-fill: #999999;
 $not-started-activity-fill: #009900;
+
+// navbar customisation to make action items look the same as the navbar tabs
+.navbar-nav{
+	.nav-text-like-link{
+            position: relative;
+            color: inherit;
+            padding: $padding-general-x;
+            font-weight: $font-weight-default;
+            font-size: $mdb-btn-font-size-base;
+            text-transform: uppercase;
+            border-radius: $border-radius-base;
+            line-height: 20px;
+	}
+}
 // 
 // Used just for main.css - the main page
 // $main_default_link: #5A738E;

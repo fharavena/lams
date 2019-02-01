@@ -104,14 +104,14 @@ public class HelpTag extends TagSupport {
 			return Tag.SKIP_BODY;
 		    }
 
-		    writer.println("<span onclick=\"window.open('" + fullURL + "', 'help')\" id=\"help-tag\">"
+		    writer.println("<span class=\"nav-link\" onclick=\"window.open('" + fullURL + "', 'help')\" id=\"help-tag\">"
 			    + "<i class=\"fa fa-question-circle\" ></i> " + helpWord + "</span>");
 
 		} else if (page != null) {
 
 		    String fullURL = HelpUtil.constructPageURL(page, languageCode);
 
-		    writer.println("<span onclick=\"window.open('" + fullURL + "', 'help')\" id=\"help-tag\">"
+		    writer.println("<span class=\"nav-link\" onclick=\"window.open('" + fullURL + "', 'help')\" id=\"help-tag\">"
 			    + "<i class=\"fa fa-question-circle\" ></i> " + helpWord + "</span>");
 
 		} else {

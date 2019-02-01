@@ -16,7 +16,7 @@
 		<script type="text/javascript" src="${tool}includes/javascript/monitoring.js"></script>
 		
 		<script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-		<script type="text/javascript" src="${lams}includes/javascript/bootstrap.min.js"></script>
+		<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 		<script type="text/javascript" src="${lams}includes/javascript/common.js"></script>
 		
 		<link rel="stylesheet" type="text/css" href="${lams}css/jquery.minicolors.css"></link>

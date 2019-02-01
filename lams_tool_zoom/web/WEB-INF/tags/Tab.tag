@@ -78,7 +78,10 @@
 
 <c:set var="class" value=""/>
 <c:if test="${id == 1}">
-	<c:set var="class">class="active"</c:set>
+	<c:set var="class">class="active nav-item"</c:set>
+</c:if>
+<c:if test="${id != 1}">
+	<c:set var="class">class="nav-item"</c:set>
 </c:if>
 	
 <c:set var="disabled" value=""/>
@@ -86,4 +89,4 @@
 	<c:set var="class">class="disabled"</c:set>
 </c:if>
 
-<li role="presentation" ${class}><a href="#t${id}" aria-controls="t${id}" role="tab" onclick="${methodCall}(${id});return false;">${tabTitle}</a></li>
+<li role="presentation" ${class}><a href="#t${id}" class="nav-link" data-toggle="tab" role="tab" aria-controls="t${id}" role="tab" id="${id}-tab" onclick="${methodCall}(${id});return false;">${tabTitle}</a></li>

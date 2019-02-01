@@ -11,7 +11,7 @@
 	<lams:css webapp="monitoring" suffix="tblmonitor"/>
 	
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"></script>
-	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/progressBar.js"></script>
 	<script>
 		var TOTAL_LESSON_LEARNERS_NUMBER = ${totalLearnersNumber},

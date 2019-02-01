@@ -23,7 +23,7 @@
 	<%@ include file="/common/header.jsp"%>
 
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"></script>
-	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/upload.js"></script>
 	<script type="text/javascript">
 

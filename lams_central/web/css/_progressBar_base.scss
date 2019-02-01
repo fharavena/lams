@@ -42,22 +42,22 @@ div#progressBarDialog iframe {
 
 .activityCurrent {
 	fill: $current-activity-fill;
-	stroke: $gray-base;
+	stroke: $black;
 }
 
 .activityNotStarted {
 	fill: $not-started-activity-fill;
-	stroke: $gray-base;
+	stroke: $black;
 }
 
 .activityCompleted {
 	fill: $completed-activity-fill;
-	stroke: $gray-base;
+	stroke: $black;
 }
 
 .activityComplex {
 	fill:  $complex-activity-fill;
-	stroke: $gray-base;
+	stroke: $black;
 }
 
 .gate {
@@ -73,5 +73,5 @@ div#progressBarDialog iframe {
 }
 
 .transitionLine {
-	stroke: $gray-base;
+	stroke: $black;
 }

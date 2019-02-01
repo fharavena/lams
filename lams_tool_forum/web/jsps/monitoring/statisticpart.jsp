@@ -37,7 +37,7 @@
 	</c:if>
 
 	<h4><fmt:message key="monitoring.tab.summary"/></h4>
-	<table class="table table-condensed table-no-border">
+	<table class="table table-sm table-no-border">
 		<tr>
 			<td class="field-name" width="30%">
 				<fmt:message key="lable.monitoring.statistic.total.message" />
@@ -58,7 +58,7 @@
 		</tr>
 	</table>
 
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 		<tr>
 			<th scope="col" width="50%">
 				<fmt:message key="lable.topic.title.subject" />

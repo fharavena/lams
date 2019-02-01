@@ -24,7 +24,7 @@
 	</div>
 	<div class="panel-body">
 		<div class="table-responsive">
-			<table id="topicTable" class="table table-hover table-condensed">
+			<table id="topicTable" class="table table-hover table-sm">
 				<thead>
 					<tr>
 						<th class="col-xs-6"><fmt:message key="lable.topic.title.subject" /></th>

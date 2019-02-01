@@ -50,51 +50,42 @@
 </c:if>
 
 <!-- navbar combined with tabs -->
-<div class="panel panel-default panel-monitor-page">
-<div class="panel-heading navbar-heading">
-
- 	<nav class="navbar navbar-default navbar-heading">
-	<div class="container-fluid">
-    	<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <c:if test="${not empty title}">
-	      	<span class="navbar-brand">${title}</span>
-	      </c:if>
-		</div>
-		<div class="collapse navbar-collapse" id="navbar-collapse-1" role="navigation">
-        	<ul class="nav navbar-nav" id="page-tabs">
-		     	<c:if test="${not empty title}">
-			    	<li role="separator" class="divider"></li>
-			    </c:if>
-	          	<jsp:doBody />
-         	</ul>
-         	<c:if test="${useActions}">
-		         <ul class="nav navbar-nav navbar-right" id="page-actions">
-				     <li role="separator" class="divider"></li>
+<div class="card card-default card-monitor-page">
+<div class="card-heading navbar-heading">
+	<nav class="navbar navbar-expand-md bg-primary">
+ 		<div class="container-fluid">
+       		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="sr-only">Toggle navigation</span>
+      					<span class="navbar-toggler-icon"></span>
+      					<span class="navbar-toggler-icon"></span>
+      					<span class="navbar-toggler-icon"></span>
+            		</button>
+			<c:if test="${not empty title}">
+          		<span class="navbar-brand">${title}</span>
+            </c:if>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            	<ul class="nav navbar-nav nav-tabs"  id="page-tabs" role="tablist">
+                	<jsp:doBody />
+                 </ul>
+  	        	<c:if test="${useActions}">
+		         <ul class="navbar-nav nav-tabs ml-md-auto" id="page-actions">  <%-- Pretend tabs to get same format --%>
 				     <c:if test="${not empty refreshOnClickAction}">
-		             <li class="navbar-text" ><span onclick="${refreshOnClickAction}"><i class="fa fa-refresh"></i></span></li>
+		             <li class="nav-item" ><span class="nav-link" onclick="${refreshOnClickAction}"><i class="fa fa-refresh"></i></span></li>
 		             </c:if>
 		             <c:if test="${not empty helpToolSignature or not empty helpModule}">
-		             <li class="navbar-text" ><lams:help toolSignature="${helpToolSignature}" module="${helpModule}" style="small"/></li>
+		             <li class="nav-item" ><lams:help toolSignature="${helpToolSignature}" module="${helpModule}" style="small"/></li>
 		             </c:if>
 		             <c:if test="${not empty helpPage}">
-		             <li class="navbar-text" ><lams:help page="${helpPage}" style="small"/></li>
+		             <li class="nav-item" ><lams:help page="${helpPage}" style="small"/></li>
 		             </c:if>
 		             <c:if test="${not empty extraControl}">
-		             <li class="navbar-text" >${extraControl}</li>
+		             <li class="nav-item" ><div class="nav-link" style="display:inline">${extraControl}<div></div></li>
 		             </c:if>
 		         </ul>
-         	</c:if>
- 	    
- 		</div>
-	 </div>
-     </nav>
+    	     	</c:if>
+			</div>
+             </div>
+	 </nav>
      <!-- /top nav -->
 </div>
 <!-- panel div closed by TabBodyArea -->

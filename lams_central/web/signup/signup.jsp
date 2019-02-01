@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="/lams/includes/javascript/jquery.js"></script>
 	<script type="text/javascript" src="/lams/includes/javascript/jquery-ui.js"></script>
 	<script type="text/javascript" src="/lams/includes/javascript/jquery.validate.js"></script>
-	<script type="text/javascript" src="/lams/includes/javascript/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/lams/includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 			var selectedTab = (${(signupOrganisation != null) && signupOrganisation.loginTabActive}) ? 1 : 0;
