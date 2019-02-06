@@ -37,6 +37,7 @@
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/profile.js"></script>
+	<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/webrtc-capturestill.js"></script>
@@ -132,9 +133,9 @@
 	<form:hidden path="portraitUuid" />
 	<div style="clear: both"></div>
 	
-	<div class="container">
-	<div class="row vertical-center-row">
-	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+	<div class="container-fluid">
+	<div class="row vertical-center-row justify-content-center">
+	<div class="col-sm-10">
 
 		<div class="currentPortrait text-center" style="margin:10px">
 			<fmt:message key="label.portrait.current" />:<br/>
@@ -144,18 +145,18 @@
 					<em><fmt:message key="msg.portrait.none" /></em>
 				</c:when>
 				<c:otherwise>
-				<img class="img-thumbnail" src="/lams/download?uuid=${PortraitActionForm.portraitUuid}&version=2&preferDownload=false" />
+				<img class="img-raised rounded-circle img-fluid" src="/lams/download?uuid=${PortraitActionForm.portraitUuid}&version=2&preferDownload=false" />
 				</c:otherwise>
 			</c:choose>
 		</div>
 
 		<c:if test="${ENABLE_PORTRAIT_EDITING}">
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="accordian" id="accordion" role="tablist" aria-multiselectable="true">
 			
 				<!-- Webcamera -->
-				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				    	<div class="panel-title">
+				<div class="card card-plain">
+				    <div class="card-header" role="tab" id="headingOne">
+				    	<div class="card-title">
 				        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" 
 				        			aria-expanded="true" aria-controls="collapseOne">
 				          	<i class="fa fa-fw fa-camera text-primary"></i> 
@@ -164,8 +165,8 @@
 				    	</div>
 				    </div>
 				    
-				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				    	<div class="panel-body">
+				    <div id="collapseOne" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingOne">
+				    	<div class="card-body">
 				      			
 							<div>
 							    <video id="video">
@@ -192,9 +193,9 @@
 				</div>
 				
 				<!-- Upload -->
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingTwo">
-						<div class="panel-title">
+				<div class="card card-plain">
+					<div class="card-header" role="tab" id="headingTwo">
+						<div class="card-title">
 				        		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" 
 				        				aria-expanded="false" aria-controls="collapseTwo">
 				        			<i class="fa fa-fw fa-upload text-primary"></i> 
@@ -203,8 +204,8 @@
 						</div>
 					</div>
 				    
-				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				    		<div class="panel-body">
+				    <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
+				    		<div class="card-body">
 							<div class="form-group">
 								<label class="btn btn-default">
 									<input type="file" name="file" value="" id="upload-input" accept="image/*">

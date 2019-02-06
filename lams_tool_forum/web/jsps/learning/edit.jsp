@@ -121,11 +121,11 @@
 			<c:set var="sessionMap" value="${sessionScope[sessionMapID]}"/>
 		
 			<div class="container-fluid">
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="title.message.edit" />
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 					<lams:errors/>
 					<%@ include file="/jsps/learning/message/topiceditform.jsp"%>
 				</div>

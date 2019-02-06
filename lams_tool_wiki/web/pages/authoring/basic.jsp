@@ -2,8 +2,8 @@
 
 <!-- ========== Basic Tab ========== -->
 
-<div id="wikimenu" class="panel panel-default">
-  <div class="panel-heading  panel-learner-title">
+<div id="wikimenu" class="card card-plain">
+  <div class="card-header  card-learner-title">
 		<c:if test="${currentWikiPage.title != mainWikiPage.title}">
 			<a href='javascript:changeWikiPage("${fn:escapeXml(mainWikiPage.javaScriptTitle)}")'>${fn:escapeXml(mainWikiPage.title)}</a> :
 		</c:if> 
@@ -49,12 +49,12 @@
 			</a>	
 		</c:if>
 	</div> <!-- end wiki menu -->
-	</div> <!--  end panel-heading -->
-</div> <!--  end panel for overall heading & buttons -->
+	</div> <!--  end card-header -->
+</div> <!--  end card for overall heading & buttons -->
 
-<div class="panel panel-default" id="view">
-   <div class="panel-heading">
-     <h4 class="panel-title"><c:out value="${currentWikiPage.title}" escapeXml="true"/></h4>
+<div class="card card-plain" id="view">
+   <div class="card-header">
+     <h4 class="card-title"><c:out value="${currentWikiPage.title}" escapeXml="true"/></h4>
      <!-- Last edited -->
      <div class="voffset5" style="font-size: 12px">
      	<!-- Last edited -->
@@ -75,18 +75,18 @@
 		</fmt:message> 
 		</div> <!-- End last edited -->
 	</div>
-    <div class="panel-body" id="viewBody">
+    <div class="card-body" id="viewBody">
 		<c:out value="${currentWikiPage.currentWikiContentDTO.body}" escapeXml="false"/>
     </div>
 </div>
 
-<div class="panel panel-default" id="history" style="display: none">
-  <div class="panel-heading">
-    <h4 class="panel-title">
+<div class="card card-plain" id="history" style="display: none">
+  <div class="card-header">
+    <h4 class="card-title">
       <fmt:message key="label.wiki.history" /> - <c:out value="${currentWikiPage.title}" />
     </h4>
   </div>
-  <div class="panel-body">
+  <div class="card-body">
 	<c:choose>
 		<c:when test="${not empty wikiPageContentHistory}">
 			<table class="table table-striped table-condensed">
@@ -149,13 +149,13 @@
 </div>
 </div>
 
-<div class="panel panel-default" id="edit" style="display: none">
-	<div class="panel-heading">
-		<h4 clas="panel-title">
+<div class="card card-plain" id="edit" style="display: none">
+	<div class="card-header">
+		<h4 clas="card-title">
 			<fmt:message key="label.wiki.edit"></fmt:message> -  <c:out value="${currentWikiPage.title}" escapeXml="true"/>
 		</h4>
 	</div>
-	<div class="panel-body">
+	<div class="card-body">
 	  	<div class="form-group">
 	  		<label for="title"><fmt:message key="label.authoring.basic.title"></fmt:message></label>
 			<input type="text" name="title" id="title" style="width: 99%;" value="${currentWikiPage.title}" class="form-control"/>
@@ -182,13 +182,13 @@
 	</div>
 </div>
 
-<div class="panel panel-default" id="add" style="display: none">
-  <div class="panel-heading">
-    <h4 clas="panel-title">
+<div class="card card-plain" id="add" style="display: none">
+  <div class="card-header">
+    <h4 clas="card-title">
       <fmt:message key="label.wiki.add"></fmt:message>
     </h4>
   </div>
-  <div class="panel-body">
+  <div class="card-body">
   	  	<div class="form-group">
 	  		<label for="newPageTitle"><fmt:message key="label.authoring.basic.title"></fmt:message></label>
 			<input type="text" name="newPageTitle" id="newPageTitle" style="width: 99%;" value="" class="form-control"/>

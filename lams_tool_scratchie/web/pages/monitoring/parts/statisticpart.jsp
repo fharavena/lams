@@ -24,8 +24,8 @@
 	
 	<p><fmt:message key="label.graph.help"/></p>
 	
-	<div class="panel panel-default" >
-      	<div class="panel-body">
+	<div class="card card-plain" >
+      	<div class="card-body">
 		<table class="table table-condensed table-striped table-no-border">
 		<tr>
 			<td class="field-name" width="25%">

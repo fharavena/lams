@@ -17,7 +17,7 @@
 		var url = "<c:url value="/authoring/editImage.do?imageIndex="/>" + idx +"&sessionMapID="+sessionMapID;;
 		showMessage(url);
 	}
-	//The panel of imageGallery list panel
+	//The card of imageGallery list card
 	var imageGalleryListTargetDiv = "imageGalleryListArea";
 	function deleteItem(idx, sessionMapID) {
 

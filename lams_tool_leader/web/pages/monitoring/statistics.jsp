@@ -4,9 +4,9 @@
 <c:forEach var="session" items="${dto.sessionDTOs}">
 
 	<c:if test="${isGroupedActivity}">
-		<div class="panel panel-default" >
-        <div class="panel-heading" id="headingStats${session.sessionID}">
-   	    	<span class="panel-title collapsable-icon-left">
+		<div class="card card-plain" >
+        <div class="card-header" id="headingStats${session.sessionID}">
+   	    	<span class="card-title collapsable-icon-left">
 	       		<a role="button" data-toggle="collapse" href="#collapseStats${session.sessionID}" 
 						aria-expanded="false" aria-controls="collapseStats${session.sessionID}" >
 					${session.sessionName}
@@ -14,7 +14,7 @@
 			</span>
        	</div>
        
-        <div id="collapseStats${session.sessionID}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingStats${session.sessionID}">
+        <div id="collapseStats${session.sessionID}" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingStats${session.sessionID}">
 	</c:if>
 
 		<table class="table table-condensed">
@@ -38,7 +38,7 @@
 	
 	<c:if test="${isGroupedActivity}">
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	</c:if>
 		
 </c:forEach>

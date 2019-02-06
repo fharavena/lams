@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${content.title}" escapeXml="true"/>
 	</h4>
@@ -24,9 +24,9 @@
 <c:forEach var="groupDto" items="${listAllGroupsDTO}" varStatus="status">
 			  
 	<c:if test="${isGroupedActivity}">	
-	    <div class="panel panel-default" >
-        <div class="panel-heading" id="heading${sessionDto.sessionID}">
-        	<span class="panel-title collapsable-icon-left">
+	    <div class="card card-plain" >
+        <div class="card-header" id="heading${sessionDto.sessionID}">
+        	<span class="card-title collapsable-icon-left">
 	        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${groupDto.sessionId}" 
 						aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${groupDto.sessionId}" >
 					<fmt:message key="group.label" />:	<c:out value="${groupDto.sessionName}" />
@@ -34,7 +34,7 @@
 			</span>
         </div>
         
-        <div id="collapse${groupDto.sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel"
+        <div id="collapse${groupDto.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard"
 				aria-labelledby="heading${groupDto.sessionId}">
 	</c:if>	 
 	
@@ -49,8 +49,8 @@
 	</c:if>
 				  	
 	<c:forEach var="question" items="${questionDTOs}">
-		<div class="panel panel-default"">
-			<div class="panel-heading">
+		<div class="card card-plain"">
+			<div class="card-header">
 				<a href="javascript:launchPopup('<lams:WebAppURL/>monitoring/getPrintAnswers.do?questionUid=${question.uid}&toolSessionID=${groupDto.sessionId}');"	
 					id="printAnswers" class="btn btn-default btn-xs pull-right"><i class="fa fa-print"></i></a>
 				<c:out value="${question.question}" escapeXml="false"/>
@@ -78,7 +78,7 @@
 	
 	<c:if test="${isGroupedActivity}">
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	</c:if>
 	${ !isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 		

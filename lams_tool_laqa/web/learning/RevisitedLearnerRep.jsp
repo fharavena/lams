@@ -299,13 +299,13 @@
 		<c:forEach var="userResponse" items="${generalLearnerFlowDTO.userResponses}" varStatus="status">
 			<div class="row no-gutter">
 				<div class="col-xs-12">
-					<div class="panel panel-default">
-						<div class="panel-heading panel-title">
+					<div class="card card-plain">
+						<div class="card-header card-title">
 							<fmt:message key="label.question" />
 							${status.count}:
 						</div>
-						<div class="panel-body">
-							<div class="panel">
+						<div class="card-body">
+							<div class="card card-plain">
 								<c:out value="${userResponse.qaQuestion.question}" escapeXml="false" />
 							</div>
 
@@ -342,7 +342,7 @@
 							</div>
 						</div>
 
-						<!--  end panel-body -->
+						<!--  end card-body -->
 					</div>
 				</div>
 			</div>
@@ -421,15 +421,15 @@
 		<c:if test="${generalLearnerFlowDTO.reflection == 'true' }">
 			<div class="row no-gutter">
 				<div class="col-xs-12">
-					<div class="panel panel-default voffset10">
-						<div class="panel-heading panel-title">
+					<div class="card card-plain voffset10">
+						<div class="card-header card-title">
 							<fmt:message key="label.reflection" />
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 							<div class="reflectionInstructions">
 								<lams:out value="${qaLearningForm.reflectionSubject}" escapeHtml="true" />
 							</div>
-							<div class="panel">
+							<div class="card card-plain">
 								<lams:out value="${qaLearningForm.entryText}" escapeHtml="true" />
 							</div>
 

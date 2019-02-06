@@ -79,11 +79,11 @@
 	
 	<!-- Adding new preceding lesson -->
 	<c:if test="${edit}">
-		<div class="panel panel-default voffset10">
-			<div class="panel-heading">
+		<div class="card card-plain voffset10">
+			<div class="card-header">
 				<fmt:message key="label.conditions.box.add.dependency" />
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 			<c:choose>
 				<c:when test="${empty availableLessons}">
 					<p>
@@ -135,11 +135,11 @@
 	<c:choose>
 	<c:when test="${edit}">
 	<!-- Finish date setup -->
-		<div class="panel panel-default">
-			<div class="panel-heading">${conditionFinishText}</div>
+		<div class="card card-plain">
+			<div class="card-header">${conditionFinishText}</div>
 	
 		<!-- Changing finish date -->
-		<div class="panel-body">
+		<div class="card-body">
 			<form action="${setDaysToLessonFinishUrl}" method="post">
 						<div class="form-group">
 							<label for="lessonDaysToFinish"><fmt:message key="advanced.tab.form.enter.number.days.label"/>: </label>

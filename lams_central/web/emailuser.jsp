@@ -87,12 +87,12 @@ input[type="checkbox"] {
 <body class="stripes">
 	<div
 		class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-plain">
+			<div class="card-header">
 				<fmt:message key="email.compose.mail" />
 			</div>
 			<lams:errors/>	
-			<div class="panel-body">
+			<div class="card-body">
 				<form id="emailUserForm"
 					action="<lams:LAMSURL/>emailUser/send.do" method="post">
 					<c:if test="${not empty user}">

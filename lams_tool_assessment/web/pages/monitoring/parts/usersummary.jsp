@@ -145,14 +145,14 @@
 	
 <body class="stripes">
 
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<div class="card-title">
 				<fmt:message key="label.monitoring.user.summary.history.responses" />
 			</div>
 		</div>
 			
-		<div class="panel-body">	
+		<div class="card-body">	
 			<lams:errors/>
 			
 			<table class="table table-condensed">
@@ -196,9 +196,9 @@
 			
 			<c:forEach var="userSummaryItem" items="${userSummary.userSummaryItems}" varStatus="status">
 				<div class="voffset20">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<div class="panel-title">
+					<div class="card card-plain">
+						<div class="card-header">
+							<div class="card-title">
 					<table style="font-size: small;">
 						<tr>
 							<td width="70px;">

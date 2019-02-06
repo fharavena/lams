@@ -82,9 +82,9 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 						<c:out value="${entry.externalID}" />
 					</c:set>
 	
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
+					<div class="card card-plain">
+						<div class="card-header">
+							<h4 class="card-title">
 								<c:choose>
 									<c:when test="${!empty sigToCheck}">
 										<fmt:message key="mynotes.signature.${sigToCheck}.heading" /> - <c:out value="${entry.lessonName}"
@@ -97,7 +97,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 							</h4>
 	
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 	
 							<table class="table table-condensed table-hover" cellspacing="0">
 								<tr>

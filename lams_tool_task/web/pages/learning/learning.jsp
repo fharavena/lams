@@ -156,7 +156,7 @@
 		</c:if>
 
 
-		<div class="panel" id="instructions">
+		<div class="card card-plain" id="instructions">
 			<c:out value="${taskList.instructions}" escapeXml="false" />
 		</div>
 
@@ -218,12 +218,12 @@
 		<!--Reflection-->
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
-						<div class="panel panel-default">
-							<div class="panel-heading panel-title">
+						<div class="card card-plain">
+							<div class="card-header card-title">
 								<fmt:message key="label.monitoring.summary.title.reflection" />
 							</div>
-							<div class="panel-body">
-								<div class="panel">
+							<div class="card-body">
+								<div class="card card-plain">
 									<lams:out escapeHtml="true" value="${sessionMap.reflectInstructions}" />
 								</div>
 

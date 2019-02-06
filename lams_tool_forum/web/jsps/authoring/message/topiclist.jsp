@@ -43,7 +43,7 @@
 		</c:forEach>
 	</table>
 </div>
-<%-- This script will works when a new topic is submitted in order to refresh "Topic List" panel. --%>
+<%-- This script will works when a new topic is submitted in order to refresh "Topic List" card. --%>
 <script type="text/javascript">
 	hideMessage();
 	var obj = document.getElementById('messageListArea');

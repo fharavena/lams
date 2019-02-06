@@ -59,15 +59,15 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 <body class="stripes">
 
 	<lams:Page title="" type="learner" usePanel="false" hideProgressBar="${!sessionMap.runAuto}">
-		<div class="panel panel-default">
- 			<div class="panel-heading">
+		<div class="card card-plain">
+ 			<div class="card-header">
 				<div id="headerFrame"></div>
 			</div>
  			<c:if test="${allowComments and (mode eq 'learner' or mode eq 'author') and not empty toolSessionID}">
  				<c:set var="accordianTitle"><fmt:message key="label.comments"/></c:set>
 				<lams:Comments toolSessionId="${toolSessionID}" toolSignature="<%=ResourceConstants.TOOL_SIGNATURE%>" embedInAccordian="true" accordionTitle="${accordianTitle}" mode="${mode}" toolItemId="${itemUid}" readOnly="${sessionMap.finishedLock}"/>	
 			</c:if>
-   			<div class="panel-body" style="height:100vh;">
+   			<div class="card-body" style="height:100vh;">
  				<iframe src="<c:url value='${resourceItemReviewUrl}'/>" id="resourceFrame" style="border:0px;width:100%;height:100%;" onload="setIframeHeight()"></iframe>
  			</div> 
    		</div>

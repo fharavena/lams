@@ -60,13 +60,13 @@
 
 				<div class="row no-gutter">
 					<div class="col-xs-12">
-						<div class="panel panel-default">
-							<div class="panel-heading panel-title">
+						<div class="card card-plain">
+							<div class="card-header card-title">
 								<strong> <fmt:message key="label.question" /> <c:out value="${questionEntry.key}" escapeXml="false" />:
 								</strong> <br>
 								<c:out value="${questionEntry.value.question}" escapeXml="false" />
 							</div>
-							<div class="panel-body">
+							<div class="card-body">
 
 								<c:forEach var="answerEntry" items="${generalLearnerFlowDTO.mapAnswersPresentable}">
 									<c:if test="${answerEntry.key == questionEntry.key}">
@@ -75,7 +75,7 @@
 											<fmt:message key="label.learning.yourAnswer" />
 										</h5>
 
-										<div class="panel" id="answer${questionEntry.key}">
+										<div class="card card-plain" id="answer${questionEntry.key}">
 											<c:out value="${answerEntry.value}" escapeXml="false" />
 										</div>
 
@@ -88,11 +88,11 @@
 
 									<div class="row no-gutter">
 										<div class="col-xs-12">
-											<div class="panel panel-default voffset5" id="feedback${questionEntry.key}">
-												<div class="panel-heading panel-heading-sm panel-title">
+											<div class="card card-plain voffset5" id="feedback${questionEntry.key}">
+												<div class="card-header card-header-sm card-title">
 													<fmt:message key="label.feedback" />
 												</div>
-												<div class="panel-body panel-body-sm">
+												<div class="card-body card-body-sm">
 													<c:out value="${questionEntry.value.feedback}" escapeXml="false" />
 												</div>
 											</div>
@@ -105,7 +105,7 @@
 
 
 							</div>
-							<!-- End panel body -->
+							<!-- End card body -->
 						</div>
 					</div>
 				</div>

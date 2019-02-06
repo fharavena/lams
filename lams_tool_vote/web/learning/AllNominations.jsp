@@ -191,11 +191,11 @@
 			</div>
 
 			<c:if test="${voteGeneralLearnerFlowDTO.notebookEntry != null && voteGeneralLearnerFlowDTO.notebookEntry != ''}">
-				<div class="panel panel-default">
-					<div class="panel-heading panel-title"></div>
-					<div class="panel-body">
+				<div class="card card-plain">
+					<div class="card-header card-title"></div>
+					<div class="card-body">
 						<fmt:message key="label.notebook.entries" />
-						<div class="panel">
+						<div class="card card-plain">
 							<lams:out value="${voteGeneralLearnerFlowDTO.notebookEntry}" escapeHtml="true" />
 						</div>
 					</div>

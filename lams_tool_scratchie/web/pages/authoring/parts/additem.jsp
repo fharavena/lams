@@ -210,13 +210,13 @@
 		<div class="col-xs-12">
 			<div class="container" id="content">
 			
-			<div class="panel panel-default panel-learner-page">
-				<div class="panel-heading">
-					<div class="panel-title panel-learner-title">
+			<div class="card card-plain card-learner-page">
+				<div class="card-header">
+					<div class="card-title card-learner-title">
 						<fmt:message key="label.edit.question" />
 					</div>
 				</div>
-			<div class="panel-body panel-${type}-body">
+			<div class="card-body card-${type}-body">
 	
 			<lams:errors/>
 			

@@ -2,12 +2,12 @@
 		
 <%@ include file="/common/taglibs.jsp"%>
 
-<div class="panel panel-default">
-<div class="panel-heading">
-	<div class="panel-title"><fmt:message key="label.authoring.conditions.add.condition" /></div>
+<div class="card card-plain">
+<div class="card-header">
+	<div class="card-title"><fmt:message key="label.authoring.conditions.add.condition" /></div>
 </div>
 
-<div class="panel-body">	
+<div class="card-body">	
 
 	 <%-- For some reason Spring MVC consumes this first form and only renders the second one.
 	   If this redundant form is removed, the other one would be consumed, so this one needs to stay --%>

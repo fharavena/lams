@@ -39,11 +39,11 @@
 			<a href="<lams:LAMSURL/>admin/sysadminstart.do" class="btn btn-default"><fmt:message key="sysadmin.maintain" /></a>
 		</p>
 			
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<div class="panel-title"><fmt:message key="admin.statistics.overall" /></div>
+			<div class="card card-plain">
+				<div class="card-header">
+					<div class="card-title"><fmt:message key="admin.statistics.overall" /></div>
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 				<table class="table table-striped table-condensed" >
 					<tr>
 						<td>
@@ -105,12 +105,12 @@
 				</div>
 			</div>
 			
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<div class="panel-title"><fmt:message key="admin.statistics.title.byGroup" /></div>
+			<div class="card card-plain">
+				<div class="card-header">
+					<div class="card-title"><fmt:message key="admin.statistics.title.byGroup" /></div>
 				</div>
 				
-				<div class="panel-body">
+				<div class="card-body">
 					<select onchange="javascript:loadGroupStats(this.options[this.selectedIndex].value)" class="form-control">
 						<option></option>
 						<c:forEach var="groupEntry" items="${groupMap}" >	

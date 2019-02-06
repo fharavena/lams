@@ -236,7 +236,7 @@
 
 			
 
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${generalLearnerFlowDTO.activityInstructions}" escapeXml="false" />
 			</div>
 

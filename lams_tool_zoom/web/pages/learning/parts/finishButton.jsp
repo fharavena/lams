@@ -18,16 +18,16 @@
 
 	<c:if test="${userDTO.finishedActivity and contentDTO.reflectOnActivity}">
 
-		<div class="panel panel-default">
-			<div class="panel-heading panel-title">${learningForm.notebookEntry}</div>
-			<div class="panel-body">
-				<div class="panel">
+		<div class="card card-plain">
+			<div class="card-header card-title">${learningForm.notebookEntry}</div>
+			<div class="card-body">
+				<div class="card card-plain">
 					<c:out value="${contentDTO.reflectInstructions}" escapeXml="true" />
 				</div>
 
 				<c:choose>
 					<c:when test="${userDTO.notebookEntryDTO != null}">
-						<div class="panel-body bg-warning">
+						<div class="card-body bg-warning">
 							<lams:out escapeHtml="true" value="${userDTO.notebookEntryDTO.entry}" />
 						</div>
 					</c:when>

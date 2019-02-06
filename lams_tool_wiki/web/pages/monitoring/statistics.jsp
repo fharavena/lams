@@ -11,9 +11,9 @@
 <c:forEach var="session" items="${dto.sessionDTOs}">
 
 	<c:if test="${isGroupedActivity}">
-		 <div class="panel panel-default" >
-	        <div class="panel-heading" id="heading${session.sessionID}">
-				<span class="panel-title">
+		 <div class="card card-plain" >
+	        <div class="card-header" id="heading${session.sessionID}">
+				<span class="card-title">
 					<c:out value="${session.sessionName}" />
 				</span>
 	        </div>

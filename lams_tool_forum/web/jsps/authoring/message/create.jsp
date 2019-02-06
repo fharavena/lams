@@ -12,8 +12,8 @@
 	</lams:head>
 	
 	<body>
-		<div class="panel panel-default">
-		<div class="panel-body">
+		<div class="card card-plain">
+		<div class="card-body">
 	
 		<!-- Basic Info Form-->
 		<lams:errors/>

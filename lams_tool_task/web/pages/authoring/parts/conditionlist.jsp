@@ -52,7 +52,7 @@
 	</table>
 </div>
 
-<%-- This script will works when a new resoruce Condition submit in order to refresh "TaskList List" panel. --%>
+<%-- This script will works when a new resoruce Condition submit in order to refresh "TaskList List" card. --%>
 <script lang="javascript"> 
 	hideConditionMessage();
 	var obj = document.getElementById('conditionsArea');

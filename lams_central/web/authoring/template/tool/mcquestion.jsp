@@ -5,12 +5,12 @@
 <c:set var="maxOptionCount" value="<%=LdTemplateController.MAX_OPTION_COUNT%>"/>
 <%-- Generic Q&A question page. Expects an input of questionNumber, contentFolderID, and creates a text field field question${questionNumber} and three options --%>
 
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<div class="panel-title"><label class="required"><fmt:message key="authoring.label.question.num"><fmt:param value="${questionNumber}"/></fmt:message></label></div>
+<div class="card card-plain">
+	<div class="card-header">
+		<div class="card-title"><label class="required"><fmt:message key="authoring.label.question.num"><fmt:param value="${questionNumber}"/></fmt:message></label></div>
 	</div>
 
-	<div class="panel-body">	
+	<div class="card-body">	
 	
 		<lams:CKEditor id="question${questionNumber}" value="${option.text}" contentFolderID="${contentFolderID}" height="100"></lams:CKEditor>
 		

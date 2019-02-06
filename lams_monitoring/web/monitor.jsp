@@ -38,6 +38,7 @@
 	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/d3.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/chart.js"></script>
 	<script type="text/javascript" src="<lams:WebAppURL/>includes/javascript/monitorLesson.js"></script>
+	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/popper.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap.tabcontroller.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/bootstrap-tour.min.js"></script> 
@@ -306,13 +307,13 @@
 			<lams:TabBodys>
 				<lams:TabBody id="1" titleKey="label.basic">
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-sm-12">
 							<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
-							<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="label.tour"/></span></button>
+							<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 							
 							<a id="tour-refresh-button" class="btn btn-sm btn-default pull-right roffset10" title="<fmt:message key='button.refresh.tooltip'/>"
 							   href="#" onClick="javascript:refreshMonitor('lesson')">
-							<i class="fa fa-refresh"></i> <span class="hidden-xs"><fmt:message key="button.refresh"/></span></a>				
+							<i class="fa fa-refresh"></i> <span class="d-none d-sm-inline"><fmt:message key="button.refresh"/></span></a>				
 							<p id="tabLessonLessonName">
 								<span class="lead">
 									<strong id="lesson-name-strong"><c:out value="${lesson.lessonName}" /></strong>
@@ -324,7 +325,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-9 col-xs-7">
+						<div class="col-sm-9">
 						
 							<!-- Lesson details -->
 							<dl id="lessonDetails" class="dl-horizontal">
@@ -391,7 +392,7 @@
 													onClick="javascript:changeLessonState()"
 													title='<fmt:message key="lesson.change.state.tooltip"/>'>
 										   		<i class="fa fa-check"></i> 
-										   		<span class="hidden-xs"><fmt:message key="button.apply"/></span>
+										   		<span class="d-none d-sm-inline"><fmt:message key="button.apply"/></span>
 										    	</button>
 										    	</span>
 								    		</div>					
@@ -404,36 +405,36 @@
 								<!--  lesson actions -->
 								<dt><fmt:message key="lesson.manage"/>:</dt>
 								<dd>
-									<div class="btn-group btn-group-xs" role="group" id="lessonActions">
+									<div class="btn-group btn-group-sm" role="group" id="lessonActions">
 										<button id="viewLearnersButton" class="btn btn-default roffset10"
 												type="button"onClick="javascript:showLessonLearnersDialog()"
 												title='<fmt:message key="button.view.learners.tooltip"/>'>
 											<i class="fa fa-sm fa-users"></i>
-											<span class="hidden-xs"><fmt:message key="button.view.learners"/></span>
+											<span class="d-none d-sm-inline"><fmt:message key="button.view.learners"/></span>
 										</button>
 										
 										<button id="editClassButton" class="btn btn-default roffset10"
 												type="button" onClick="javascript:showClassDialog()"
 												title='<fmt:message key="button.edit.class.tooltip"/>'>
 											<i class="fa fa-sm fa-user-times"></i>
-											<span class="hidden-xs"><fmt:message key="button.edit.class"/></span>
+											<span class="d-none d-sm-inline"><fmt:message key="button.edit.class"/></span>
 										</button>
 										
 										<c:if test="${lesson.enabledLessonNotifications}">
 											<button id="notificationButton" class="btn btn-default roffset10"
 													type="button" onClick="javascript:showNotificationsDialog(null,${lesson.lessonID})">
 												<i class="fa fa-sm fa-bullhorn"></i>
-												<span class="hidden-xs"><fmt:message key="email.notifications"/></span>
+												<span class="d-none d-sm-inline"><fmt:message key="email.notifications"/></span>
 											</button>
 										</c:if>
 									</div>
 									
-									<div class="btn-group btn-group-xs" role="group" id="lessonActions2">
+									<div class="btn-group btn-group-sm" role="group" id="lessonActions2">
 										<c:if test="${lesson.enableLessonIntro}">
 											<button id="editIntroButton" class="btn btn-default roffset10"
 													type="button" onClick="javascript:showIntroductionDialog(${lesson.lessonID})">
 												<i class="fa fa-sm fa-info"></i>
-												<span class="hidden-xs"><fmt:message key="label.lesson.introduction"/></span>
+												<span class="d-none d-sm-inline"><fmt:message key="label.lesson.introduction"/></span>
 											</button>
 										</c:if>							  
 
@@ -442,7 +443,7 @@
 												btn-success
 											</c:if>
 											">
-											<i class="fa fa-sm fa-list-ol"></i><span class="hidden-xs">&nbsp;<fmt:message key="label.display.activity.scores"/></span> 
+											<i class="fa fa-sm fa-list-ol"></i><span class="d-none d-sm-inline">&nbsp;<fmt:message key="label.display.activity.scores"/></span> 
  										</button>
 									</div>
 										
@@ -451,13 +452,13 @@
 								<!-- IM & Presence -->
 								<dt><fmt:message key="lesson.im"/>:</dt>
 								<dd>
-									<div class="btn-group btn-group-xs" role="group" id="tour-lesson-im">
+									<div class="btn-group btn-group-sm" role="group" id="tour-lesson-im">
 										<button id="presenceButton" class="btn btn-default roffset10
 											<c:if test="${lesson.learnerPresenceAvailable}">
 												btn-success
 											</c:if>
 											"><i class="fa fa-sm fa-wifi"></i>
-											<span class="hidden-xs"><fmt:message key="lesson.presence"/></span> 
+											<span class="d-none d-sm-inline"><fmt:message key="lesson.presence"/></span> 
 											<span id="presenceCounter" class="badge">0</span>
 										</button>
 	
@@ -470,7 +471,7 @@
 												style="display: none"
 											</c:if>
 										><i class="fa fa-sm fa-comments-o"></i>
-										 <span class="hidden-xs"><fmt:message key="lesson.im"/></span>
+										 <span class="d-none d-sm-inline"><fmt:message key="lesson.im"/></span>
 										</button>
 										
 										<button id="openImButton" class="btn btn-default"
@@ -478,7 +479,7 @@
 												style="display: none"
 											</c:if>
 										><i class="fa fa-sm fa-comments"></i>
-										 <span class="hidden-xs"><fmt:message key="button.open.im"/></span> 
+										 <span class="d-none d-sm-inline"><fmt:message key="button.open.im"/></span> 
 										</button>
 									</div>
 								</dd>
@@ -486,16 +487,16 @@
 								<!-- Progress Emails -->
 								<dt><fmt:message key="lesson.progress.email"/>:</dt>
 								<dd>
-									<div class="btn-group btn-group-xs" role="group">
+									<div class="btn-group btn-group-sm" id="emailActions" role="group">
 										<button id="sendProgressEmail" class="btn btn-default roffset10"
 											onClick="javascript:sendProgressEmail()"/>
 											<i class="fa fa-sm fa-envelope"></i>
-											<span class="hidden-xs"><fmt:message key="progress.email.send"/></span> 
+											<span class="d-none d-sm-inline"><fmt:message key="progress.email.send"/></span> 
 										</button>
 										<button id="configureProgressEmail" class="btn btn-default roffset10"
 											onClick="javascript:configureProgressEmail()"/>
 											<i class="fa fa-sm fa-cog"></i>
-											<span class="hidden-xs"><fmt:message key="progress.email.configure"/></span> 
+											<span class="d-none d-sm-inline"><fmt:message key="progress.email.configure"/></span> 
 										</button>
 									</div>
 								</dd>
@@ -510,18 +511,20 @@
 								
 							</dl>	
 						</div>
-						<div class="panel panel-default pull-right">
-							<div class="panel-heading"><fmt:message key="lesson.chart.title"/></div>
-							<div id="chartDiv" class="panel-body"></div>
+						<div class="col-sm-3">
+							<div class="card card-plain">
+								<div class="card-header"><fmt:message key="lesson.chart.title"/></div>
+								<div id="chartDiv" class="card-body"></div>
+							</div>
 						</div>
 					</div>
 					
 					<!-- Required tasks -->
-					<div id="requiredTasks" class="panel panel-warning" style="display: none;">
-						<div class="panel-heading">
-							<div class="panel-title"><fmt:message key="lesson.required.tasks"/></div>
+					<div id="requiredTasks" class="card card-warning" style="display: none;">
+						<div class="card-header">
+							<div class="card-title"><fmt:message key="lesson.required.tasks"/></div>
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 							<span id="contributeHeader"></span>
 						</div>
 					</div>
@@ -570,15 +573,15 @@
 					
 					<div id="sequenceTopButtonsContainer" class="topButtonsContainer">
 						<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
-						<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="label.tour"/></span></button>
+						<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 
 						<a id="refreshButton" class="btn btn-sm btn-default" title="<fmt:message key='button.refresh.tooltip'/>"
 						   href="#" onClick="javascript:refreshMonitor('sequence')">
-							<i class="fa fa-refresh"></i> <span class="hidden-xs"><fmt:message key="button.refresh"/></span>
+							<i class="fa fa-refresh"></i> <span class="d-none d-sm-inline"><fmt:message key="button.refresh"/></span>
 						</a>
 						<a id="liveEditButton" class="btn btn-sm btn-default style="display:none" title="<fmt:message key='button.live.edit.tooltip'/>"
 					       href="#" onClick="javascript:openLiveEdit()">
-							<i class="fa fa-pencil"></i> <span class="hidden-xs"><fmt:message key='button.live.edit'/></span>
+							<i class="fa fa-pencil"></i> <span class="d-none d-sm-inline"><fmt:message key='button.live.edit'/></span>
 						</a>
 						<span id="sequenceSearchPhraseClear"
 							 class="fa fa-xs fa-times-circle"
@@ -636,15 +639,15 @@
 							</td>
 							<td class="topButtonsContainer">
 								<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
-								<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="label.tour"/></span></button>
+								<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 							
 								<a class="btn btn-sm btn-default" title="<fmt:message key='button.refresh.tooltip'/>"
 								   href="#" onClick="javascript:refreshMonitor('learners')">
-								   <i class="fa fa-refresh"></i> <span class="hidden-xs"><fmt:message key="button.refresh"/></span></a>
+								   <i class="fa fa-refresh"></i> <span class="d-none d-sm-inline"><fmt:message key="button.refresh"/></span></a>
 								<a class="btn btn-sm btn-default" title="<fmt:message key='button.journal.entries.tooltip'/>"
 						   		   href="#" id="journalButton"
 						           onClick="javascript:openPopUp('<lams:LAMSURL/>learning/notebook/viewAllJournals.do?lessonID=${lesson.lessonID}', 'JournalEntries', 648, 1152, true)">
-						           <i class="fa fa-book"></i> <span class="hidden-xs"><fmt:message key="button.journal.entries"/></span></a>
+						           <i class="fa fa-book"></i> <span class="d-none d-sm-inline"><fmt:message key="button.journal.entries"/></span></a>
 							</td>
 						</tr>
 					</table>
@@ -658,11 +661,11 @@
 				<lams:TabBody id="4" titleKey="label.gradebook">
 					<div id="gradebookTopButtonsContainer" class="topButtonsContainer pull-right">
 						<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
-						<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="label.tour"/></span></button>
+						<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 
 						<a id="refreshButton" class="btn btn-sm btn-default" title="<fmt:message key='button.refresh.tooltip'/>"
 						   href="#" onClick="javascript:refreshMonitor('gradebook')">
-							<i class="fa fa-refresh"></i> <span class="hidden-xs"><fmt:message key="button.refresh"/></span>
+							<i class="fa fa-refresh"></i> <span class="d-none d-sm-inline"><fmt:message key="button.refresh"/></span>
 						</a>
 					</div>
 					<div id="gradebookDiv"></div>
@@ -746,7 +749,7 @@
 	<div id="classDialogContents" class="dialogContainer">
 		<div id="classDialogTable">
 			<div class="row no-margin">
-				<div id="leftLearnerTable" class="col-xs-6">
+				<div id="leftLearnerTable" class="col-sm-6">
 					<table id="classLearnerTable" class="table table-condensed">
 						<tr class="active">
 							<td class="dialogTitle" colspan="6"><fmt:message
@@ -801,7 +804,7 @@
 						</tr>
 					</table>
 				</div>
-				<div id="rightMonitorTable" class="col-xs-6">
+				<div id="rightMonitorTable" class="col-sm-6">
 					<table id="classMonitorTable" class="table table-condensed">
 						<tr class="active">
 							<td class="dialogTitle" colspan="6"><fmt:message
@@ -873,7 +876,7 @@
 	<div id="emailProgressDialogContents" class="dialogContainer">
 		<div id="emailProgressDialogTable">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-sm-12">
 					<table id="emailProgressTable" class="table table-condensed">
 						<tr class="active">
 							<td class="dialogTitle" colspan="6"><fmt:message key="progress.email.will.be.sent.on"/></td>
@@ -885,21 +888,21 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-6">
+				<div class="col-sm-6">
 					<div class="form-group">
 						<label for="emaildatePicker"><fmt:message key="progress.email.select.date"/></label><input type="text" class="form-control" name="emaildatePicker" id="emaildatePicker" value=""/>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-6">
+				<div class="col-sm-6">
 					<button id="addEmailProgressDateButton"
 						class="btn btn-sm btn-default pull-left"
 						onClick="javascript:addEmailProgressDate()">
 						<fmt:message key="progress.email.add.date"/>
 					</button>
 				</div>
-				<div class="col-xs-6">
+				<div class="col-sm-6">
 					<button id="addEmailProgressSeriesButton"
 						class="btn btn-sm btn-default pull-right"
 						onClick="javascript:addEmailProgressSeries(true)">

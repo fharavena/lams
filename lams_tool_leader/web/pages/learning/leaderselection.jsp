@@ -172,7 +172,7 @@
 					</div>
 					<div class="modal-body">
 						<!-- begin -->
-						<div class="panel" id="leaderInstructions">
+						<div class="card card-plain" id="leaderInstructions">
 							<c:out value="${content.instructions}" escapeXml="false" />
 						</div>
 						<div class="lead">

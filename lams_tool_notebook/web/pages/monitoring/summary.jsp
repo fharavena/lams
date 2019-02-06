@@ -193,7 +193,7 @@
 </script>
 <script type="text/javascript" src="${lams}/includes/javascript/monitorToolSummaryAdvanced.js" ></script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${notebookDTO.title}" escapeXml="true"/>
 	</h4>
@@ -210,23 +210,23 @@
 	</div>
 	 
 	<c:if test="${isGroupedActivity}">
-		<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+		<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 	</c:if>
 
 	<c:forEach var="session" items="${notebookDTO.sessions}" varStatus="status">
 
 		<c:if test="${isGroupedActivity}">	
-		    <div class="panel panel-default" >
-		        <div class="panel-heading" id="heading${session.key}">
-		        	<span class="panel-title collapsable-icon-left">
+		    <div class="card card-plain" >
+		        <div class="card-header" id="heading${session.key}">
+		        	<span class="card-title collapsable-icon-left">
 		        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.key}" 
 							aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${session.key}" >
 					<fmt:message key="message.session.name" />:	<c:out value="${session.value}" /></a>
 					</span>
 		        </div>
 	        
-	       		<div id="collapse${session.key}" class="panel-collapse collapse ${status.first ? 'in' : ''}"
-	        	 role="tabpanel" aria-labelledby="heading${session.key}">
+	       		<div id="collapse${session.key}" class="card-collapse collapse ${status.first ? 'in' : ''}"
+	        	 role="tabcard" aria-labelledby="heading${session.key}">
 		</c:if>
 	 
 	 	<table id="group${session.key}" class="scroll" cellpadding="0" cellspacing="0" ></table>
@@ -234,13 +234,13 @@
  
 		<c:if test="${isGroupedActivity}">
 			</div> <!-- end collapse area  -->
-			</div> <!-- end collapse panel  -->
+			</div> <!-- end collapse card  -->
 		</c:if>
 	${ !isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 	</c:forEach>
 	
 	<c:if test="${isGroupedActivity}">
-		</div> <!--  end panel group -->
+		</div> <!--  end card group -->
 	</c:if> 
 
 <%@include file="advanceOptions.jsp"%>

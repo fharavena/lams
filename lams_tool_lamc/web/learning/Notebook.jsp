@@ -11,7 +11,7 @@
 
 	<lams:Page type="learner" title="${mcGeneralLearnerFlowDTO.activityTitle}" formID="reflectionForm">
 
-		<div class="panel">
+		<div class="card card-plain">
 			<lams:out value="${mcGeneralLearnerFlowDTO.reflectionSubject}" escapeHtml="true" />
 		</div>
 

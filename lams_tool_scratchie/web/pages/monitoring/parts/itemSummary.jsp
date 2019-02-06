@@ -105,9 +105,9 @@
 			<lams:errors/>
 			
 			<c:forEach var="summary" items="${summaryList}" varStatus="status">
-				<div class="panel panel-default" >
-		        	<div class="panel-heading">
-						<span class="panel-title">
+				<div class="card card-plain" >
+		        	<div class="card-header">
+						<span class="card-title">
 							<fmt:message key="label.monitoring.item.summary.group" />&nbsp;${summary.sessionName}
 						</span>
 					</div>

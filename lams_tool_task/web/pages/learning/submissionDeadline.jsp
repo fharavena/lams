@@ -37,17 +37,17 @@
 
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="panel panel-default">
-						<div class="panel-heading-sm">
-							<div class="panel-title">${sessionMap.reflectInstructions}</div>
+					<div class="card card-plain">
+						<div class="card-header-sm">
+							<div class="card-title">${sessionMap.reflectInstructions}</div>
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 							<c:choose>
 								<c:when test="${empty sessionMap.reflectEntry}">
 									<fmt:message key="message.no.reflection.available" />
 								</c:when>
 								<c:otherwise>
-									<div class="panel">
+									<div class="card card-plain">
 										<lams:out escapeHtml="true" value="${sessionMap.reflectEntry}" />
 									</div>
 								</c:otherwise>

@@ -143,7 +143,7 @@
 
 		<%--Advanced settings and notices-----------------------------------%>
 
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${imageGallery.instructions}" escapeXml="false"/>
 		</div>
 		
@@ -209,17 +209,17 @@
 		<%--Reflection--------------------------------------------------%>
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
-			<div class="panel panel-default voffset10">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain voffset10">
+				<div class="card-header card-title">
 					<fmt:message key="title.reflection" />
 				</div>
 						
-		 		<div class="panel-body">
+		 		<div class="card-body">
 		 			<div class="reflectionInstructions">
 						<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true"/>
 					</div>
 				
-					<div class="panel">
+					<div class="card card-plain">
 						<c:choose>
 							<c:when test="${empty sessionMap.reflectEntry}">
 								<p>

@@ -67,8 +67,8 @@
 	
 	<c:choose>
 	<c:when test="${sessionMap.assessment.useSelectLeaderToolOuput}">	
-		<div class="panel panel-default" >
-       	<div class="panel-body">
+		<div class="card card-plain" >
+       	<div class="card-body">
  		<table class="table table-condensed table-striped table-no-border">
 			<tr>
 				<td class="field-name" width="25%">
@@ -110,15 +110,15 @@
 		
 	<c:otherwise>
 	<c:forEach var="sessionDto" items="${sessionDtos}">
-	    <div class="panel panel-default" >
+	    <div class="card card-plain" >
 			<c:if test="${!sessionMap.assessment.useSelectLeaderToolOuput && sessionMap.isGroupedActivity}">	
-		        <div class="panel-heading" id="heading${sessionDto.sessionId}">
-					<span class="panel-title">
+		        <div class="card-header" id="heading${sessionDto.sessionId}">
+					<span class="card-title">
 						<fmt:message key="monitoring.label.group" />: <c:out value="${sessionDto.sessionName}" />
 					</span>
 		        </div>
 			</c:if>
-       		<div class="panel-body">
+       		<div class="card-body">
 			<table class="table table-condensed table-striped table-no-border">
 				<tr>
 					<td class="field-name" width="25%">

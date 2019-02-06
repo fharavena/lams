@@ -64,7 +64,7 @@
 
 <lams:SimplePanel titleKey="label.question.options">
 
-<lams:SimplePanel panelBodyClass="panel-body-sm">
+<lams:SimplePanel cardBodyClass="card-body-sm">
 
 <div class="form-inline">
 	<label for="assessment.questionsPerPage">
@@ -101,7 +101,7 @@
 
 </lams:SimplePanel>
 
-<lams:SimplePanel panelBodyClass="panel-body-sm">
+<lams:SimplePanel cardBodyClass="card-body-sm">
 
 <div class="form-inline">
 	<label for="timeLimit">
@@ -147,7 +147,7 @@
 
 </lams:SimplePanel>
 
-<lams:SimplePanel panelBodyClass="panel-body-sm">
+<lams:SimplePanel cardBodyClass="card-body-sm">
 
 <div class="checkbox">
 	<label for="display-summary">

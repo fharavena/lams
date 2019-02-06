@@ -62,12 +62,12 @@
 	</lams:head>
 	<body>
 
-		<div class="panel panel-default add-file">
-			<div class="panel-heading panel-title">
+		<div class="card card-plain add-file">
+			<div class="card-header card-title">
 				<fmt:message key="label.authoring.basic.add.website" />
 			</div>
 			
-			<div class="panel-body">
+			<div class="card-body">
 
 			<lams:errors/>
 			

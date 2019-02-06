@@ -3,15 +3,15 @@
 <c:forEach var="questionResult" items="${assessmentResult.questionResults}" varStatus="i">
 	<c:set var="question" value="${questionResult.assessmentQuestion}"/>
 	
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<h4 class="card-title">
 				<span class="float-left space-right">Q${i.index+1})</span> 
 				<c:out value="${questionResult.assessmentQuestion.title}" escapeXml="false"/>
 			</h4> 
 		</div>
 	              
-		<div class="panel-body">
+		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-striped">
 					<tbody>

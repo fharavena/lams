@@ -8,8 +8,8 @@
 <div id="questionList">
 <%-- This image is shown when a question is being downloaded from a server. --%>
 
-<div class="panel panel-default voffset5">
-	<div class="panel-heading panel-title">
+<div class="card card-plain voffset5">
+	<div class="card-header card-title">
 		<fmt:message key="label.authoring.basic.list.title" /> 
 		<i class="fa fa-refresh fa-spin fa-3x fa-fw" style="display: none" id="questionListArea_Busy"></i>
 	</div>
@@ -69,7 +69,7 @@
 </div>
 </div>
 
-<%-- This script will work when a new question is submited in order to refresh "Question List" panel. --%>
+<%-- This script will work when a new question is submited in order to refresh "Question List" card. --%>
 <script type="text/javascript">
 	hideQuestionInputArea();
 	var obj = document.getElementById('questionListArea');

@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="${lams}/includes/javascript/monitorToolSummaryAdvanced.js" ></script>
  
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${voteGeneralMonitoringDTO.activityTitle}" escapeXml="true"/>
 	</h4>

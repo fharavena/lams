@@ -1,11 +1,11 @@
 <%@ include file="/common/taglibs.jsp"%>
 
 <!-- Add a URL Form-->
-<div class="panel panel-default">
-	<div class="panel-heading panel-title">
+<div class="card card-plain">
+	<div class="card-header card-title">
 		<fmt:message key="label.learning.new.url" />
 	</div>
-	<div class="panel-body">
+	<div class="card-body">
 	
 	<lams:errors/>
 	

@@ -11,9 +11,9 @@
 <form:form action="${FORM_ACTION}" method="post" modelAttribute="imageGalleryItemForm" id="imageGalleryItemForm" enctype="multipart/form-data">
 	<c:set var="sessionMap"	value="${sessionScope[imageGalleryForm.sessionMapID]}" />
 	
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<div class="card-title">
 				<fmt:message key="label.authoring.basic.add.image" />
 				<div class="pull-right">
 					<c:if test="${empty imageGalleryItemForm.imageIndex}">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 			
-		<div class="panel-body">
+		<div class="card-body">
 			<lams:errors/>
 			<form:hidden path="sessionMapID" />
 			<form:hidden path="imageIndex" />
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 	
-			<div class="panel-body text-center" style="display:none" id="itemAttachmentArea_Busy">
+			<div class="card-body text-center" style="display:none" id="itemAttachmentArea_Busy">
 				<i class="fa fa-refresh fa-spin fa-2x fa-fw text-primary"></i>
 			</div>
 		

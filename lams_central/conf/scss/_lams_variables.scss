@@ -2,6 +2,7 @@
 //@import "_material-kit.scss";
 @import "material-kit/variables.scss";
 @import "material-kit/bootstrap/scss/mixins/breakpoints.scss";
+@import "material-kit/bootstrap/scss/mixins/buttons.scss";
 @import "mixins.scss";
 
 // dialog related
@@ -61,19 +62,6 @@ $gate-activity-fill: #FF0000;
 $complex-activity-fill: #999999;
 $not-started-activity-fill: #009900;
 
-// navbar customisation to make action items look the same as the navbar tabs
-.navbar-nav{
-	.nav-text-like-link{
-            position: relative;
-            color: inherit;
-            padding: $padding-general-x;
-            font-weight: $font-weight-default;
-            font-size: $mdb-btn-font-size-base;
-            text-transform: uppercase;
-            border-radius: $border-radius-base;
-            line-height: 20px;
-	}
-}
 // 
 // Used just for main.css - the main page
 // $main_default_link: #5A738E;

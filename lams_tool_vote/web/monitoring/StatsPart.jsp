@@ -9,14 +9,14 @@
 <c:forEach var="stats" items="${voteStatsDTO}">
 
 	<c:if test="${isGroupedActivity}">	
-	    <div class="panel panel-default" >
-        <div class="panel-heading">
-			<span class="panel-title">
+	    <div class="card card-plain" >
+        <div class="card-header">
+			<span class="card-title">
 				${stats.sessionName}
 			</span>
         </div>
 
-        <div class="panel-body">
+        <div class="card-body">
 	</c:if>
 
 	<p><fmt:message key="label.total.completed.students"/>&nbsp;${stats.countUsersComplete}</p>

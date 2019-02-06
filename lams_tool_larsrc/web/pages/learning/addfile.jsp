@@ -7,11 +7,11 @@
 <c:set var="EXE_FILE_TYPES"><%=Configuration.get(ConfigurationKeys.EXE_EXTENSIONS)%></c:set>
 
 <!-- Add a File Form-->
-<div class="panel panel-default">
-	<div class="panel-heading panel-title">
+<div class="card card-plain">
+	<div class="card-header card-title">
 		<fmt:message key="label.learning.new.file" />
 	</div>
-	<div class="panel-body">
+	<div class="card-body">
 	
 	<lams:errors/>
 	

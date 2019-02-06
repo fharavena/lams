@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	  <c:out value="${sessionMap.commonCartridge.title}" escapeXml="true"/>
 	</h4>
@@ -26,7 +26,7 @@ $(document).ready(function(){
 </div>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-	<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 
@@ -34,9 +34,9 @@ $(document).ready(function(){
 	<c:set var="groupSize" value="${fn:length(group)}" />
 		
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="panel panel-default" >
-	        <div class="panel-heading" id="heading${group[0].sessionId}">
-	        	<span class="panel-title collapsable-icon-left">
+	    <div class="card card-plain" >
+	        <div class="card-header" id="heading${group[0].sessionId}">
+	        	<span class="card-title collapsable-icon-left">
 	        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${group[0].sessionId}" 
 							aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${group[0].sessionId}" >
 						<fmt:message key="monitoring.label.group" />:	<c:out value="${group[0].sessionName}" />
@@ -44,8 +44,8 @@ $(document).ready(function(){
 				</span>
 	        </div>
 	        
-        <div id="collapse${group[0].sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" 
-	       		role="tabpanel" aria-labelledby="heading${sessionSummary.sessionId}">
+        <div id="collapse${group[0].sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" 
+	       		role="tabcard" aria-labelledby="heading${sessionSummary.sessionId}">
 	</c:if>
 				
 	<table class="table">
@@ -169,13 +169,13 @@ $(document).ready(function(){
 	
 	<c:if test="${sessionMap.isGroupedActivity}">
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	</c:if>
 	${ !sessionMap.isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 </c:forEach>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-	</div> <!--  end panel group -->
+	</div> <!--  end card group -->
 </c:if>
 
 <%@ include file="advanceOptions.jsp"%>

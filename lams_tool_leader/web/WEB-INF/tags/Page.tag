@@ -57,7 +57,7 @@
 			jQuery.ui || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery-ui.js"><\/script>');
 		
 			// Adding bootstrap.js if it hasn't been loaded already
-			(typeof($.fn.modal) != 'undefined') || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap.min.js"><\/script>');
+			(typeof($.fn.modal) != 'undefined') || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/popper.min.js"><\/script><script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"><\/script>');
 		</script>
 		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/dialog.js"></script>
 		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/snap.svg.js"></script>
@@ -290,23 +290,23 @@
 			
 		</script>
 	
-		<nav class="navbar navbar-default sidebar" id="sidebar" role="navigation" onMouseEnter="javascript:toggleSlideMenu()" onMouseLeave="javascript:hideSlideMenu()" style="display:none" >
+		<nav class="navbar navbar-expand-sm sidebar" id="sidebar" role="navigation" onMouseEnter="javascript:toggleSlideMenu()" onMouseLeave="javascript:hideSlideMenu()" style="display:none" >
 		    <div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand visible-xs hidden-sm hidden-md hidden-lg" href="#"><span class="lessonName"></span></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="bs-sidebar-navbar-collapse-1" aria-controls="bs-sidebar-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="sr-only">Toggle navigation</span>
+      					<span class="navbar-toggler-icon"></span>
+      					<span class="navbar-toggler-icon"></span>
+      					<span class="navbar-toggler-icon"></span>
+            		</button>
+					<a class="navbar-brand d-inline d-sm-none" href="#"><span class="lessonName"></span></a>
 				</div>
 				
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li>
+						<li class="nav-item">
 							<c:if test="${displayPortrait}">
 								<a id="navbar-portrait" href="#" onclick="javascript:showMyPortraitDialog(); return false;">
 									<c:set var="userId"><lams:user property="userID" /></c:set>
@@ -314,7 +314,7 @@
 								</a>
 							</c:if>
 					
-							<a href="#" class="hidden-xs visible-sm visible-md visible-lg slidesidemenu" onClick="javascript:toggleSlideMenu(); return false;">
+							<a href="#" class="d-none d-sm-inline slidesidemenu" onClick="javascript:toggleSlideMenu(); return false;">
 								<c:if test="${!displayPortrait}">
 									<i class="pull-right fa fa-bars"></i>
 								</c:if>
@@ -322,26 +322,26 @@
 								<p class="lessonName <c:if test='${!displayPortrait}'>no-portrait</c:if>"></p>
 							</a>
 						</li>
-						<li>
+						<li class="nav-item">
 							<a href="#" onClick="javascript:viewNotebookEntries(); return false;" >
 								<span id="notebooklabel">Notebook</span>
 								<i class="pull-right fa fa-book"></i>
 							</a>
 						</li>
-						<li id="restartitem" style="display:none">
+						<li class="nav-item" id="restartitem" style="display:none">
 							<a href="#" onClick="javascript:restartLesson()">
 								<span id="restartlabel">Restart</span>
 								<i class="pull-right fa fa-fast-backward "></i>
 							</a>
 						</li>
-						<li id="supportitem" style="display:none">
+						<li class="nav-item" id="supportitem" style="display:none">
 							<a href="#" class="slidesidemenu" onClick="javascript:toggleSlideMenu(); return false;">
 								<span id="supportlabel">Support Activities</span>
 								<i class="pull-right fa fa-th-large"></i>
 							</a>
 							<div id="supportPart" class="progressBarContainer"></div>
 						</li>
-						<li>
+						<li class="nav-item">
 							<a href="#" class="slidesidemenu" onClick="javascript:toggleSlideMenu(); return false;">
 								<span id="progresslabel">My Progress</span>
 								<i class="pull-right fa fa-map"></i>
@@ -358,12 +358,11 @@
 		<div id="navcontent" class="content">
 			<div class="row no-gutter no-margin">
 			<div class="col-sm-12">
-			<div class="container">
 				<c:choose>
 				<c:when test="${usePanel}">
 					<div class="card card-${type}-page">
 						<c:if test="${not empty title}">
-							<div class="card-header primary-color white-text">
+							<div class="card-header">
 									<c:out value="${title}" escapeXml="true" />
 									<c:if test="${not empty titleHelpURL}">
 										<span class="pull-right">${titleHelpURL}</span>
@@ -372,7 +371,6 @@
 								<c:if test="${not empty headingContent}">
 									<c:out value="${headingContent}" escapeXml="true" />
 								</c:if>
-							</div>
 						</c:if>
 						
 						<div class="card-body card-${type}-body">
@@ -381,14 +379,15 @@
 					</div>
 				</c:when>
 				<c:otherwise>
+					<div class="container-fluid">
 					<jsp:doBody />
+					</div>
 				</c:otherwise>
 				</c:choose>						
 				<%--  only have sidebar and presence in learner --%>
 				<c:if test="${ not hideProgressBar && ( empty mode || mode == 'author' || mode == 'learner') }">
 					<div id="presenceEnabledPatchDiv"></div>
 				</c:if>
-			</div>
 				</div>
 			</div>
 		</div>
@@ -397,23 +396,6 @@
 
 	<c:otherwise>
 	<!-- Standard Screens  --> 
-	
-		<header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
-		<div class="container">
-	        <div class="navbar-header">
-	          <a class="navbar-brand navbar-brand-login" href="#"><%=Configuration.get(ConfigurationKeys.SITE_NAME)%></a>
-	        </div>
-		</div>	
-		<c:if test="${not empty titleHelpURL}">
-			<div class="navbar-nav-scroll ml-md-auto ">
-				<ul class="navbar-nav bd-navbar-nav flex-row">
-				<li class="nav-item">
-          			<!--  a class="nav-link" -->${titleHelpURL}<i class="material-icons">help_outline</i> Some Text Here<!--  /a  -->
-		        </li>
-		       </ul>
-		    </div>
-		</c:if>
-	  </header>
   
 	  <div class="container-fluid">
 	    <div class="row flex-xl-nowrap">

@@ -403,12 +403,12 @@
 		<!-- Display reflections -->
 		<c:if test="${sessionMap.reflectOn}">
 			<div class="voffset20">
-				<div class="panel panel-default">
-					<div class="panel-heading-sm  bg-success">
+				<div class="card card-plain">
+					<div class="card-header-sm  bg-success">
 						<fmt:message key="monitor.summary.td.notebookInstructions" />
 					</div>
-					<div class="panel-body-sm">
-						<div class="panel">
+					<div class="card-body-sm">
+						<div class="card card-plain">
 							<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 						</div>
 						<c:choose>
@@ -418,7 +418,7 @@
 								</p>
 							</c:when>
 							<c:otherwise>
-								<div class="panel-body-sm bg-warning">
+								<div class="card-body-sm bg-warning">
 									<lams:out escapeHtml="true" value="${sessionMap.reflectEntry}" />
 								</div>
 							</c:otherwise>

@@ -195,7 +195,7 @@
 			<li role="presentation" class="nav-item align-self-center">
 				<a href="javascript:;" id="index-tour" onclick="javascript:startTour();" class="nav-link info-number" data-toggle="dropdown" aria-expanded="false">
 					<i class="fa fa-question-circle"></i>
-					<span class="xs-hidden"><fmt:message key="label.tour"/></span>
+					<span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span>
 				</a>
 			</li>
 					
@@ -233,7 +233,7 @@
 				<li role="presentation" class="nav-item align-self-center" >
 					<a href="<c:out value='${headerlink.url}' />"  id="${headerlink.id}" class="nav-link  tour-${headerlink.id}" title="${headerLinkTitle}">
 						<i class="fa ${headerLinkIcon}"></i> 
-						<span class="xs-hidden"><c:out value='${headerLinkName}'/></span>
+						<span class="d-none d-sm-inline"><c:out value='${headerLinkName}'/></span>
 					</a>
 				</li>
 			</c:forEach>
@@ -256,7 +256,7 @@
 					<c:set var="lastName">
 						 <lams:user property="lastName" />
 					</c:set>
-					<span class="xs-hidden">
+					<span class="d-none d-sm-inline">
 						<c:out value="${firstName}" escapeXml="true"/>&nbsp;<c:out value="${lastName}" escapeXml="true"/>								
 					</span>
 				</a>        
@@ -295,7 +295,7 @@
 	<!-- /header -->
 
 			<!-- content -->      
-	<main id="page-wrapper" class="content">
+	<main id="page-wrapper" class="content container-fluid">
 		<div id="messageCell">
 			<%--
 				<div id="message">Important annoucements might be posted here...</div>
@@ -304,7 +304,7 @@
 		
 		<div class="row no-gutter">
 			<div class="col-sm-12">
-	        	<div id="org-container" class="tour-org-container"></div>
+	        	<div id="org-container" class="card tour-org-container"></div>
 			</div>
 		</div>
 	</main>
@@ -312,13 +312,13 @@
 	        
 	<!-- footer -->
 	<footer class="footer">
-		<div class="">
-			<p class="text-muted text-center">
+		<div class="container">
+			<p>
 				<fmt:message key="msg.LAMS.version" />&nbsp;<%=Configuration.get(ConfigurationKeys.VERSION)%>
 				<a href="<lams:LAMSURL/>/www/copyright.jsp" target='copyright' onClick="openCopyRight()">
 					&copy; <fmt:message key="msg.LAMS.copyright.short" /> 
 				</a>
-				<span class="text-danger text-center" id="timezoneWarning"></span>
+				<span class="text-danger" id="timezoneWarning"></span>
 			</p>
 		</div>
 		<div class="clearfix"></div>

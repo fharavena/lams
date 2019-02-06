@@ -55,7 +55,7 @@
 
 				<h1><fmt:message key="sysadmin.tool.management" /></h1>
 				
-				<div class="panel">
+				<div class="card card-plain">
 					<p>
 						<fmt:message key="msg.edit.tool.content.1" />
 						&nbsp;

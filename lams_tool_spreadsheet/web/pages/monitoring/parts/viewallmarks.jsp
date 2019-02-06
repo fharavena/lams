@@ -19,11 +19,11 @@
 
 				<c:forEach var="user" items="${userList}">
 						
-					<div class="panel panel-default">
-						<div class="panel-heading panel-title">
+					<div class="card card-plain">
+						<div class="card-header card-title">
 							<c:out value="${user.fullUsername}"/>
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 						<div class="row no-gutter">
 							<div class="col-sm-2"><fmt:message key="label.monitoring.vieawallmarks.spreadsheet.submitted" /></div>
 							<div class="col-sm-10">

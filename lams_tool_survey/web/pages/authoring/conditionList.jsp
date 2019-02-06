@@ -62,7 +62,7 @@
 	</table>
 </div>
 
-<%-- This script will works when a new resource Condition submit in order to refresh "TaskList List" panel. --%>
+<%-- This script will works when a new resource Condition submit in order to refresh "TaskList List" card. --%>
 <script type="text/javascript">
 	hideConditionMessage();
 	var obj = document.getElementById('conditionsArea');

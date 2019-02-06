@@ -107,8 +107,8 @@
 	<c:set var="title"><fmt:message key="admin.title" /></c:set>
 	<lams:Page type="admin" title="${title}">
 		<div class="container-fluid">
-			<div class="panel panel-default panel-admin-page">
-				<div class="panel-body panel-admin-body">
+			<div class="card card-plain card-admin-page">
+				<div class="card-body card-admin-body">
 					<p><a href="<lams:LAMSURL/>/admin/sysadminstart.do" class="btn btn-primary"><fmt:message key="sysadmin.maintain" /></a></p>
 					<c:if test="${saveOK}">
 						 <lams:Alert type="info" close="false">

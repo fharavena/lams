@@ -65,8 +65,8 @@
 		<input type="text" class="form-control" placeholder="<fmt:message key='label.kumalive.name.enter'/>" />
 		<button class="btn btn-primary"><fmt:message key="button.kumalive.create"/></button>
 		<br />
-		<div id="rubrics" class="panel">
-			<div class="panel-body">
+		<div id="rubrics" class="card card-plain">
+			<div class="card-body">
 				<h4><fmt:message key="label.kumalive.rubric.choose"/></h4>
 			</div>
 		</div>

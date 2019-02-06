@@ -28,7 +28,7 @@
 </form:form>
 
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${monitoringDTO.title}" escapeXml="true"/>
 	</h4>
@@ -39,25 +39,25 @@
 
 
 <c:if test="${isGroupedActivity}">
-	<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="session" items="${dto.sessionDTOs}" varStatus="status">
 
-	<c:set var="subpanelHeadingClass"></c:set>
+	<c:set var="subcardHeadingClass"></c:set>
 		
 	<c:if test="${isGroupedActivity}">
-		<c:set var="subpanelHeadingClass">panel-heading-sm</c:set>
-		<div class="panel panel-default" >
-        <div class="panel-heading" id="heading${session.sessionID}">
-   	    	<span class="panel-title collapsable-icon-left">
+		<c:set var="subcardHeadingClass">card-header-sm</c:set>
+		<div class="card card-plain" >
+        <div class="card-header" id="heading${session.sessionID}">
+   	    	<span class="card-title collapsable-icon-left">
        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 
 				aria-expanded="false" aria-controls="collapse${session.sessionID}" >
 			${session.sessionName}</a>
 			</span>
        	</div>
        
-        <div id="collapse${session.sessionID}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${session.sessionID}">
+        <div id="collapse${session.sessionID}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${session.sessionID}">
 		<div class="loffset5 voffset10 roffset5" >
 	</c:if>
 
@@ -103,9 +103,9 @@
 	<c:if test="${session.appointedScribe != null}">
 		<c:set var="scribeSessionDTO" value="${session}" scope="request"/>
 
-		<div class="panel panel-default voffset10" style="margin-bottom:5px" >
-        <div class="panel-heading ${subpanelHeadingClass}"><span class="panel-title"><fmt:message key="heading.report" /></span></div>
-        <div class="panel-body">
+		<div class="card card-plain voffset10" style="margin-bottom:5px" >
+        <div class="card-header ${subcardHeadingClass}"><span class="card-title"><fmt:message key="heading.report" /></span></div>
+        <div class="card-body">
 			<c:forEach var="report" items="${session.reportDTOs}">
  				<p>
 					<c:out value="${report.headingDTO.headingText}" escapeXml="false" />
@@ -132,8 +132,8 @@
 	</c:if>
 
 	<c:if test="${dto.reflectOnActivity}">
-		<div class="panel panel-default voffset10" style="margin-bottom:5px" >
-        <div class="panel-heading  ${subpanelHeadingClass}"><span class="panel-title"><fmt:message key="heading.reflections" /></span></div>
+		<div class="card card-plain voffset10" style="margin-bottom:5px" >
+        <div class="card-header  ${subcardHeadingClass}"><span class="card-title"><fmt:message key="heading.reflections" /></span></div>
 		<table class="table table-condensed table-striped">
 			<tr>
 				<th>
@@ -179,7 +179,7 @@
 	<c:if test="${isGroupedActivity}">
 		</div>
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	</c:if>
 	${ !isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 	

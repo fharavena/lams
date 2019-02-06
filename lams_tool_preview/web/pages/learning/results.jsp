@@ -102,11 +102,11 @@
 
 		<c:if test="${not empty allCriteriaRatings}">
 		<c:forEach var="criteriaRatings" items="${allCriteriaRatings}" varStatus="status">
-			<div class="panel panel-default">
-			<div class="panel-heading panel-title">
+			<div class="card card-plain">
+			<div class="card-header card-title">
 				<c:out value="${criteriaRatings.ratingCriteria.title}" escapeXml="true"/>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 			<lams:StyledRating criteriaRatings="${criteriaRatings}" showJustification="true" alwaysShowAverage="false" currentUserDisplay="false" />
 			</div>
 			</div>
@@ -116,11 +116,11 @@
 	
 	<c:if test="${peerreview.showRatingsLeftForUser}">
 
-		<div class="panel panel-default">
-		<div class="panel-heading panel-title">
+		<div class="card card-plain">
+		<div class="card-header card-title">
 			<fmt:message key="label.ratings.by.others" />
 		</div>
-		<div class="panel-body">
+		<div class="card-body">
 		
 			<lams:Alert type="info" id="warn-lock" close="false">
 				<fmt:message key="label.no.ratings.out.of.possible.ratings" ><fmt:param>${numberRatings}</fmt:param><fmt:param>${numberPotentialRatings}</fmt:param></fmt:message>

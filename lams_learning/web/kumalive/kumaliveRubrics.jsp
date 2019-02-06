@@ -107,8 +107,8 @@
 <body class="stripes">
 
 <div class="container-fluid">
-	<div class="panel panel-default panel-admin-page">
-		<div class="panel-body panel-admin-body">
+	<div class="card card-plain card-admin-page">
+		<div class="card-body card-admin-body">
 			<div>
 				<div class="row rubric">
 					<div class="col-xs-9">

@@ -24,15 +24,15 @@
 
 <c:if test='${includeMode=="learning"}'>
 <div class="voffset10">
-<div class="panel">
+<div class="card card-plain">
 	<c:out value="${daco.instructions}" escapeXml="false"/>
 </div>
 </div>
 </c:if>
 
-<!--  summary panel  -->
-<div class="panel panel-default">
-<div class="panel-heading panel-title">
+<!--  summary card  -->
+<div class="card card-plain">
+<div class="card-header card-title">
 	<fmt:message key="label.learning.tableheader.questions" />
 </div>
 
@@ -224,7 +224,7 @@
 		</tr>
 	</c:forEach>
 </table>
-</div> <!--  end summary panel -->
+</div> <!--  end summary card -->
 
 <c:if test='${includeMode=="learning"}'>
 	<button class="btn btn-default btn-disable-on-submit" onclick="javascript:refreshQuestionSummaries('${sessionMapID}')"><fmt:message key="label.common.summary.refresh" /></a>

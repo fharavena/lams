@@ -10,9 +10,9 @@
 <c:forEach var="session" items="${dto.sessionDTOs}">
 
 	<c:if test="${isGroupedActivity}">
-		<div class="panel panel-default" >
-			<div class="panel-heading">
-				<span class="panel-title">
+		<div class="card card-plain" >
+			<div class="card-header">
+				<span class="card-title">
 					<fmt:message key="heading.group">
 						<fmt:param>${session.sessionName}</fmt:param>
 					</fmt:message>
@@ -21,7 +21,7 @@
 		</div>
 	</c:if>
 
-	<div class="panel-body">
+	<div class="card-body">
 		<table class="table table-condensed">
 			<tr>
 				<td width="40%">

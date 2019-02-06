@@ -26,7 +26,7 @@
 		<script type="text/javascript" src="includes/javascript/learning.js"></script>
 			
 		<lams:Page type="learner" title="${pageTitle.monitoring}">
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${chatDTO.instructions}" escapeXml="false" />
 			</div>
 		

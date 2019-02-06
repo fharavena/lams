@@ -1,10 +1,10 @@
 <%@ include file="/common/taglibs.jsp"%>
-<div class="panel panel-default">
-<div class="panel-heading">
-	<div class="panel-title"><fmt:message key="label.add.new.question" /></div>
+<div class="card card-plain">
+<div class="card-header">
+	<div class="card-title"><fmt:message key="label.add.new.question" /></div>
 </div>
 
-<div class="panel-body">
+<div class="card-body">
 <form:form action="${empty newQuestionForm.editableQuestionIndex ? 'addSingleQuestion.do' : 'saveSingleQuestion.do'}" modelAttribute="newQuestionForm" id="newQuestionForm" method="POST">
 	<form:hidden path="toolContentID" />
 	<form:hidden path="httpSessionID" />
@@ -22,7 +22,7 @@
 			</div>
 
 			<a data-toggle="collapse" data-target="#extra" href="#xta"><i class="fa fa-xs fa-plus-square-o roffset5" aria-hidden="true"></i><fmt:message key="label.other.options"/></a>
-<div id="extra" class="panel-body collapse" >  	        
+<div id="extra" class="card-body collapse" >  	        
 	<div class="form-group form-inline">
 	  	<label for="minWordsLimit">
 	    	<fmt:message key="label.minimum.number.words" >

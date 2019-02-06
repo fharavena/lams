@@ -97,7 +97,7 @@
 
 <c:set var="adTitle"><fmt:message key="label.change.marking.allocation" /></c:set>
 <lams:AdvancedAccordian title="${adTitle}">
-	<div class="panel-body ">
+	<div class="card-body ">
 		<div class="alert alert-warning">
 			<fmt:message key="label.change.marking.allocation.warning" />
 		</div>

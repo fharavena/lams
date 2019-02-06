@@ -46,7 +46,7 @@
 				initializeJRating();
 				initializePortraitPopover('<lams:LAMSURL/>');
 			},
-		   	// caption: "${groupSummary.sessionName}" use Bootstrap panels as the title bar
+		   	// caption: "${groupSummary.sessionName}" use Bootstrap cards as the title bar
 			subGrid: true,
 			subGridOptions: {
 				reloadOnExpand : false 

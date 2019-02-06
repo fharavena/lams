@@ -42,17 +42,15 @@
 		<form:hidden path="login" />
 		<form:hidden path="password" />
 
-		<lams:errors path="*"/>
-
 		<c:set var="profileEditEnabled"><%=Configuration.get(ConfigurationKeys.PROFILE_EDIT_ENABLE)%></c:set>
 		<c:set var="partialProfileEditEnabled"><%=Configuration.get(ConfigurationKeys.PROFILE_PARTIAL_EDIT_ENABLE)%></c:set>
 		<div style="clear: both;"></div>
-		<div class="container">
-			<div class="row vertical-center-row">
-				<div
-					class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-					<div class="panel">
-						<div class="panel-body">
+		<div class="container-fluid">
+			<div class="row vertical-center-row justify-content-center">
+			<div class="col-sm-10">
+					<div class="card card-plain">
+					<div class="card-body card-plain">
+							<lams:errors path="*"/>
 							<c:set var="authenticationMethodId">
 								<lams:user property="authenticationMethodId" />
 							</c:set>
@@ -363,6 +361,7 @@
 					<fmt:message key="button.save" />
 				</button>
 			</c:if>
+		</div>
 		</div>
 	</form:form>
 </body>

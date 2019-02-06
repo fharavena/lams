@@ -99,8 +99,8 @@
 
 			<div class="row no-gutter">
 				<div class="col-xs-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
+					<div class="card card-plain">
+						<div class="card-header">
 							<table>
 								<tr>
 									<td>${status.count})</td>
@@ -108,7 +108,7 @@
 								</tr>
 							</table>
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 
 							<!--  CANDIDATE ANSWERS  -->
 							<c:set var="queIndex" scope="request" value="0" />
@@ -213,13 +213,13 @@
 									<c:if test="${(requestScope.mainQueIndex == feedbackEntry.key)
                                           && (feedbackEntry.value != null) && (feedbackEntry.value != '')}">
 
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
+										<div class="card card-plain">
+											<div class="card-header">
+												<h4 class="card-title">
 													<fmt:message key="label.feedback.simple" />
 												</h4>
 											</div>
-											<div class="panel-body">
+											<div class="card-body">
 												<c:out value="${feedbackEntry.value}" escapeXml="false" />
 											</div>
 										</div>
@@ -233,7 +233,7 @@
 				</div>
 			</div>
 		</c:forEach>
-		<!-- end page panel -->
+		<!-- end page card -->
 
 		<!-- END QUESTION  -->
 		
@@ -271,13 +271,13 @@
 						<fmt:message key="label.reflection" />
 					</h4>
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h2 class="panel-title">
+					<div class="card card-plain">
+						<div class="card-header">
+							<h2 class="card-title">
 								<lams:out value="${mcGeneralLearnerFlowDTO.reflectionSubject}" escapeHtml="true" />
 							</h2>
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 
 							<c:choose>
 								<c:when test="${not empty mcGeneralLearnerFlowDTO.notebookEntry}">

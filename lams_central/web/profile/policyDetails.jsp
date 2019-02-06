@@ -18,14 +18,14 @@
 <div class="container">
 <div class="row vertical-center-row">
 <div>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<div class="panel-title">
+<div class="card card-plain">
+	<div class="card-header">
+		<div class="card-title">
 			<h4><fmt:message key="label.policy.details" /></h4>
 		</div>
 	</div>
 
-<div class="panel-body">		
+<div class="card-body">		
 	<table class="table table-striped table-no-border">
 		<tr>
 			<td><fmt:message key="label.name" /></td>

@@ -18,9 +18,9 @@
 		<c:set var="burningQsCount" value="${fn:length(burningQuestionItemDto.burningQuestionDtos)}"/>
 		<c:set var="item" value="${burningQuestionItemDto.scratchieItem}"/>
 		
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title panel-collapse">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title card-collapse">
 					<c:choose>
 						<c:when test="${burningQsCount != 0}">
 							<a data-toggle="collapse" data-itemuid="${item.uid}" class="collapsed burning-question-title">
@@ -41,8 +41,8 @@
 			</div>
 		
 			<c:if test="${burningQsCount > 0}">
-				<div id="collapse-${item.uid}" class="panel-collapse collapse">
-				<div class="panel-body">
+				<div id="collapse-${item.uid}" class="card-collapse collapse">
+				<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover">
 						<tbody>

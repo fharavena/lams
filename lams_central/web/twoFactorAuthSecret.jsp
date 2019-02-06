@@ -31,14 +31,14 @@
 	</nav>
 	
 	<div class="container">
-		<div class="panel panel-default center-block" style="max-width: 300px;">
-			<div class="panel-heading text-center">
-				<div class="panel-title"> 
+		<div class="card card-plain center-block" style="max-width: 300px;">
+			<div class="card-header text-center">
+				<div class="card-title"> 
 					<fmt:message key="label.2FA.shared.secret" />
 				</div>
 			</div>
 			     			
-			<div class="panel-body text-center">
+			<div class="card-body text-center">
 					<div class="input-group">
 						<p>
 							<fmt:message key="label.your.new.shared.secret">

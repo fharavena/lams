@@ -42,8 +42,8 @@
 <!-- Table -->
 <div class="row no-gutter">
 <div class="col-xs-12 col-md-12 col-lg-12">
-<div class="panel">
-<div class="panel-body">
+<div class="card card-plain">
+<div class="card-body">
 <div class="table-responsive" style="margin:0">
 	<table id="questions-data" class="table table-striped table-bordered table-hover table-condensed">
 		<thead>
@@ -95,11 +95,11 @@
 	<div class="modal-content">
 	<div class="modal-body">
 	
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><span class="float-left space-right">Q${i.index+1})</span> ${questionDto.question}</h4>
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title"><span class="float-left space-right">Q${i.index+1})</span> ${questionDto.question}</h4>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-striped table-hover">
 						<tbody>

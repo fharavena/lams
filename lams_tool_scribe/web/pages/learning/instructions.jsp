@@ -31,7 +31,7 @@
 			</c:set>
 		
 			<c:if test="${role == 'scribe'}">
-				<div class="panel">
+				<div class="card card-plain">
 					<p>
 						<fmt:message key="message.scribeInstructions">
 							<fmt:param value="<strong><mark>${appointedScribe}</mark></strong>"></fmt:param>
@@ -53,7 +53,7 @@
 			</c:if>
 		
 			<c:if test="${role == 'learner'}">
-				<div class="panel">
+				<div class="card card-plain">
 					<p>
 						<fmt:message key="message.learnerInstructions"/>
 					</p>

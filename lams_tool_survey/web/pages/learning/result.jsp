@@ -41,7 +41,7 @@
 <body class="stripes">
 
 	<lams:Page type="learner" title="${sessionMap.title}">
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${sessionMap.instructions}" escapeXml="false" />
 		</div>
 
@@ -155,12 +155,12 @@
 		<div class="voffset10">&nbsp;</div>
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn and !sessionMap.showOtherUsersAnswers}">
-			<div class="panel panel-default voffset10">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain voffset10">
+				<div class="card-header card-title">
 					<fmt:message key="title.reflection" />
 				</div>
-				<div class="panel-body">
-					<div class="panel">
+				<div class="card-body">
+					<div class="card card-plain">
 						<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 					</div>
 
@@ -171,7 +171,7 @@
 							</p>
 						</c:when>
 						<c:otherwise>
-							<div class="panel-body bg-warning voffset5">
+							<div class="card-body bg-warning voffset5">
 								<lams:out escapeHtml="true" value="${sessionMap.reflectEntry}" />
 							</div>
 						</c:otherwise>

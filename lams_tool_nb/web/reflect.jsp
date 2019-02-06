@@ -30,7 +30,7 @@
 
 	<form:form method="post" onsubmit="disableFinishButton();" modelAttribute="nbLearnerForm" id="nbLearnerForm">
 		<div class="form-group">
-			<div class="panel">
+			<div class="card card-plain">
 				<lams:out value="${reflectInstructions}" escapeHtml="true" />
 			</div>
 

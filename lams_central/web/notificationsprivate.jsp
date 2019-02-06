@@ -118,7 +118,7 @@
 <div class="container">
 	<div class="row vertical-center-row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-		<div class="panel panel-default">
+		<div class="card card-plain">
 		<table id="tablePrivateNotifications" class="table table-condensed table-striped">
 		</table>			
 		</div>

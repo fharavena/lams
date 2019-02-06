@@ -19,9 +19,9 @@
 <!-- Notifications -->  
 <div class="row no-gutter">
 	<div class="col-xs-6 col-md-4 col-lg-4 ">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title">
 					<i class="fa fa-users" style="color:gray" ></i> 
 					<fmt:message key="label.attendance"/>: ${attemptedLearnersNumber}/<span id="total-learners-number"></span> 
 				</h4> 
@@ -46,14 +46,14 @@
 <div class="col-xs-12 col-md-12 col-lg-12">
 
 <c:forEach var="question" items="${questions}" varStatus="i">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<h4 class="card-title">
 				<span class="float-left space-right">Q${i.index + 1})</span> <c:out value="${question.question}" escapeXml="false"/>
 			</h4>
 		</div>
 		
-		<div class="panel-body">
+		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-striped">
 					<tbody>

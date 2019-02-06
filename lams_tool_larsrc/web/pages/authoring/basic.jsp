@@ -30,7 +30,7 @@
 		var url = "<c:url value="/authoring/editItemInit.do?itemIndex="/>" + idx +"&reqID="+reqIDVar.getTime()+"&sessionMapID="+sessionMapID;;
 		showResourceItem(url);
 	}
-	//The panel of resource list panel
+	//The card of resource list card
 	var resourceListTargetDiv = "resourceListArea";
 	function deleteItem(idx,sessionMapID){
 		var url = "<c:url value="/authoring/removeItem.do"/>";

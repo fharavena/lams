@@ -107,7 +107,7 @@ table.alternative-color td:first-child {
 <body class="stripes">
 
 	<lams:Page type="learner" title="${sessionMap.title}">
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${sessionMap.instructions}" escapeXml="false" />
 		</div>
 
@@ -118,7 +118,7 @@ table.alternative-color td:first-child {
 		</c:if>
 
 		<%-- user personal results--%>
-		<div class="panel">
+		<div class="card card-plain">
 		<c:forEach var="element" items="${sessionMap.questionList}">
 			<div class="sbox voffset10">
 				<div class="sbox-heading clearfix">
@@ -178,12 +178,12 @@ table.alternative-color td:first-child {
 		</div>
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
-			<div class="voffset10 panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="voffset10 card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="title.reflection" />
 				</div>
-				<div class="panel-body">
-					<div class="panel">
+				<div class="card-body">
+					<div class="card card-plain">
 						<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 					</div>
 
@@ -194,7 +194,7 @@ table.alternative-color td:first-child {
 							</p>
 						</c:when>
 						<c:otherwise>
-							<div class="panel-body bg-warning">
+							<div class="card-body bg-warning">
 								<lams:out escapeHtml="true" value="${sessionMap.reflectEntry}" />
 							</div>
 						</c:otherwise>
@@ -209,12 +209,12 @@ table.alternative-color td:first-child {
 
 		<%-- other users personal results--%>
 		<c:if test="${sessionMap.showOtherUsersAnswers}">
-		<div class="voffset10 panel panel-default">
-			<div class="panel-heading panel-title" id="other-users-answers-title">
+		<div class="voffset10 card card-plain">
+			<div class="card-header card-title" id="other-users-answers-title">
 				<fmt:message key="label.other.answers" />
 			</div>
 			
-			<div class="panel-body">
+			<div class="card-body">
 			<div>
 				<fmt:message key="label.total.responses">
 					<fmt:param>${countFinishedUser}</fmt:param>

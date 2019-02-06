@@ -39,7 +39,7 @@
 		padding-top: 5px;
 	}
 	
-	.panel {
+	.card {
 		overflow: auto;
 	}
 	#time-limit-buttons {
@@ -210,7 +210,7 @@
 
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${sessionMap.dokumaran.title}" escapeXml="true"/>
 	</h4>
@@ -247,15 +247,15 @@
 </div>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-	<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="groupSummary" items="${summaryList}" varStatus="status">
 	
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="panel panel-default" >
-        <div class="panel-heading" id="heading${groupSummary.sessionId}">
-        	<span class="panel-title collapsable-icon-left">
+	    <div class="card card-plain" >
+        <div class="card-header" id="heading${groupSummary.sessionId}">
+        	<span class="card-title collapsable-icon-left">
         		<a class="collapsed" role="button" data-toggle="collapse" href="#collapse${groupSummary.sessionId}" 
 						aria-expanded="false" aria-controls="collapse${groupSummary.sessionId}" >
 					<fmt:message key="monitoring.label.group" />&nbsp;${groupSummary.sessionName}
@@ -263,7 +263,7 @@
 			</span>
         </div>
         
-        <div id="collapse${groupSummary.sessionId}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading${groupSummary.sessionId}">
+        <div id="collapse${groupSummary.sessionId}" class="card-collapse collapse in" role="tabcard" aria-labelledby="heading${groupSummary.sessionId}">
 	</c:if>
 	
 	<c:choose>
@@ -300,7 +300,7 @@
 	
 	<c:if test="${sessionMap.isGroupedActivity}">
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	</c:if>
 	${ !sessionMap.isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 	

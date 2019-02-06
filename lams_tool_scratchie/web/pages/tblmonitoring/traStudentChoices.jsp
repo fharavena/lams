@@ -43,8 +43,8 @@
 <!-- Table --> 
 <div class="row no-gutter">
 <div class="col-xs-12 col-md-12 col-lg-12">
-<div class="panel">
-<div class="panel-body table-responsive">
+<div class="card card-plain">
+<div class="card-body table-responsive">
           
 	<table id="questions-data" class="table table-responsive table-striped table-bordered table-hover table-condensed">
 		<thead>
@@ -142,11 +142,11 @@
 	<div class="modal-content">
 	<div class="modal-body">
 	
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><span class="float-left space-right">Q${i.index+1})</span> ${item.title}</h4>
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title"><span class="float-left space-right">Q${i.index+1})</span> ${item.title}</h4>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 			
 				<div>
 					${item.description}

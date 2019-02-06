@@ -129,7 +129,7 @@
 		
 		<lams:Page type="learner" title="${scribeDTO.title}">
 		
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${scribeDTO.instructions}" escapeXml="false" />		
 			</div>
 		
@@ -145,13 +145,13 @@
 			<c:forEach var="reportDTO" items="${scribeSessionDTO.reportDTOs}">
 				<div class="row">
 					<div class="col-xs-12">
-						<div class="panel panel-default">
-							<div class="panel-heading panel-title">
+						<div class="card card-plain">
+							<div class="card-header card-title">
 								<c:out value="${reportDTO.headingDTO.headingText}" escapeXml="false" />
 							</div>
-							<div class="panel-body">
+							<div class="card-body">
 		
-								<div class="panel-warning panel-body bg-warning">
+								<div class="card-warning card-body bg-warning">
 									<abbr class="pull-right hidden-xs" title="<fmt:message key="label.what.others.see" />"><i
 										class="fa fa-xs fa-question-circle text-info"></i></abbr>
 		

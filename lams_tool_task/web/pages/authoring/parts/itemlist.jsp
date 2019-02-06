@@ -40,7 +40,7 @@
 	</table>
 </div>
 
-<%-- This script will works when a new item is submitted in order to refresh "TaskList List" panel. --%>
+<%-- This script will works when a new item is submitted in order to refresh "TaskList List" card. --%>
 <script lang="javascript">
 	if ($("#resourceInputArea").is(':visible')) { 
 		hideMessage();

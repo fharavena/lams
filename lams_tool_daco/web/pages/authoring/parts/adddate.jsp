@@ -18,12 +18,12 @@
 </lams:head>
 <body class="tabpart">
 
-<div class="panel panel-default">
-<div class="panel-heading">
-	<div class="panel-title"><fmt:message key="label.authoring.basic.date" /></div>
+<div class="card card-plain">
+<div class="card-header">
+	<div class="card-title"><fmt:message key="label.authoring.basic.date" /></div>
 </div>
 
-<div class="panel-body">
+<div class="card-body">
 
 <!-- Add question form-->
 <lams:errors/>
@@ -36,7 +36,7 @@
 
 	<!--  Options -->  
 	<a href="javascript:toggleAdditionalOptionsArea()" class="fa-xs"><i id="faIcon" class="fa fa-plus-square-o"></i> <span id="toggleAdditionalOptionsAreaLink"><fmt:message key="label.authoring.basic.additionaloptions.show" /></span></a>
-	<div id="additionalOptionsArea" style="display: none;" class="panel-body">
+	<div id="additionalOptionsArea" style="display: none;" class="card-body">
 		<div class="checkbox">
 		    <label>
 	 	      <form:checkbox path="questionRequired" id="questionRequired"/>&nbsp;<fmt:message key="label.authoring.basic.required" />

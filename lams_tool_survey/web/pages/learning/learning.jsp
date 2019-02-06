@@ -43,7 +43,7 @@
 
 		<lams:Page type="learner" title="${sessionMap.title}">
 
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${sessionMap.instructions}" escapeXml="false" />
 			</div>
 			<c:if test="${not empty sessionMap.submissionDeadline}">

@@ -2,7 +2,7 @@
 
 <c:set var="dto" value="${contentDTO}" />
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${contentDTO.title}" escapeXml="true"/>
 	</h4>

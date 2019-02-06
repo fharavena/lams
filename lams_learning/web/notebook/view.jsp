@@ -90,9 +90,9 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 			</c:set>
 	
 			<!-- title -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
+			<div class="card card-plain">
+				<div class="card-header">
+					<h4 class="card-title">
 						<c:choose>
 							<c:when test="${param.mode == 'edit'}">
 								<fmt:message key="mynotes.edit.heading">
@@ -108,7 +108,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 					</h4>
 	
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 					<c:choose>
 						<c:when test="${param.mode == 'edit'}">
 							<div class="form-group" style="text-align: left;">
@@ -127,7 +127,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 							<c:set var="entryTxt">
 								<c:out value="${entry.entry}" escapeXml="false" />
 							</c:set>
-							<div class="panel">
+							<div class="card card-plain">
 								<lams:out value="${entryTxt}" />
 							</div>
 							<c:if test="${mode == 'teacher'}">

@@ -4,15 +4,15 @@
 	<fmt:message key="label.learning.tasks.to.do" />
 </h4>
 
-<div class="panel-group" id="accordion">
+<div class="card-group" id="accordion">
 	<c:forEach var="itemDTO" items="${sessionMap.itemDTOs}" varStatus="status">
 		<c:set var="item" value="${itemDTO.taskListItem}" />
 
 		<c:if test="${itemDTO.allowedByParent}">
 
-			<div class="panel panel-default">
-				<div class="panel-heading clearfix">
-					<div class="panel-title pull-left" data-toggle="collapse" data-target="#collapse${item.uid}">
+			<div class="card card-plain">
+				<div class="card-header clearfix">
+					<div class="card-title pull-left" data-toggle="collapse" data-target="#collapse${item.uid}">
 						<c:out value="${item.title}" escapeXml="true" /> 
 						<c:if test="${!item.createByAuthor && item.createBy != null}">
 							[<c:out value="${item.createBy.firstName} ${item.createBy.lastName}" escapeXml="true" />]
@@ -44,8 +44,8 @@
 					</div>
 				</div>
 				
-				<div id="collapse${item.uid}" class="panel-collapse collapse <c:if test="${not item.complete}">in</c:if>">
-					<div class="panel-body">
+				<div id="collapse${item.uid}" class="card-collapse collapse <c:if test="${not item.complete}">in</c:if>">
+					<div class="card-body">
 						<!-- task details -->
 						<%@ include file="/pages/learning/parts/itemdetails.jsp"%>
 					</div>

@@ -26,6 +26,7 @@
 <script type="text/javascript" src="<lams:LAMSURL />includes/javascript/d3.js"></script>
 <script type="text/javascript" src="<lams:LAMSURL />includes/javascript/chart.js"></script>
 <script type="text/javascript" src="<lams:WebAppURL/>includes/javascript/monitorLesson.js"></script>
+<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/popper.min.js"></script>
 <script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"></script>
 <script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap.tabcontroller.js"></script>
 <script type="text/javascript" src="<lams:LAMSURL />includes/javascript/bootstrap-tour.min.js"></script> 
@@ -209,7 +210,7 @@
 		
 <!-- Header -->
 <div class="row no-gutter">
-	<div class="col-xs-12 col-md-12 col-lg-8">
+	<div class="col-sm-12 col-md-12 col-lg-8">
 		<h3>
 			<fmt:message key="label.sequence.diagram"/>
 		</h3>
@@ -220,7 +221,7 @@
 <!-- Notifications -->  
 <c:if test="${(lesson.lessonStateId == 3) || (lesson.lessonStateId == 4) }">
 	<div class="row no-gutter">
-		<div class="col-xs-6 col-md-4 col-lg-4 ">
+		<div class="col-sm-6 col-md-4 col-lg-4 ">
 			<a href="#nogo" type="button" id="disable-sequence-button" class="btn btn-sm btn-default">
 				<span id="disable-sequence-label">
 					<c:choose>
@@ -241,8 +242,8 @@
 
 <!-- Tables -->
 	<div class="row no-gutter">
-	<div class="col-xs-12">
-	<div class="panel panel-success">
+	<div class="col-sm-12">
+	<div class="card card-success">
 	
 	<div id="tabSequence">
 		<div id="sequenceCanvas"></div>

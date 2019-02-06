@@ -1,8 +1,8 @@
 <%@ include file="/common/taglibs.jsp"%>
 <c:set var="ctxPath" value="${pageContext.request.contextPath}"	scope="request" />
 <div id="itemList">
-<div class="panel panel-default voffset5">
-	<div class="panel-heading panel-title">
+<div class="card card-plain voffset5">
+	<div class="card-header card-title">
 		<fmt:message key="label.authoring.basic.survey.list.title" />
 		<i class="fa fa-spinner" style="display: none" id="resourceListArea_Busy"></i>
 	</div>
@@ -66,7 +66,7 @@
 </div>
 </div>
 
-<%-- This script will works when a new resource item submit in order to refresh "Survey List" panel. --%>
+<%-- This script will works when a new resource item submit in order to refresh "Survey List" card. --%>
 <script lang="javascript">
 	if ($("#questionInputArea").is(':visible')) {
 		hideMessage();

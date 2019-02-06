@@ -39,7 +39,7 @@
 			<form:form action="submitReflection.do"  modelAttribute="learningForm" method="post" onsubmit="disableFinishButton();" id="learningForm">
 				<form:hidden path="scribeUserUID" />
 		
-				<div class="panel">
+				<div class="card card-plain">
 					<lams:out value="${scribeDTO.reflectInstructions}" escapeHtml="true"/>
 				</div>
 		

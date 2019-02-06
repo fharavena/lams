@@ -93,7 +93,7 @@
 	  	})
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 <div class="pull-right">
 	<c:if test="${not sessionMap.isGroupedActivity }">
 		<c:forEach var="sessionSummary" items="${monitoringSummary}" varStatus="status">
@@ -125,15 +125,15 @@
 	</c:when>
 	<c:otherwise>
 		<c:if test="${sessionMap.isGroupedActivity}">
-			<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+			<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 		</c:if>
 
 		<c:forEach var="sessionSummary" items="${monitoringSummary}" varStatus="status">
 			<c:url var="viewRecordList" value="/monitoring/listRecords.do?sessionMapID=${sessionMapID}&toolSessionID=${sessionSummary.sessionId}&sort=1" />
  		<c:if test="${sessionMap.isGroupedActivity}">
-			    <div class="panel panel-default" >
-			        <div class="panel-heading" id="heading${sessionSummary.sessionId}">
-						<span class="panel-title collapsable-icon-left">
+			    <div class="card card-plain" >
+			        <div class="card-header" id="heading${sessionSummary.sessionId}">
+						<span class="card-title collapsable-icon-left">
 			        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${sessionSummary.sessionId}" 
 							aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${sessionSummary.sessionId}" >
 						<fmt:message key="label.learning.tableheader.summary.group" />: <c:out value="${sessionSummary.sessionName}"/></a>
@@ -142,7 +142,7 @@
 						<fmt:message key="label.monitoring.viewrecords.all" />
 						</a>					
 			        </div>
-			        <div id="collapse${sessionSummary.sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${sessionSummary.sessionId}">
+			        <div id="collapse${sessionSummary.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${sessionSummary.sessionId}">
 		</c:if>
 		
 					<!-- Details for the group / whole of class -->
@@ -162,13 +162,13 @@
 
 		<c:if test="${sessionMap.isGroupedActivity}">
 					</div> <!-- end collapse area  -->
-				</div> <!-- end collapse panel  -->
+				</div> <!-- end collapse card  -->
 				${status.last ? '' : '<div class="voffset5">&nbsp;</div>'}
 		</c:if>
 
 		</c:forEach>
 		<c:if test="${sessionMap.isGroupedActivity}">
-			</div> <!-- end panel-group for accordian -->
+			</div> <!-- end card-group for accordian -->
 		</c:if>
 
 	</c:otherwise>

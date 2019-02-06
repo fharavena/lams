@@ -11,16 +11,16 @@
 <c:forEach var="group" items="${summaryList}" varStatus="firstGroup">
 
 	<c:if test="${sessionMap.isGroupedActivity}">
-		<div class="panel panel-default" >
-			<div class="panel-heading">
-				<span class="panel-title">
+		<div class="card card-plain" >
+			<div class="card-header">
+				<span class="card-title">
 					<fmt:message key="monitoring.label.group" /> ${group[0].sessionName}
 				</span>
 			</div>
 		</div>
 	</c:if>
 	
-	<div class="panel-body">
+	<div class="card-body">
 	<table class="table table-condensed table-striped">
 		<tr>
 			<th width="20%" align="center">

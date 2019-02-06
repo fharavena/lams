@@ -42,7 +42,7 @@
 
 	<lams:Page type="learner" title="${commonCartridge.title}">
 
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${commonCartridge.instructions}" escapeXml="false"/>
 		</div>
 		
@@ -91,13 +91,13 @@
 		<%--Reflection--------------------------------------------------%>
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
-			<div class="panel panel-default voffset10">
+			<div class="card card-plain voffset10">
 				
-				<div class="panel-heading panel-title">
+				<div class="card-header card-title">
 					<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true"/>
 				</div>
 
-				<div class="panel-body">
+				<div class="card-body">
 					<c:choose>
 						<c:when test="${empty sessionMap.reflectEntry}">
 							<em> <fmt:message key="message.no.reflection.available" /></em>

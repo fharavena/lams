@@ -172,13 +172,13 @@
 		<lams:errors/>
 
 		<!--  Instructions -->
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${resource.instructions}" escapeXml="false"/>
 		</div>
 
 		<!-- Resources to View -->
-		<div class="panel panel-default">
-			<div class="panel-heading panel-title">
+		<div class="card card-plain">
+			<div class="card-header card-title">
 				<fmt:message key="label.resoruce.to.review" />
 
 				<!--  Panel button bar controlling refresh and adding items -->
@@ -208,7 +208,7 @@
 						</c:choose>
 					</c:if>
 				</div>
-				<!--  End panel button bar -->
+				<!--  End card button bar -->
 			</div> 
 
 			<table class="table table-hover table-striped table-condensed">
@@ -276,11 +276,11 @@
 
 		<!-- Reflection -->
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="title.reflection" />
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 					<div class="reflectionInstructions">
 						<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 					</div>

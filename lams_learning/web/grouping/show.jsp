@@ -57,12 +57,12 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 	
 			<c:set var="userId" value="${user.userID}" />
 	
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<i class="fa fa-sm fa-users text-primary"></i>&nbsp;
 					<fmt:message key="label.view.groups.title" />
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 	
 					<div class="table-responsive">
 						<table class="table table-condensed table-hover" cellspacing="0">

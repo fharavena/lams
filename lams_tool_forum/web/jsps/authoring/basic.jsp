@@ -49,7 +49,7 @@
 		var url = "<c:url value="/authoring/editTopic.do?topicIndex="/>" + topicIndex +"&reqID="+reqIDVar.getTime()+"&sessionMapID="+sessionMapID;;
 		showMessage(url);
 	}
-	//The panel of taskList list panel
+	//The card of taskList list card
 	var topicListTargetDiv = "messageListArea";
 	function deleteTopic(topicIndex, sessionMapID){
 

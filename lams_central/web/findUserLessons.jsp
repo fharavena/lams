@@ -50,7 +50,7 @@
 	
 	<lams:Page type="admin" title="${title}">
 
-		<div class="panel">
+		<div class="card card-plain">
 			<fmt:message key="lessonsearch.instuctions" />
 		</div>
 

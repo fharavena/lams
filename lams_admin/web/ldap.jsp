@@ -36,18 +36,18 @@
 			<a href="<lams:LAMSURL/>admin/sysadminstart.do" class="btn btn-default"><fmt:message key="sysadmin.maintain" /></a>
 		</p>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="panel-title"><fmt:message key="sysadmin.ldap.configuration"/></div>
+		<div class="card card-plain">
+			<div class="card-header">
+				<div class="card-title"><fmt:message key="sysadmin.ldap.configuration"/></div>
 			</div>
 				
-			<div class="panel-body panel-default">
+			<div class="card-body card-plain">
 				<c:if test="${not empty config}">
 					<form:form action="../config/save.do" modelAttribute="configForm" id="configForm" method="post">
 						<c:forEach items="${config}" var="group">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<div class="panel-title"><fmt:message key="${group.key}"/></div>
+							<div class="card card-plain">
+								<div class="card-header">
+									<div class="card-title"><fmt:message key="${group.key}"/></div>
 								</div>
 												
 								<table class="table table-striped table-condensed" >
@@ -103,12 +103,12 @@
 			</div>
 		</div>
 		
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="panel-title"><fmt:message key="heading.ldap.synchronise"/></div>
+		<div class="card card-plain">
+			<div class="card-header">
+				<div class="card-title"><fmt:message key="heading.ldap.synchronise"/></div>
 			</div>
 				
-					<div class="panel-body panel-default">
+					<div class="card-body card-plain">
 						<p><fmt:message key="msg.ldap.synchronise.intro"/></p>
 						<p><fmt:message key="msg.ldap.synchronise.warning"/></p>
 						

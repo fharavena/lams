@@ -2,8 +2,8 @@
 <c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 <c:set var="availableQuestions" value="${sessionMap.availableQuestions}" />
 
-<div class="panel panel-default voffset5">
-	<div class="panel-heading panel-title">
+<div class="card card-plain voffset5">
+	<div class="card-header card-title">
 		<fmt:message key="label.authoring.basic.question.list.title" />
 	</div>
 

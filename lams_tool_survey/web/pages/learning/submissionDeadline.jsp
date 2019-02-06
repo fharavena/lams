@@ -31,12 +31,12 @@
 		</lams:Alert>
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
-			<div class="panel panel-default voffset10">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain voffset10">
+				<div class="card-header card-title">
 
 					<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 
 					<c:choose>
 						<c:when test="${empty sessionMap.reflectEntry}">
@@ -46,7 +46,7 @@
 							</p>
 						</c:when>
 						<c:otherwise>
-							<div class="panel-body bg-warning">
+							<div class="card-body bg-warning">
 								<lams:out escapeHtml="true" value="${sessionMap.reflectEntry}" />
 							</div>
 						</c:otherwise>

@@ -127,7 +127,7 @@
 		
 		<lams:Page type="learner" title="${scribeDTO.title}">
 		
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${scribeDTO.instructions}" escapeXml="false" />
 			</div>
 		
@@ -145,11 +145,11 @@
 		
 					<div class="row">
 						<div class="col-xs-12">
-							<div class="panel panel-default">
-								<div class="panel-heading panel-title">
+							<div class="card card-plain">
+								<div class="card-header card-title">
 									<c:out value="${reportDTO.headingDTO.headingText}" escapeXml="false" />
 								</div>
-								<div class="panel-body">
+								<div class="card-body">
 									<abbr class="pull-right hidden-xs" title="<fmt:message key="label.scribe.posted" />"><i
 										class="fa fa-xs fa-question-circle text-info"></i></abbr>
 		

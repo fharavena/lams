@@ -18,9 +18,9 @@
 	<c:forEach var="group" items="${summaryList}" varStatus="firstGroup">
 	
 		<c:if test="${sessionMap.isGroupedActivity}">	
-		    <div class="panel panel-default" >
-	        <div class="panel-heading" id="heading${toolSessionDto.sessionID}">
-				<span class="panel-title">
+		    <div class="card card-plain" >
+	        <div class="card-header" id="heading${toolSessionDto.sessionID}">
+				<span class="card-title">
 					<fmt:message key="monitoring.label.group" />&nbsp;${group.sessionName}
 				</span>
 	        </div>

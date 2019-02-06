@@ -1,13 +1,13 @@
- <div class="panel panel-default" >
-	<div class="panel-heading" id="heading-advanced-questions">
-		<span class="panel-title collapsable-icon-left">
+ <div class="card card-plain" >
+	<div class="card-header" id="heading-advanced-questions">
+		<span class="card-title collapsable-icon-left">
 			<a class=collapsed role="button" data-toggle="collapse" href="#advanced-questions" 
 				aria-expanded="true" aria-controls="advanced-questions" >
 			<fmt:message key="label.Questions" /></a>
 		</span>
      </div>
      
-     <div id="advanced-questions" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-advanced-questions">
+     <div id="advanced-questions" class="card-collapse collapse" role="tabcard" aria-labelledby="heading-advanced-questions">
 
 		<table class="table table-condensed table-striped">
 			<c:forEach var="question" items="${content.mcQueContents}" varStatus="i">

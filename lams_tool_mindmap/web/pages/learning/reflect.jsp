@@ -37,7 +37,7 @@
 			<form:hidden path="mindmapContent" id="mindmapContent" />
 			<form:hidden path="mode" />
 		
-			<div class="panel">
+			<div class="card card-plain">
 				<lams:out value="${reflectInstructions}" escapeHtml="true"/>
 			</div>
 			

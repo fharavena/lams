@@ -3,7 +3,7 @@
 <c:set scope="request" var="lams"><lams:LAMSURL/></c:set>
 <c:set scope="request" var="tool"><lams:WebAppURL/></c:set>
 
-<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="false"> 
+<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="false"> 
 
 <c:forEach var="sessionDto" items="${sessionDTOs}" varStatus="status">
 	<c:set var="sessionUid" value="${sessionDto.sessionUid}"/>
@@ -33,16 +33,16 @@
 		</div>
 	</c:set>						
 		
-	<div class="panel panel-default" >
-       <div class="panel-heading " id="heading${sessionUid}">
-  	    	<span class="panel-title  collapsable-icon-left">
+	<div class="card card-plain" >
+       <div class="card-header " id="heading${sessionUid}">
+  	    	<span class="card-title  collapsable-icon-left">
   	    	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${sessionUid}" 
 				aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${sessionUid}" >
 		<c:out value="${sessionDto.sessionName}"/></a>
 		</span>  ${buttonbar}
        </div>
        
-       <div id="collapse${sessionUid}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${sessionUid}">
+       <div id="collapse${sessionUid}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${sessionUid}">
 
 	<table class="table table-condensed table-striped">							
 
@@ -93,10 +93,10 @@
  	<p id="chartDiv${sessionDto.toolSessionId}" style="height: 220px; display: none;"></p>
  
 	</div> <!-- end collapse area  -->
-	</div> <!-- end collapse panel  -->
+	</div> <!-- end collapse card  -->
  	${ ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 	
 </c:forEach>				
 
-</div> <!--  end panel group -->
+</div> <!--  end card group -->
 

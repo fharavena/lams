@@ -11,6 +11,7 @@
 	<lams:css webapp="monitoring" suffix="tblmonitor"/>
 	
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"></script>
+	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/popper.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/progressBar.js"></script>
 	<script>
@@ -277,7 +278,7 @@
 
 			<!-- Top bar -->
 			<div class="top-nav">
-				<div class="col-xs-5 col-md-3 col-lg-3">
+				<div class="col-sm-5 col-md-3 col-lg-3">
 					<a href="#">
 						<i class="fa fa-bars fa-lg" id="menu-toggle-bars"></i>
 					</a>

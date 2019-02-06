@@ -26,11 +26,11 @@
 <body class="stripes">
 
 	<lams:Page title="" type="learner" usePanel="false" hideProgressBar="${!sessionMap.runAuto}">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-plain">
+			<div class="card-header">
 				<div id="headerFrame"></div>
 			</div>
-			<div class="panel-body" style="height:100vh;">
+			<div class="card-body" style="height:100vh;">
 				<iframe src="<c:url value='${commonCartridgeItemReviewUrl}'/>" id="commonCartridgeFrame" style="border:0px;width:100%;height:100%;" onload="setIframeHeight()"></iframe>
 				</div>
 		</div>

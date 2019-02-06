@@ -51,7 +51,7 @@
 
 		<lams:Page type="learner" title="${pixlrDTO.title}">
 		
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${pixlrDTO.instructions}" escapeXml="false"/>
 			</div>
 		
@@ -98,12 +98,12 @@
 						<form:hidden path="mode" value="${mode}" />	
 						<form:hidden path="toolSessionID" id="toolSessionID"/>
 						
-						<div class="panel panel-default voffset10">
-							<div class="panel-heading panel-title">
+						<div class="card card-plain voffset10">
+							<div class="card-header card-title">
 								${pixlrDTO.reflectInstructions}
 							</div>
 					
-							<div class="panel-body">
+							<div class="card-body">
 								<c:choose>
 									<c:when test="${not empty pixlrUserDTO.notebookEntry}">
 										<lams:out escapeHtml="true" value="${pixlrUserDTO.notebookEntry}" />

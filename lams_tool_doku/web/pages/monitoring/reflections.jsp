@@ -6,10 +6,10 @@
 	});
 </script>
 		
-<div class="panel-group" id="accordionReflection" role="tablist" aria-multiselectable="true"> 
-    <div class="panel panel-default" >
-        <div class="panel-heading collapsable-icon-left" id="headingReflection">
-        	<span class="panel-title">
+<div class="card-group" id="accordionReflection" role="tablist" aria-multiselectable="true"> 
+    <div class="card card-plain" >
+        <div class="card-header collapsable-icon-left" id="headingReflection">
+        	<span class="card-title">
 	    		<a class="collapsed" role="button" data-toggle="collapse" href="#collapseReflection" 
 	    				aria-expanded="false" aria-controls="collapseReflection" >
           			<fmt:message key="title.reflection"/>
@@ -17,7 +17,7 @@
       		</span>
         </div>
 
-        <div id="collapseReflection" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingReflection">
+        <div id="collapseReflection" class="card-collapse collapse" role="tabcard" aria-labelledby="headingReflection">
 			<table class="table table-striped table-condensed">
 				<c:forEach var="reflectDTO" items="${sessionMap.reflectList}">
 					<tr>

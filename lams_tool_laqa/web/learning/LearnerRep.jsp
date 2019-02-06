@@ -317,13 +317,13 @@
 			<c:forEach var="userResponse" items="${generalLearnerFlowDTO.userResponses}" varStatus="status">
 				<div class="row no-gutter">
 					<div class="col-xs-12">
-						<div class="panel panel-default">
-							<div class="panel-heading panel-title">
+						<div class="card card-plain">
+							<div class="card-header card-title">
 								<fmt:message key="label.question" />
 								${status.count}:
 							</div>
-							<div class="panel-body">
-								<div class="panel">
+							<div class="card-body">
+								<div class="card card-plain">
 									<c:out value="${userResponse.qaQuestion.question}" escapeXml="false" />
 								</div>
 	

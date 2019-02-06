@@ -12,8 +12,8 @@
 		</c:set>
 		<lams:Page type="learner" title="${title}">
 		
-			<div class="panel panel-default">	
-				<div class="panel-heading panel-title ">
+			<div class="card card-plain">	
+				<div class="card-header card-title ">
 					<div class="row">
 						<a href="javascript:;" onclick="javascipt:launchPopup('<c:url value='${popupUrl}'/>','popupUrl');"
 								class="btn btn-primary pull-right roffset5">

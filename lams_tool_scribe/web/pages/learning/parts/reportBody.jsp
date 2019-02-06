@@ -1,7 +1,7 @@
 
 <%@ include file="/common/taglibs.jsp"%>
 
-<div class="panel">
+<div class="card card-plain">
 	<c:out value="${scribeDTO.instructions}" escapeXml="false" />
 </div>
 
@@ -15,11 +15,11 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<c:out value="${reportDTO.headingDTO.headingText}" escapeXml="false" />
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 					<c:if test="${not empty reportDTO.entryText}">
 						<c:set var="entry">
 							<lams:out value="${reportDTO.entryText}" escapeHtml="true" />
@@ -35,16 +35,16 @@
 <c:if test="${scribeUserDTO.finishedActivity and scribeDTO.reflectOnActivity}">
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="heading.reflection" />
 				</div>
-				<div class="panel-body">
-					<div class="panel">
+				<div class="card-body">
+					<div class="card card-plain">
 						<lams:out value="${scribeDTO.reflectInstructions}" escapeHtml="true" />
 					</div>
 
-					<div class="panel-body bg-warning voffset10">
+					<div class="card-body bg-warning voffset10">
 						<lams:out value="${scribeUserDTO.notebookEntry}" escapeHtml="true" />
 					</div>
 				</div>
@@ -64,18 +64,18 @@
 		<c:set var="sessNumber" value="${sessNumber +1 }"/>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="panel panel-default">
-					<div class="panel-heading panel-title">
-					<a data-toggle="collapse" data-target="#panel-${sessNumber}" href="#panel-${sessNumber}">${scribeSessionDTO.sessionName}</a>
+				<div class="card card-plain">
+					<div class="card-header card-title">
+					<a data-toggle="collapse" data-target="#card-${sessNumber}" href="#card-${sessNumber}">${scribeSessionDTO.sessionName}</a>
 					</div>
-					<div id="panel-${sessNumber}" class="panel-body panel-collapse collapse in">
+					<div id="card-${sessNumber}" class="card-body card-collapse collapse in">
 
 						<c:forEach var="reportDTO" items="${scribeSessionDTO.reportDTOs}">
-							<div class="panel panel-info">
-								<div class="panel-heading panel-title">
+							<div class="card card-info">
+								<div class="card-header card-title">
 									<c:out value="${reportDTO.headingDTO.headingText}" escapeXml="false" />
 								</div>
-								<div class="panel-body">
+								<div class="card-body">
 									<c:if test="${not empty reportDTO.entryText}">
 										<c:set var="entry">
 											<lams:out value="${reportDTO.entryText}" escapeHtml="true" />

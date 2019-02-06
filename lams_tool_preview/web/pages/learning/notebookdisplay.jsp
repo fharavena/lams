@@ -1,8 +1,8 @@
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="title.reflection" />
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 					<div class="reflectionInstructions">
 						<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 					</div>

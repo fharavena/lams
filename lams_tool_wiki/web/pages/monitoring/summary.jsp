@@ -56,7 +56,7 @@
 
 <c:set var="dto" value="${wikiDTO}" />
  
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${dto.title}" escapeXml="true"/>
 	</h4>

@@ -26,14 +26,14 @@
 	</c:forEach>
 
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="panel panel-default" >
-        <div class="panel-heading" id="heading${toolSessionDto.sessionID}">
-			<span class="panel-title">
+	    <div class="card card-plain" >
+        <div class="card-header" id="heading${toolSessionDto.sessionID}">
+			<span class="card-title">
 				<fmt:message key="message.session.name" />: <c:out value="${toolSessionDto.sessionName}" />
 			</span>
         </div>
 
-        <div class="panel-body">
+        <div class="card-body">
 	</c:if>
 
 	<h4><fmt:message key="monitoring.tab.summary"/></h4>

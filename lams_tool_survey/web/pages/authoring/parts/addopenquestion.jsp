@@ -6,11 +6,11 @@
 </script>
 <script type="text/javascript" src="<lams:WebAppURL/>/includes/javascript/surveyitem.js"></script>
 
-	<div class="panel panel-default add-file">
-		<div class="panel-heading panel-title">
+	<div class="card card-plain add-file">
+		<div class="card-header card-title">
 			<fmt:message key="label.authoring.basic.add.survey.question" />
 		</div>
-		<div class="panel-body">
+		<div class="card-body">
 
 		
 

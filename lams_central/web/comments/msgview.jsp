@@ -24,9 +24,9 @@
 
   <div class="row no-gutter">
     <div class="col-xs-12" style="margin-left:${indentSize}px;padding-right:${paddingRightSize}px">
-      <div class="panel panel-default ${highlightClass} msg" id="msg${commentDto.comment.uid}">
-        <div class="panel-heading">
-          <h4 class="panel-title">
+      <div class="card card-plain ${highlightClass} msg" id="msg${commentDto.comment.uid}">
+        <div class="card-header">
+          <h4 class="card-title">
           
           	<%-- authors name --%>
 			<c:set var="msgAuthor" value="${commentDto.authorname}" />
@@ -90,7 +90,7 @@
             </span>         
           </h4>
         </div>
-        <div class="panel-body ${bgClass}" id="pb-msg${commentDto.comment.uid}">
+        <div class="card-body ${bgClass}" id="pb-msg${commentDto.comment.uid}">
         
         	  <c:if test='${(sessionMap.mode == "teacher") or not (anonymous or hidden)}'>
 	      <div class="pull-left roffset10"><lams:Portrait userId="${commentDto.authorUserId}"/></div>

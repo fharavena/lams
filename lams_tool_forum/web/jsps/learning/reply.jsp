@@ -142,11 +142,11 @@
 			<form:hidden path="sessionMapID"/>
 			
 			<div class="container-fluid">
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="title.message.reply" />
 				</div>
-		 		<div class="panel-body">
+		 		<div class="card-body">
 					<lams:errors/>
 					<%@ include file="/jsps/learning/message/topicreplyform.jsp"%>
 				</div> 

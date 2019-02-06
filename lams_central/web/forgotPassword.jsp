@@ -101,7 +101,7 @@
 
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="panel-body">
+					<div class="card-body">
 
 						<div class="form-group">
 							<input type="radio" id="loginCheck" name="selectType"

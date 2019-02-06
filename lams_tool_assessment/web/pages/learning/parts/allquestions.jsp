@@ -4,8 +4,8 @@
 						
 		<input type="hidden" name="questionUid${status.index}" id="questionUid${status.index}" value="${question.uid}" />						
 							
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-plain">
+			<div class="card-header">
 				<c:if test="${assessment.numbered}">
 					<span class="question-numbers">
 						${status.index + sessionMap.questionNumberingOffset}.
@@ -26,7 +26,7 @@
 				${question.question}
 			</div>
 					
-			<div class="panel-body" id="question-area-${status.index}">
+			<div class="card-body" id="question-area-${status.index}">
 				<c:choose>
 					<c:when test="${question.type == 1}">
 						<%@ include file="multiplechoice.jsp"%>

@@ -4,8 +4,8 @@
 <c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 
 <div id="itemList">
-	<div class="panel panel-default voffset5">
-		<div class="panel-heading panel-title">
+	<div class="card card-plain voffset5">
+		<div class="card-header card-title">
 			<fmt:message key="label.authoring.basic.resource.list.title" />
 			<i class="fa fa-refresh fa-spin fa-1x fa-fw" style="display:none" id="commonCartridgeListArea_Busy"></i>
 		</div>
@@ -112,7 +112,7 @@
 	</div>
 </div>
 
-<%-- This script will works when a new resoruce item submit in order to refresh "CommonCartridge List" panel. --%>
+<%-- This script will works when a new resoruce item submit in order to refresh "CommonCartridge List" card. --%>
 <script lang="javascript">	
 	if (window.parent && window.parent.refreshThickbox) {
 		window.parent.tb_remove();

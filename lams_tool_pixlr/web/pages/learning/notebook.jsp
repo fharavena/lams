@@ -38,7 +38,7 @@
 				<form:hidden path="toolSessionID" id="toolSessionID"/>
 				<form:hidden path="mode" value="${mode}" />
 				
-				<div class="panel">
+				<div class="card card-plain">
 					<lams:out value="${pixlrDTO.reflectInstructions}" escapeHtml="true"/>
 				</div>
 		

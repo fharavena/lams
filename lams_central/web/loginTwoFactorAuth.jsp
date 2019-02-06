@@ -66,15 +66,15 @@
 	</nav>
 	
 	<div class="container">
-		<div class="panel panel-default center-block" style="max-width: 350px;">
-			<div class="panel-heading">
-				<div class="panel-title"> <fmt:message key="label.2FA.login.panel" /></div>
+		<div class="card card-plain center-block" style="max-width: 350px;">
+			<div class="card-header">
+				<div class="card-title"> <fmt:message key="label.2FA.login.card" /></div>
 			</div>
 
-			<div class="panel-body" >
+			<div class="card-body" >
 				<c:if test="${!empty param.failed}">
-					<div class="panel panel-danger">
-						<div class="panel-heading">
+					<div class="card card-danger">
+						<div class="card-header">
 							<fmt:message key="error.verification.code" />
 						</div>
 					</div>

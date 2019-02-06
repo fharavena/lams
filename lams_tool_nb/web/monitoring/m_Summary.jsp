@@ -8,7 +8,7 @@
 	});
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4><c:out value="${nbMonitoringForm.title}" escapeXml="true" /></h4>
 	<div class="voffset5"><c:out value="${nbMonitoringForm.basicContent}" escapeXml="false" /></div>
 </div>

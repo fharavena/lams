@@ -256,7 +256,7 @@
 		</button>
 	</c:if>
 
-	<div class="panel">
+	<div class="card card-plain">
 		<h4>
 		    <c:out value="${scratchie.title}" escapeXml="true"/>
 		</h4>
@@ -310,37 +310,37 @@
 			<c:set var="summaryTitle"><fmt:message key="monitoring.label.group" /></B> ${summary.sessionName}</c:set>
 		</c:if>
 		
-	    <div class="panel panel-default" >
-        <div class="panel-heading" id="heading${summary.sessionId}">
-        	<span class="panel-title collapsable-icon-left">
+	    <div class="card card-plain" >
+        <div class="card-header" id="heading${summary.sessionId}">
+        	<span class="card-title collapsable-icon-left">
         	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${summary.sessionId}" 
 					aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${summary.sessionId}" >
 				${summaryTitle}</a>
 			</span>
         </div>
         
-        <div id="collapse${summary.sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${summary.sessionId}">
+        <div id="collapse${summary.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${summary.sessionId}">
 
 		<table id="list${summary.sessionId}" class="scroll" cellpadding="0" cellspacing="0"></table>
 		
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	
 	</c:forEach>
 
 	<!-- Display burningQuestionItemDtos -->
 	<c:if test="${scratchie.burningQuestionsEnabled}">
-		<div class="panel-group" id="accordionBurning" role="tablist" aria-multiselectable="true"> 
-		    <div class="panel panel-default" >
-		        <div class="panel-heading collapsable-icon-left" id="headingBurning">
-		        	<span class="panel-title">
+		<div class="card-group" id="accordionBurning" role="tablist" aria-multiselectable="true"> 
+		    <div class="card card-plain" >
+		        <div class="card-header collapsable-icon-left" id="headingBurning">
+		        	<span class="card-title">
 			    	<a role="button" data-toggle="collapse" href="#collapseBurning" aria-expanded="false" aria-controls="collapseBurning" >
 		          	<fmt:message key="label.burning.questions" />
 		        	</a>
 		      		</span>
 		        </div>
 		
-		        <div id="collapseBurning" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingBurning">
+		        <div id="collapseBurning" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingBurning">
 					<c:forEach var="burningQuestionItemDto" items="${sessionMap.burningQuestionItemDtos}" varStatus="i">
 						<div class="voffset5"><strong>${burningQuestionItemDto.scratchieItem.title}</strong></div>
 						<table id="burningQuestions${burningQuestionItemDto.scratchieItem.uid}" class="scroll" cellpadding="0" cellspacing="0"></table>
@@ -353,10 +353,10 @@
 	<!-- Display reflection entries -->
 	<c:if test="${sessionMap.reflectOn}">
 
-		<div class="panel-group" id="accordionReflections" role="tablist" aria-multiselectable="true"> 
-		    <div class="panel panel-default" >
-		        <div class="panel-heading collapsable-icon-left" id="headingReflections">
-		        	<span class="panel-title">
+		<div class="card-group" id="accordionReflections" role="tablist" aria-multiselectable="true"> 
+		    <div class="card card-plain" >
+		        <div class="card-header collapsable-icon-left" id="headingReflections">
+		        	<span class="card-title">
 			    	<a role="button" data-toggle="collapse" href="#collapseReflections" aria-expanded="false" aria-controls="collapseReflections" >
 		          	<fmt:message key="label.learners.feedback" />
 		        	</a>
@@ -369,7 +369,7 @@
 		      		</span>
 		        </div>
 		
-		        <div id="collapseReflections" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingReflections">
+		        <div id="collapseReflections" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingReflections">
 					<table id="reflections" class="scroll" cellpadding="0" cellspacing="0"></table>
 				</div>
 			</div>

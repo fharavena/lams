@@ -27,9 +27,9 @@
 	</c:otherwise>
 </c:choose>
 
-<div class="panel panel-default ${highlightClass} msg" id="msg${msgDto.message.uid}">
-	<div class="panel-heading">
-		<div class="panel-title portrait-container-small">
+<div class="card card-plain ${highlightClass} msg" id="msg${msgDto.message.uid}">
+	<div class="card-header">
+		<div class="card-title portrait-container-small">
 
 			<c:choose>
 				<c:when test="${msgDto.message.isMonitor}">
@@ -95,9 +95,9 @@
             - <lams:Date value="${msgDto.message.updated}" timeago="true"/>
 			</div>
 		</div>
-	</div> <!--  end of panel-heading -->
+	</div> <!--  end of card-header -->
 
-	<div class="panel-body ${bgClass}" id="pb-msg${msgDto.message.uid}">
+	<div class="card-body ${bgClass}" id="pb-msg${msgDto.message.uid}">
 		<span> <c:if test='${(not hidden) || (hidden && sessionMap.mode == "teacher")}'>
 				<c:out value="${msgDto.message.body}" escapeXml="false" />
 			</c:if> <c:if test='${hidden}'>
@@ -204,8 +204,8 @@
 			</c:if>
 
 		</div> <!--  end msg-footer -->
-	</div> <!--  end panel-body -->
-</div> <!--  end panel -->
+	</div> <!--  end card-body -->
+</div> <!--  end card -->
 
 <%-- Close the 2 divs from the choose --%> 
 </div> <!--  end div outermsg -->

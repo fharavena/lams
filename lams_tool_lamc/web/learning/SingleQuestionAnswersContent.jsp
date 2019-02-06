@@ -11,8 +11,8 @@
 
 		<div class="row no-gutter">
 			<div class="col-xs-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
+				<div class="card card-plain">
+					<div class="card-header">
 						<table>
 							<tr>
 								<td style="vertical-align: top;">${dto.displayOrder})</td>
@@ -28,7 +28,7 @@
 						</table>
 					</div>
 					<!-- Display answers -->
-					<div class="panel-body">
+					<div class="card-body">
 						<div class="table-responsive">
 							<table class="table table-hover table-condensed">
 								<tbody>

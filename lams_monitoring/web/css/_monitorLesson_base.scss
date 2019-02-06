@@ -275,6 +275,7 @@ td.contributeEntryCell a {
 	width: 150px;
 	height: 150px;
 	padding: 0;
+    align-self: center;
 }
 
 #emailProgressTable input[type="checkbox"] {
@@ -283,7 +284,7 @@ td.contributeEntryCell a {
 
 
 @include media-breakpoint-up(md) {
-#lessonActions {
+#lessonActions, #tour-lesson-im, #emailActions {
 	display: inline-block;
 }
 
@@ -294,7 +295,7 @@ td.contributeEntryCell a {
 }
 
 @include media-breakpoint-down(md) {
-#lessonActions {
+#lessonActions, #tour-lesson-im, #emailActions {
 	display: inline;
 }
 }

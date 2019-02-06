@@ -107,9 +107,9 @@
 <!-- Notifications -->  
 <div class="row no-gutter">
 	<div class="col-xs-6 col-md-4 col-lg-4 ">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title">
 					<i class="fa fa-users" style="color:gray" ></i> 
 					<fmt:message key="label.attendance"/>: <span id="attempted-learners-number">${assessmentDtos[0].attemptedLearnersNumber}</span>/<span id="total-learners-number"></span> 
 				</h4> 
@@ -172,9 +172,9 @@
 			<c:forEach var="question" items="${assessmentDto.questions}" varStatus="i">
 				<div class="row no-gutter">
 				<div class="col-xs-12 col-md-12 col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title">
+				<div class="card card-plain">
+					<div class="card-header">
+						<div class="card-title">
 							<span class="float-left space-right">Q${i.index+1})</span> <c:out value="${question.title}" escapeXml="false"/>
 							<c:if test="${assessmentDto.assessment.allowDiscloseAnswers}">
 								<div class="btn-group-xs pull-right disclose-button-group" questionUid="${question.uid}">
@@ -200,7 +200,7 @@
 						</div>
 					</div>
 					
-					<div class="panel-body">
+					<div class="card-body">
 						<div class="table-responsive">	
 							<c:out value="${question.question}" escapeXml="false"/>
 							

@@ -721,7 +721,7 @@
 		
 	<c:set var="lockLabelClass">${isInTabs?"lockLabel":""}</c:set>
 	<c:set var="padlockCode">
-		<div class="visible-xs-inline">
+		<div class="d-block d-sm-none">
 		<div id="padlockLocked" style="display:none">
 			<span class="${lockLabelClass}">
 			<i class="fa fa-lock"></i>
@@ -742,14 +742,14 @@
 		<div id="tour-mark-chart-button">
 			<div id="markChartShown" style="display:none">
 			<a href="javascript:toggleMarkChart()" class="${btnclass}" title="<fmt:message key='label.hide.marks.chart'/>" >
-				<i class="fa fa-bar-chart"></i> <span class="hidden-xs">
+				<i class="fa fa-bar-chart"></i> <span class="d-none d-sm-inline">
 				<fmt:message key="label.hide.marks.chart"/>
 				</span>
 			</a> 
 		</div>
 		<div id="markChartHidden">
 			<a href="javascript:toggleMarkChart()" class="${btnclass}" title="<fmt:message key='label.show.marks.chart'/>" >
-				<i class="fa fa-bar-chart"></i> <span class="hidden-xs">
+				<i class="fa fa-bar-chart"></i> <span class="d-none d-sm-inline">
 				<fmt:message key="label.show.marks.chart"/>
 				</span>
 			</a> 
@@ -762,14 +762,14 @@
 			<div id="tour-weight-button">
 				<div id="weightShown" style="display:none">
 				<a href="javascript:toggleWeight()" class="${btnclass}" title="<fmt:message key='label.button.hide.weights'/>" >
-					<i class="fa fa-balance-scale"></i> <span class="hidden-xs">
+					<i class="fa fa-balance-scale"></i> <span class="d-none d-sm-inline">
 					<fmt:message key="label.button.hide.weights"/>
 					</span>
 				</a> 
 				</div>
 				<div id="weightHidden">
 					<a href="javascript:toggleWeight()" class="${btnclass}" title="<fmt:message key='label.button.show.weights'/>" >
-						<i class="fa fa-balance-scale"></i> <span class="hidden-xs">
+						<i class="fa fa-balance-scale"></i> <span class="d-none d-sm-inline">
 						<fmt:message key="label.button.show.weights"/>
 						</span>
 					</a> 
@@ -785,21 +785,22 @@
 		<div class="col-xs-12">
 		<div class="container" id="content">
 
-		<div class="panel panel-default panel-admin-page">
-		<div class="panel-body panel-admin-body">
+		<div class="card card-plain card-admin-page">
+		<div class="card-body card-admin-body">
 
 		<h4><fmt:message key="gradebook.title.lessonGradebook">
 					<fmt:param>
 						<c:out value="${lessonDetails.lessonName}" escapeXml="true"/>
 					</fmt:param>
 				</fmt:message></h4>
-
+		
+		<div id="gbButtons">
 		<div class="gbTopButtonsContainer pull-right">
 			${chartButtonCode}
 			${weightButtonCode}
 			<a target="_blank" class="${btnclass}" title="<fmt:message key='button.help.tooltip'/>"
 				   href="http://wiki.lamsfoundation.org/display/lamsdocs/Gradebook+Lesson+Marking">
-			<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="button.help"/></span></a>
+			<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span></a>
 		</div>
 
 		<div class="gbTopButtonsContainer pull-left" id="export-link-area">
@@ -809,6 +810,7 @@
 	
 	<c:otherwise>
 	 	
+		<div id="gbButtons">
 		<div class="gbTopButtonsContainer pull-left">
 			${padlockCode}
 		</div>
@@ -820,7 +822,7 @@
 
 			<div>
 				<a href="#nogo" id="export-grades-button" class="${btnclass}" title="<fmt:message key='gradebook.export.excel'/>" >
-					<i class="fa fa-download"></i><span id="exportSpan" class="hidden-xs">
+					<i class="fa fa-download"></i><span id="exportSpan" class="d-none d-sm-inline">
 					<fmt:message key="gradebook.export.excel" />
 					</span>
 				</a> 
@@ -830,7 +832,7 @@
 			<div id="marksNotReleased" style="display:none">
 				<a href="javascript:toggleRelease()" class="${btnclass}" 
 					title="<fmt:message key="gradebook.monitor.releasemarks.1" />&nbsp;<fmt:message key="gradebook.monitor.releasemarks.3" />" >
-					<i class="fa fa-share-alt "></i> <span class="hidden-xs">
+					<i class="fa fa-share-alt "></i> <span class="d-none d-sm-inline">
 					<fmt:message key="gradebook.monitor.releasemarks.1" />&nbsp;<fmt:message key="gradebook.monitor.releasemarks.3" />
 					</span>
 				</a>
@@ -838,7 +840,7 @@
 			<div id="marksReleased" style="display:none" class="tour-release-marks">
 				<a href="javascript:toggleRelease()" class="${btnclass}" 
 					title="<fmt:message key="gradebook.monitor.releasemarks.2" />&nbsp;<fmt:message key="gradebook.monitor.releasemarks.3" />" >
-					<i class="fa fa-share-alt "></i> <span class="hidden-xs">
+					<i class="fa fa-share-alt "></i> <span class="d-none d-sm-inline">
 					<fmt:message key="gradebook.monitor.releasemarks.2" />&nbsp;<fmt:message key="gradebook.monitor.releasemarks.3" /></span>
 				</a> 
 			</div>
@@ -849,7 +851,9 @@
 	 		${weightButtonCode}
 		</c:if>
 		
-		</div> <!-- Closes buttons -->
+		</div> <!-- Closes gbTopButtonsContainer pull-right  -->
+		</div> <!-- Closes gbButtons -->
+		
 		
 			<div class="row">
 				 <div class="col-xs-12">
@@ -860,11 +864,11 @@
 
 			<c:if test="${usesWeights}">
 			<div id="weights" class="grid-holder voffset20" style="display:none" >
-			<div class="panel panel-default">
-				<div class="panel-heading">
+			<div class="card card-plain">
+				<div class="card-header">
 					<fmt:message key="label.weights.title"/>
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 				<%-- Display weights in four columns --%>
 				<c:forEach var="weightArray" items="${weights}" varStatus="weightCounter">
 					<c:if test="${(weightCounter.index mod 3) == 0}">

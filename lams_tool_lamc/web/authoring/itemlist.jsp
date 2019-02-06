@@ -3,9 +3,9 @@
 <c:set var="questionDtos" value="${sessionMap.questionDtos}" />
 
 <div id="itemList">
-	<div class="panel panel-default add-file">
+	<div class="card card-plain add-file">
 	
-	<div class="panel-heading panel-title">
+	<div class="card-header card-title">
 		<fmt:message key="label.questions" />
 		<i class="fa fa-spinner" style="display: none" id="resourceListArea_Busy"></i>
 		<div class="btn-group btn-group-xs pull-right">

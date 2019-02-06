@@ -19,7 +19,7 @@
 			height: 45px;
 		}
 		
-		#courseHeading .panel-title {
+		#courseHeading .card-title {
 			display: inline-block;
 			margin-top: 5px;
 		}
@@ -67,9 +67,9 @@
 				</c:if>
 			</p>
 			
-			<div class="panel panel-default voffset5" >
-				<div id="courseHeading" class="panel-heading">
-					<span class="panel-title">
+			<div class="card card-plain voffset5" >
+				<div id="courseHeading" class="card-header">
+					<span class="card-title">
 						<c:if test="${orgType == 1}">
 							<fmt:message key="admin.global.roles.manage" />
 						</c:if>

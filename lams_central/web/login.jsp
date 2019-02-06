@@ -103,7 +103,7 @@
                 <h4 class="card-title"><img file="<lams:LAMSURL/>images/svg/lams_logo_white.svg"/> <fmt:message key="button.login" /></h4>
               </div>
   
-			<div id="browserNotCompatible" class="panel panel-danger" style="display: none">
+			<div id="browserNotCompatible" class="card card-danger" style="display: none">
 				 <p class="description text-center"><fmt:message key="msg.browser.compat"/></p>
             </div>
 			<c:if test="${!empty param.failed}">

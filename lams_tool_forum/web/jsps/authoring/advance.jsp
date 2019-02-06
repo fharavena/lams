@@ -52,7 +52,7 @@
 			class="form-control form-control-inline input-sm" max="5000" />
 	</div>
 
-	<lams:SimplePanel panelBodyClass="panel-body-sm">
+	<lams:SimplePanel cardBodyClass="card-body-sm">
 		<div class="checkbox">
 			<label for="allowRateMessages"><form:checkbox
 					path="forum.allowRateMessages" id="allowRateMessages"
@@ -80,7 +80,7 @@
 		</div>
 	</lams:SimplePanel>
 
-	<lams:SimplePanel panelBodyClass="panel-body-sm">
+	<lams:SimplePanel cardBodyClass="card-body-sm">
 		<fmt:message key="message.posting.limiting" />
 		<div class="radio">
 			<label for="allowNewTopic1"> <form:radiobutton

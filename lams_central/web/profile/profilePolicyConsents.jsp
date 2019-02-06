@@ -28,13 +28,13 @@
 
 <body>
 <div style="clear: both;"></div>
-<div class="container">
-	<div class="row vertical-center-row">
-		<div>
-			<div class="panel">
-				<div class="panel-body">
+	<div class="container-fluid">
+		<div class="row vertical-center-row justify-content-center">
+		<div class="col-sm-10">
+				<div class="card card-plain">
+				<div class="card-body card-plain">
 
-					<table class="table table-condensed table-striped" >
+					<table class="table table-striped" >
 						<tr>
 							<th><fmt:message key="label.policy.name" /></th>
 							<th><fmt:message key="label.policy.type" /></th>

@@ -8,19 +8,19 @@
 	</c:if>
 	
 	<c:if test="${sessionMap.isGroupedActivity}">
-	<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 	</c:if>
 	
 	<c:forEach var="groupSummary" items="${summaryList}" varStatus="status">
 		<c:if test="${sessionMap.isGroupedActivity}">	
-		    <div class="panel panel-default" >
-	        <div class="panel-heading" id="headingStats${groupSummary.sessionId}">
-				<span class="panel-title">
+		    <div class="card card-plain" >
+	        <div class="card-header" id="headingStats${groupSummary.sessionId}">
+				<span class="card-title">
 					<fmt:message key="monitoring.label.group" />: <c:out value="${groupSummary.sessionName}" />
 				</span>
 	        </div>
 	
-	        <div class="panel-body">
+	        <div class="card-body">
 		</c:if>
 	
 		<table class="table table-condensed table-no-border">

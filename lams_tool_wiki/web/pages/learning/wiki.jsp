@@ -79,12 +79,12 @@
      
     <form:form action="learning.do" method="post" id="learningForm" modelAttribute="learningForm" enctype="multipart/form-data">
 
-            <div class="panel panel-default">
-              <div class="panel-heading panel-learner-title">
+            <div class="card card-plain">
+              <div class="card-header card-learner-title">
                 <c:if test="${currentWikiPage.title != mainWikiPage.title}">
-                  <a class="panel-title panel-learner-title pull-left" href="javascript:changeWikiPage('${fn:escapeXml(mainWikiPage.javaScriptTitle)}')"> ${fn:escapeXml(mainWikiPage.title)}</a>&nbsp;/&nbsp;
+                  <a class="card-title card-learner-title pull-left" href="javascript:changeWikiPage('${fn:escapeXml(mainWikiPage.javaScriptTitle)}')"> ${fn:escapeXml(mainWikiPage.title)}</a>&nbsp;/&nbsp;
                 </c:if> 
-                <a class="panel-title panel-learner-title"  href="javascript:changeWikiPage('${fn:escapeXml(currentWikiPage.javaScriptTitle)}')">${fn:escapeXml(currentWikiPage.title)}</a>
+                <a class="card-title card-learner-title"  href="javascript:changeWikiPage('${fn:escapeXml(currentWikiPage.javaScriptTitle)}')">${fn:escapeXml(currentWikiPage.title)}</a>
 
 
                 <!-- Set up edit and add flags -->
@@ -139,7 +139,7 @@
 
                 </div> <!-- end wiki top menu -->               
               </div>
-              <div class="panel-body">
+              <div class="card-body">
               
                 <!--
 <div style="float: right; margin-left: 10px; position:relative; padding-top: 4px" class="help">
@@ -225,8 +225,8 @@
                 <div class="row no-gutter">
                   <div class="col-xs-12">
 
-                    <div class="panel panel-default" id="view">
-                      <div class="panel-heading">
+                    <div class="card card-plain" id="view">
+                      <div class="card-header">
                         <!-- Title and Last edited -->
                         <c:choose>
                             <c:when test="${currentWikiPage.currentWikiContentDTO.editorDTO == null}">
@@ -238,7 +238,7 @@
                             </c:otherwise>
                         </c:choose>
                         ${lastEditPortrait}
-                        <h4 class="panel-title">${fn:escapeXml(currentWikiPage.title)}</h4> 
+                        <h4 class="card-title">${fn:escapeXml(currentWikiPage.title)}</h4> 
                         <div class="voffset5" style="font-size: 12px">
                           <fmt:message key="label.wiki.last.edit">
                             <fmt:param>${lastEditName}</fmt:param>
@@ -248,10 +248,10 @@
                           </fmt:message> 
                         </div> <!-- End last edited -->
                       </div>
-                      <div class="panel-body" id="viewBody">
+                      <div class="card-body" id="viewBody">
                         <c:out value="${currentWikiPage.currentWikiContentDTO.body}" escapeXml="false"/>
                       </div>
-                      <div class="panel-footer" style="font-size: 12px">
+                      <div class="card-footer" style="font-size: 12px">
                         <i class="fa fa-envelope"></i> 
                         <fmt:message key="notify.learner.query">
                           <fmt:param>
@@ -285,13 +285,13 @@
                 <form:hidden path="historyPageContentId" id="historyPageContentId" />
 
 
-                <div class="panel panel-default" id="history" style="display: none">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
+                <div class="card card-plain" id="history" style="display: none">
+                  <div class="card-header">
+                    <h4 class="card-title">
                       <fmt:message key="label.wiki.history" /> - ${fn:escapeXml(currentWikiPage.title)}
                     </h4>
                   </div>
-                  <div class="panel-body">
+                  <div class="card-body">
                     <c:choose>
                       <c:when test="${not empty wikiPageContentHistory}">
                         <table class="table table-striped table-condensed">
@@ -358,13 +358,13 @@
                 </div>
 
 
-                <div class="panel panel-default" id="edit" style="display: none">
-                  <div class="panel-heading">
-                    <h4 clas="panel-title">
+                <div class="card card-plain" id="edit" style="display: none">
+                  <div class="card-header">
+                    <h4 clas="card-title">
                       <fmt:message key="label.wiki.edit"></fmt:message> - ${fn:escapeXml(currentWikiPage.title)}
                     </h4>
                   </div>
-                  <div class="panel-body">
+                  <div class="card-body">
                     <table class="table table-striped table-condensed">
                       <tr>
                         <td>
@@ -403,14 +403,14 @@
                   <div class="row no-gutter">
                     <div class="col-xs-12">
 
-                      <div class="panel panel-default" id="view">
-                        <div class="panel-heading">
+                      <div class="card card-plain" id="view">
+                        <div class="card-header">
 
-                          <h4 class="panel-title">
+                          <h4 class="card-title">
                             <fmt:message key="label.wiki.add"></fmt:message>
                           </h4>
                         </div>
-                        <div class="panel-body">
+                        <div class="card-body">
                           <div class="field-name">
                             <fmt:message key="label.authoring.basic.title"/>
                           </div>
@@ -466,8 +466,8 @@
                 </div>
 
 
-            </div><!-- end panel body -->
-          </div> <!-- end panel -->
+            </div><!-- end card body -->
+          </div> <!-- end card -->
 
 	</lams:Page>
 

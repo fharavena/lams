@@ -43,13 +43,13 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 					<c:set var="numGroups" value="${fn:length(groups)}"/> 
 					<c:choose>
 					<c:when test="${numGroups == 1}">
-						<c:set var="colClass">col-xs-12</c:set>
+						<c:set var="colClass">col-sm-12</c:set>
 					</c:when>
 					<c:when test="${numGroups == 2}">
-						<c:set var="colClass">col-xs-6</c:set>
+						<c:set var="colClass">col-sm-6</c:set>
 					</c:when>
 					<c:when test="${numGroups == 3}">
-						<c:set var="colClass">col-xs-4</c:set>
+						<c:set var="colClass">col-sm-4</c:set>
 					</c:when>
 					<c:otherwise>
 						<c:set var="colClass">col-md-3</c:set>

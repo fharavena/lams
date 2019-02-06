@@ -10,14 +10,14 @@
 
 	<body>
 	
-		<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="panel-title">
+		<div class="card card-plain">
+		<div class="card-header">
+			<div class="card-title">
 				<fmt:message key="label.authoring.conditions.add.condition" />
 			</div>
 		</div>
 	
-		<div class="panel-body">
+		<div class="card-body">
 			
 			<!-- Basic Info Form-->
 			<form:form action="../authoringCondition/saveOrUpdateCondition.do" method="post" modelAttribute="taskListConditionForm" id="taskListConditionForm" focus="name"

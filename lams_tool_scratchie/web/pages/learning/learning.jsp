@@ -238,7 +238,7 @@
 
 		<lams:LeaderDisplay username="${sessionMap.groupLeaderName}" userId="${sessionMap.groupLeaderUserId}"/>
 
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${scratchie.instructions}" escapeXml="false" />
 		</div>
 

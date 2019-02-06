@@ -75,15 +75,15 @@
 
 			<c:if test="${voteGeneralLearnerFlowDTO.reflection}">
 				<hr class="msg-hr">
-				<div class="panel panel-default">
-					<div class="panel-heading panel-title">
+				<div class="card card-plain">
+					<div class="card-header card-title">
 						<fmt:message key="label.reflection" />
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 
 						<lams:out value="${voteGeneralLearnerFlowDTO.reflectionSubject}" escapeHtml="true" />
 
-						<div class="panel-body voffset5 bg-warning">
+						<div class="card-body voffset5 bg-warning">
 							<lams:out value="${voteGeneralLearnerFlowDTO.notebookEntry}" escapeHtml="true" />
 						</div>
 

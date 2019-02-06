@@ -25,11 +25,11 @@
 			width:100%;
 		}
 		
-		.panel-heading {
+		.card-header {
 			height: 45px;
 		}
 		
-		.panel-heading .panel-title > span {
+		.card-header .card-title > span {
 			display: inline-block;
 			margin-top: 5px;
 		}
@@ -159,9 +159,9 @@
 		<c:if test="${orgManageForm.type == 2}">
 				<p><a href="<lams:LAMSURL/>admin/orgmanage.do?org=1" class="btn btn-default"><fmt:message key="admin.course.manage" /></a></p>
 			
-				<div class="panel panel-default voffset5" >
-					<div class="panel-heading">
-						<div class="panel-title">
+				<div class="card card-plain voffset5" >
+					<div class="card-header">
+						<div class="card-title">
 							<span id="courseName"><c:out value="${orgManageForm.parentName}"/></span>
 			
 							<div class="btn-group btn-group-sm  pull-right">
@@ -177,7 +177,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 			
 					<table class="table table-striped table-bordered">
 						<tr>
@@ -243,9 +243,9 @@
 					: <a href="<lams:LAMSURL/>admin/orgmanage.do?org=<c:out value="${parentGroupId}"/>" class="btn btn-default"><c:out value="${parentGroupName}"/></a>
 				</p>
 				
-				<div class="panel panel-default voffset5" >
-					<div class="panel-heading">
-						<div class="panel-title">
+				<div class="card card-plain voffset5" >
+					<div class="card-header">
+						<div class="card-title">
 							<span><c:out value="${orgManageForm.parentName}"/></span>
 							<div class="btn-group btn-group-sm  pull-right">
 								<c:if test="${editGroup == true}">

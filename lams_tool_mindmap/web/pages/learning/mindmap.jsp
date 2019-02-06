@@ -63,7 +63,7 @@
 			
 				<%--Advanced settings and notices-----------------------------------%>
 				
-				<div class="panel">
+				<div class="card card-plain">
 					<c:out value="${mindmapDTO.instructions}" escapeXml="false"/>
 				</div>
 			

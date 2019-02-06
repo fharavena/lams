@@ -68,14 +68,14 @@
 
 <body class="stripes">
 
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<div class="card-title">
 				<fmt:message key="authoring.title.import" />
 			</div>
 		</div>
 			
-		<div class="panel-body">
+		<div class="card-body">
 				
 			<form action="<c:url value="/authoring/importQuestions.do"/>?sessionMapID=${sessionMapID}" method="post" enctype="multipart/form-data" id="importForm">	
 				<lams:FileUpload fileFieldname="UPLOAD_FILE" fileInputMessageKey="label.file" 

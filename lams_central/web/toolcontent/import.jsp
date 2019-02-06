@@ -59,7 +59,7 @@
 	<body class="stripes">
 			<lams:Page type="admin" title="${title}">
 
-				<div class="panel">
+				<div class="card card-plain">
 					<fmt:message key="title.import.instruction" />
 					<c:if test="${ANTIVIRUS_ENABLE == 'true'}">
 						<br />

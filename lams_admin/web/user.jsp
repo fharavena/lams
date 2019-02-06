@@ -193,9 +193,9 @@
 					</a>
 				</c:if>
 			
-				<div class="panel panel-default voffset5">
-					<div class="panel-heading">
-						<span class="panel-title"> <c:if test="${not empty userForm.userId}">
+				<div class="card card-plain voffset5">
+					<div class="card-header">
+						<span class="card-title"> <c:if test="${not empty userForm.userId}">
 								<fmt:message key="admin.user.edit" />
 							</c:if> <c:if test="${empty userForm.userId}">
 								<fmt:message key="admin.user.create" />
@@ -203,7 +203,7 @@
 						</span>
 					</div>
 			
-					<div class="panel-body">
+					<div class="card-body">
 					    <div class="row">
 						<div class="col-md-12">
 						
@@ -241,7 +241,7 @@
 					</div>
 					</div>
 					
-					<!--  Main panel. Do not show portrait area for new user. -->
+					<!--  Main card. Do not show portrait area for new user. -->
 					<c:if test="${not empty userForm.userId}">
 				    <div class="row">
 					<div class="col-md-3">
@@ -501,14 +501,14 @@
 					</div>
 					
 					</div>
-				</div> <!-- End of panel -->
+				</div> <!-- End of card -->
 			
 			
 				<c:if test="${not empty globalRoles || not empty userOrgRoles}">
 			
-					<div class="panel panel-default voffset5">
-						<div class="panel-heading">
-							<span class="panel-title"> <fmt:message
+					<div class="card card-plain voffset5">
+						<div class="card-header">
+							<span class="card-title"> <fmt:message
 									key="admin.organisation" />
 							</span>
 						</div>

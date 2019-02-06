@@ -28,7 +28,7 @@
 	<body class="stripes">
 			
 		<lams:Page type="learner" title="${chatDTO.title}">
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${chatDTO.instructions}" escapeXml="false" />
 			</div>
 		

@@ -6,11 +6,11 @@
 <lams:head>
 </lams:head>
 <body>
-<div class="panel panel-default">
-<div class="panel-heading">
-<div class="panel-title"><fmt:message key="label.email.preview"/></div>
+<div class="card card-plain">
+<div class="card-header">
+<div class="card-title"><fmt:message key="label.email.preview"/></div>
 </div>
-<div class="panel-body">
+<div class="card-body">
 <div id="emailHTML">${emailPreviewDTO.emailHTML}</div>
 <div class="pull-right">
 	<button onclick="javascript:closeResultsForLearner();return false;" class="btn btn-default btn-sm btn-disable-on-submit"><fmt:message key="label.hide"/></button>

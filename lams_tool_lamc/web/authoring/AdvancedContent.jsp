@@ -67,7 +67,7 @@
 		</label>
 	</div>
 
-	<lams:SimplePanel panelBodyClass="panel-body-sm" titleKey="label.feedback.simple">
+	<lams:SimplePanel cardBodyClass="card-body-sm" titleKey="label.feedback.simple">
 	<div class="radio">
 		<label for="displayAnswers">
 			<form:radiobutton path="displayAnswersFeedback" value="answers" id="displayAnswers"/>

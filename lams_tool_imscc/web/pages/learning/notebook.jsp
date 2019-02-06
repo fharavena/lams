@@ -34,7 +34,7 @@
 
 			<lams:errors/>
 
-			<div class="panel">
+			<div class="card card-plain">
 				<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true" />
 			</div>
 

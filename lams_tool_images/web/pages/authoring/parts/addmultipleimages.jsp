@@ -18,9 +18,9 @@
 
 <form:form action="saveMultipleImages.do" method="post" modelAttribute="multipleImagesForm" id="multipleImagesForm" enctype="multipart/form-data">
 	
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<div class="card-title">
 				<fmt:message key="label.authoring.basic.add.multiple.images" />
 				<a href="javascript:showMessage('<lams:WebAppURL />authoring/newImageInit.do?sessionMapID=${multipleImagesForm.sessionMapID}');" 
 						class="btn btn-default btn-xs pull-right">
@@ -29,7 +29,7 @@
 			</div>		
 		</div>
 			
-		<div class="panel-body">
+		<div class="card-body">
 	
 			<lams:errors/>	
 			<form:hidden path="sessionMapID" id="sessionMapID"/>
@@ -65,7 +65,7 @@
 									
 			</div>
 			
-			<div class="panel-body text-center" style="display:none" id="itemAttachmentArea_Busy">
+			<div class="card-body text-center" style="display:none" id="itemAttachmentArea_Busy">
 				<i class="fa fa-refresh fa-spin fa-2x fa-fw text-primary"></i>
 			</div>
 				

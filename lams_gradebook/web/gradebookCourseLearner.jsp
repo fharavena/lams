@@ -141,7 +141,7 @@
 
 		<a target="_blank" class="btn btn-sm btn-default pull-right" title="<fmt:message key='button.help.tooltip'/>"
 		   href="http://wiki.lamsfoundation.org/display/lamsdocs/My+Grades">
-		<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="button.help"/></span></a>
+		<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span></a>
 
 		<h4><fmt:message key="gradebook.title.myGradebook">
 				<fmt:param>

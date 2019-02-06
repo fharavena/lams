@@ -31,9 +31,9 @@
 		<form:form action="config/save.do" modelAttribute="configForm" id="configForm" method="post">
 				
 			<c:forEach items="${config}" var="group">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title"><fmt:message key="${group.key}"/></div>
+				<div class="card card-plain">
+					<div class="card-header">
+						<div class="card-title"><fmt:message key="${group.key}"/></div>
 					</div>
 									
 					<table class="table table-striped table-condensed" >

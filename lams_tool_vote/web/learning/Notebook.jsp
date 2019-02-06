@@ -36,7 +36,7 @@
 			<form:hidden path="groupLeaderUserId" />
 			<form:hidden path="useSelectLeaderToolOuput" />
 
-			<div class="panel">
+			<div class="card card-plain">
 				<lams:out value="${voteGeneralLearnerFlowDTO.reflectionSubject}" escapeHtml="true" />
 			</div>
 

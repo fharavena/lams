@@ -10,14 +10,14 @@
 <c:forEach var="statistic" items="${statisticList}">
 
 	<c:if test="${isGroupedActivity}">	
-	    <div class="panel panel-default" >
-        <div class="panel-heading" id="heading${toolSessionDto.sessionID}">
-			<span class="panel-title">
+	    <div class="card card-plain" >
+        <div class="card-header" id="heading${toolSessionDto.sessionID}">
+			<span class="card-title">
 				<fmt:message key="monitoring.label.group" />&nbsp;<c:out value="${statistic.sessionName}" />
 			</span>
         </div>
 
-        <div class="panel-body">
+        <div class="card-body">
 	</c:if>
 	
 		<table class="table table-condensed table-striped">

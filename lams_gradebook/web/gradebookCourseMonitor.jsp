@@ -15,7 +15,6 @@
 	<jsp:include page="includes/jsp/jqGridIncludes.jsp"></jsp:include>
 	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/jquery.blockUI.js"></script>	
 	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/jquery.cookie.js"></script>
-	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="<lams:LAMSURL />includes/javascript/portrait.js"></script>
 	<script type="text/javascript" src="<lams:WebAppURL/>includes/javascript/blockexportbutton.js"></script>
 
@@ -446,19 +445,19 @@
 
 		<a target="_blank" class="${btnclass} pull-right loffset5" title="<fmt:message key='button.help.tooltip'/>"
 		   href="http://wiki.lamsfoundation.org/display/lamsdocs/Gradebook+Course+Monitor">
-			<i class="fa fa-question-circle"></i> <span class="hidden-xs"><fmt:message key="button.help"/></span>
+			<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span>
 		</a>
 
 		<div id="datesNotShown">
 			<a class="${btnclass} pull-right btn-primary" href="javascript:toggleLessonDates()" title="<fmt:message key="gradebook.monitor.show.dates" />">
-				<i class="fa fa-calendar-check-o"></i> <span class="hidden-xs">
+				<i class="fa fa-calendar-check-o"></i> <span class="d-none d-sm-inline">
 				<fmt:message key="gradebook.monitor.show.dates" /></span>
 			</a>
 		</div>
 
 		<div id="datesShown" style="display:none">
 			<a class="${btnclass} pull-right btn-primary" href="javascript:toggleLessonDates()" title="<fmt:message key="gradebook.monitor.hide.dates" />">
-				<i class="fa fa-calendar-check-o"></i> <span class="hidden-xs">
+				<i class="fa fa-calendar-check-o"></i> <span class="d-none d-sm-inline">
 				<fmt:message key="gradebook.monitor.hide.dates" /></span>
 			</a>
 		</div>			
@@ -467,7 +466,7 @@
 		<div id="export-link-area" class="gbTopButtonsContainer">
 		<div>
 			<a href="#nogo" id="export-course-button" class="${btnclass}" title="<fmt:message key="gradebook.export.excel" />">
-				<i class="fa fa-download"></i><span class="hidden-xs">
+				<i class="fa fa-download"></i><span class="d-none d-sm-inline">
 				<fmt:message key="gradebook.export.excel" />
 				</span>
 			</a>
@@ -475,14 +474,14 @@
 
 		<div id="selectLessonsNotShown">
 			<a class="${btnclass}" href="#nogo" onclick="return openSelectLessonsArea();" title="<fmt:message key="label.select.lessons.to.export" />" >
-				<i class="fa fa-square-o"></i><span class="hidden-xs">
+				<i class="fa fa-square-o"></i><span class="d-none d-sm-inline">
 				<fmt:message key="label.select.lessons.to.export" />
 				</span>
 			</a>
 		</div>
 		<div id="selectLessonsShown" style="display:none">
 			<a class="${btnclass}" href="#nogo" onclick="return openSelectLessonsArea();" title="<fmt:message key="label.hide.lessons.to.export " />" >
-				<i class="fa fa-square-o"></i><span class="hidden-xs">
+				<i class="fa fa-square-o"></i><span class="d-none d-sm-inline">
 				<fmt:message key="label.hide.lessons.to.export" />
 				</span>
 			</a>

@@ -39,7 +39,7 @@
 				<form:hidden path="toolSessionID" id="toolSessionID" />
 				<form:hidden path="mode" value="${mode}" />
 		
-				<div class="panel">
+				<div class="card card-plain">
 					<lams:out value="${wikiDTO.reflectInstructions}" escapeHtml="true" />
 				</div>
 				<div class="form-group">

@@ -191,17 +191,17 @@
 	<!-- LDEV_NTU-7 Page jumps to the top when clicking the link in Grouping -->	
 	<!-- lams:AdvancedAccordian title="${adTitle}"-->
 	
-		<div class="panel-group" id="accordionAdvanced" role="tablist" aria-multiselectable="true"> 
-    <div class="panel panel-default" >
-		 <div class="panel-heading collapsable-icon-left" id="headingAdvanced">
-        	<span class="panel-title">
+		<div class="card-group" id="accordionAdvanced" role="tablist" aria-multiselectable="true"> 
+    <div class="card card-plain" >
+		 <div class="card-header collapsable-icon-left" id="headingAdvanced">
+        	<span class="card-title">
 	    	<a id="noscrolladvancedid" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseAdvanced" >
           	${adTitle}
         	</a>
       		</span>
         </div>
         
-        <div id="collapseAdvanced" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAdvanced">
+        <div id="collapseAdvanced" class="card-collapse collapse" role="tabcard" aria-labelledby="headingAdvanced">
 	        <div id="course-grouping-advanced-settings">
 				<fmt:message key="label.save.as.course.grouping.hint" />
 				<button id="save-course-grouping-button" class="pull-right btn btn-sm btn-primary btn-disable-on-downupload" onClick="javascript:saveAsCourseGrouping();">
@@ -217,16 +217,16 @@
 </c:if>
 
 <c:if test="${canEdit}">
-<div class="panel-group ${lessonMode?'voffset5':'voffset20'}" id="accordionUploadGroupFile" role="tablist" aria-multiselectable="true"> 
-    <div class="panel panel-default" >
-        <div class="panel-heading collapsable-icon-left" id="headingUploadGroupFile">
-	        	<span class="panel-title">
+<div class="card-group ${lessonMode?'voffset5':'voffset20'}" id="accordionUploadGroupFile" role="tablist" aria-multiselectable="true"> 
+    <div class="card card-plain" >
+        <div class="card-header collapsable-icon-left" id="headingUploadGroupFile">
+	        	<span class="card-title">
 	        		<a id="noscrollinputid" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseUploadGroupFile" >
 		          		<fmt:message key="label.import.groups.from.template" />
 		        	</a>
 		     </span>
         </div>
-        <div id="collapseUploadGroupFile" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingUploadGroupFile">
+        <div id="collapseUploadGroupFile" class="card-collapse collapse" role="tabcard" aria-labelledby="headingUploadGroupFile">
         		<div id="upload-group-file-settings">
 			<fmt:message key="label.import.groups.from.template.description" />
 			<div>

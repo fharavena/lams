@@ -42,7 +42,7 @@
 				</c:if>
 				</h1>
 				<c:if test="${not empty signupOrganisation.blurb}">
-					<div id="signup-intro" class="panel">
+					<div id="signup-intro" class="card card-plain">
 						<c:out value="${signupOrganisation.blurb}" escapeXml="false" />
 					</div>
 				</c:if>
@@ -69,8 +69,8 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="panel with-nav-tabs panel-default">
-					<div class="panel-heading" style="height: 51px">
+				<div class="card with-nav-tabs card-plain">
+					<div class="card-header" style="height: 51px">
 						<ul class="nav nav-tabs">
 							<li class="active"><a href="#tab1default" data-toggle="tab"><fmt:message
 										key="register.signup.to.lams" /></a></li>
@@ -78,7 +78,7 @@
 										key="register.login" /></a></li>
 						</ul>
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 						<div class="tab-content">
 							<div class="tab-pane fade in active" id="tab1default">
 								<p>

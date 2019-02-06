@@ -74,7 +74,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 	
 	<lams:Page type="learner" title="${title}">
 	
-		<div class="panel">
+		<div class="card card-plain">
 			<fmt:message key="label.learner.choice.group.message" />
 		</div>
 	

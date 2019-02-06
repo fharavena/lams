@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	  <c:out value="${dto.title}" escapeXml="true"/>
 	</h4>
@@ -32,7 +32,7 @@
 </div>
 
 <c:if test="${isGroupedActivity}">
-	<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <form:form action="toggleHideImage.do" modelAttribute="monitoringForm" method="post" id="monitoringForm">
@@ -44,9 +44,9 @@
 	<c:forEach var="session" items="${dto.sessionDTOs}" varStatus="status">
 	
 		<c:if test="${isGroupedActivity}">	
-		    <div class="panel panel-default" >
-		        <div class="panel-heading" id="heading${session.sessionID}">
-		        	<span class="panel-title collapsable-icon-left">
+		    <div class="card card-plain" >
+		        <div class="card-header" id="heading${session.sessionID}">
+		        	<span class="card-title collapsable-icon-left">
 		        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 
 								aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${session.sessionID}" >
 							<fmt:message key="heading.group" >
@@ -56,8 +56,8 @@
 					</span>
 		        </div>
 	        
-				<div id="collapse${session.sessionID}" class="panel-collapse collapse ${status.first ? 'in' : ''}" 
-	        			role="tabpanel" aria-labelledby="heading${session.sessionID}">
+				<div id="collapse${session.sessionID}" class="card-collapse collapse ${status.first ? 'in' : ''}" 
+	        			role="tabcard" aria-labelledby="heading${session.sessionID}">
 		</c:if>
 	
 		<table class="table table-centered voffset10">
@@ -128,7 +128,7 @@
 		
 		<c:if test="${isGroupedActivity}">
 			</div> <!-- end collapse area  -->
-			</div> <!-- end collapse panel  -->
+			</div> <!-- end collapse card  -->
 		</c:if>
 		${ !isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 	
@@ -137,7 +137,7 @@
 </form:form>
 
 <c:if test="${isGroupedActivity}">
-	</div> <!--  end panel group -->
+	</div> <!--  end card group -->
 </c:if>
 
 <%@ include file="advanceOptions.jsp"%>

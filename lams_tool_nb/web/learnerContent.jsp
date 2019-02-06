@@ -30,7 +30,7 @@
 </script>
 
 <lams:Page type="learner" title="${nbLearnerForm.title}">
-	<div class="panel">
+	<div class="card card-plain">
 		<c:out value="${nbLearnerForm.basicContent}" escapeXml="false" />
 	</div>
 
@@ -39,7 +39,7 @@
 		<form:hidden path="toolSessionID" />
 
 		<c:if test="${userFinished and reflectOnActivity}">
-			<div class="panel">
+			<div class="card card-plain">
 				<lams:out value="${reflectInstructions}" escapeHtml="true" />
 			</div>
 

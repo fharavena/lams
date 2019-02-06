@@ -158,7 +158,7 @@
 
 <!-- Header -->
 <div class="row no-gutter">
-	<div class="col-xs-12 col-md-12 col-lg-8">
+	<div class="col-sm-12 col-md-12 col-lg-8">
 		<h3>
 			<fmt:message key="label.students.teams"/>
 		</h3>
@@ -168,20 +168,20 @@
 
 <!-- Tables -->
 <div class="row no-gutter">
-<div class="col-xs-12 col-md-12 col-lg-12">
+<div class="col-sm-12 col-md-12 col-lg-12">
 
 	<c:forEach var="groupDto" items="${groupDtos}">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title panel-collapse">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title card-collapse">
 					<a data-toggle="collapse" data-target="#collapse-${groupDto.groupID}" href="#collapse-${groupDto.groupID}" class="collapsed" id="group-name-${groupDto.groupID}">
 						${groupDto.groupName}
 					</a>
 				</h4>
 			</div>
 	
-			<div id="collapse-${groupDto.groupID}" class="panel-collapse collapse in">
-				<div class="panel-body">
+			<div id="collapse-${groupDto.groupID}" class="card-collapse collapse in">
+				<div class="card-body">
 	
 					<div class="table-responsive">
 						<table class="table table-striped table-hover table-condensed">
@@ -254,7 +254,7 @@
 	
 					<!-- Change leader and Compare buttons -->
 					<div class="row">
-						<div class="col-xs-12 col-md-12 col-lg-12">
+						<div class="col-sm-12 col-md-12 col-lg-12">
 							<c:if test="${(isIraAssessmentAvailable || isIraMcqAvailable) && isScratchieAvailable}">
 								<button href="#" data-toggle="modal" data-target="#comparison-modal" type="button" class="btn btn-sm btn-default pull-right"
 										data-ira-scores="
@@ -387,9 +387,9 @@
 	          
 		<!-- Begin -->
 		<div class="modal-body">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">${groupDto.groupName}:</h4> 
+			<div class="card card-plain">
+				<div class="card-header">
+					<h4 class="card-title">${groupDto.groupName}:</h4> 
 					<small>
 						<fmt:message key="label.current.leader"/>
 						<c:if test="${not empty groupDto.groupLeader}">
@@ -398,7 +398,7 @@
 					</small>
 				</div>
 				
-				<div class="panel-body">
+				<div class="card-body">
 					<select class="select-picker" id="change-leader-select-${groupDto.groupID}">
 						<c:forEach var="userDto" items="${groupDto.userList}">
 							<option value="${userDto.userID}">${userDto.lastName},&nbsp;${userDto.firstName}</option>

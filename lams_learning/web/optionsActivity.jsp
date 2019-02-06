@@ -78,7 +78,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 		<lams:Page type="learner" title="${optionsActivityForm.title}">
 		
 			<c:if test="${not empty optionsActivityForm.description}">
-				<div class="panel">
+				<div class="card card-plain">
 					<c:out value="${optionsActivityForm.description}" />
 				</div>
 			</c:if>

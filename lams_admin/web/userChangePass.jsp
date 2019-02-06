@@ -87,20 +87,20 @@
 <body class="stripes">
 	<form id="userForm" modelAttribute="userForm" action="usersave/changePass.do" method="post">
 		<input type="hidden" name="userId" value="${param.userId}" />
-		<div class="panel panel-default">
+		<div class="card card-plain">
 			<div
 				class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-				<div class="panel voffset20">
+				<div class="card voffset20">
 
-					<div class="panel panel-default">
+					<div class="card card-plain">
 
-						<div class="panel-heading">
-							<div class="panel-title">
+						<div class="card-header">
+							<div class="card-title">
 								<fmt:message key="admin.user.edit" />
 							</div>
 						</div>
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 						<lams:Alert type="info" id="passwordConditions" close="false">
 							<fmt:message key='label.password.must.contain' />:
 				<ul class="list-unstyled" style="line-height: 1.2">

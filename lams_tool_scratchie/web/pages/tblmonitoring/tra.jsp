@@ -49,9 +49,9 @@
 <!-- Notifications -->  
 <div class="row no-gutter">
 	<div class="col-xs-6 col-md-4 col-lg-4 ">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title">
 					<i class="fa fa-users" style="color:gray" ></i> 
 					<fmt:message key="label.attendance"/>: ${attemptedLearnersNumber}/<span id="total-learners-number"></span> 
 				</h4> 
@@ -75,14 +75,14 @@
 <c:forEach var="item" items="${items}" varStatus="i">
 	<div class="row no-gutter">
 	<div class="col-xs-12 col-md-12 col-lg-12">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<h4 class="card-title">
 				Q${i.index+1}) <c:out value="${item.description}" escapeXml="false"/>
 			</h4> 
 		</div>
 		
-		<div class="panel-body">
+		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-striped">
 					<tbody>
@@ -109,12 +109,12 @@
 <!-- Chart -->
 <div class="row no-gutter">
 	<div class="col-xs-12 col-md-12 col-lg-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-plain">
+			<div class="card-header">
 				<fmt:message key="label.tra.results.by.team"/> <small>(<fmt:message key="label.average"/>)</small>
 			</div>
 			
-			<div class="panel-body">
+			<div class="card-body">
 				<canvas id="barChart" height="240" width="515" style="width: 515px; height: 240px;"></canvas>
 			</div>
 		</div>  

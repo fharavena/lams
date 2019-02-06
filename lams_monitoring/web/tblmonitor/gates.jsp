@@ -10,7 +10,7 @@
 
 <!-- Header -->
 <div class="row no-gutter">
-	<div class="col-xs-12 col-md-12 col-lg-8">
+	<div class="col-sm-12 col-md-12 col-lg-8">
 		<h3>
 			<fmt:message key="label.gates"/>
 		</h3>
@@ -20,15 +20,15 @@
 
 <!-- Tables -->
 <div class="row no-gutter">
-<div class="col-xs-12 col-md-12 col-lg-12">
+<div class="col-sm-12 col-md-12 col-lg-12">
 
 	<c:forEach var="permissionGate" items="${permissionGates}">
 			
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-plain">
+			<div class="card-header">
 			</div>
 			
-			<div class="panel-body">
+			<div class="card-body">
 				<c:out value="${permissionGate.title}" escapeXml="false"/>
 				<c:choose>
 					<c:when test="${permissionGate.complete}">

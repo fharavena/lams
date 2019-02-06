@@ -193,7 +193,7 @@
 
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${mcGeneralMonitoringDTO.activityTitle}" escapeXml="true"/>
 	</h4>
@@ -236,22 +236,22 @@
 	</div>
 
 	<c:if test="${isGroupedActivity}">
-	<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 	</c:if>
 	
 	<c:forEach var="sessionDto" items="${sessionDtos}" varStatus="status">
 
 		<c:if test="${isGroupedActivity}">
-			<div class="panel panel-default" >
-	        <div class="panel-heading" id="heading${sessionDto.sessionId}">
-    	    	<span class="panel-title collapsable-icon-left">
+			<div class="card card-plain" >
+	        <div class="card-header" id="heading${sessionDto.sessionId}">
+    	    	<span class="card-title collapsable-icon-left">
         		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${sessionDto.sessionId}" 
 					aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${sessionDto.sessionId}" >
 				<fmt:message key="group.label" />&nbsp;${sessionDto.sessionName}</a>
 				</span>
         	</div>
         
-	        <div id="collapse${sessionDto.sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${sessionDto.sessionId}">
+	        <div id="collapse${sessionDto.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${sessionDto.sessionId}">
 		</c:if>
 					
 			<table id="group${sessionDto.sessionId}" class="scroll" cellpadding="0" cellspacing="0"></table>
@@ -263,7 +263,7 @@
 			
 		<c:if test="${isGroupedActivity}">
 			</div> <!-- end collapse area  -->
-			</div> <!-- end collapse panel  -->
+			</div> <!-- end collapse card  -->
 		</c:if>
 		${ !isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 		

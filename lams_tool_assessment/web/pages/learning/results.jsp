@@ -109,7 +109,7 @@
 		<%@ include file="results/attemptsummary.jsp"%>
 		
 		<c:if test="${assessment.displaySummary}">
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${assessment.instructions}" escapeXml="false"/>
 			</div>
 
@@ -122,14 +122,14 @@
 		
 		<%-- Reflection entry --%>
 		<c:if test="${sessionMap.reflectOn && (sessionMap.userFinished || !hasEditRight)}">
-		 	 <div class="panel panel-default">
+		 	 <div class="card card-plain">
 	
-				<div class="panel-heading panel-title">
+				<div class="card-header card-title">
 			 		<fmt:message key="label.export.reflection" />
 			 	</div>
 				 	
-			 	<div class="panel-body">
-				 	<div class="panel">
+			 	<div class="card-body">
+				 	<div class="card card-plain">
 				 		<lams:out value="${sessionMap.reflectInstructions}" escapeHtml="true"/>
 					</div>
 						

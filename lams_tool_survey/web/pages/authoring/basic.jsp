@@ -29,7 +29,7 @@
 		showMessage(url);
 	}
 	
-	//The panel of survey list panel
+	//The card of survey list card
 	function deleteItem(idx,sessionMapID){
 	    var reqIDVar = new Date();
 		var param = "itemIndex=" + idx +"&reqID="+reqIDVar.getTime()+"&sessionMapID="+sessionMapID;;

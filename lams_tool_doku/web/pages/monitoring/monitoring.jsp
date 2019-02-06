@@ -6,7 +6,7 @@
 	<lams:head>
 		<%@ include file="/common/tabbedheader.jsp" %>
 		<style type="text/css">
-			.panel-collapse > .btn-group.btn-group-xs {
+			.card-collapse > .btn-group.btn-group-xs {
 				margin-top: -33px;
 			}
 			.btn-group.btn-group-xs {

@@ -10,16 +10,16 @@
 		<c:if test="${questionEntry.key == answerEntry.key}">
 			<div class="row no-gutter">
 				<div class="col-xs-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<div class="panel-title">
+					<div class="card card-plain">
+						<div class="card-header">
+							<div class="card-title">
 								<strong> <fmt:message key="label.question" /> <c:out
 										value="${questionEntry.key}" /> 
 								</strong>
 							</div>
 						</div>
-						<div class="panel-body">
-							<div class="panel"><c:out value="${questionEntry.value.question}" escapeXml="false" /></div>
+						<div class="card-body">
+							<div class="card card-plain"><c:out value="${questionEntry.value.question}" escapeXml="false" /></div>
 						
 							<div class="answer-req">
 								<fmt:message key="label.learning.yourAnswer" /> 

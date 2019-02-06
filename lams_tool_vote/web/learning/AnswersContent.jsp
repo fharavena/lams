@@ -159,7 +159,7 @@
 				</lams:Alert>
 			</c:if>
 			<!-- End announcements and advanced settings -->
-			<div class="panel">
+			<div class="card card-plain">
 				<c:out value="${voteGeneralLearnerFlowDTO.activityInstructions}" escapeXml="false" />
 			</div>
 

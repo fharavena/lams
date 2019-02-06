@@ -94,14 +94,14 @@
 			</lams:Alert>
 		</c:if>
 
-		<div class="panel">
+		<div class="card card-plain">
 			<p><c:out value="${peerreview.instructions}" escapeXml="false"/><p>
 			<c:if test="${numCriteria > 1}">
 				<p><fmt:message key="label.step"><fmt:param>${stepNumber}</fmt:param><fmt:param>${numCriteria}</fmt:param></fmt:message></p>
 		 	</c:if> 
 		</div>
 			
-		<div class="panel">
+		<div class="card card-plain">
 			<h4><c:out value="${criteriaRatings.ratingCriteria.title}" escapeXml="true"/></h4>
 		<c:choose>
 		<c:when test="${criteriaRatings.ratingCriteria.ratingStyle == isComment}">

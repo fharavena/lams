@@ -4,7 +4,7 @@
 <%@ taglib uri="tags-core" prefix="c"%>
 <%@ taglib uri="tags-lams" prefix="lams"%>
 
-<div class="course-header">
+<div class="course-header card-header">
 	<span class="lead">
 		<strong><c:out value="${orgBean.name}" /></strong>
 	</span>
@@ -26,7 +26,7 @@
 </div>
 
 <!-- Group contents -->
-<div class="j-course-contents">
+<div class="j-course-contents card-body card-plain">
 	<div class="sequence-list">
 		<div id="${orgBean.id}-lessons" class="lesson-table">
 			<%@ include file="groupContents.jsp"%>

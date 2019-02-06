@@ -48,12 +48,12 @@
 			<c:set var="sessionMap"
 				value="${sessionScope[authoringForm.sessionMapID]}" />
 		
-			<div class="panel panel-default add-file">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain add-file">
+				<div class="card-header card-title">
 					<fmt:message key="label.authoring.basic.heading.add" />
 				</div>
 				
-				<div class="panel-body">
+				<div class="card-body">
 		
 					<c:set var="headingText" value="" />
 					<c:if test="${not empty authoringForm.headingIndex}">

@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="col-xs-12">
-		<div class="panel-body">${item.description}</div>
+		<div class="card-body">${item.description}</div>
 		
 		<!-- Comments Part -->
 		<c:if test="${item.commentsAllowed}">

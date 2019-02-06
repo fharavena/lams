@@ -80,7 +80,7 @@
 	<form:hidden path="contentEditable" value="${contentEditable}" />
 
 	<lams:Page type="learner" title="${notebookDTO.title}">
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${notebookDTO.instructions}" escapeXml="false" />
 		</div>
 
@@ -141,11 +141,11 @@
 			</c:choose>
 
 			<c:if test="${not empty teachersComment}">
-				<div class="panel panel-default voffset5 roffset10">
-					<div class="panel-heading">
+				<div class="card card-plain voffset5 roffset10">
+					<div class="card-header">
 						<fmt:message key="label.reply.comment" />
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 						<lams:out value="${teachersComment}" escapeHtml="true" />
 					</div>
 				</div>

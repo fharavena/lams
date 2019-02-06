@@ -56,12 +56,12 @@
 		function resizeSVG() {
 			var svg = $('svg','#ldSVG');
 			if ( svg ) {
-				var panelWidth = $('.panel-learner-page').width(),
+				var cardWidth = $('.card-learner-page').width(),
 					svgWidth = svg.attr('width'),
 					svgHeight = svg.attr('height');
 		
-				if ( originalThumbnailWidth > panelWidth ) {
-					var newWidth = panelWidth > 100 ? panelWidth - 100 : panelWidth;
+				if ( originalThumbnailWidth > cardWidth ) {
+					var newWidth = cardWidth > 100 ? cardWidth - 100 : cardWidth;
 					svg.attr('width', newWidth);
 					svg.attr('height', Math.ceil(originalThumbnailHeight * (newWidth / originalThumbnailWidth)));
 				} else {

@@ -26,12 +26,11 @@
 
 <body>
 <div style="clear: both;"></div>
-<div class="container">
-	<div class="row vertical-center-row">
-		<div
-			class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-			<div class="panel">
-				<div class="panel-body">
+	<div class="container-fluid">
+		<div class="row vertical-center-row justify-content-center">
+		<div class="col-sm-10">
+				<div class="card card-plain">
+				<div class="card-body card-plain">
 					<div class="text-left">
 						<c:if test="${not empty beans}">
 						

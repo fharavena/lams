@@ -2,7 +2,7 @@
 	<div class="lead">
         <a name="${item.title}" style="text-decoration:none;color:black"><c:out value="${item.title}" escapeXml="true" /></a>
 	</div>
-	<div class="panel-body-sm">
+	<div class="card-body-sm">
 		<c:out value="${item.description}" escapeXml="false" />
 	</div>
 

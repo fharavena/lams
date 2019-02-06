@@ -54,9 +54,9 @@
 		<div class="container" id="content">
 		  <div class="row no-gutter">
 		    <div class="col-xs-12">
-		      <div class="panel panel-default">
+		      <div class="card card-plain">
 				<!-- begin wiki main heading-->
-		        <div class="panel-heading  panel-learner-title">
+		        <div class="card-header  card-learner-title">
 					<c:if test="${isGroupedActivity}">
 						${sessionDTO.sessionName}:
 					</c:if>
@@ -91,11 +91,11 @@
 						</c:if>
 					</div>
 				</div> <!--  end of wiki main heading -->
-				<div class="panel-body">
+				<div class="card-body">
 				
 				<!-- Wiki main -->
-			     <div class="panel panel-default" id="view">
-			       <div class="panel-heading">
+			     <div class="card card-plain" id="view">
+			       <div class="card-header">
 			         <!-- Title & Last edited -->
 		             <c:choose>
 		               <c:when test="${currentWikiPage.currentWikiContentDTO.editorDTO == null}">
@@ -107,7 +107,7 @@
 		               </c:otherwise>
 		             </c:choose>
 		             ${lastEditPortrait}
-			         <h4 class="panel-title">${fn:escapeXml(currentWikiPage.title)}</h4>
+			         <h4 class="card-title">${fn:escapeXml(currentWikiPage.title)}</h4>
 			         <div class="voffset5" style="font-size: 12px">
 			           <fmt:message key="label.wiki.last.edit">
 			             <fmt:param>${lastEditName}</fmt:param>
@@ -117,19 +117,19 @@
 			           </fmt:message> 
 			         </div> <!-- End last edited -->
 			       </div>
-			       <div class="panel-body" id="viewBody">
+			       <div class="card-body" id="viewBody">
 			         <c:out value="${currentWikiPage.currentWikiContentDTO.body}" escapeXml="false"/>
 			       </div>
 			     </div>
 				<!--  End of Wiki main -->
 		
-		         <div class="panel panel-default" id="history" style="display: none">
-		           <div class="panel-heading">
-		             <h4 class="panel-title">
+		         <div class="card card-plain" id="history" style="display: none">
+		           <div class="card-header">
+		             <h4 class="card-title">
 		               <fmt:message key="label.wiki.history" /> - ${fn:escapeXml(currentWikiPage.title)}
 		             </h4>
 		           </div>
-		           <div class="panel-body">
+		           <div class="card-body">
 		             <c:choose>
 		               <c:when test="${not empty wikiPageContentHistory}">
 		                 <table class="table table-striped table-condensed">
@@ -195,13 +195,13 @@
 		          </div>
 		        </div>
 					
-		        <div class="panel panel-default" id="edit" style="display: none">
-		           <div class="panel-heading">
-		             <h4 clas="panel-title">
+		        <div class="card card-plain" id="edit" style="display: none">
+		           <div class="card-header">
+		             <h4 clas="card-title">
 		               <fmt:message key="label.wiki.edit"></fmt:message> - ${fn:escapeXml(currentWikiPage.title)}
 		             </h4>
 		           </div>
-		           <div class="panel-body">
+		           <div class="card-body">
 		             <table class="table table-striped table-condensed">
 					<tr>
 						<td>
@@ -240,14 +240,14 @@
 				</div>
 			</div>
 		
-		     	<div class="panel panel-default" id="add"  style="display: none">
-		            <div class="panel-heading">
-		              <h4 class="panel-title">
+		     	<div class="card card-plain" id="add"  style="display: none">
+		            <div class="card-header">
+		              <h4 class="card-title">
 		                <fmt:message key="label.wiki.add"></fmt:message>
 		              </h4>
 		            </div>
 		
-					<div class="panel-body">
+					<div class="card-body">
 						<div class="field-name">
 							<fmt:message key="label.authoring.basic.title"></fmt:message>
 						</div>
@@ -287,9 +287,9 @@
 			
 			<!-- Reflections -->
 			<c:if test="${not empty sessionDTO.userDTOs && sessionDTO.reflectOnActivity}">
-		     	<div class="panel panel-default voffset10" id="add">
-		            <div class="panel-heading">
-		              <h4 class="panel-title">
+		     	<div class="card card-plain voffset10" id="add">
+		            <div class="card-header">
+		              <h4 class="card-title">
 		                <fmt:message key="monitor.notebooks"></fmt:message>
 		              </h4>
 		            </div>

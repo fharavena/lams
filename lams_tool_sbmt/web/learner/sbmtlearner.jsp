@@ -125,7 +125,7 @@
 <body class="stripes">
 
 	<lams:Page type="learner" title="${sessionMap.title}" formID="learnerForm">
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${sessionMap.instruction}" escapeXml="false" />
 		</div>
 
@@ -294,11 +294,11 @@
 					<input type="hidden" name="toolSessionID" value="${toolSessionID}" />
 
 					<!--File path row -->
-					<div class="panel panel-default">
-						<div class="panel-heading panel-title">
+					<div class="card card-plain">
+						<div class="card-header card-title">
 							<fmt:message key="label.learner.upload" />
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 
 							<div class="form-group">
 								<label for="file"><fmt:message key="label.learner.filePath" />&nbsp;<span style="color: red">*</span></label>
@@ -334,12 +334,12 @@
 
 		<c:if test="${sessionMap.userFinished and sessionMap.reflectOn}">
 			<!-- reflection -->
-			<div class="panel panel-default">
-				<div class="panel-heading panel-title">
+			<div class="card card-plain">
+				<div class="card-header card-title">
 					<fmt:message key="title.reflection" />
 				</div>
-				<div class="panel-body">
-					<div class="panel">
+				<div class="card-body">
+					<div class="card card-plain">
 						<lams:out escapeHtml="true" value="${sessionMap.reflectInstructions}" />
 					</div>
 

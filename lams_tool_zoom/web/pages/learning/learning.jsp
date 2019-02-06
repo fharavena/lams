@@ -24,7 +24,7 @@
 </lams:head>
 <body class="stripes">
 <lams:Page type="learner" title="${contentDTO.title}">
-	<div class="panel">
+	<div class="card card-plain">
 		<c:out value="${contentDTO.instructions}" escapeXml="false" />
 	</div>
 

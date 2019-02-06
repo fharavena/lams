@@ -11,9 +11,9 @@
 <c:forEach var="sessionDto" items="${sessionDtos}">
 
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	   <div class="panel panel-default" >
-	      <div class="panel-heading">
-			<span class="panel-title">
+	   <div class="card card-plain" >
+	      <div class="card-header">
+			<span class="card-title">
 				<fmt:message key="monitoring.label.group" />&nbsp;${sessionDto.sessionName}
 			</span>
 	      </div>

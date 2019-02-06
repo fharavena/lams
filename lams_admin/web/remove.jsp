@@ -26,13 +26,13 @@
 				</c:if>
 				
 				<c:if test="${method == 'disable'}">
-					<div class="panel panel-default" >
-						<div class="panel-heading">
-							<span class="panel-title">
+					<div class="card card-plain" >
+						<div class="card-header">
+							<span class="card-title">
 								<fmt:message key="admin.user.disable"/>
 							</span>
 						</div>
-						<div class="panel-body">     
+						<div class="card-body">     
 							<p>
 								<fmt:message key="msg.disable.user.1"/>&nbsp;&nbsp;
 								<fmt:message key="msg.disable.user.2"/>&nbsp;&nbsp;
@@ -56,13 +56,13 @@
 				</c:if>
 				
 				<c:if test="${method == 'delete'}">
-					<div class="panel panel-default" >
-						<div class="panel-heading">
-							<span class="panel-title">
+					<div class="card card-plain" >
+						<div class="card-header">
+							<span class="card-title">
 								<fmt:message key="admin.user.delete"/>
 							</span>
 						</div>
-						<div class="panel-body">     
+						<div class="card-body">     
 							<p><fmt:message key="msg.delete.user.1"/>&nbsp;&nbsp;<fmt:message key="msg.delete.user.2"/></p>
 							<c:url var="deleteaction" value="/user/delete.do">
 								<c:param name="userId" value="${userId}" />

@@ -16,9 +16,9 @@
 <body class="stripes">
 	<lams:Page type="admin" title="${title}">
 			<c:forEach items="${groupedLinks}" var="links">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title"><fmt:message key="${links[0]}"/></div>
+				<div class="card card-plain">
+					<div class="card-header">
+						<div class="card-title"><fmt:message key="${links[0]}"/></div>
 					</div>
 					<div class="list-group">
 						<c:set var="linkBeans" value="${links[1]}"/>

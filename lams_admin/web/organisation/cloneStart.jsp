@@ -151,13 +151,13 @@
 				</lams:Alert>
 			</c:if>
 			
-			<div class="panel panel-default voffset5" >
-				<div class="panel-heading">
-					<span class="panel-title">
+			<div class="card card-plain voffset5" >
+				<div class="card-header">
+					<span class="card-title">
 						<fmt:message key="title.choose.group" />
 					</span>
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 					<div class="form-group">
 						<fmt:message key="admin.course" />:
 						<select id="sourceGroupId" class="form-control">
@@ -193,36 +193,36 @@
 			
 				<div style="display:none;" id="cloneOptionsDiv">
 				
-					<div class="panel panel-default voffset5" >
-					<div class="panel-heading">
-						<span class="panel-title">
+					<div class="card card-plain voffset5" >
+					<div class="card-header">
+						<span class="card-title">
 							<fmt:message key="title.select.lessons" />
 						</span>
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 						<p id="availableLessons"></p>
 					</div>
 					</div>
 				
-					<div class="panel panel-default voffset5" >
-					<div class="panel-heading">
-						<span class="panel-title">
+					<div class="card card-plain voffset5" >
+					<div class="card-header">
+						<span class="card-title">
 							<fmt:message key="title.select.staff" />
 						</span>
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 						<input type="checkbox" id="addAllStaff" name="addAllStaff" checked="checked"> <fmt:message key="message.add.all.monitors" />
 						<a onclick="staffDialog();" class="btn btn-default pull-right"><fmt:message key="label.configure.staff" /></a>
 					</div>
 					</div>
 					
-					<div class="panel panel-default voffset5" >
-					<div class="panel-heading">
-						<span class="panel-title">
+					<div class="card card-plain voffset5" >
+					<div class="card-header">
+						<span class="card-title">
 							<fmt:message key="title.select.learners" />
 						</span>
 					</div>
-					<div class="panel-body">
+					<div class="card-body">
 						<input type="checkbox" id="addAllLearners" name="addAllLearners" checked="checked"> <fmt:message key="message.add.all.learners" />
 						<a onclick="learnerDialog();" class="btn btn-default pull-right"><fmt:message key="label.configure.learners" /></a>
 					</div>

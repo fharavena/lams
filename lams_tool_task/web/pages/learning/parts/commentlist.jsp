@@ -16,8 +16,8 @@
 	<c:if test="${(sessionMap.userLogin == comment.createBy.loginName) || (sessionMap.mode == 'teacher') || (sessionMap.mode == 'author')}">
 		<div class="row voffset5">
 			<div class="col-xs-12">
-				<div class="panel panel-default">
-					<div class="panel-heading-sm panel-title bg-warning">
+				<div class="card card-plain">
+					<div class="card-header-sm card-title bg-warning">
 						<c:if test="${not empty comment.createBy.userId}">
 							<lams:Portrait userId="${comment.createBy.userId}"/>&nbsp;
 						</c:if>
@@ -35,7 +35,7 @@
 						<lams:Date value="${comment.createDate}" timeago="true"/>
 					</div>
 					
-					<div class="panel-body-sm">
+					<div class="card-body-sm">
 						<c:out value="${comment.comment}" escapeXml="false" />
 					</div>
 				</div>

@@ -34,7 +34,7 @@
 			
 				<form:form action="submitReflection.do" method="post" onsubmit="disableFinishButton();" modelAttribute="learningForm" id="learningForm">
 			
-					<div class="panel">
+					<div class="card card-plain">
 						<lams:out value="${chatDTO.reflectInstructions}" escapeHtml="true" />
 					</div>
 			

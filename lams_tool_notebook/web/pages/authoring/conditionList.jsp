@@ -57,7 +57,7 @@
 	</table>
 </div>
 
-<%-- This script will works when a new Condition submit in order to refresh "Condition List" panel. --%>
+<%-- This script will works when a new Condition submit in order to refresh "Condition List" card. --%>
 <script type="text/javascript">
 	hideConditionMessage();
 	var obj = document.getElementById('conditionsArea');

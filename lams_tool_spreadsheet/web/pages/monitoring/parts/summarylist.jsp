@@ -122,22 +122,22 @@
 </c:if>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 	<c:forEach var="summary" items="${summaryList}" varStatus="status">
 	
 		<c:if test="${sessionMap.isGroupedActivity}">
-			<div class="panel panel-default" >
-	        <div class="panel-heading" id="heading${summary.sessionId}">
-	        	<span class="panel-title collapsable-icon-left">
+			<div class="card card-plain" >
+	        <div class="card-header" id="heading${summary.sessionId}">
+	        	<span class="card-title collapsable-icon-left">
 	        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${summary.sessionId}" 
 						aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse$${summary.sessionId}" >
 				<fmt:message key="monitoring.label.group" />&nbsp;${summary.sessionName}</a>
 				</span>
 	        </div>
 		        
-		    <div id="collapse${summary.sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${summary.sessionId}">
+		    <div id="collapse${summary.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${summary.sessionId}">
 		</c:if>
 		
 			<c:set var="numColumns" value="1"/>
@@ -185,14 +185,14 @@
 		
 		<c:if test="${sessionMap.isGroupedActivity}">
 			</div> <!-- end collapse area  -->
-			</div> <!-- end collapse panel  -->
+			</div> <!-- end collapse card  -->
 		</c:if>
 	${ !sessionMap.isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 
 </c:forEach>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-	</div> <!--  end panel group -->
+	</div> <!--  end card group -->
 </c:if>
 
 </div>

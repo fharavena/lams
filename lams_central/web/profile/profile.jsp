@@ -30,7 +30,7 @@
 <div class="container-fluid">
 	<div class="row vertical-center-row justify-content-center">
 		<div class="col-xs-12 col-sm-10">
-			<div class="card">
+			<div class="card card-plain">
 				<div class="card-body card-plain">
 					<div class="text-center">
 						<c:choose>
@@ -43,7 +43,7 @@
 								</div>
 							</c:when>
 							<c:otherwise>
-								<img style="margin: 0 auto;" class="img-circle img-responsive"
+								<img style="margin: 0 auto;" class="img-raised rounded-circle img-fluid"
 									title="<c:out value='${fullName}' />"
 									src="/lams/download/?uuid=<c:out value="${portraitUuid}" />&version=2&preferDownload=false" />
 							</c:otherwise>

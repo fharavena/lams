@@ -343,7 +343,7 @@
 					<fmt:message key="admin.user.manage" /></a>
 				</p>
 				
-				<div class="panel panel-default panel-body">
+				<div class="card card-plain card-body">
 					<h3><c:out value='${orgPasswordChangeForm.orgName}' /></h3>
 					
 					<lams:Alert type="info" id="passwordConditions" close="false">

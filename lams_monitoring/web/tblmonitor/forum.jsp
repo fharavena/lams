@@ -9,7 +9,7 @@
 
 <!-- Header -->
 <div class="row no-gutter">
-	<div class="col-xs-12 col-md-12 col-lg-8">
+	<div class="col-sm-12 col-md-12 col-lg-8">
 		<h3>
 			<fmt:message key="label.forum"/>
 		</h3>
@@ -19,10 +19,10 @@
 
 <!-- Notifications -->  
 <div class="row no-gutter">
-	<div class="col-xs-6 col-md-4 col-lg-4 ">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
+	<div class="col-sm-6 col-md-4 col-lg-4 ">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title">
 					<i class="fa fa-users" style="color:gray" ></i> 
 					<fmt:message key="label.attendance"/>: ${attemptedLearnersNumber}/<span id="total-learners-number"></span>
 				</h4> 
@@ -34,19 +34,19 @@
 
 <!-- Tables -->
 <div class="row no-gutter">
-<div class="col-xs-12 col-md-12 col-lg-12">
+<div class="col-sm-12 col-md-12 col-lg-12">
 
 <h4><fmt:message key="label.grouping.group.heading"/></h4>
 
 <c:forEach var="toolSession" items="${toolSessions}" varStatus="i">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
+	<div class="card card-plain">
+		<div class="card-header">
+			<h4 class="card-title">
 				<c:out value="${toolSession.toolSessionName}" escapeXml="false"/>
 			</h4>
 		</div>
 		
-		<div class="panel-body">
+		<div class="card-body">
 			<div class="table-responsive">
 				<a href="/lams/tool/<%= CommonConstants.TOOL_SIGNATURE_FORUM %>/learning/viewForum.do?toolSessionID=${toolSession.toolSessionId}&mode=teacher&hideReflection=true" target="_blank" class="btn btn-default btn-sm">
 					<i class="fa fa-comments"></i> <fmt:message key="label.view.forum" />

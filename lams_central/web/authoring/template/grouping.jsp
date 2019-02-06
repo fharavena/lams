@@ -1,10 +1,10 @@
 <%@ taglib uri="tags-fmt" prefix="fmt"%>
 
-	<div class="panel panel-default">
-	<div class="panel-heading"><div class="panel-title">
+	<div class="card card-plain">
+	<div class="card-header"><div class="card-title">
 		<fmt:message key="authoring.label.grouping" />
 	</div></div>
-	<div class="panel-body">	
+	<div class="card-body">	
 
 		<select name="grouping" id="grouping" title="<fmt:message key="authoring.label.grouping" />" class="form-control form-control-sm form-control-inline">
 			<option value="1"><fmt:message key="authoring.label.grouping.random.allocation" /></option>

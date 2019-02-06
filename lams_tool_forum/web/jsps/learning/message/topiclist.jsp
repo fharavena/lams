@@ -6,23 +6,23 @@
 <script type="text/javascript" src="<lams:LAMSURL />/includes/javascript/timeagoi18n/jquery.timeago.${fn:toLowerCase(localeLanguage)}.js"></script>
 
 <c:set var="pageSize" value="<%=ForumConstants.DEFAULT_PAGE_SIZE%>" />
-<div class="panel panel-default">
-	<div class="panel-heading panel-title">
+<div class="card card-plain">
+	<div class="card-header card-title">
 		<fmt:message key="label.topics" />
 
-		<div class="btn-group pull-right">
-			<a href="javascript:location.href='${refresh}';" type="button" class="btn btn-xs btn-default"><i class="fa fa-xm fa-refresh"></i>
+		<div class="pull-right">
+			<a href="javascript:location.href='${refresh}';" type="button" class="btn btn-sm btn-default"><i class="fa fa-xm fa-refresh"></i>
 				<fmt:message key="label.refresh" /></a>
 
 			<c:if test='${(not sessionMap.finishedLock) && (sessionMap.allowNewTopics)}'>
-				<a href="javascript:location.href='${newtopic}';" type="button" class="btn btn-xs btn-default"> <i
+				<a href="javascript:location.href='${newtopic}';" type="button" class="btn btn-sm btn-default"> <i
 					class="fa fa-xm fa-plus"></i> <fmt:message key="label.newtopic" /></a>
 			</c:if>
 		</div>
 
 
 	</div>
-	<div class="panel-body">
+	<div class="card-body">
 		<div class="table-responsive">
 			<table id="topicTable" class="table table-hover table-sm">
 				<thead>

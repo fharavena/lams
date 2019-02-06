@@ -5,9 +5,9 @@
 <c:forEach var="session" items="${dto.sessionDTOs}">
 
 	<c:if test="${dto.groupedActivity}">	
-	    <div class="panel panel-default" >
-        <div class="panel-heading">
-			<span class="panel-title">
+	    <div class="card card-plain" >
+        <div class="card-header">
+			<span class="card-title">
 				<c:out value="${session.sessionName}" escapeXml="true"/>
 			</span>
         </div>

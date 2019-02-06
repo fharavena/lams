@@ -11,7 +11,7 @@
 		reinitializePassingMarkSelect(true);
 	});
 
-	//The panel of assessment list panel
+	//The card of assessment list card
 	var questionListTargetDiv = "#questionListArea";
 	function deleteQuestion(questionSequenceId){
 		var	deletionConfirmed = confirm("<fmt:message key="warning.msg.authoring.do.you.want.to.delete"></fmt:message>");

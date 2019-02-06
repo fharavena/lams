@@ -37,7 +37,7 @@
 			
 			<c:forEach items="${messages}" var="topic">
 			
-			<div class="panel panel-default ${highlightClass} msg" >
+			<div class="card card-plain ${highlightClass} msg" >
 			
 				<c:choose>
 					<c:when test="${topic.message.isMonitor}">
@@ -52,8 +52,8 @@
 			        </c:otherwise>
 			    </c:choose>
 			
-				<div class="panel-heading">
-					<h4 class="panel-title">
+				<div class="card-header">
+					<h4 class="card-title">
 					<span class="${textClass}">
 						<span style="float: right"> <i class="fa fa-xs ${iconClass}"></i> 
 							<lams:Date value="${topic.message.updated}" />
@@ -63,7 +63,7 @@
 					</h4>
 				</div>
 			
-				<div class="panel-body ${bgClass}" >
+				<div class="card-body ${bgClass}" >
 			
 				<div class="pull-right">
 						<form:form action="editMark.do" id="markForm" modelAttribute="markForm" method="post">

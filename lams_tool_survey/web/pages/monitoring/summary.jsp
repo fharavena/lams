@@ -18,7 +18,7 @@
 	}
 </script>
 
-<div class="panel">
+<div class="card card-plain">
 	<h4>
 	    <c:out value="${survey.title}" escapeXml="true"/>
 	</h4>
@@ -39,7 +39,7 @@
 
 <c:set var="sessionButtonSize">btn-sm</c:set>
 <c:if test="${sessionMap.isGroupedActivity}">
-<div class="panel-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 <c:set var="sessionButtonSize">btn-xs</c:set>
 </c:if>
 
@@ -62,9 +62,9 @@
 
 		<c:choose>
 		<c:when test="${sessionMap.isGroupedActivity}">	
-		    <div class="panel panel-default" >
-	        <div class="panel-heading" id="heading${surveySession.sessionId}">
-	        	<span class="panel-title collapsable-icon-left">
+		    <div class="card card-plain" >
+	        <div class="card-header" id="heading${surveySession.sessionId}">
+	        	<span class="card-title collapsable-icon-left">
 	        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${surveySession.sessionId}" 
 						aria-expanded="${status.first ? 'false' : 'true'}" aria-controls="collapse${surveySession.sessionId}" >
 				<fmt:message key="monitoring.label.group" />&nbsp;${surveySession.sessionName}</a>
@@ -72,7 +72,7 @@
 				<span class="pull-right btn-group">${sessionButtons}</span>
 	        </div>
 	        
-	        <div id="collapse${surveySession.sessionId}" class="panel-collapse collapse ${status.first ? 'in' : ''}" role="tabpanel" aria-labelledby="heading${surveySession.sessionId}">
+	        <div id="collapse${surveySession.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${surveySession.sessionId}">
 		</c:when>
 		<c:otherwise>
 			<div>${sessionButtons}</div>
@@ -157,7 +157,7 @@
 
 	<c:if test="${sessionMap.isGroupedActivity}">
 		</div> <!-- end collapse area  -->
-		</div> <!-- end collapse panel  -->
+		</div> <!-- end collapse card  -->
 	</c:if>
 	${ !sessionMap.isGroupedActivity || ! status.last ? '<div class="voffset5">&nbsp;</div>' :  ''}
 			

@@ -48,7 +48,7 @@
 
 <c:if test='${includeMode=="learning"}'>
 <div class="voffset10">
-<div class="panel">
+<div class="card card-plain">
 	<c:out value="${daco.instructions}" escapeXml="false"/>
 </div>
 </div>
@@ -116,9 +116,9 @@
 			<c:otherwise>
 				<%-- Vertical view displays records as separate tables of answers. --%>
 				<c:forEach var="record" items="${recordList}" varStatus="recordStatus">
-				<!--  record panel  -->
-				<div class="panel panel-default">
-					<div class="panel-heading panel-title">
+				<!--  record card  -->
+				<div class="card card-plain">
+					<div class="card-header card-title">
 						<fmt:message key="label.learning.heading.recordnumber" />&nbsp;${recordStatus.index+1}
 						<c:if test='${includeMode=="learning" and not finishedLock}'>
 						<%-- If the record can be edited, display these links. --%>
@@ -279,7 +279,7 @@
 							</c:forEach>
 						</c:forEach>
 					</table>
-				</div> <!--  end record panel -->		
+				</div> <!--  end record card -->		
 				</c:forEach>
 			</c:otherwise>
 		</c:choose> <!--  end vertical/horizontal -->

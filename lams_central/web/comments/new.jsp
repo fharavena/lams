@@ -87,13 +87,13 @@
 
 <%-- <div class="row no-gutter">
 	<div class="col-xs-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
+		<div class="card card-plain">
+			<div class="card-header">
+				<h4 class="card-title">
 					<fmt:message key="heading.comments" />
 				</h4>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 
  --%>				<div class="form-group">
 					<div class="comment-entry">
@@ -127,9 +127,9 @@
 				</div>
 <!-- 
 			</div>
-			end panel body
+			end card body
 		</div>
-		end comment panel
+		end comment card
 	</div>
 	end col-*-12
 </div>

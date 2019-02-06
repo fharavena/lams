@@ -497,7 +497,7 @@
 			<lams:LeaderDisplay username="${sessionMap.groupLeader.firstName} ${sessionMap.groupLeader.lastName}" userId="${sessionMap.groupLeader.userId}"/>
 		</c:if>
 
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${assessment.instructions}" escapeXml="false"/>
 		</div>
 		

@@ -40,16 +40,16 @@
 	</lams:Alert>
 </c:if>
 
-<div class="panel">
+<div class="card card-plain">
 	<c:out value="${daco.instructions}" escapeXml="false"/>
 </div>
 </div>
 
 <c:if test="${not finishedLock }">
 
-<!--  record panel  -->
-<div class="panel panel-default">
-	<div class="panel-heading panel-title">
+<!--  record card  -->
+<div class="card card-plain">
+	<div class="card-header card-title">
 		<fmt:message key="label.learning.heading.recordnumber" />
 		<span id="displayedRecordNumberSpan" class="hint">
 			${displayedRecordNumber}
@@ -254,20 +254,20 @@
 		</c:if>
 	</form:form>
 </div>
-<!--  end record panel -->
+<!--  end record card -->
 </c:if>
 
 <!-- Reflection -->
 <c:if test="${sessionMap.userFinished and daco.reflectOnActivity}">
-	<div class="panel panel-default">
-		<div class="panel-heading panel-title">
+	<div class="card card-plain">
+		<div class="card-header card-title">
 			<fmt:message key="label.export.reflection.heading" />
 		</div>
-		<div class="panel-body">
+		<div class="card-body">
 			<div class="reflectionInstructions">
 				<lams:out value="${daco.reflectInstructions}" escapeHtml="true" />
 			</div>
-			<div class="panel">
+			<div class="card card-plain">
 				<c:choose>
 					<c:when test="${empty sessionMap.reflectEntry}">
 						<em><fmt:message key="message.no.reflection.available" /></em>

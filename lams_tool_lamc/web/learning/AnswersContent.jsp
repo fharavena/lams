@@ -121,7 +121,7 @@
 
 	<lams:Page type="learner" title="${mcGeneralLearnerFlowDTO.activityTitle}" formID="mcLearningForm">
 
-		<div class="panel">
+		<div class="card card-plain">
 			<c:out value="${mcGeneralLearnerFlowDTO.activityInstructions}" escapeXml="false" />
 		</div>
 

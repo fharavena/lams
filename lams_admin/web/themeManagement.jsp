@@ -143,12 +143,12 @@
 				</c:forEach>
 			</table>
 			
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<div class="panel-title"><fmt:message key="admin.themes.addNew" /></div>
+			<div class="card card-plain">
+				<div class="card-header">
+					<div class="card-title"><fmt:message key="admin.themes.addNew" /></div>
 				</div>
 				
-				<div class="panel-body">
+				<div class="card-body">
 				<form:form action="addOrEditTheme.do" method="post" modelAttribute="themeForm" id="themeForm">	
 				<form:hidden path="id" id="id" />
 				

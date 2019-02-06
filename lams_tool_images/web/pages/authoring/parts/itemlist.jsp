@@ -3,8 +3,8 @@
 
 <div id="itemList" >
 
-	<div class="panel panel-default voffset5">
-		<div class="panel-heading panel-title">
+	<div class="card card-plain voffset5">
+		<div class="card-header card-title">
 			<fmt:message key="label.authoring.basic.image.list" />
 			<i class="fa fa-refresh fa-spin fa-2x fa-fw" style="display:none" id="imageGalleryListArea_Busy"></i>
 		</div>
@@ -61,7 +61,7 @@
 	</div>
 </div>
 
-<%-- This script will works when a new resoruce item submit in order to refresh "ImageGallery List" panel. --%>
+<%-- This script will works when a new resoruce item submit in order to refresh "ImageGallery List" card. --%>
 <script lang="javascript">
 	if ($("#new-image-input-area").is(':visible')) {
 		hideMessage();

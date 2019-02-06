@@ -42,8 +42,8 @@
 <!-- Table --> 
 <div class="row no-gutter">
 <div class="col-xs-12 col-md-12 col-lg-12">
-<div class="panel">
-<div class="panel-body table-responsive">
+<div class="card card-plain">
+<div class="card-body table-responsive">
           
 	<table  id="questions-data" class="table table-responsive table-striped table-bordered table-hover table-condensed">
 		<thead>

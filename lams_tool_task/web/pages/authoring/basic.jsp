@@ -23,7 +23,7 @@
 		var url = "<c:url value="/authoring/editItemInit.do?itemIndex="/>" + idx +"&reqID="+reqIDVar.getTime()+"&sessionMapID="+sessionMapID;;
 		showMessage(url);
 	}
-	//The panel of taskList list panel
+	//The card of taskList list card
 	var taskListListTargetDiv = "taskListListArea";
 	function deleteItem(idx, sessionMapID){
 		var deletionConfirmed = true;
