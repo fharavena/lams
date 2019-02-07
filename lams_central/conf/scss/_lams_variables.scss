@@ -1,12 +1,9 @@
 // Import this file into all LAMS scss files to get the consistent definitions
-//@import "_material-kit.scss";
-@import "material-kit/variables.scss";
+// Based on $brand-primary:              $blue-a400 !default;
+@import "material-kit/variables-blue.scss";
 @import "material-kit/bootstrap/scss/mixins/breakpoints.scss";
 @import "material-kit/bootstrap/scss/mixins/buttons.scss";
 @import "mixins.scss";
-
-// dialog related
-$authoring-width-lg: 1280px;
 
 // LAMS SASS Global Variables
 $gray-light-mid:  $grey-300; // #dddddd
@@ -48,6 +45,21 @@ $border-thin-primary: thin solid $brand-primary;
 // Red
 $border-thin-danger: thin solid $brand-danger;
 $border-medium-danger: 3px solid $brand-danger;
+
+// Override the material kit parts that are hard coded to purple
+.card {
+	.card-header-primary,
+	&.bg-primary,
+	&.card-rotate.bg-primary .front,
+	&.card-rotate.bg-primary .back {
+		background: linear-gradient(60deg, $blue-a400, $blue-a700);
+	}
+}
+    
+// dialog related
+$authoring-width-lg: 1280px;
+
+
 // 
 // learner page box shadow
 // $panel-box-shadow: 0 1px 1px rgba(8, 8, 8, 0.88);
