@@ -145,7 +145,7 @@
 <body <c:if test="${not empty activeOrgId}">class="offcanvas-hidden"</c:if>>
 
 <!-- Offcanvas Bar -->
- <%--    <nav id="offcanvas" role="navigation">
+    <nav id="offcanvas" role="navigation">
         <div class="offcanvas-scroll-area">
         
 			<div class="offcanvas-logo">
@@ -175,21 +175,20 @@
 			</div>
 			
         </div>
-    </nav> --%>
+    </nav>
 <!-- /Offcanvas Bar -->
 
-<!-- header -->
-<header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
-	<a class="navbar-brand navbar-brand-login" href="#"><%=Configuration.get(ConfigurationKeys.SITE_NAME)%></a>
-    
-<!-- 	<div class="top-nav">
+<div class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar" id="mainNavBar">
+	<!-- header -->
+	<div class="container-fluid top-nav">
 	
 		<div class="offcanvas-toggle offcanvas-toggle-header">
 			<i class="fa fa-bars tour-course-reveal"></i>
 		</div>
 
- -->
- <div class="navbar-nav-scroll ml-md-auto ">
+	<a class="navbar-brand navbar-brand-login navbar-logo" href="#"><%=Configuration.get(ConfigurationKeys.SITE_NAME)%></a>
+    
+	 <div class="navbar-nav-scroll ml-md-auto ">
       <ul class="navbar-nav bd-navbar-nav flex-row">
 
 			<li role="presentation" class="nav-item align-self-center">
@@ -291,11 +290,13 @@
 		</ul>
 		</div>
 
-	</header>
+	</div>
+	</div>
 	<!-- /header -->
 
+<div id="page-wrapper">
+
 			<!-- content -->      
-	<main id="page-wrapper" class="content container-fluid">
 		<div id="messageCell">
 			<%--
 				<div id="message">Important annoucements might be posted here...</div>

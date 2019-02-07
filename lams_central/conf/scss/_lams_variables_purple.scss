@@ -12,27 +12,26 @@ $authoring-width-lg: 1280px;
 // LAMS SASS Global Variables
 $gray-light-mid:  $grey-300; // #dddddd
 $gray-lightest:  $grey-100; // #f5f5f5 or whitesmoke
-// 
+
 // Primary colour shades
-// $brand-primary-darkest: #072B57; // used for main page offcanvas course list
-// $brand-primary-darker: #164276;  // used for main page offcanvas course list
-$brand-primary-mid: lighten($brand-primary, 12%); // #5798d0
-$brand-primary-light: lighten($brand-primary, 45%); // #dbe9f5
-// next one is to be removed!!!!
+$brand-primary-darkest: $purple-900; // used for main page offcanvas course list
+$brand-primary-darker: $purple-700;  // used for main page offcanvas course list
+$brand-primary-mid: $purple-200; 
+$brand-primary-light: $purple-50;
 $brand-primary-bright: $brand-rose;   // used when we need a primary standout, such as the right hand bar indicating the current org in the offcanvas course list.
-// 
+
 // a links
 $a-link-default: $brand-primary;
 $a-link-default-hover: $brand-primary-bright;
 $a-link-default-focus: $brand-primary-bright;
-// 
+
 // Success Green shades
-$brand-success-light: lighten($green-500, 25%); // #b5dfb5
-// 
+$brand-success-light: $green-200;
+
 // Warning Yellow shades:
-$contrast-fade-start: lighten($orange-500, 50%); // Used in Forum, Comment for highlighting replies
-$contrast-light: lighten($orange-500,  20%); 
-// 
+$contrast-fade-start: $orange-300; // Used in Forum, Comment for highlighting replies
+$contrast-light: $orange-50; 
+
 // Borders in various colours
 // Grey or black
 $legend-border-color: #e5e5e5;
@@ -57,28 +56,27 @@ $border-medium-danger: 3px solid $brand-danger;
 $optional-activity-background: lighten($brand-primary-mid, 35%);
 $optional-activity-background-heading: lighten($brand-primary-mid, 5%); 
 $optional-activity-background-hover: $contrast-light;
-$completed-activity-fill: #000099;
-$current-activity-fill: #BB0000;
-$gate-activity-fill: #FF0000;
-$complex-activity-fill: #999999;
-$not-started-activity-fill: #009900;
+$completed-activity-fill: $blue-a700;
+$current-activity-fill: $red-900;
+$gate-activity-fill: $red;
+$complex-activity-fill: $grey;
+$not-started-activity-fill: $green;
 
-// 
 // Used just for main.css - the main page
-// $main_default_link: #5A738E;
-// $main_blue_light_highlight: #A6E5FD;
-// $main_fav_org_link: #A7B1C2;
-// $main_offcanvas_link: #2B5B95;
-// $main_offcanvas_link_color: $body-bg;
-// $main_offcanvas_background: $brand-primary-darker;
-// $main_offcanvas_color: $gray-lighter;
-// $main_offcanvas_logo_background: $brand-primary-darkest;
-// $main_offcanvas_search_background: $brand-primary-darkest;
-// $main_dropdown_border: #D9DEE4;
-// $main_navbar_link: #515356;
-// $main_singlelesson_hover_border: #9be0f9;
-// $main_singlelesson_hover_background: #F0F8FF;
-// 
+$main_default_link: #5A738E;
+$main_blue_light_highlight: #A6E5FD;
+$main_fav_org_link: #A7B1C2;
+$main_offcanvas_link: #2B5B95;
+$main_offcanvas_link_color: $gray-lightest;
+$main_offcanvas_background: $brand-primary;
+$main_offcanvas_color: $gray-lightest;
+$main_offcanvas_logo_background: $brand-primary-darkest;
+$main_offcanvas_search_background: $brand-primary-darkest;
+$main_dropdown_border: #D9DEE4;
+$main_navbar_link: #515356;
+$main_singlelesson_hover_border: #9be0f9;
+$main_singlelesson_hover_background: #F0F8FF;
+
 // navbar login bar
 // $navbar-brand-login-color: #ffffff;
 // $navbar-login-background: $brand-primary;
@@ -94,9 +92,9 @@ $url_css_directory: "/lams/images/css/";
 // $login_logo: "/lams/images/svg/lams_logo_black.svg";
 // $login_logo_size: auto 20px;
 // $login-logo_div_width: 100px;
-// 
-// $offcanvas_logo: "/lams/images/svg/lams_logo_white.svg";
-// $offcanvas_height: 31px;
+ 
+$offcanvas_logo: "/lams/images/svg/lams_logo_white.svg";
+$offcanvas_height: 30px;
 
 // generic portrait colors
 $portrait-color-0:#001f3f;

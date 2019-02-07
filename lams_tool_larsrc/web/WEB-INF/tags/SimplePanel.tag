@@ -5,7 +5,7 @@
 <%@ attribute name="title" required="false" rtexprvalue="true"%>
 <%@ attribute name="titleKey" required="false" rtexprvalue="true"%>
 <%@ attribute name="titleHelpURL" required="false" rtexprvalue="true"%>
-<%@ attribute name="panelBodyClass" required="false"  rtexprvalue="true"%>
+<%@ attribute name="cardBodyClass" required="false"  rtexprvalue="true"%>
 
 <c:if test="${not empty titleKey}">
 	<c:set var="title"><fmt:message key="${titleKey}" /></c:set>
@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	</c:if>
-	<div class="card-body ${panelBodyClass}">
+	<div class="card-body ${cardBodyClass}">
 		<jsp:doBody />
 	</div>
 </div>
