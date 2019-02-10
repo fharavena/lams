@@ -31,12 +31,12 @@
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-widgets.js"></script> 	
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.dialogextend.js"></script>	
 	<script type="text/javascript" src="${lams}includes/javascript/dialog.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-tour.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.ui.touch-punch.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.slimscroll.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/main.js"></script>
+	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-tour.min.js"></script>
 	<script type="text/javascript">
 		var LAMS_URL = '<lams:LAMSURL/>',	
 			decoderDiv = $('<div />'),
@@ -192,14 +192,14 @@
       <ul class="navbar-nav bd-navbar-nav flex-row">
 
 			<li role="presentation" class="nav-item align-self-center">
-				<a href="javascript:;" id="index-tour" onclick="javascript:startTour();" class="nav-link info-number" data-toggle="dropdown" aria-expanded="false">
+				<a href="javascript:;" id="index-tour" onclick="javascript:startTour();" class="nav-link">
 					<i class="fa fa-question-circle"></i>
 					<span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span>
 				</a>
 			</li>
 					
 			<li role="presentation" class="nav-item align-self-center">
-				<a href="javascript:;" onclick="javascript:showPrivateNotificationsDialog();" class="nav-link info-number tour-user-notifications" data-toggle="dropdown" aria-expanded="false">
+				<a href="javascript:;" onclick="javascript:showPrivateNotificationsDialog();" class="nav-link info-number tour-user-notifications">
 					<i class="fa fa-envelope-o"></i>
                		<span id="notificationsPendingCount" class="btn-default"></span>
 				</a>

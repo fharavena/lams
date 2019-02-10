@@ -41,6 +41,7 @@
 		}
 
 		function showMarkChart() {
+			$("#markChartCard").css("display", "block");
 			$("#markChartDiv").css("display", "block");
 			$("#markChartHidden").css("display", "none");
 			if ( ! graphLoaded ) {
@@ -55,6 +56,7 @@
 		}
 		
 		function hideMarkChart() {
+			$("#markChartCard").css("display", "none");
 			$("#markChartDiv").css("display", "none");
 			$("#markChartShown").css("display", "none");
 			$("#markChartHidden").css("display", "inline");
@@ -710,18 +712,11 @@
 	<!--  The buttons are formatted and dispayed differently in the pop up vs monitoring version. Popup matches Course Gradebook, 
 	-- Monitoring matches monitoring. So various button settings and the button codes are setup in advance and included where needed later.  -->
 	
-	<c:choose>
-	<c:when test="${!isInTabs}">
-		<c:set var="btnclass" value="btn btn-xs btn-default"/>
-	</c:when>
-	<c:otherwise>
-		<c:set var="btnclass" value="btn btn-sm btn-default"/>
-	</c:otherwise>
-	</c:choose>
+	<c:set var="btnclass" value="btn btn-sm btn-default"/>
 		
 	<c:set var="lockLabelClass">${isInTabs?"lockLabel":""}</c:set>
 	<c:set var="padlockCode">
-		<div class="d-block d-sm-none">
+		<div class="d-inline d-sm-none">
 		<div id="padlockLocked" style="display:none">
 			<span class="${lockLabelClass}">
 			<i class="fa fa-lock"></i>
@@ -782,7 +777,7 @@
 	<c:when test="${!isInTabs}">
 		<%-- replacement for Page type admin --%>
 		<div class="row no-gutter no-margin">
-		<div class="col-xs-12">
+		<div class="col-sm-12">
 		<div class="container" id="content">
 
 		<div class="card card-plain card-admin-page">
@@ -855,15 +850,15 @@
 		</div> <!-- Closes gbButtons -->
 		
 		
-			<div class="row">
-				 <div class="col-xs-12">
+			<div  id="markChartCard" class="card card-plain" style="display:none">
+				 <div class="card-body">
 				 <lams:WaitingSpinner id="markChartBusy"/>
  				 <div id="markChartDiv" class="markChartDiv" style="display:none"></div>
 				</div>
 			</div>
 
 			<c:if test="${usesWeights}">
-			<div id="weights" class="grid-holder voffset20" style="display:none" >
+			<div id="weights" class="grid-holder voffset40" style="display:none" >
 			<div class="card card-plain">
 				<div class="card-header">
 					<fmt:message key="label.weights.title"/>
@@ -883,7 +878,7 @@
 			</div>	
 			</c:if>
 			
-			<div class="grid-holder voffset20">
+			<div id="userActivityViewsHolder" class="grid-holder ${usesWeights?'voffset20':'voffset40'}">
 				<table id="userView" class="scroll" ></table>
 				<div id="userViewPager" class="scroll" ></div>
 				

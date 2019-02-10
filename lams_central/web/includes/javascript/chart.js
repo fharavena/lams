@@ -308,9 +308,12 @@ function drawHistogram(chartID, url, xAxisLabel, yAxisLabel){
 			
 		// clear previous chart
 		data = response.data;
-		var	max = Number(d3.max(data))+1;
-		var min = Number(d3.min(data));
-		var range = max-min;
+		var max = 0, min = 0, range = 0;
+		if ( data.length > 0 ) {
+			max = Number(d3.max(data))+1;
+			min = Number(d3.min(data));
+			range = max-min;
+		}
 		if ( range > 11 ) {
 			// tweak the range to have more space at the top so it charts better for larger numbers
 			range+=3;

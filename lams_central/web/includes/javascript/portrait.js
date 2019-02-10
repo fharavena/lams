@@ -97,7 +97,7 @@ function initializePortraitPopover(LAMS_URL, size, placement) {
 		if ( element.dataset.portrait ) {
 			var url =  LAMS_URL + '/download?preferDownload=false&uuid='+element.dataset.portrait+_getSizeVersion(size);
 			// uses custom template to set the size of the portrait area
-			var template = '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content popover-content-with-portrait"></div></div>'
+			var template = '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body popover-content-with-portrait"></div></div>'
 			$(element).popover({
 				template: template, 
 				content: '<img src="'+url+'"/>',  

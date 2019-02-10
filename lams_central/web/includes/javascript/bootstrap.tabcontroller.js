@@ -12,7 +12,7 @@ function selectTab(tabID) {
 }
 
 function getCurrentTabID() {
-	var activeTab = $("ul#page-tabs li.active a");
+	var activeTab = $("ul#page-tabs li a.active");
 	var href = activeTab.attr("href") // activated tab, should be "#t<num>"
 	var activeTabID = href.substring(2);
 	return activeTabID;

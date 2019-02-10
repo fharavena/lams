@@ -92,6 +92,9 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 .voffset20 {
   margin-top: 20px;
 }
+.voffset40 {
+  margin-top: 40px;
+}
 .roffset2 {
   margin-right: 2px;
 }
@@ -141,6 +144,16 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 }
 .card-no-border {
   box-shadow: none;
+}
+
+// Reduce the gap between the nav bar and the content for authoring and monitoring.
+// The gap is designed for a large panel header but we are not using that on the popup
+// dialogs.
+.card-monitor-page .navbar {
+	margin-bottom: 10px;
+}
+.card-monitor-body {
+	margin-top: 0px;
 }
 
 /* Comments/Forum classes */
@@ -764,7 +777,7 @@ $portrait-size-image-xl: 400px;
     color: $a-link-default-focus !important;
 }
 
-.popover-title {
+.popover-header, .popover-title {
 	background-color: $gray-light-mid;
 }
 

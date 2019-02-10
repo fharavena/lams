@@ -76,17 +76,18 @@
 	</c:set>
 </c:if>
 
-<c:set var="class" value=""/>
-<c:if test="${id == 1}">
-	<c:set var="class">class="active nav-item"</c:set>
-</c:if>
-<c:if test="${id != 1}">
-	<c:set var="class">class="nav-item"</c:set>
-</c:if>
-	
-<c:set var="disabled" value=""/>
+<c:set var="liclass" value="nav-item"/>	
 <c:if test="${inactive}">
-	<c:set var="class">class="disabled"</c:set>
+	<c:set var="liclass" value="disabled"/>	
 </c:if>
 
-<li role="presentation" ${class}><a href="#t${id}" class="nav-link" data-toggle="tab" role="tab" aria-controls="t${id}" role="tab" id="${id}-tab" onclick="${methodCall}(${id});return false;">${tabTitle}</a></li>
+
+<c:if test="${id == 1}">
+	<c:set var="aclass" value="nav-link active"/>	
+</c:if>
+<c:if test="${id != 1}">
+	<c:set var="aclass" value="nav-link"/>	
+</c:if>
+
+
+<li role="presentation" class="${liclass}"><a href="#t${id}" class="${aclass}" role="tab" aria-controls="t${id}" role="tab" id="${id}-tab" onclick="${methodCall}(${id});return false;">${tabTitle}</a></li>
