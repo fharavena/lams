@@ -4,9 +4,6 @@
 </c:set>
 <c:set var="dto" value="${requestScope.monitoringDTO}" />
 
-<link type="text/css" href="${lams}/css/jquery-ui-bootstrap-theme.css" rel="stylesheet">
-<link type="text/css" href="${lams}/css/jquery-ui.timepicker.css" rel="stylesheet">
-
 <script type="text/javascript">
 	//pass settings to monitorToolSummaryAdvanced.js
 	var submissionDeadlineSettings = {
@@ -25,8 +22,6 @@
 	});
 
 </script>
-<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.js"></script>
-<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.timepicker.js"></script>
 <script type="text/javascript" src="${lams}includes/javascript/jquery.blockUI.js"></script>  
 <script type="text/javascript" src="${lams}/includes/javascript/monitorToolSummaryAdvanced.js" ></script>
 <script type="text/javascript" src="${lams}/includes/javascript/portrait.js" ></script>
@@ -56,7 +51,7 @@
 			</span>
         </div>
         
-        <div id="collapse${session.sessionID}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${session.sessionID}">
+        <div id="collapse${session.sessionID}" class="card-collapse collapse ${status.first ? 'show' : ''}" role="tabcard" aria-labelledby="heading${session.sessionID}">
 	</c:if>
 
 		<table class="table table-sm table-no-border">

@@ -41,9 +41,9 @@
 		</form:form>
 
 		<div class="voffset5 pull-right">
-		<a href="javascript:;" onclick="hideConditionMessage()" class="btn btn-default btn-xs">
+		<a href="javascript:;" onclick="hideConditionMessage()" class="btn btn-default btn-sm">
 				<fmt:message key="label.cancel" /> </a>
-			<a href="javascript:;" onclick="submitCondition();" class="btn btn-default btn-xs">
+			<a href="javascript:;" onclick="submitCondition();" class="btn btn-default btn-sm">
 				<fmt:message key="label.save" /></a>
 			
 		</div>

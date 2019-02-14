@@ -11,11 +11,8 @@
 		<title>
 			<fmt:message key="activity.title" />
 		</title>
+		<lams:headItems/>
 		<link href="${tool}includes/css/chat.css" rel="stylesheet" type="text/css">
-		<link href="${tool}includes/css/chat.css" rel="stylesheet" type="text/css">
-		<link href="${lams}css/defaultHTML_learner.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-		<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 		
 	</lams:head>
 	<body class="stripes">
