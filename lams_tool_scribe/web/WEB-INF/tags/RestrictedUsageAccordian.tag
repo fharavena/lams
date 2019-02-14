@@ -23,7 +23,7 @@
 	 */
 
 	/**
-	 * AdvancedAccordian.tag
+	 * RestrictedUsage.tag
 	 *	Author: Fiona Malikoff
 	 *	Description: Creates the show/hide entry for the Restricted Usage Settings in Monitoring.
 	 * Wiki: 
@@ -35,18 +35,16 @@
 <%@ taglib uri="tags-fmt" prefix="fmt"%>
 <%@ taglib uri="tags-lams" prefix="lams"%>
 
-<div class="panel-group" id="accordionRestrictUsageDiv" role="tablist" aria-multiselectable="true"> 
-    <div class="panel panel-default" >
-        <div class="panel-heading collapsable-icon-left" id="headingRestrictedUsageDiv">
-        	<span class="panel-title">
+<div class="accordian" id="accordionRestrictUsageDiv" role="tablist" aria-multiselectable="true"> 
+    <div class="card card-accordian" >
+        <div class="card-header collapsable-icon-left" id="headingRestrictedUsageDiv">
+        	<span class="card-title">
 	    	<a class="collapsed" role="button" data-toggle="collapse" href="#restrictUsageDiv" aria-expanded="false" aria-controls="restrictUsageDiv" >
           	${title}
         	</a>
       		</span>
         </div>
-
-
-		<div id="restrictUsageDiv" class="panel-body panel-collapse collapse" role="tabpanel" aria-labelledby="headingRestrictedUsageDiv">
+		<div id="restrictUsageDiv" class="card-body card-collapse collapse" role="tabpanel" aria-labelledby="headingRestrictedUsageDiv">
 		<jsp:doBody />
 		</div>
 	</div>

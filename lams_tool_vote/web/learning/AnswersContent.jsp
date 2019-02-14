@@ -175,7 +175,7 @@
 
 			<!-- options  -->
 			<div class="table-responsive">
-				<table class="table table-hover table-condensed">
+				<table class="table table-hover table-sm">
 					<tbody>
 						<c:set var="count" value="0" scope="page" />
 						<c:forEach var="subEntry" varStatus="status" items="${requestScope.mapQuestionContentLearner}">

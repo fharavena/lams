@@ -4,7 +4,7 @@
 <c:forEach var="session" items="${dto.sessionDTOs}">
 
 <c:if test="${isGroupedActivity}">
-	<div class="card card-plain" >
+	<div class="card card-statistics" >
        <div class="card-header" id="stats${session.sessionID}">
   	    	<span class="card-title">
 			${session.sessionName}</a>
@@ -12,7 +12,7 @@
       	</div>
 </c:if>
 
-	<table class="table table-condensed">
+	<table class="table table-sm">
 		<tr>
 			<td><strong> <fmt:message key="heading.totalLearners" /> </strong></td>
 			<td>${session.numberOfLearners}	</td>

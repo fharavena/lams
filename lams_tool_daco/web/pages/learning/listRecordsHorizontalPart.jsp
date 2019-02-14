@@ -48,7 +48,7 @@
 		</c:otherwise>
 	</c:choose>
 
-	<table id="horizontalListTable" class="table table-striped table-bordered table-condensed">
+	<table id="horizontalListTable" class="table table-striped table-bordered table-sm">
 		<tr>
  			<c:forEach var="record" items="${recordList}" varStatus="recordStatus">
 				<td style="height:50px">
@@ -142,7 +142,7 @@
 												</c:choose>
 											</c:when>
 											<c:when test="${question.type==7}">
-												<table class="table table-condensed table-no-border table-nonfluid">
+												<table class="table table-sm table-no-border table-nonfluid">
 													<tr>
 														<td>
 															<c:forEach var="answerOption" items="${question.answerOptions}" varStatus="status">
@@ -176,7 +176,7 @@
 												</c:choose>
 											</c:when>
 											<c:when test="${question.type==9}">
-												<table class="table table-condensed table-no-border table-nonfluid">
+												<table class="table table-sm table-no-border table-nonfluid">
 													<tr>
 														<td>
 															<c:forEach var="answerOption" items="${question.answerOptions}" varStatus="status">
@@ -193,7 +193,7 @@
 												</table>
 											</c:when>
 											<c:when test="${question.type==10}">
-												<table class="table table-condensed table-no-border table-nonfluid">
+												<table class="table table-sm table-no-border table-nonfluid">
 													<tr>
 														<td width="80px">
 														<label><fmt:message key="label.learning.longlat.longitude" /></label>

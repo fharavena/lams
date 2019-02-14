@@ -211,7 +211,7 @@
 				<!--  End card button bar -->
 			</div> 
 
-			<table class="table table-hover table-striped table-condensed">
+			<table class="table table-hover table-striped table-sm">
 			<tr>
 				<th width="70%">
 					<fmt:message key="export.label.resource" />

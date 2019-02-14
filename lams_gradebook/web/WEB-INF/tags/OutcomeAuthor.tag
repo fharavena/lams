@@ -32,7 +32,7 @@
 	}
 </style>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	// Adding jquery-ui.js if it hasn't been loaded already
 	if (!jQuery.ui) {
 		document.write('<link href="<lams:LAMSURL/>css/jquery-ui-bootstrap-theme.css" rel="stylesheet" type="text/css" />');
@@ -136,7 +136,7 @@
 			}
 		});
 	}
-</script>
+</script> -->
 
 <lams:SimplePanel titleKey="outcome.authoring.title">
 	<div class="input-group">

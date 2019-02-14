@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	  <c:out value="${sessionMap.commonCartridge.title}" escapeXml="true"/>
 	</h4>
@@ -26,7 +26,7 @@ $(document).ready(function(){
 </div>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 
@@ -34,7 +34,7 @@ $(document).ready(function(){
 	<c:set var="groupSize" value="${fn:length(group)}" />
 		
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
 	        <div class="card-header" id="heading${group[0].sessionId}">
 	        	<span class="card-title collapsable-icon-left">
 	        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${group[0].sessionId}" 

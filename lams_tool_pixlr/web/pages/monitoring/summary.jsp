@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	  <c:out value="${dto.title}" escapeXml="true"/>
 	</h4>
@@ -32,7 +32,7 @@
 </div>
 
 <c:if test="${isGroupedActivity}">
-	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <form:form action="toggleHideImage.do" modelAttribute="monitoringForm" method="post" id="monitoringForm">
@@ -44,7 +44,7 @@
 	<c:forEach var="session" items="${dto.sessionDTOs}" varStatus="status">
 	
 		<c:if test="${isGroupedActivity}">	
-		    <div class="card card-plain" >
+		    <div class="card card-accordian" >
 		        <div class="card-header" id="heading${session.sessionID}">
 		        	<span class="card-title collapsable-icon-left">
 		        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 

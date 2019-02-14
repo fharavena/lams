@@ -8,7 +8,7 @@
 	</lams:Alert>
 </c:if>
 
-<table  class="table table-condensed">
+<table  class="table table-sm">
 	<tr>
 		<td>
 			<fmt:message key="label.authoring.basic.title" />

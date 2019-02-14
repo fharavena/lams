@@ -132,7 +132,7 @@
 		           <div class="card-body">
 		             <c:choose>
 		               <c:when test="${not empty wikiPageContentHistory}">
-		                 <table class="table table-striped table-condensed">
+		                 <table class="table table-striped table-sm">
 							<tr>
 								<th>
 									<fmt:message key="label.wiki.history.version"></fmt:message>
@@ -202,7 +202,7 @@
 		             </h4>
 		           </div>
 		           <div class="card-body">
-		             <table class="table table-striped table-condensed">
+		             <table class="table table-striped table-sm">
 					<tr>
 						<td>
 							<div class="field-name">
@@ -294,7 +294,7 @@
 		              </h4>
 		            </div>
 		
-					<table class="table table-condensed table-striped">
+					<table class="table table-sm table-striped">
 					<c:forEach var="user" items="${sessionDTO.userDTOs}">
 						<c:if test="${not empty user.notebookEntry}">
 							<tr>

@@ -125,7 +125,7 @@
 	</c:when>
 	<c:otherwise>
 		<c:if test="${sessionMap.isGroupedActivity}">
-			<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+			<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 		</c:if>
 
 		<c:forEach var="sessionSummary" items="${monitoringSummary}" varStatus="status">
@@ -168,7 +168,7 @@
 
 		</c:forEach>
 		<c:if test="${sessionMap.isGroupedActivity}">
-			</div> <!-- end card-group for accordian -->
+			</div> <!-- end accordian for accordian -->
 		</c:if>
 
 	</c:otherwise>
@@ -177,7 +177,7 @@
 <c:set var="adTitle"><fmt:message key="label.monitoring.advancedsettings" /></c:set>
 <lams:AdvancedAccordian title="${adTitle}">
           	
-<table class="table table-striped table-condensed">
+<table class="table table-striped table-sm">
 	<tr>
 		<td>
 			<fmt:message key="label.common.min" />

@@ -119,7 +119,7 @@
 									<!-- list of candidate answers -->
 				                     <c:choose>
 				                     <c:when test="${isPrefixAnswersWithLetters}">
-										<table class="table table-hover table-condensed table-no-border table-top">
+										<table class="table table-hover table-sm table-no-border table-top">
 										<c:forEach var="subEntry" items="${mainEntry.value}">
 										<tr><td>${subEntry.key}
 										</td>
@@ -140,7 +140,7 @@
 
 									<!-- display students answers -->
 									<div class="table-responsive">
-										<table class="table table-condensed">
+										<table class="table table-sm">
 											<thead>
 												<tr>
 													<th colspan="2"><fmt:message key="label.yourAnswers" /></th>
@@ -251,7 +251,7 @@
 				<fmt:message key="label.group.results" />
 			</h4>
 
-			<table class="table table-condensed">
+			<table class="table table-sm">
 				<tr>
 					<td class="active" width="30%"><fmt:message key="label.topMark" /></td>
 					<td><c:out value="${mcGeneralLearnerFlowDTO.topMark}" /></td>

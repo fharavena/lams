@@ -6,7 +6,7 @@
 		<i class="fa fa-spinner" style="display: none" id="taskListListArea_Busy"></i>
 	</h4>
 	
-	<table class="table table-condensed table-striped" id="itemTable">
+	<table class="table table-sm table-striped" id="itemTable">
 		<c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 
 		<c:forEach var="taskList" items="${sessionMap.taskListList}" varStatus="status">

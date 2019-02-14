@@ -7,7 +7,7 @@
 		<fmt:message key="label.authoring.basic.question.list.title" />
 	</div>
 
-	<table class="table table-condensed" id="referencesTable">
+	<table class="table table-sm" id="referencesTable">
 		<tr>
 			<th width="20%">
 				<fmt:message key="label.authoring.basic.list.header.type" />

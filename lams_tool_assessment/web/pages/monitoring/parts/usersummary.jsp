@@ -155,7 +155,7 @@
 		<div class="card-body">	
 			<lams:errors/>
 			
-			<table class="table table-condensed">
+			<table class="table table-sm">
 				<tr>
 					<th style="width: 180px;" >
 						<fmt:message key="label.monitoring.user.summary.user.name" />

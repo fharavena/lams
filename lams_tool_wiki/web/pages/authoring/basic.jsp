@@ -89,7 +89,7 @@
   <div class="card-body">
 	<c:choose>
 		<c:when test="${not empty wikiPageContentHistory}">
-			<table class="table table-striped table-condensed">
+			<table class="table table-striped table-sm">
 				<tr>
 					<th>
 						<fmt:message key="label.wiki.history.version"></fmt:message>

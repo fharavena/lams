@@ -27,19 +27,13 @@ if ((typeof jQuery != 'undefined') && (typeof submissionDeadlineSettings != 'und
 			var date = new Date(eval(submissionDeadlineSettings.submissionDeadline));
 
 			if ( typeof submissionDeadlineSettings.submissionDateString != 'undefined' ) {
-				$("#dateInfo").html( submissionDeadlineSettings.submissionDateString );
+				$("#dateInfo").html(submissionDeadlineSettings.submissionDateString );
 			} else {
 				$("#dateInfo").html( formatDate(date) );
 			}
-			
-			if ( $("#restrictUsageDiv").hasClass("collapse") )  {
-				// new version - using the according
-				//open up date restriction area
-				$("#restrictUsageDiv").addClass("in");
-			} else {
-				// old code - remove once bootstrapping is completed.
-				toggleAdvancedOptionsVisibility(document.getElementById('restrictUsageDiv'), document.getElementById('restrictUsageTreeIcon'),submissionDeadlineSettings.lams);
-			}
+
+			// show the date area straight away as it has a date set!
+			$("#restrictUsageDiv").addClass("show");
 		}
 	});	
 	
@@ -57,9 +51,9 @@ if ((typeof jQuery != 'undefined') && (typeof submissionDeadlineSettings != 'und
 	}
 
 	function setSubmissionDeadline() {
-		//get the timestamp in milliseconds since midnight Jan 1, 1970
-		var date = $("#datetime").datetimepicker('getDate');
-		if (date == null) {
+		// Need to get the timestamp in milliseconds since midnight Jan 1, 1970. 
+		var moment = $("#datetime").data("DateTimePicker").date(); 
+		if (moment == null) {
 			return;
 		}
 
@@ -67,7 +61,8 @@ if ((typeof jQuery != 'undefined') && (typeof submissionDeadlineSettings != 'und
 		var parameterDelimiter = (submissionDeadlineSettings.setSubmissionDeadlineUrl.indexOf("?") == -1) ? "?" : "&"; 
 		
 		var url = submissionDeadlineSettings.setSubmissionDeadlineUrl + parameterDelimiter + "toolContentID=" + submissionDeadlineSettings.toolContentID + "&submissionDeadline=" +
-					+ date.getTime() + "&reqID=" + reqIDVar.getTime();
+					+ moment.valueOf() + "&reqID=" + reqIDVar.getTime();
+
 		$.ajax({
 			url : url,
 			success : function(data) {
@@ -88,7 +83,7 @@ if ((typeof jQuery != 'undefined') && (typeof submissionDeadlineSettings != 'und
 		
 		var url = submissionDeadlineSettings.setSubmissionDeadlineUrl + parameterDelimiter + "toolContentID=" + submissionDeadlineSettings.toolContentID + "&submissionDeadline=" +
 				"&reqID=" + reqIDVar.getTime();
-
+		
 		$.ajax({
 			url : url,
 			success : function() {

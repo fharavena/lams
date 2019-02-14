@@ -240,11 +240,11 @@
 		var enableCommentsId = 'enableComments' + orderId;
 		var spinnerId = 'commentsMinWordsLimit' + orderId;
 		var spinnerlabelId = 'commentsMinWordsLimitLabel' + orderId;
-		minimumWordsSpinnerArray[orderId] = $('#'+spinnerId).spinner({ 
+/* 		minimumWordsSpinnerArray[orderId] = $('#'+spinnerId).spinner({ 
 				min: 0,
 			 	disabled: !justifyOrComment
 			 });
-	 	$('#'+enableCommentsId).click(function() {
+ */	 	$('#'+enableCommentsId).click(function() {
 	 		var id = this.id.substring(14);
 	 		var minimumWordsSpinner = minimumWordsSpinnerArray[id];
 	 		if ( minimumWordsSpinner.spinner( "option", "disabled" ) ) {
@@ -266,11 +266,11 @@
 		if ( style == 0 ) {
 			var ratingLimitsStr = '';
 			if ( '${hasRatingLimits}' == 'true' ) {
-				ratingLimitsStr = '<div class="voffset5"><label for="minimumRates"><fmt:message key="${minimumLabel}" /></label>&nbsp;'
+				ratingLimitsStr = '<div class="form-group form-inline"><label for="minimumRates"><fmt:message key="${minimumLabel}" /></label>&nbsp;'
 				+ generateSelect('minimumRates' + orderId, 'true', '<fmt:message key="${noMinimumLabel}"/>', orderId, minimumRates)
 	  			+ '<label for="maximumRates" class="loffset10"><fmt:message key="${maximumLabel}" /></label>&nbsp;'
 				+ generateSelect('maximumRates' + orderId, 'false', '<fmt:message key="${noMaximumLabel}"/>', orderId, maximumRates)
-				+ '<BR/>'
+				+ '</div>'
 			 	+ generateManadatorySpinner(orderId, '<fmt:message key="${minNumberWordsLabel}"><fmt:param> </fmt:param></fmt:message>', commentMinWordsLimit);
 			}
 			row.append(jQuery('<td/>', {
@@ -281,11 +281,11 @@
 		} else if ( style == 1 ) {
 			var ratingLimitsStr = '';
 			if ( '${hasRatingLimits}' == 'true' ) {
-				ratingLimitsStr = '<div class="voffset5"><label for="minimumRates"><fmt:message key="${minimumLabel}" /></label>&nbsp;'
+				ratingLimitsStr = '<div class="form-group form-inline"><label for="minimumRates"><fmt:message key="${minimumLabel}" /></label>&nbsp;'
 				+ generateSelect('minimumRates' + orderId, 'true', '<fmt:message key="${noMinimumLabel}"/>', orderId, minimumRates)
 	  			+ '<label for="maximumRates" class="loffset10"><fmt:message key="${maximumLabel}" /></label>&nbsp;'
 				+ generateSelect('maximumRates' + orderId, 'false', '<fmt:message key="${noMaximumLabel}"/>', orderId, maximumRates)
-				+ '<BR/>'
+				+ '</div>'
 			 	+ generateSpinner(orderId, justifyOrComment, '<fmt:message key="${allowCommentsLabel}" />', '<fmt:message key="${minNumberWordsLabel}"><fmt:param> </fmt:param></fmt:message>', commentMinWordsLimit);
 			}
 			row.append(jQuery('<td/>', {
@@ -398,15 +398,15 @@
 				<label><fmt:message key="${headerLabel}" /></label>
 			</div>
 	
-			<table class="table table-striped table-condensed" id="criterias-table">	
+			<table class="table table-striped table-sm" id="criterias-table">	
 			<tbody id="criterias-table-body">
 				<!--  populated by javascript -->
 			</tbody>
 			</table>
 		</div>
 
-		<div class="form-group voffset20">
- 			<select id="ratingStyle" class="form-control form-control-inline loffset10">
+		<div class="form-group form-inline">
+ 			<select id="ratingStyle" class="form-control loffset10 roffset5">
 				<option selected="selected" value="1"><fmt:message key="${styleStar}" /></option>
 				<option value="2"><fmt:message key="${styleRanking}" /></option>
 				<option value="3"><fmt:message key="${styleHedging}" /></option>

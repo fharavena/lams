@@ -8,7 +8,7 @@
 	</lams:Alert>
 </c:when>
 <c:otherwise>	
-	<table class="table table-condensed table-no-border">
+	<table class="table table-sm table-no-border">
 		<tr>
 			<th class="first">
 				<fmt:message key="label.session.name"/>

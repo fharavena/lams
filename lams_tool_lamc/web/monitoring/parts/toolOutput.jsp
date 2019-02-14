@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 
-<div id="accordion-tool-output" class="card-group voffset20" role="tablist" aria-multiselectable="true"> 
+<div id="accordion-tool-output" class="accordian voffset20" role="tablist" aria-multiselectable="true"> 
     <div class="card card-plain">
         <div class="card-header collapsable-icon-left" id="heading-tool-output">
         	<span class="card-title">

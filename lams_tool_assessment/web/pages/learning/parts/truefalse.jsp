@@ -5,7 +5,7 @@
 </div>
 
 <div class="table-responsive">
-	<table class="table table-hover table-condensed">
+	<table class="table table-hover table-sm">
 		<tr>
 			<td class="has-radio-button">
 				<input type="radio" name="question${status.index}" value="${true}"

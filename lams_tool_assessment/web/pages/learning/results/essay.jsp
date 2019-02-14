@@ -5,7 +5,7 @@
 </div>
 
 <div class="table-responsive">
-	<table class="table table-hover table-condensed">
+	<table class="table table-hover table-sm">
 		<tr>
 			<td>
 				${question.answerString}
@@ -15,7 +15,7 @@
 </div>
 
 <c:if test="${assessment.allowDiscloseAnswers && fn:length(sessions) > 1}">
-	<table class="table table-responsive table-striped table-bordered table-hover table-condensed">
+	<table class="table table-responsive table-striped table-bordered table-hover table-sm">
 		<tr role="row">
 			<td colspan="2" class="text-center"><b><fmt:message key="label.learning.summary.other.team.answers"/></b></td>
 		</tr>

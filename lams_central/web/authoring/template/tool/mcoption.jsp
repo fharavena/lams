@@ -6,7 +6,7 @@ and a text field field named question${questionNumber}option${optionNumber} --%>
 
 		<c:set var="qnon">question${questionNumber}option${optionNumber}</c:set>
 		
-		<table class="table table-condensed table-no-border">
+		<table class="table table-sm table-no-border">
 		<tr>
 		<td>
 			<span class="field-name">

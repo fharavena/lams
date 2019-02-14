@@ -2,7 +2,7 @@
 <c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 
 <div id="conditionList">
-	<table class="table table-striped table-condensed" id="conditionTable" >
+	<table class="table table-striped table-sm" id="conditionTable" >
 		<tr>
 			<th width="8%">
 				<fmt:message key="label.authoring.conditions.order" />

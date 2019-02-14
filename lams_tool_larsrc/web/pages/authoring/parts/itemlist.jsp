@@ -8,7 +8,7 @@
 		<lams:WaitingSpinner id="resourceListArea_Busy" showInline="true"/>
 	</div>
 
-	<table class="table table-striped table-condensed" id="itemTable">
+	<table class="table table-striped table-sm" id="itemTable">
 		<c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 		<c:set var="listSize" value="${fn:length(sessionMap.resourceList)}" />
 		<c:forEach var="resource" items="${sessionMap.resourceList}"

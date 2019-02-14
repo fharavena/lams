@@ -65,7 +65,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 								<span><fmt:message key="label.no.learners"/></span>
 							</c:when>
 							<c:otherwise>
-							<table class="group-table table table-condensed table-striped">
+							<table class="group-table table table-sm table-striped">
 							<c:forEach items="${group.users}" var="user">
 								<tr><td>	<lams:Portrait userId="${user.userId}"/><span class="loffset5"><c:out value="${user.firstName} ${user.lastName}" /></span></td></tr>
 							</c:forEach>

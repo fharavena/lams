@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 
-<div class="card-group" id="reflections" role="tablist" aria-multiselectable="true"> 
+<div class="accordian" id="reflections" role="tablist" aria-multiselectable="true"> 
     <div class="card card-plain" >
         <div class="card-header collapsable-icon-left" id="headingReflection">
         	<span class="card-title">
@@ -11,7 +11,7 @@
         </div>
 
         <div id="collapseReflection" class="card-collapse collapse" role="tabcard" aria-labelledby="headingReflection">
-			<table class="table table-striped table-condensed">
+			<table class="table table-striped table-sm">
 				<c:forEach var="reflectDTO" items="${sessionMap.reflectList}">
 					<tr>
 						<td>

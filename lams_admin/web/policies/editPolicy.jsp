@@ -74,7 +74,7 @@
 		<form:form action="../policyManagement/save.do" modelAttribute="policyForm" id="policy-form" cssClass="voffset20" method="post">
 			<form:hidden path="policyUid" />
 			<form:hidden path="policyId" />
-			<table class="table table-condensed table-no-border">
+			<table class="table table-sm table-no-border">
 				<tr>
 					<td><fmt:message key="label.name" />&nbsp;&nbsp;*</td>
 					<td><form:input path="policyName" size="40" maxlength="255" cssClass="form-control" /></td>

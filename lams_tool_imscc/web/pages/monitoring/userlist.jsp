@@ -17,7 +17,7 @@
 	<c:set var="title"><fmt:message key="label.monitoring.heading.access" /></c:set>
 	<lams:Page type="learner" title="${title}">
 		
-		<table class="table table-condensed">
+		<table class="table table-sm">
 			<tr>
 				<th>
 					<fmt:message key="monitoring.label.access.time" />

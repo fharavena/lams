@@ -84,7 +84,7 @@
 			<a href="<lams:LAMSURL/>admin/sysadminstart.do" class="btn btn-default"><fmt:message key="sysadmin.maintain" /></a>
 		</p>
 			
-			<table class="table table-striped table-condensed" >
+			<table class="table table-striped table-sm" >
 				<tr>
 					<th>
 						<fmt:message key="admin.themes.theme" />

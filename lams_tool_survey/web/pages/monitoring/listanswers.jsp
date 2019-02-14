@@ -121,7 +121,7 @@
 
 		<h4><fmt:message key="label.question"/></h4>
 
-		<table  class="table table-condensed table-striped table-bordered">
+		<table  class="table table-sm table-striped table-bordered">
 		<tr>
 			<th colspan="2" class="first"><c:out value="${question.description}" escapeXml="false"/></th>
 		</tr>

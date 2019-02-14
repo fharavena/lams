@@ -10,7 +10,7 @@
 <c:forEach var="session" items="${dto.sessionDTOs}">
 
 	<c:if test="${isGroupedActivity}">
-		<div class="card card-plain" >
+		<div class="card card-statistics" >
 			<div class="card-header">
 				<span class="card-title">
 					<fmt:message key="heading.group">
@@ -22,7 +22,7 @@
 	</c:if>
 
 	<div class="card-body">
-		<table class="table table-condensed">
+		<table class="table table-sm">
 			<tr>
 				<td width="40%">
 					<fmt:message>heading.totalLearnersInGroup</fmt:message>

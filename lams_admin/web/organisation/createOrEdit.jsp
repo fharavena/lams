@@ -74,7 +74,7 @@
 					<fmt:message key="label.delete.all.lesson.progress" />
 				</div>
 				
-				<table class="table table-condensed table-no-border">
+				<table class="table table-sm table-no-border">
 					<tr>
 						<td width="15%"><fmt:message key="admin.organisation.name"/> *</td>
 						<td><form:input path="name" size="40" cssClass="form-control" maxlength="240"/></td>

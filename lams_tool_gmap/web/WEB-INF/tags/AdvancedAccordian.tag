@@ -35,17 +35,17 @@
 <%@ taglib uri="tags-fmt" prefix="fmt"%>
 <%@ taglib uri="tags-lams" prefix="lams"%>
 
-<div class="panel-group" id="accordionAdvanced" role="tablist" aria-multiselectable="true"> 
-    <div class="panel panel-default" >
-        <div class="panel-heading collapsable-icon-left" id="headingAdvanced">
-        	<span class="panel-title">
+<div class="accordian" id="accordionAdvanced" role="tablist" aria-multiselectable="true"> 
+    <div class="card card-accordian" >
+        <div class="card-header collapsable-icon-left" id="headingAdvanced">
+        	<span class="card-title">
 	    	<a class="collapsed" role="button" data-toggle="collapse" href="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced" >
           	${title}
         	</a>
       		</span>
         </div>
 
-        <div id="collapseAdvanced" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAdvanced">
+        <div id="collapseAdvanced" class="card-body card-collapse collapse" role="tabpanel" aria-labelledby="headingAdvanced">
 		<jsp:doBody />
 		</div>
 	</div>

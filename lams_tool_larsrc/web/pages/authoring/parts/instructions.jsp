@@ -9,7 +9,7 @@
 
 		<label><fmt:message key="label.authoring.basic.resource.instructions" /></label>
 
-		<table class="table table-condensed table-no-border">
+		<table class="table table-sm table-no-border">
 			<c:forEach var="item" items="${instructionList}" varStatus="status">
 				<tr id="instructionItem${status.index}">
 					<td width="10px">

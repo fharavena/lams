@@ -45,7 +45,7 @@
 		<form:form action="userorgrolesave.do" modelAttribute="userOrgRoleForm" id="userOrgRoleForm" method="post">
 		<form:hidden path="orgId" />
 		
-		<table class="table table-condensed table-striped table-hover">
+		<table class="table table-sm table-striped table-hover">
 		<tr>
 			<th style="width: 20%"><fmt:message key="admin.user.login"/></th>
 			<c:forEach var="role" items="${roles}" varStatus="roleIndex">

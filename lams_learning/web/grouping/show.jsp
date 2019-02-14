@@ -65,7 +65,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 				<div class="card-body">
 	
 					<div class="table-responsive">
-						<table class="table table-condensed table-hover" cellspacing="0">
+						<table class="table table-sm table-hover" cellspacing="0">
 							<c:forEach var="group" items="${groups}">
 								<tr>
 									<td width="15%"><strong><c:out value="${group.groupName}" /></strong></td>

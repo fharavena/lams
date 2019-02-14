@@ -7,7 +7,7 @@
 	
 	<form id="instructionForm">
 		<input type="hidden" name="instructionCount" id="instructionCount">
-		<table id="questionTable" class="table table-condensed table-no-border">
+		<table id="questionTable" class="table table-sm table-no-border">
 			<c:forEach var="item" items="${instructionList}" varStatus="status">
 				<c:set var="item">
 					<c:out value="${item}" escapeXml="true"/>

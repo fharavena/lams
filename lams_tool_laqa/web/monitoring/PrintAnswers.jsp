@@ -29,7 +29,7 @@
 	
 	<p>${questionDTO.question}</p>
 
-	<table class="table table-striped table-bordered table-condensed">
+	<table class="table table-striped table-bordered table-sm">
 	<tr>
 		<th><fmt:message key="label.username"/></th>
 		<th><fmt:message key="label.fullname"/></th>

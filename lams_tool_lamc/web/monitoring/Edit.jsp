@@ -4,7 +4,7 @@
     <fmt:message key="message.monitoring.edit.activity.warning" />
 </lams:Alert>
 
-<table class="table table-condensed">
+<table class="table table-sm">
 	<tr>
 		<td width="10%" ><fmt:message key="label.authoring.title.col"></fmt:message></td>
 		<td><c:out value="${mcGeneralMonitoringDTO.activityTitle}" escapeXml="false"/></td>

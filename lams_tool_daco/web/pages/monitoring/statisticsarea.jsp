@@ -10,7 +10,7 @@
 	</c:when>
 
 	<c:otherwise>
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped table-sm">
 		<tr>
 			<c:if test="${sessionMap.isGroupedActivity}">
 			<th scope="col" width="36%">

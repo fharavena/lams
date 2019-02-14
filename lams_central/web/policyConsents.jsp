@@ -70,7 +70,7 @@
 	</lams:Alert>
 	
 	<form action="/lams/policyConsents/consent.do" method="post" id="consents-form">
-	<table class="table table-striped table-condensed" >
+	<table class="table table-striped table-sm" >
 		<c:forEach items="${policies}" var="policy">
 			<tr>
 				<td>

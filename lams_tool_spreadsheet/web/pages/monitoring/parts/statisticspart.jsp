@@ -20,7 +20,7 @@
         <div class="card-body">
 	</c:if>
 	
-		<table class="table table-condensed table-striped">
+		<table class="table table-sm table-striped">
 			<tr>
 				<td>
 					<fmt:message key="label.monitoring.statistics.marked" />

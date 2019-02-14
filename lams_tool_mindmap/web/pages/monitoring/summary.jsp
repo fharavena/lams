@@ -38,7 +38,7 @@
 	
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	  <c:out value="${mindmapDTO.title}" escapeXml="true"/>
 	</h4>
@@ -55,13 +55,13 @@
 </div>
 
 <c:if test="${isGroupedActivity}">
-	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="session" items="${dto.sessionDTOs}" varStatus="status">
 
 	<c:if test="${isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
 	        <div class="card-header" id="heading${session.sessionID}">
 	        	<span class="card-title collapsable-icon-left">
 	        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 
@@ -81,7 +81,7 @@
 		<fmt:message key="heading.totalLearners" />&nbsp;${session.numberOfLearners}
 	</div>
 
-	<table class="table table-striped table-condensed voffset10">
+	<table class="table table-striped table-sm voffset10">
 
 		<tr>
 			<th width="40%">

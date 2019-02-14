@@ -56,7 +56,7 @@
 	}	
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${spreadsheet.title}" escapeXml="true"/>
 	</h4>

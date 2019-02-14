@@ -96,7 +96,7 @@
 		<input type="hidden" name="next" id="next" value=""/>
 
 		<div class="table-responsive">
-			<table class="table table-hover table-condensed">
+			<table class="table table-hover table-sm">
 				<c:forEach var="ratingDto" items="${criteriaRatings.ratingDtos}">
 				<tr>
 					<td>

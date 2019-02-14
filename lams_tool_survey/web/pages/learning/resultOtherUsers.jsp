@@ -223,7 +223,7 @@ table.alternative-color td:first-child {
 
 			<c:forEach var="question" items="${answerDtos}" varStatus="queStatus">
 				<div class="table-responsive">
-					<table class="table table-hover table-condensed">
+					<table class="table table-hover table-sm">
 						<tr>
 							<th class="first" colspan="2"><c:out value="${question.shortTitle}" /> <%-- Only show pie/bar chart when question is single/multiple choics type --%>
 								<c:if test="${question.type != 3}">

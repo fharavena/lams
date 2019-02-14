@@ -2,7 +2,7 @@
 
 <h4>${groupStatisticsDTO.name}</h4>
 
-<table class="table table-striped table-condensed" >
+<table class="table table-striped table-sm" >
 	<tr>
 		<td><fmt:message key="admin.statistics.totalUsers" /></td>
 		<td width="150px">${groupStatisticsDTO.totalUsers}</td>
@@ -31,7 +31,7 @@
 
 		<h4>${subGroupStatisticsDTO.name}</h4>
 
-		<table class="table table-striped table-condensed" >
+		<table class="table table-striped table-sm" >
 			<tr>
 				<td><fmt:message key="admin.statistics.totalUsers" /></td>
 				<td width="150px">${subGroupStatisticsDTO.totalUsers}</td>

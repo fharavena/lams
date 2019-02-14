@@ -236,7 +236,7 @@
 	</div>
 
 	<c:if test="${isGroupedActivity}">
-	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 	</c:if>
 	
 	<c:forEach var="sessionDto" items="${sessionDtos}" varStatus="status">

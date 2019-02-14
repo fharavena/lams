@@ -3,7 +3,7 @@
 <c:set var="adTitle"><fmt:message key="monitor.summary.th.advancedSettings" /></c:set>
 <lams:AdvancedAccordian title="${adTitle}">
              
-<table class="table table-striped table-condensed">
+<table class="table table-striped table-sm">
 	<tr>
 		<td>
 			<fmt:message key="label.authoring.advanced.give.extra.point" />

@@ -161,7 +161,7 @@
 
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${title}" escapeXml="true"/>
 	</h4>
@@ -186,7 +186,7 @@
 <c:forEach var="sessionDto" items="${sessionMap.sessionDtos}" varStatus="status">
 
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
         <div class="card-header" id="heading${sessionDto.sessionID}">
         	<span class="card-title collapsable-icon-left">
         	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${sessionDto.sessionID}" 

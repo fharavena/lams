@@ -92,7 +92,7 @@
 				<fmt:message key="${allWordsLabelKey}" />
 			</td>
 			<td>
-				<form:input size="40" path="allWords" />
+				<form:input class="form-control" size="40" path="allWords" />
 			</td>
 		</tr>
 		<tr>
@@ -100,7 +100,7 @@
 				<fmt:message key="${phraseLabelKey}" />
 			</td>
 			<td>
-				<form:input size="40" path="phrase" />
+				<form:input class="form-control" size="40" path="phrase" />
 			</td>
 		</tr>
 		<tr>
@@ -108,7 +108,7 @@
 				<fmt:message key="${anyWordsLabelKey}" />
 			</td>
 			<td>
-				<form:input size="40" path="anyWords" /> 
+				<form:input class="form-control" size="40" path="anyWords" /> 
 			</td>
 		</tr>
 		<tr>
@@ -116,7 +116,7 @@
 				<fmt:message key="${excludedWordsLabelKey}" />
 			</td>
 			<td>
-				<form:input size="40" path="excludedWords" /> 
+				<form:input class="form-control" size="40" path="excludedWords" /> 
 			</td>
 		</tr>
 	</table>

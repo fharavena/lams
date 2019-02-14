@@ -3,7 +3,7 @@
 
 <%-- Overall TaskList information  --%>
              
-<table class="table table-striped table-condensed">
+<table class="table table-striped table-sm">
 		<tr>
 			<td>
 				<fmt:message key="label.monitoring.summary.lock.when.finished" />

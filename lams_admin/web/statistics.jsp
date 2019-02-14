@@ -39,12 +39,12 @@
 			<a href="<lams:LAMSURL/>admin/sysadminstart.do" class="btn btn-default"><fmt:message key="sysadmin.maintain" /></a>
 		</p>
 			
-			<div class="card card-plain">
+			<div class="card card-statistics">
 				<div class="card-header">
 					<div class="card-title"><fmt:message key="admin.statistics.overall" /></div>
 				</div>
 				<div class="card-body">
-				<table class="table table-striped table-condensed" >
+				<table class="table table-striped table-sm" >
 					<tr>
 						<td>
 							<fmt:message key="admin.statistics.totalUsers" />
@@ -105,7 +105,7 @@
 				</div>
 			</div>
 			
-			<div class="card card-plain">
+			<div class="card card-statistics">
 				<div class="card-header">
 					<div class="card-title"><fmt:message key="admin.statistics.title.byGroup" /></div>
 				</div>

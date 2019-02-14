@@ -99,7 +99,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 						</div>
 						<div class="card-body">
 	
-							<table class="table table-condensed table-hover" cellspacing="0">
+							<table class="table table-sm table-hover" cellspacing="0">
 								<tr>
 									<th scope="col" width="30%" colspan="2"><fmt:message key="mynotes.entry.title.label" /></th>
 									<th scope="col" width="25%" align="center"><fmt:message key="mynotes.entry.create.date.label" /></th>
@@ -125,7 +125,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 								</c:choose>
 							</h4>
 	
-							<table class="table table-condensed table-hover" cellspacing="0">
+							<table class="table table-sm table-hover" cellspacing="0">
 								<tr>
 									<th scope="col" width="30%" colspan="2"><fmt:message key="mynotes.entry.title.label" /></th>
 									<th scope="col" width="25%" align="center"><fmt:message key="mynotes.entry.create.date.label" /></th>

@@ -7,7 +7,7 @@
 	</lams:Alert>
 </c:if>
 
-<table class="table table-condensed">
+<table class="table table-sm">
 	<tbody>
 		<tr>
 			<td width="10%" nowrap>

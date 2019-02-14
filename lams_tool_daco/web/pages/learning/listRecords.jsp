@@ -80,7 +80,7 @@
 
 					<div class="row">
 						<div class="col-xs-2" style="padding:0">
-							<table id="recordListTable" class="table table-striped table-bordered table-condensed">
+							<table id="recordListTable" class="table table-striped table-bordered table-sm">
 								<tr>
 								<td style="height:50px" style="padding-right:0"><fmt:message key="label.learning.tableheader.recordnumber" /></td>
 								</tr>
@@ -128,7 +128,7 @@
 										onclick="javascript:removeRecord('${sessionMapID}',${recordStatus.index+1})"></i>
 						</c:if>
 					</div>
-					<table class="table table-striped table-condensed">
+					<table class="table table-striped table-sm">
 						<c:forEach var="question" items="${daco.dacoQuestions}" varStatus="questionStatus">
 							<%-- "Generated" means that the table for a long/lat question was already generated
 								 and the current answer only needs to be filled in in the existing textfield.
@@ -234,7 +234,7 @@
 													</c:forEach>
 												</c:when>
 												<c:when test="${question.type==10}">
-													<table class="table table-condensed table-no-border table-nonfluid">
+													<table class="table table-sm table-no-border table-nonfluid">
 														<tr>
 															<td width="80px">
 																<label><fmt:message key="label.learning.longlat.longitude" /></label>

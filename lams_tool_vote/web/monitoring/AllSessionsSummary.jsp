@@ -44,7 +44,7 @@
        
        <div id="collapse${sessionUid}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${sessionUid}">
 
-	<table class="table table-condensed table-striped">							
+	<table class="table table-sm table-striped">							
 
 		<tr>
 			<th><fmt:message key="label.nomination"/></th>

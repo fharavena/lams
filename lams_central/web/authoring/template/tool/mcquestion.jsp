@@ -14,7 +14,7 @@
 	
 		<lams:CKEditor id="question${questionNumber}" value="${option.text}" contentFolderID="${contentFolderID}" height="100"></lams:CKEditor>
 		
-		<table class="table table-condensed table-no-border">
+		<table class="table table-sm table-no-border">
 		<tr><td></td>
 		<td width="60px" class="align-center">
 			<span class="field-name">

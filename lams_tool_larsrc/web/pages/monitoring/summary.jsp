@@ -241,7 +241,7 @@
 
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${sessionMap.resource.title}" escapeXml="true"/>
 	</h4>
@@ -263,13 +263,13 @@
 
 
 <c:if test="${sessionMap.isGroupedActivity}">
-<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="groupSummary" items="${summaryList}" varStatus="status">
 	
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
         <div class="card-header" id="heading${groupSummary.sessionId}">
         	<span class="card-title collapsable-icon-left">
         	<a class="collapsed" role="button" data-toggle="collapse" href="#collapse${groupSummary.sessionId}" 

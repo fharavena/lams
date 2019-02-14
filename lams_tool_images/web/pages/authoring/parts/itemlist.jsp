@@ -9,7 +9,7 @@
 			<i class="fa fa-refresh fa-spin fa-2x fa-fw" style="display:none" id="imageGalleryListArea_Busy"></i>
 		</div>
 
-		<table class="table table-condensed" id="itemTable">
+		<table class="table table-sm" id="itemTable">
 			<c:forEach var="image" items="${sessionMap.imageGalleryList}" varStatus="status">
 			
 				<tr>

@@ -18,7 +18,7 @@
 	}
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${survey.title}" escapeXml="true"/>
 	</h4>
@@ -62,7 +62,7 @@
 
 		<c:choose>
 		<c:when test="${sessionMap.isGroupedActivity}">	
-		    <div class="card card-plain" >
+		    <div class="card card-accordian" >
 	        <div class="card-header" id="heading${surveySession.sessionId}">
 	        	<span class="card-title collapsable-icon-left">
 	        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${surveySession.sessionId}" 
@@ -84,7 +84,7 @@
 		</c:if>
 		
 		<c:forEach var="question" items="${questions}" varStatus="queStatus">
-			<table class="table table-condensed table-no-border">
+			<table class="table table-sm table-no-border">
 			<tr>
 				<th class="first" colspan="2">
 					<a href="javascript:;" onclick="launchPopup('<c:url value="/monitoring/listAnswers.do?"/>toolSessionID=${surveySession.sessionId}&questionUid=${question.uid}')">

@@ -62,7 +62,7 @@
 		<fmt:message key="email.notifications.scheduled.messages.list"/>
 	</h4>
 
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 		<thead>
 			<tr>
 				<th class="text-left" width="25%">

@@ -55,7 +55,7 @@
 		<lams:errors/>
 
 		<div class="table-responsive">
-			<table class="table table-hover table-condensed">
+			<table class="table table-hover table-sm">
 				<thead>
 					<tr>
 						<th width="70%">

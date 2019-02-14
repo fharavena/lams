@@ -28,7 +28,7 @@
 </form:form>
 
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${monitoringDTO.title}" escapeXml="true"/>
 	</h4>
@@ -48,7 +48,7 @@
 		
 	<c:if test="${isGroupedActivity}">
 		<c:set var="subcardHeadingClass">card-header-sm</c:set>
-		<div class="card card-plain" >
+		<div class="card card-accordian" >
         <div class="card-header" id="heading${session.sessionID}">
    	    	<span class="card-title collapsable-icon-left">
        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 
@@ -103,7 +103,7 @@
 	<c:if test="${session.appointedScribe != null}">
 		<c:set var="scribeSessionDTO" value="${session}" scope="request"/>
 
-		<div class="card card-plain voffset10" style="margin-bottom:5px" >
+		<div class="card card-accordian voffset10" style="margin-bottom:5px" >
         <div class="card-header ${subcardHeadingClass}"><span class="card-title"><fmt:message key="heading.report" /></span></div>
         <div class="card-body">
 			<c:forEach var="report" items="${session.reportDTOs}">
@@ -132,9 +132,9 @@
 	</c:if>
 
 	<c:if test="${dto.reflectOnActivity}">
-		<div class="card card-plain voffset10" style="margin-bottom:5px" >
+		<div class="card card-accordian voffset10" style="margin-bottom:5px" >
         <div class="card-header  ${subcardHeadingClass}"><span class="card-title"><fmt:message key="heading.reflections" /></span></div>
-		<table class="table table-condensed table-striped">
+		<table class="table table-sm table-striped">
 			<tr>
 				<th>
 					<fmt:message>heading.learner</fmt:message>
@@ -191,7 +191,7 @@
 
 <c:set var="adTitle"><fmt:message key="monitor.summary.th.advancedSettings" /></c:set>
 <lams:AdvancedAccordian title="${adTitle}">
-<table class="table table-striped table-condensed">	
+<table class="table table-striped table-sm">	
 
 	<tr>
 		<td>

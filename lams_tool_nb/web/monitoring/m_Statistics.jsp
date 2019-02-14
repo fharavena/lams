@@ -5,7 +5,7 @@
 
 	
  <c:if test="${isGroupedActivity}">
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped table-sm">
 		<tr><td colspan="${allowComments ? 3 : 2}"><fmt:message key="heading.totalLearnersInGroup" /></td></tr>
 	
 		<c:forEach var="group" items="${nbMonitoringForm.groupStatsMap}">
@@ -23,7 +23,7 @@
 	</table>
 </c:if>
 
-<table class="table table-striped table-condensed">
+<table class="table table-striped table-sm">
 	<tr>
 		<td width="40%"><fmt:message key="heading.totalLearners" /></td>
 		<td><c:out value="${nbMonitoringForm.totalLearners}" /></td>

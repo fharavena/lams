@@ -299,7 +299,7 @@
 	};
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	  <c:out value="${assessment.title}" escapeXml="true"/>
 	</h4>
@@ -338,13 +338,13 @@
 	<a onclick="" href="return false;" class="thickbox initially-hidden" id="userSummaryHref"></a>
 	
 	<c:if test="${sessionMap.isGroupedActivity}">
-		<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+		<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 	</c:if>
 	
 	<c:forEach var="sessionDto" items="${sessionDtos}" varStatus="status">
 	
 		<c:if test="${sessionMap.isGroupedActivity}">	
-		    <div class="card card-plain" >
+		    <div class="card card-accordian" >
 		        <div class="card-header" id="heading${sessionDto.sessionId}">
 		        	<span class="card-title collapsable-icon-left">
 		        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${sessionDto.sessionId}" 

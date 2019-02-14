@@ -22,7 +22,7 @@
 		<input type="hidden" name="overallFeedbackCount" id="overallFeedbackCount" value="${overallFeedbackListSize}">
 		<i class="fa fa-refresh fa-spin fa-2x fa-fw" style="display:none;" id="overallFeedbackArea_Busy"></i>
 		
-		<table class="table table-condensed">
+		<table class="table table-sm">
 			<tr>
 				<td style="text-align:right;">
 					<fmt:message key="label.authoring.advance.grade.boundary"></fmt:message>

@@ -2,7 +2,7 @@
 
 <c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 
-<table class="table table-condensed table-striped" >
+<table class="table table-sm table-striped" >
 	<c:if test="${empty sessionMap.headings}">
 		<tr>
 			<td>

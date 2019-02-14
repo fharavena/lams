@@ -30,7 +30,7 @@
           <div class="card-body">
             <!-- Answer options begin -->
             <div class="table-responsive">
-              <table class="table table-hover table-condensed">
+              <table class="table table-hover table-sm">
                 <tbody>
                 
                   <c:forEach var="option" items="${dto.options}" varStatus="status">

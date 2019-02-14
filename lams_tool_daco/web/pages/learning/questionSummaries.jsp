@@ -36,7 +36,7 @@
 	<fmt:message key="label.learning.tableheader.questions" />
 </div>
 
-<table class="table table-striped table-condensed" id="summaryTable">
+<table class="table table-striped table-sm" id="summaryTable">
 	<tr class="active">
 		<th></th>
 		<th colspan="2" class="singleSummaryCell"><fmt:message key="label.learning.tableheader.summary" /></th>

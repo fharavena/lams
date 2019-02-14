@@ -21,7 +21,7 @@
 	</c:if>
 	
 	<div class="card-body">
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 		<tr>
 			<th width="35%">
 				<fmt:message key="monitoring.label.title" />

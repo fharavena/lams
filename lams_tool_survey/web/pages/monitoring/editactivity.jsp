@@ -9,7 +9,7 @@
 	</lams:Alert>
 </c:if>
 
-<table class="table table-condensed">
+<table class="table table-sm">
 	<tr>
 		<td nowrap width="10%">
 			<fmt:message key="label.authoring.basic.title" />

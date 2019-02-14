@@ -31,7 +31,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 		<lams:Page type="monitor" title="${activityTitle}">
 
 		<c:if test="${!hasSequenceActivity}">
-		<table class="table table-bordered table-striped table-condensed">
+		<table class="table table-bordered table-striped table-sm">
 		<c:forEach items="${subActivities}" var="subActivity">
 			<c:set var="id" value="${subActivity.activityID}"/>
 			<tr>
@@ -64,7 +64,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 				<c:otherwise><fmt:message key="label.not.started" /></c:otherwise>
 			</c:choose>
 			</h4>
-			<table class="table table-bordered table-striped table-condensed">
+			<table class="table table-bordered table-striped table-sm">
 				<c:forEach items="${subActivity.childActivities}" var="child">
 					<c:set var="childId" value="${child.activityID}"/>
 					<tr><td>

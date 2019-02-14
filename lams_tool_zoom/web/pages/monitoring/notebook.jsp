@@ -28,7 +28,7 @@
 			<c:out value="${userDTO.firstName} ${userDTO.lastName}" escapeXml="true"/>
 		</h4>
 	
-		<table class="table table-striped table-condensed">
+		<table class="table table-striped table-sm">
 			<tr>
 				<td>
 					<fmt:message key="label.created" />

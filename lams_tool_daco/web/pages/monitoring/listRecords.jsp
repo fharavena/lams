@@ -63,7 +63,7 @@
 	</h4>
 	
  	<c:forEach var="user" items="${userGroup.users}">
-		<table class="table table-striped table-condensed">
+		<table class="table table-striped table-sm">
 		<tr>
 			<th><fmt:message key="label.monitoring.fullname" /></th>
 			<th><fmt:message key="label.monitoring.recordcount" /></th>

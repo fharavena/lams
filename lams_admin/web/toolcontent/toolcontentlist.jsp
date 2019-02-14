@@ -84,7 +84,7 @@
 					</c:if>
 				</c:forEach>
 				
-				<table class="table table-striped table-condensed voffset10">
+				<table class="table table-striped table-sm voffset10">
 					<tr>
 						<th><fmt:message key="label.tool" /></th>
 						<th><fmt:message key="sysadmin.library.activity.description" /></th>

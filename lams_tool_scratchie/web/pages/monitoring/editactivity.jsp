@@ -6,7 +6,7 @@
     <fmt:message key="message.monitoring.edit.activity.warning" />
 </lams:Alert>
 
-<table class="table table-condensed">
+<table class="table table-sm">
 	<tr>
 		<td width="10%" nowrap>
 			<fmt:message key="label.authoring.basic.title" />

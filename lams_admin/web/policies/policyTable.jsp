@@ -1,6 +1,6 @@
 <%@ include file="/taglibs.jsp"%>
 
-<table class="table table-striped table-condensed" >
+<table class="table table-striped table-sm" >
 	<tr>
 		<th><fmt:message key="label.name" /></th>
 		<th><fmt:message key="label.policy.status" /></th>

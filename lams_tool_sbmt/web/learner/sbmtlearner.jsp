@@ -183,7 +183,7 @@
 
 			<c:otherwise>
 			
-			<table class="table table-condensed">
+			<table class="table table-sm">
 				<tr>
 					<th class="active">
 						<fmt:message key="monitoring.user.submittedFiles" />

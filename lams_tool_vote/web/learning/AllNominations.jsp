@@ -65,7 +65,7 @@
 
 			<!--present  a mini summary table here -->
 
-			<table class="table table-condensed table-hover">
+			<table class="table table-sm table-hover">
 				<tr>
 					<th><fmt:message key="label.nomination" /></th>
 					<th class="text-center"><fmt:message key="label.total.votes" /></th>

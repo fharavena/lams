@@ -9,7 +9,7 @@
      
      <div id="advanced-questions" class="card-collapse collapse" role="tabcard" aria-labelledby="heading-advanced-questions">
 
-		<table class="table table-condensed table-striped">
+		<table class="table table-sm table-striped">
 			<c:forEach var="question" items="${content.mcQueContents}" varStatus="i">
 	
 				<tr>			
@@ -20,7 +20,7 @@
 							
 				<tr>					
 					<td>  <b> <fmt:message key="label.mc.options.col"/>  </b> 
-						<table class="table table-condensed" style="margin-bottom:0px">
+						<table class="table table-sm" style="margin-bottom:0px">
 							<c:forEach var="option" items="${question.mcOptionsContents}" varStatus="optionStatus">
 								<tr>			
 									<c:if test="${prefixAnswersWithLetters}">

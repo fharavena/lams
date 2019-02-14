@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	  <c:out value="${sessionMap.imageGallery.title}" escapeXml="true"/>
 	</h4>
@@ -27,13 +27,13 @@ $(document).ready(function(){
 </div>
 
 <c:if test="${sessionMap.isGroupedActivity}">
-	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="group" items="${summaryList}" varStatus="status">
 
 	<c:if test="${sessionMap.isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
 	        <div class="card-header" id="heading${group[0].sessionId}">
 	        	<span class="card-title collapsable-icon-left">
 	        		<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${group[0].sessionId}" 
@@ -197,7 +197,7 @@ $(document).ready(function(){
 			<fmt:message key="label.monitoring.summary.title.reflection"/>
 		</h5>
 	
-		<table class="table table-condensed">			
+		<table class="table table-sm">			
 		
 			<tr>
 				<th>
@@ -242,7 +242,7 @@ $(document).ready(function(){
 <%@ include file="parts/advanceOptions.jsp"%>
 
 <div id="manage-image-buttons">
-	<div class="card card-plain" >
+	<div class="card card-accordian" >
 		<div class="card-header">
 			<button onclick="javascript:newImageInit('<c:url value="/authoring/newImageInit.do?sessionMapID=${sessionMapID}&saveUsingLearningAction=true"/>');"
 					class="btn btn-default btn-xs loffset5  " id="">  

@@ -22,7 +22,7 @@
 	<input type="hidden" name="assessment${questionNumber}type" id="assessment${questionNumber}type" value="mcq"/>
 	<lams:CKEditor id="assessment${questionNumber}" value="" contentFolderID="${contentFolderID}" height="100"></lams:CKEditor>
 	
-	<table class="table table-condensed table-no-border">
+	<table class="table table-sm table-no-border">
 	<tr><td></td><td></td>
 	<td width="100px" class="align-center">
 		<span class="field-name">

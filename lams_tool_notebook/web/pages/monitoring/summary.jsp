@@ -193,7 +193,7 @@
 </script>
 <script type="text/javascript" src="${lams}/includes/javascript/monitorToolSummaryAdvanced.js" ></script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${notebookDTO.title}" escapeXml="true"/>
 	</h4>
@@ -210,13 +210,13 @@
 	</div>
 	 
 	<c:if test="${isGroupedActivity}">
-		<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+		<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 	</c:if>
 
 	<c:forEach var="session" items="${notebookDTO.sessions}" varStatus="status">
 
 		<c:if test="${isGroupedActivity}">	
-		    <div class="card card-plain" >
+		    <div class="card card-accordian" >
 		        <div class="card-header" id="heading${session.key}">
 		        	<span class="card-title collapsable-icon-left">
 		        	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.key}" 

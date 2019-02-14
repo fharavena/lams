@@ -144,6 +144,12 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 }
 .card-no-border {
   box-shadow: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card-accordian .card-collapse, .card-statistics .card-collapse {
+  margin-top: 15px;
 }
 
 // Reduce the gap between the nav bar and the content for authoring and monitoring.
@@ -280,6 +286,11 @@ a.button-add-item:before {
   text-decoration: inherit;
   margin-left: 5px;
   color: inherit;
+}
+
+.form-control-inline {
+   width: auto !important;
+   display: inline-block;
 }
 
 .rating-criteria-tag {

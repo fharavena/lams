@@ -79,7 +79,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 		</div>
 	
 		<div class="table-responsive">
-			<table class="table table-condensed table-hover">
+			<table class="table table-sm table-hover">
 				<tr>
 					<th width="25%" class="first"><fmt:message key="label.view.groups.title" /></th>
 					<th><c:if test="${viewStudentsBeforeSelection}">

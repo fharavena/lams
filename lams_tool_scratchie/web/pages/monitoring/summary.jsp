@@ -256,7 +256,7 @@
 		</button>
 	</c:if>
 
-	<div class="card card-plain">
+	<div class="card card-no-border">
 		<h4>
 		    <c:out value="${scratchie.title}" escapeXml="true"/>
 		</h4>
@@ -310,7 +310,7 @@
 			<c:set var="summaryTitle"><fmt:message key="monitoring.label.group" /></B> ${summary.sessionName}</c:set>
 		</c:if>
 		
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
         <div class="card-header" id="heading${summary.sessionId}">
         	<span class="card-title collapsable-icon-left">
         	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${summary.sessionId}" 
@@ -331,7 +331,7 @@
 	<!-- Display burningQuestionItemDtos -->
 	<c:if test="${scratchie.burningQuestionsEnabled}">
 		<div class="card-group" id="accordionBurning" role="tablist" aria-multiselectable="true"> 
-		    <div class="card card-plain" >
+		    <div class="card card-accordian" >
 		        <div class="card-header collapsable-icon-left" id="headingBurning">
 		        	<span class="card-title">
 			    	<a role="button" data-toggle="collapse" href="#collapseBurning" aria-expanded="false" aria-controls="collapseBurning" >
@@ -354,7 +354,7 @@
 	<c:if test="${sessionMap.reflectOn}">
 
 		<div class="card-group" id="accordionReflections" role="tablist" aria-multiselectable="true"> 
-		    <div class="card card-plain" >
+		    <div class="card card-accordian" >
 		        <div class="card-header collapsable-icon-left" id="headingReflections">
 		        	<span class="card-title">
 			    	<a role="button" data-toggle="collapse" href="#collapseReflections" aria-expanded="false" aria-controls="collapseReflections" >

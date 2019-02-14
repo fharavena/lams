@@ -2,7 +2,7 @@
 
 <c:set var="dto" value="${contentDTO}" />
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${contentDTO.title}" escapeXml="true"/>
 	</h4>
@@ -67,7 +67,7 @@
 
 <c:set var="adTitle"><fmt:message key="monitor.summary.th.advancedSettings" /></c:set>
 <lams:AdvancedAccordian title="${adTitle}">
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped table-sm">
 
 	</table>
 </lams:AdvancedAccordian>

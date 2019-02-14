@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 
-<table class="table table-condensed table-no-border">
+<table class="table table-sm table-no-border">
 	<tr>
 		<td class="field-name" width="30%">
 			<fmt:message key="count.total.user" />

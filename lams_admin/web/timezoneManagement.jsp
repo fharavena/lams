@@ -52,7 +52,7 @@
 			
 			<form:form action="save.do" id="timezoneForm" modelAttribute="timezoneForm" method="post">
 				
-				<table class="table table-striped table-condensed">
+				<table class="table table-striped table-sm">
 					<tr>
 						<th width="10%" align="center"><fmt:message key="admin.timezone.select" />
 						<!-- added this check box for the user to enable all available time zones -->

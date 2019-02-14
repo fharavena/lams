@@ -7,7 +7,7 @@
 		<i class="fa fa-spinner" style="display: none" id="resourceListArea_Busy"></i>
 	</div>
 
-	<table class="table table-striped table-condensed" id="itemTable">
+	<table class="table table-striped table-sm" id="itemTable">
 		<c:set var="sessionMap" value="${sessionScope[sessionMapID]}" />
 
 		<c:forEach var="question" items="${sessionMap.questionList}" varStatus="status">

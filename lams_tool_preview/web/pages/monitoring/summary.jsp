@@ -70,7 +70,7 @@
 	}
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${sessionMap.peerreview.title}" escapeXml="true"/>
 	</h4>
@@ -97,7 +97,7 @@
 <c:forEach var="groupSummary" items="${summaryList}" varStatus="status">
 	
  	<c:if test="${sessionMap.isGroupedActivity}">
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
         <div class="card-header" id="heading${groupSummary.sessionId}">
         	<span class="card-title collapsable-icon-left">
         	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${groupSummary.sessionId}" 

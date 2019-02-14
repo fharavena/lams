@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${leaderselectionDTO.title}" escapeXml="true"/>
 	</h4>
@@ -16,13 +16,13 @@ $(document).ready(function(){
 </div>
 
 <c:if test="${isGroupedActivity}">
-	<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+	<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="session" items="${leaderselectionDTO.sessionDTOs}">
 
 	<c:if test="${isGroupedActivity}">
-		<div class="card card-plain" >
+		<div class="card card-accordian" >
         	<div class="card-header" id="heading${session.sessionID}">
    	    		<span class="card-title collapsable-icon-left">
        				<a role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 
@@ -35,7 +35,7 @@ $(document).ready(function(){
         	<div id="collapse${session.sessionID}" class="card-collapse collapse in" role="tabcard" aria-labelledby="heading${session.sessionID}">
 	</c:if>
 
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 	
 		<tr>
 			<th>

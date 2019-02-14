@@ -17,7 +17,7 @@
     
     <div id="collapseReflections" class="card-collapse collapse" role="tabcard" aria-labelledby="headingReflections">
 
-		<table class="table table-condensed table-striped">				
+		<table class="table table-sm table-striped">				
 			<c:forEach var="reflectDTO" items="${sessionMap.reflectList}">
 				<tr>
 					<td valign=top class="align-left">

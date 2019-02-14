@@ -5,7 +5,7 @@
 
 		<c:set scope="request" var="qnon">assmcq${questionNumber}option${optionNumber}</c:set>
 
-		<table class="table table-condensed table-no-border">
+		<table class="table table-sm table-no-border">
 		<tr>
 		<td width="75px">
 			<span class="field-name"><label for="${qnon}">

@@ -27,7 +27,7 @@
 			</lams:Alert>
 		</c:if>
 		
-		<table class="table table-striped table-condensed" >
+		<table class="table table-striped table-sm" >
 			<tr>
 				<th><fmt:message key="admin.group" /></th>
 				<th><fmt:message key="admin.group.code" /></th>

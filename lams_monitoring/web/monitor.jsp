@@ -654,7 +654,7 @@
 					
 					<div id="tabLearnersContainer">
 						<div class="table-responsive">
-							<table id="tabLearnersTable" class="table table-condensed table-responsive"></table>
+							<table id="tabLearnersTable" class="table table-sm table-responsive"></table>
 						</div>
 					</div>
 				</lams:TabBody>
@@ -679,7 +679,7 @@
 	
 	<div id="learnerGroupDialogContents" class="dialogContainer">
 		<span id="learnerGroupMultiSelectLabel"><fmt:message key='learner.group.multi.select'/></span>
-		<table id="listLearners" class="table table-condensed">
+		<table id="listLearners" class="table table-sm">
 			<tr id="learnerGroupSearchRow">
 				<td>
 					<span class="dialogSearchPhraseIcon fa fa-xs fa-search"
@@ -750,7 +750,7 @@
 		<div id="classDialogTable">
 			<div class="row no-margin">
 				<div id="leftLearnerTable" class="col-sm-6">
-					<table id="classLearnerTable" class="table table-condensed">
+					<table id="classLearnerTable" class="table table-sm">
 						<tr class="active">
 							<td class="dialogTitle" colspan="6"><fmt:message
 									key="lesson.learners" /></td>
@@ -805,7 +805,7 @@
 					</table>
 				</div>
 				<div id="rightMonitorTable" class="col-sm-6">
-					<table id="classMonitorTable" class="table table-condensed">
+					<table id="classMonitorTable" class="table table-sm">
 						<tr class="active">
 							<td class="dialogTitle" colspan="6"><fmt:message
 									key="lesson.monitors" /></td>
@@ -877,7 +877,7 @@
 		<div id="emailProgressDialogTable">
 			<div class="row">
 				<div class="col-sm-12">
-					<table id="emailProgressTable" class="table table-condensed">
+					<table id="emailProgressTable" class="table table-sm">
 						<tr class="active">
 							<td class="dialogTitle" colspan="6"><fmt:message key="progress.email.will.be.sent.on"/></td>
 						</tr>

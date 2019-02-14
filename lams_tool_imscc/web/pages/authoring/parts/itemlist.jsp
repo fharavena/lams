@@ -10,7 +10,7 @@
 			<i class="fa fa-refresh fa-spin fa-1x fa-fw" style="display:none" id="commonCartridgeListArea_Busy"></i>
 		</div>
 
-		<table class="table table-condensed" id="itemTable">
+		<table class="table table-sm" id="itemTable">
 			<c:forEach var="commonCartridge" items="${sessionMap.commonCartridgeList}" varStatus="status">
 			
 				<tr>

@@ -18,7 +18,7 @@
 		</div>
 	</div>
 
-	<table id="itemTable" class="table table-striped table-condensed">
+	<table id="itemTable" class="table table-striped table-sm">
 		<c:set var="queIndex" scope="request" value="0" />
 
 		<tr>

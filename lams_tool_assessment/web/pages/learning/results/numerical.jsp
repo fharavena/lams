@@ -5,7 +5,7 @@
 </div>
 
 <div class="table-responsive">
-	<table class="table table-hover table-condensed">
+	<table class="table table-hover table-sm">
 		<tr>
 			<td class="complete-item-gif">
 				<c:if test="${assessment.allowRightAnswersAfterQuestion && question.answerBoolean}">

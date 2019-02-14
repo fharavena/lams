@@ -5,7 +5,7 @@
 </div>
 
 <div class="table-responsive">
-	<table class="table table-hover table-condensed">
+	<table class="table table-hover table-sm">
 		<tr>
 			<td>
 				<input type="text" autocomplete="off" name="question${status.index}" value="<c:out value='${question.answerString}' />"  class="form-control" 

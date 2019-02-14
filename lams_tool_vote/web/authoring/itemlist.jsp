@@ -8,7 +8,7 @@
 		<i class="fa fa-spinner" style="display: none" id="resourceListArea_Busy"></i>
 	</div>
 
-	<table class="table table-striped table-condensed" id="itemTable">
+	<table class="table table-striped table-sm" id="itemTable">
 		<c:set var="queIndex" scope="request" value="0" />
 
 		<c:forEach items="${listQuestionDTO}" var="currentDTO" varStatus="status">

@@ -15,7 +15,7 @@
 <%-- This image is shown when answer options are downloaded from a server. --%>
 <i class="fa fa-refresh fa-spin fa-1x fa-fw" style="display:none;" id="answerOptionsArea_Busy" name="answerOptionsArea_Busy"></i>
 	
-<table class="table table-condensed table-no-border table-nonfluid">
+<table class="table table-sm table-no-border table-nonfluid">
 	<c:forEach var="item" items="${answerOptionList}" varStatus="status">
 		<tr>
 			<td width="3px">${fn:substring(ordinal,status.index,status.index+1)})</td>

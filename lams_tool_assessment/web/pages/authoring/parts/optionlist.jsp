@@ -3,7 +3,7 @@
 	<input type="hidden" name="optionCount" id="optionCount" value="${fn:length(optionList)}">
 	<input type="hidden" name="questionType" id="questionType" value="${questionType}" />
 	
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 		<c:forEach var="option" items="${optionList}" varStatus="status">
 			<tr>
 				<td>

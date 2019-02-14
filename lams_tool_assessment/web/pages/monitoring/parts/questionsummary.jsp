@@ -165,7 +165,7 @@
 
             <div class="row"><div class="col-xs-12 col-sm-6">
             <h5><fmt:message key="label.question.options"/></h5>    
-			<table class="table table-condensed table-striped">
+			<table class="table table-sm table-striped">
 				<c:if test="${questionSummary.question.type == 1}">
 					<tr>
 						<td>

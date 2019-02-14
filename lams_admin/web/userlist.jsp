@@ -89,7 +89,7 @@
 				</div>
 			
 				<c:if test="${orgType != 1}">
-				<table class="table table-condensed table-striped">
+				<table class="table table-sm table-striped">
 					<tr>
 						<td width="30%"><fmt:message key="label.learners"/>:</td>
 						<td><c:out value="${LEARNER}"/></td>
@@ -115,7 +115,7 @@
 				</c:if>
 					
 				<c:if test="${orgType == 1}">
-				<table class="table table-condensed table-striped">
+				<table class="table table-sm table-striped">
 					<tr>
 						<td width="30%"><fmt:message key="label.sysadmins"/>:</td>
 						<td><c:out value="${SYSADMIN}"/></td>

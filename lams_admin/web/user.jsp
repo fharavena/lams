@@ -258,7 +258,7 @@
 					<div class="col-md-12">
 					</c:if>
 					
-						<table class="table table-condensed table-no-border">
+						<table class="table table-sm table-no-border">
 							<tr>
 								<td class="align-right"><fmt:message key="admin.user.login" />
 									*:</td>
@@ -518,7 +518,7 @@
 							<c:if test="${not empty globalRoles}">
 								<tr>
 									<td>
-										<table class="table table-striped table-condensed">
+										<table class="table table-striped table-sm">
 											<tr>
 												<th><fmt:message key="label.global.roles" />:</th>
 											</tr>
@@ -538,7 +538,7 @@
 							<c:if test="${not empty userOrgRoles}">
 								<tr>
 									<td>
-										<table id="tableRoles" class="table table-striped table-condensed">
+										<table id="tableRoles" class="table table-striped table-sm">
 											<tr>
 												<th><fmt:message key="label.member.of" />:</th>
 												<th><fmt:message key="label.with.roles" />:</th>

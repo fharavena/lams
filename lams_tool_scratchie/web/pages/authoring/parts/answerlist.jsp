@@ -3,7 +3,7 @@
 <div id="answerArea">
 	<input type="hidden" name="answerCount" id="answerCount" value="${fn:length(answerList)}">
 	
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 		<c:forEach var="answer" items="${answerList}" varStatus="status">
 			<tr>
 				<td class="text-center" style="width:5%">

@@ -19,7 +19,7 @@
 	      </div>
 	</c:if>
 
-	<table class="table table-condensed table-striped">
+	<table class="table table-sm table-striped">
 		<tr>
 			<th width="45%">
 				<fmt:message key="monitoring.label.title" />

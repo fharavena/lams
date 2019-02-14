@@ -263,7 +263,7 @@
 
 	<div id="learnerGroupDialogContents" class="dialogContainer">
 		<span id="learnerGroupMultiSelectLabel"><fmt:message key='learner.group.multi.select'/></span>
-		<table id="listLearners" class="table table-condensed">
+		<table id="listLearners" class="table table-sm">
 			<tr id="learnerGroupSearchRow">
 				<td>
 					<span class="dialogSearchPhraseIcon fa fa-xs fa-search"

@@ -14,7 +14,7 @@
 		<i class="fa fa-refresh fa-spin fa-3x fa-fw" style="display: none" id="questionListArea_Busy"></i>
 	</div>
 
-	<table class="table table-striped table-condensed" id="questionTable">
+	<table class="table table-striped table-sm" id="questionTable">
 	<tr>
 		<th width="24%"><fmt:message key="label.authoring.basic.list.header.type" /></th>
 		<th colspan="3"><fmt:message key="label.authoring.basic.list.header.question" /></th>

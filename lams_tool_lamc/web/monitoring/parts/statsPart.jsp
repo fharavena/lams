@@ -65,7 +65,7 @@
 	<c:when test="${useSelectLeaderToolOutput}">	
 		<div class="card card-plain" >
        	<div class="card-body">
- 		<table class="table table-condensed table-striped table-no-border">
+ 		<table class="table table-sm table-striped table-no-border">
 			<tr>
 				<td class="field-name" width="25%">
 					<fmt:message key="label.number.groups.finished" />:
@@ -115,7 +115,7 @@
 		        </div>
 			</c:if>
        		<div class="card-body">
-			<table class="table table-condensed table-striped table-no-border">
+			<table class="table table-sm table-striped table-no-border">
 				<tr>
 					<td class="field-name" width="25%">
 						<fmt:message key="label.number.learners" />:

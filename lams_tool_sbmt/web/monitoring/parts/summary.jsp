@@ -152,7 +152,7 @@
 
 </script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${authoring.title}" escapeXml="true"/>
 	</h4>
@@ -174,7 +174,7 @@
 <c:forEach var="sessionDto" items="${sessions}" varStatus="status">
 		
 	<c:if test="${isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
         <div class="card-header" id="heading${sessionDto.sessionID}">
         	<span class="card-title collapsable-icon-left">
         	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${sessionDto.sessionID}" 
@@ -232,7 +232,7 @@
 <c:set var="adTitle"><fmt:message key="monitor.summary.th.advancedSettings" /></c:set>
 <lams:AdvancedAccordian title="${adTitle}">
              
-<table class="table table-striped table-condensed">
+<table class="table table-striped table-sm">
 	<tr>
 		<td>
 			<fmt:message key="label.use.select.leader.tool.output" />

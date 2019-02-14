@@ -78,7 +78,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 					action="forceBranching.do?type=${branchingForm.type}&activityID=${branchingForm.activityID}&progressID=${branchingForm.progressID}"
 					modelAttribute="branchingForm" target="_self" onsubmit="return validate();">
 		
-					<table class="table table-condensed table-striped">
+					<table class="table table-sm table-striped">
 						<c:forEach items="${branchingForm.activityURLs}"
 							var="activityURL" varStatus="loop">
 							<tr>

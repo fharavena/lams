@@ -191,7 +191,7 @@
 	<!-- LDEV_NTU-7 Page jumps to the top when clicking the link in Grouping -->	
 	<!-- lams:AdvancedAccordian title="${adTitle}"-->
 	
-		<div class="card-group" id="accordionAdvanced" role="tablist" aria-multiselectable="true"> 
+		<div class="accordian" id="accordionAdvanced" role="tablist" aria-multiselectable="true"> 
     <div class="card card-plain" >
 		 <div class="card-header collapsable-icon-left" id="headingAdvanced">
         	<span class="card-title">
@@ -217,7 +217,7 @@
 </c:if>
 
 <c:if test="${canEdit}">
-<div class="card-group ${lessonMode?'voffset5':'voffset20'}" id="accordionUploadGroupFile" role="tablist" aria-multiselectable="true"> 
+<div class="accordian ${lessonMode?'voffset5':'voffset20'}" id="accordionUploadGroupFile" role="tablist" aria-multiselectable="true"> 
     <div class="card card-plain" >
         <div class="card-header collapsable-icon-left" id="headingUploadGroupFile">
 	        	<span class="card-title">

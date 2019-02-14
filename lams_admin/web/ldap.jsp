@@ -50,7 +50,7 @@
 									<div class="card-title"><fmt:message key="${group.key}"/></div>
 								</div>
 												
-								<table class="table table-striped table-condensed" >
+								<table class="table table-striped table-sm" >
 									<c:forEach items="${group.value}" var="row">
 										<tr>
 											<td>

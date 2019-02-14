@@ -5,7 +5,7 @@
 </div>
 
 <div class="table-responsive">
-	<table class="table table-hover table-condensed">
+	<table class="table table-hover table-sm">
 		<c:forEach var="option" items="${question.optionDtos}">
 			<tr>
 				<td>

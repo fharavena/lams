@@ -24,7 +24,7 @@
 		<form:form action="add.do" modelAttribute="signupForm" id="signupForm" method="post">
 				<form:hidden path="signupOrganisationId" />
 				
-				<table class="table table-condensed table-no-border">
+				<table class="table table-sm table-no-border">
 					<tr>
 						<td style="width: 250px;"><fmt:message key="admin.group" />:</td>
 						<td>

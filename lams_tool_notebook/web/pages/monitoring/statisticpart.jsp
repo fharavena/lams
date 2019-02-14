@@ -12,7 +12,7 @@
 		<h4><c:out value="${statistic.sessionName}" /></h4>
 	</c:if>
 	
-	<table class="table table-condensed table-no-border">
+	<table class="table table-sm table-no-border">
 		<tr>
 			<td class="field-name" width="30%">
 				<fmt:message key="heading.totalLearnersInGroup" />

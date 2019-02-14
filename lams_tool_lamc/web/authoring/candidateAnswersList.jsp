@@ -16,7 +16,7 @@
 	<input type="hidden" name="candidateIndex" value="${candidateIndex}"/>
 	<lams:errors/>
 
-	<table id="caTable" class="table table-condensed table-no-border">
+	<table id="caTable" class="table table-sm table-no-border">
 	
 		<c:set var="optionsCount" scope="request" value="${fn:length(questionDto.optionDtos)}"/>
 		<c:set var="optionIndex" scope="request" value="0"/>

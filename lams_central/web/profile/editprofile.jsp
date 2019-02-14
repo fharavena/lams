@@ -12,14 +12,13 @@
 <lams:html>
 <lams:head>
 	<lams:css/>
+	<lams:headItems/>
 	<style type="text/css">
 		body {
 			overflow-x:hidden;
 		}
 	</style>
 
-	<script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/profile.js"></script>
 	<script type="text/javascript">
 		$(document).ready( function() {
@@ -58,23 +57,23 @@
 							<c:if test="${authenticationMethodId eq dbId}">
 
 								<div class="form-group">
-									<span class="lead"><label><fmt:message
+									<span class="lead"><label class="bmd-label-static"><fmt:message
 												key="label.username" /></label>: ${UserForm.login}</span>
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.title" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.title" />:</label>
 									<form:input path="title" size="32" maxlength="32"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.first_name" /> *:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.first_name" /> *:</label>
 									<form:input path="firstName" size="50" maxlength="128"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.last_name" /> *:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.last_name" /> *:</label>
 									<form:input path="lastName" size="50" maxlength="128"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
@@ -82,47 +81,47 @@
 									<form:hidden path="firstName" />
 									<form:hidden path="lastName" />
 								</c:if>
-								<div class="form-group">
-									<label><fmt:message key="label.email" /> *:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.email" /> *:</label>
 									<form:input path="email" size="50" maxlength="128"
 										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
 										cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.address_line_1" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.address_line_1" />:</label>
 									<form:input path="addressLine1" size="50" maxlength="64"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.address_line_2" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.address_line_2" />:</label>
 									<form:input path="addressLine2" size="50" maxlength="64"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.address_line_3" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.address_line_3" />:</label>
 									<form:input path="addressLine3" size="50" maxlength="64"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.city" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.city" />:</label>
 									<form:input path="city" size="50" maxlength="64"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.state" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.state" />:</label>
 									<form:input path="state" size="50" maxlength="64"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.postcode" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.postcode" />:</label>
 									<form:input path="postcode" size="10" maxlength="10"
 										disabled="${!profileEditEnabled}" cssClass="form-control" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.country" /> *:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.country" /> *:</label>
 
 									<form:select path="country" disabled="${!profileEditEnabled}" cssClass="form-control">
 										<form:option value="0">
@@ -135,34 +134,34 @@
 										</c:forEach>
 									</form:select>
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.day_phone" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.day_phone" />:</label>
 									<form:input path="dayPhone" size="50" maxlength="64"
 										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
 										cssClass="form-control" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.evening_phone" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.evening_phone" />:</label>
 									<form:input path="eveningPhone" size="50" maxlength="64"
 										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
 										cssClass="form-control" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.mobile_phone" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.mobile_phone" />:</label>
 									<form:input path="mobilePhone" size="50" maxlength="64"
 										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
 										cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.fax" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.fax" />:</label>
 									<form:input path="fax" size="50" maxlength="64"
 										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
 										cssClass="form-control" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.language" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.language" />:</label>
 									<form:select path="localeId"
 										disabled="${!profileEditEnabled}" cssClass="form-control">
 										<c:forEach items="${locales}" var="locale">
@@ -173,8 +172,8 @@
 									</form:select>
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.timezone.title" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.timezone.title" />:</label>
 									<form:select path="timeZone" disabled="${!profileEditEnabled}" cssClass="form-control">
 										<c:forEach items="${timezoneDtos}" var="timezoneDto">
 											<form:option value="${timezoneDto.timeZoneId}">
@@ -184,8 +183,8 @@
 									</form:select>
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.theme" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.theme" />:</label>
 									<form:select path="userTheme" disabled="${!profileEditEnabled}" cssClass="form-control">
 										<c:forEach items="${themes}" var="theme">
 											<form:option value="${theme.themeId}">${theme.name}</form:option>
@@ -213,100 +212,100 @@
 								<form:hidden path="mobilePhone" />
 								<form:hidden path="fax" />
 
-								<div class="form-group">
-									<label><fmt:message key="label.username" /></label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.username" /></label> <input
 										type="text" class="form-control"
 										value="${UserForm.login}">
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.username" /></label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.username" /></label> <input
 										type="text" class="form-control"
 										value="${UserForm.login}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.title" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.title" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.title}"/>
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.first_name" /> *:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.first_name" /> *:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.firstName}"/>
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.last_name" /> *:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.last_name" /> *:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.lastName}"/>
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.email" /> *:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.email" /> *:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.email}"/>
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.address_line_1" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.address_line_1" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.addressLine1}"/>
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.address_line_2" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.address_line_2" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.addressLine2}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.address_line_3" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.address_line_3" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.addressLine3}" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.city" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.city" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.city}" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.state" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.state" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.state}" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.postcode" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.postcode" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.postcode}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.country" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.country" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.country}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.day_phone" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.day_phone" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.dayPhone}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.evening_phone" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.evening_phone" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.eveningPhone}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.mobile_phone" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.mobile_phone" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.mobilePhone}" />
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.fax" />:</label> <input
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.fax" />:</label> <input
 										type="text" class="form-control"
 										value="${UserForm.fax}" />
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.theme" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.theme" />:</label>
 									<form:select path="userTheme"
 										disabled="${!profileEditEnabled}" cssClass="form-control">
 										<c:forEach items="${themes}" var="theme">
@@ -315,8 +314,8 @@
 									</form:select>
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.language" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.language" />:</label>
 									<form:select path="localeId"
 										disabled="${!profileEditEnabled}" cssClass="form-control">
 										<c:forEach items="${locales}" var="locale">
@@ -327,8 +326,8 @@
 									</form:select>
 								</div>
 
-								<div class="form-group">
-									<label><fmt:message key="label.timezone.title" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-static"><fmt:message key="label.timezone.title" />:</label>
 									<form:select path="timeZone" disabled="${!profileEditEnabled}" cssClass="form-control">
 										<c:forEach items="${timezoneDtos}" var="timezoneDto">
 											<form:option value="${timezoneDto.timeZoneId}">
@@ -337,8 +336,8 @@
 										</c:forEach>
 									</form:select>
 								</div>
-								<div class="form-group">
-									<label><fmt:message key="label.timezone.title" />:</label>
+								<div class="form-group bmd-form-group">
+									<label class="bmd-label-floating"><fmt:message key="label.timezone.title" />:</label>
 									<c:set var="timeZone">
 										<input type="text" class="form-control" value="${UserForm.timeZone}" />
 									</c:set>
@@ -350,7 +349,7 @@
 					</div>
 				</div>
 			</div>
-		<div class="form-group" align="right">
+		<div class="form-group bmd-form-group" align="right">
 			<button type="button" class="btn btn-sm btn-default voffset5" onclick="history.go(-1);">
 				<fmt:message key="button.cancel" />
 			</button>

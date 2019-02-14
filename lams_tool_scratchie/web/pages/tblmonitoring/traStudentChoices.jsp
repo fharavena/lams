@@ -46,7 +46,7 @@
 <div class="card card-plain">
 <div class="card-body table-responsive">
           
-	<table id="questions-data" class="table table-responsive table-striped table-bordered table-hover table-condensed">
+	<table id="questions-data" class="table table-responsive table-striped table-bordered table-hover table-sm">
 		<thead>
 			<tr role="row">
 			

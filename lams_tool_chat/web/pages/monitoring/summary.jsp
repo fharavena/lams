@@ -31,7 +31,7 @@
 <script type="text/javascript" src="${lams}/includes/javascript/monitorToolSummaryAdvanced.js" ></script>
 <script type="text/javascript" src="${lams}/includes/javascript/portrait.js" ></script>
 
-<div class="card card-plain">
+<div class="card card-no-border">
 	<h4>
 	    <c:out value="${monitoringDTO.title}" escapeXml="true"/>
 	</h4>
@@ -41,13 +41,13 @@
 </div>
 
 <c:if test="${isGroupedActivity}">
-<div class="card-group" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
+<div class="accordian" id="accordionSessions" role="tablist" aria-multiselectable="true"> 
 </c:if>
 
 <c:forEach var="session" items="${dto.sessionDTOs}" varStatus="status">
 
 	<c:if test="${isGroupedActivity}">	
-	    <div class="card card-plain" >
+	    <div class="card card-accordian" >
         <div class="card-header" id="heading${session.sessionID}">
         	<span class="card-title collapsable-icon-left">
         	<a class="${status.first ? '' : 'collapsed'}" role="button" data-toggle="collapse" href="#collapse${session.sessionID}" 
@@ -59,7 +59,7 @@
         <div id="collapse${session.sessionID}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${session.sessionID}">
 	</c:if>
 
-		<table class="table table-condensed table-no-border">
+		<table class="table table-sm table-no-border">
 			<tr>
 				<td class="field-name" style="width: 30%;">
 					<fmt:message>heading.totalLearners</fmt:message>
@@ -112,7 +112,7 @@
 		<hr/>
 		<!--  View the Reflections -->
 		<c:if test="${dto.reflectOnActivity}">
-			<table class="table table-condensed table-no-border">
+			<table class="table table-sm table-no-border">
 				<th>
 					<fmt:message>heading.learner</fmt:message>
 				</th>

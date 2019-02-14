@@ -16,7 +16,7 @@
 	</div>
 		<input type="hidden" name="itemCount" id="itemCount" value="${fn:length(sessionMap.itemList)}">
 		
-		<table class="table table-condensed table-striped">
+		<table class="table table-sm table-striped">
 			<c:forEach var="item" items="${sessionMap.itemList}" varStatus="status">
 				<tr>
 					<td style="padding-top:15px; padding-bottom:15px;">

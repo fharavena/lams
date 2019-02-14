@@ -1,7 +1,7 @@
 <%@ include file="/common/taglibs.jsp"%>
 
 <div id="itemList">
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped table-sm">
 		<tr>
 			<th colspan="5"><fmt:message key="label.questions"/></th>
 		</tr>
