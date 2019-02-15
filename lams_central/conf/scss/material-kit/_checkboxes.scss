@@ -1,3 +1,8 @@
+//  LAMS Modification Checkboxes originally defined using the "+" sibling selector but this fails as we have a 
+// hidden field between the checkbox class and the form-check-sign class,  put there by Spring MVC. So changed
+// the "+" to the more general "~" sibling selector. So it is very important that each checkbox is in its own 
+// form-check div otherwise checking may change the wrong value!
+
 .form-check {
   margin-bottom: .5rem;
   padding-left: 0;
@@ -82,16 +87,16 @@
 
     .form-check-input{
 
-        &:focus + .form-check-sign .check:after {
+        &:focus ~ .form-check-sign .check:after {
             opacity: 0.2;
         }
 
         &:checked {
-            & + .form-check-sign .check {
+            & ~ .form-check-sign .check {
                 background: $mdb-checkbox-checked-color;
             }
 
-            & + .form-check-sign .check:before {
+            & ~ .form-check-sign .check:before {
                 color: #FFFFFF;
                 box-shadow: 0 0 0 10px,
                             10px -10px 0 10px,
@@ -102,22 +107,22 @@
                 @include animation(checkbox-on $mdb-checkbox-animation-check forwards);
             }
 
-            & + .form-check-sign:before {
+            & ~ .form-check-sign:before {
             @include animation(rippleOn $mdb-checkbox-animation-ripple);
             }
 
-            & + .form-check-sign .check:after {
+            & ~ .form-check-sign .check:after {
             //background-color: $brand-success; // FIXME: seems like tho wrong color, test and make sure it can be removed
             @include animation(rippleOn $mdb-checkbox-animation-ripple forwards);
             }
         }
 
         &:not(:checked) {
-          & + .form-check-sign:before {
+          & ~ .form-check-sign:before {
             @include animation(rippleOff $mdb-checkbox-animation-ripple);
           }
 
-          & + .form-check-sign .check:after {
+          & ~ .form-check-sign .check:after {
             @include animation(rippleOff $mdb-checkbox-animation-ripple); // Ripple effect on uncheck
 
           }
@@ -128,7 +133,7 @@
   fieldset[disabled] &,
   fieldset[disabled] & .form-check-input,
   .form-check-input[disabled] ~ .form-check-sign .check,
-  .form-check-input[disabled] + .circle {
+  .form-check-input[disabled] ~ .circle {
     opacity: 0.5;
   }
 
@@ -137,12 +142,12 @@
       opacity: .26;
   }
 
-  .form-check-input[disabled] + .form-check-sign .check:after {
+  .form-check-input[disabled] ~ .form-check-sign .check:after {
     background-color: $mdb-text-color-primary;
     transform: rotate(-45deg);
   }
 
-  .form-check-input[disabled][checked] + .form-check-sign .check{
+  .form-check-input[disabled][checked] ~ .form-check-sign .check{
       background-color: $black;
   }
 }

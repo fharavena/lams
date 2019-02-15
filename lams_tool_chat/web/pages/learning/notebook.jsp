@@ -11,8 +11,7 @@
 		<title>
 			<fmt:message key="activity.title" />
 		</title>
-		<lams:headItems/>
-		<link href="${tool}includes/css/chat.css" rel="stylesheet" type="text/css">
+		<lams:headItems minimal="true"/> 
 		
 	</lams:head>
 	<body class="stripes">
@@ -31,7 +30,7 @@
 			
 				<form:form action="submitReflection.do" method="post" onsubmit="disableFinishButton();" modelAttribute="learningForm" id="learningForm">
 			
-					<div class="card card-plain">
+					<div class="card card-no-border">
 						<lams:out value="${chatDTO.reflectInstructions}" escapeHtml="true" />
 					</div>
 			

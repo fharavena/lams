@@ -2,9 +2,10 @@
 
 <!-- ========== Advanced Tab ========== -->
 <lams:SimplePanel titleKey="label.chat.options">
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="filteringEnabled">
 	<form:checkbox path="filteringEnabled" value="1" id="filteringEnabled"/>
+	<span class="toggle"></span>
 	<fmt:message key="advanced.filteringEnabled" />
 	</label>
 </div>
@@ -16,16 +17,18 @@
 <lams:OutcomeAuthor toolContentId="${sessionMap.toolContentID}" />
 
 <lams:SimplePanel titleKey="label.activity.completion">
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="lockOnFinished">
 	<form:checkbox path="lockOnFinished" value="1" id="lockOnFinished"/>
+	<span class="toggle"></span>
 	<fmt:message key="advanced.lockOnFinished" />
 	</label>
 </div>
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="reflectOnActivity">
 	<form:checkbox path="reflectOnActivity" value="1" id="reflectOnActivity"/>
+	<span class="toggle"></span>
 	<fmt:message key="advanced.reflectOnActivity" />
 	</label>
 </div>

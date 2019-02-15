@@ -16,21 +16,12 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<lams:css/>
-<link href="${lams}css/jquery-ui-bootstrap-theme.css" rel="stylesheet" type="text/css" />
-
-<!-- ********************  javascript ********************** -->
-<script type="text/javascript" src="${lams}includes/javascript/common.js"></script>
-<script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.js"></script>
-<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.timepicker.js"></script>
+<!-- ********************  css and javascript ********************** -->
+<lams:headItems/>
 <script type="text/javascript" src="${lams}includes/javascript/jquery.blockUI.js"></script>  
 <script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter.js"></script> 
 <script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-widgets.js"></script> 
 <script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-pager.js"></script> 
-<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
-<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
-<script type="text/javascript" src="${lams}includes/javascript/bootstrap.tabcontroller.js"></script>
 <script type="text/javascript" src="${lams}includes/javascript/upload.js"></script>
 <script type="text/javascript" src="${tool}includes/javascript/message.js"></script>
 

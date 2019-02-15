@@ -34,6 +34,8 @@
 <%@ taglib uri="tags-lams" prefix="lams"%>
 <%@ taglib uri="tags-fmt" prefix="fmt"%>
 
+<%@ attribute name="minimal" required="false" rtexprvalue="true"%>
+
 <c:set var="lams">
 	<lams:LAMSURL />
 </c:set>
@@ -47,12 +49,15 @@
 <script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
 <script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
 <script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
+<c:if test="${! minimal}">
+<script type="text/javascript" src="${lams}includes/javascript/bootstrap.tabcontroller.js"></script>
 <script type="text/javascript" src="${lams}includes/javascript/moment.min.js"></script>
 <script type="text/javascript" src="${lams}includes/javascript/bootstrap-datetimepicker.js"></script>
 <%--<script type="text/javascript" src="${lams}includes/javascript/nouislider.min.js"></script> --%>
+</c:if>
 <script type="text/javascript" src="${lams}includes/javascript/material-kit.js?v=2.0.5" type="text/javascript"></script>
-<script type="text/javascript" src="${lams}includes/javascript/bootstrap.tabcontroller.js"></script>
 
+<c:if test="${! minimal}">
 <script>
     $(document).ready(function() {
      // init DateTimePickers
@@ -61,4 +66,4 @@
      // materialKit.initSliders();
     });
 </script>
-      
+</c:if>      

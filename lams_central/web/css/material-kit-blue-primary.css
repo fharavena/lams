@@ -8311,11 +8311,11 @@ label {
         -o-animation: checkbox-off 0.3s forwards;
         -ms-animation: checkbox-off 0.3s forwards;
         animation: checkbox-off 0.3s forwards; }
-  .form-check .form-check-input:focus + .form-check-sign .check:after {
+  .form-check .form-check-input:focus ~ .form-check-sign .check:after {
     opacity: 0.2; }
-  .form-check .form-check-input:checked + .form-check-sign .check {
+  .form-check .form-check-input:checked ~ .form-check-sign .check {
     background: #2979ff; }
-  .form-check .form-check-input:checked + .form-check-sign .check:before {
+  .form-check .form-check-input:checked ~ .form-check-sign .check:before {
     color: #FFFFFF;
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
     -webkit-animation: checkbox-on 0.3s forwards;
@@ -8323,25 +8323,25 @@ label {
     -o-animation: checkbox-on 0.3s forwards;
     -ms-animation: checkbox-on 0.3s forwards;
     animation: checkbox-on 0.3s forwards; }
-  .form-check .form-check-input:checked + .form-check-sign:before {
+  .form-check .form-check-input:checked ~ .form-check-sign:before {
     -webkit-animation: rippleOn 500ms;
     -moz-animation: rippleOn 500ms;
     -o-animation: rippleOn 500ms;
     -ms-animation: rippleOn 500ms;
     animation: rippleOn 500ms; }
-  .form-check .form-check-input:checked + .form-check-sign .check:after {
+  .form-check .form-check-input:checked ~ .form-check-sign .check:after {
     -webkit-animation: rippleOn 500ms forwards;
     -moz-animation: rippleOn 500ms forwards;
     -o-animation: rippleOn 500ms forwards;
     -ms-animation: rippleOn 500ms forwards;
     animation: rippleOn 500ms forwards; }
-  .form-check .form-check-input:not(:checked) + .form-check-sign:before {
+  .form-check .form-check-input:not(:checked) ~ .form-check-sign:before {
     -webkit-animation: rippleOff 500ms;
     -moz-animation: rippleOff 500ms;
     -o-animation: rippleOff 500ms;
     -ms-animation: rippleOff 500ms;
     animation: rippleOff 500ms; }
-  .form-check .form-check-input:not(:checked) + .form-check-sign .check:after {
+  .form-check .form-check-input:not(:checked) ~ .form-check-sign .check:after {
     -webkit-animation: rippleOff 500ms;
     -moz-animation: rippleOff 500ms;
     -o-animation: rippleOff 500ms;
@@ -8349,15 +8349,15 @@ label {
     animation: rippleOff 500ms; }
   fieldset[disabled] .form-check, fieldset[disabled] .form-check .form-check-input,
   .form-check .form-check-input[disabled] ~ .form-check-sign .check,
-  .form-check .form-check-input[disabled] + .circle {
+  .form-check .form-check-input[disabled] ~ .circle {
     opacity: 0.5; }
   .form-check .form-check-input[disabled] ~ .form-check-sign .check {
     border-color: #000000;
     opacity: .26; }
-  .form-check .form-check-input[disabled] + .form-check-sign .check:after {
+  .form-check .form-check-input[disabled] ~ .form-check-sign .check:after {
     background-color: rgba(0,0,0, 0.87);
     transform: rotate(-45deg); }
-  .form-check .form-check-input[disabled][checked] + .form-check-sign .check {
+  .form-check .form-check-input[disabled][checked] ~ .form-check-sign .check {
     background-color: #000000; }
 
 @keyframes checkbox-on {
@@ -11065,7 +11065,7 @@ h2.title {
       text-align: left;
       margin-left: 5px; }
     .togglebutton label .toggle,
-    .togglebutton label input[type=checkbox][disabled] + .toggle {
+    .togglebutton label input[type=checkbox][disabled] ~ .toggle {
       content: "";
       display: inline-block;
       width: 30px;
@@ -11088,17 +11088,17 @@ h2.title {
       top: -2.5px;
       border: 1px solid rgba(0,0,0, .54);
       transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease; }
-    .togglebutton label input[type=checkbox][disabled] + .toggle:after, .togglebutton label input[type=checkbox][disabled]:checked + .toggle:after {
+    .togglebutton label input[type=checkbox][disabled] ~ .toggle:after, .togglebutton label input[type=checkbox][disabled]:checked ~ .toggle:after {
       background-color: #BDBDBD; }
-    .togglebutton label input[type=checkbox] + .toggle:active:after, .togglebutton label input[type=checkbox][disabled] + .toggle:active:after {
+    .togglebutton label input[type=checkbox] ~ .toggle:active:after, .togglebutton label input[type=checkbox][disabled] ~ .toggle:active:after {
       box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.1); }
-    .togglebutton label input[type=checkbox]:checked + .toggle:after {
+    .togglebutton label input[type=checkbox]:checked ~ .toggle:after {
       left: 15px; }
-    .togglebutton label input[type=checkbox]:checked + .toggle {
+    .togglebutton label input[type=checkbox]:checked ~ .toggle {
       background-color: rgba(41, 121, 255, 0.7); }
-    .togglebutton label input[type=checkbox]:checked + .toggle:after {
+    .togglebutton label input[type=checkbox]:checked ~ .toggle:after {
       border-color: #2979ff; }
-    .togglebutton label input[type=checkbox]:checked + .toggle:active:after {
+    .togglebutton label input[type=checkbox]:checked ~ .toggle:active:after {
       box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(41, 121, 255, 0.1); }
 
 .ripple {

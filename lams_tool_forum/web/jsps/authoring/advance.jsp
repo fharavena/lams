@@ -6,46 +6,52 @@
 
 <lams:SimplePanel titleKey="label.posting.options">
 
-	<div class="checkbox">
-		<label for="rich-editor"><form:checkbox
-				path="forum.allowRichEditor" id="rich-editor" /> <fmt:message
-				key="label.authoring.advance.use.richeditor" /></label>
+	<div class="togglebutton">
+		<label for="rich-editor">
+		<form:checkbox path="forum.allowRichEditor" id="rich-editor" />		
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.use.richeditor" /></label>
 	</div>
 
-	<div class="checkbox">
-		<label for="allow-upload"><form:checkbox
-				path="forum.allowUpload" id="allow-upload" /> <fmt:message
-				key="label.authoring.advance.allow.upload" /></label>
+	<div class="togglebutton">
+		<label for="allow-upload">
+		<form:checkbox path="forum.allowUpload" id="allow-upload" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.allow.upload" /></label>
 	</div>
 
-	<div class="checkbox">
-		<label for="allowEdit"><form:checkbox
-				path="forum.allowEdit" id="allowEdit" /> <fmt:message
-				key="label.authoring.advance.allow.edit" /></label>
+	<div class="togglebutton">
+		<label for="allowEdit">
+		<form:checkbox	path="forum.allowEdit" id="allowEdit" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.allow.edit" /></label>
 	</div>
 
-	<div class="checkbox">
-		<label for="allow-anon"><form:checkbox
-				path="forum.allowAnonym" id="allowAnonym" /> <fmt:message
-				key="label.authoring.advance.enable.anonymous.posts" /></label>
+	<div class="togglebutton">
+		<label for="allowAnonym">
+		<form:checkbox path="forum.allowAnonym" id="allowAnonym" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.enable.anonymous.posts" /></label>
 	</div>
 
-	<div class="checkbox">
-		<label for="limited-min-characters"><form:checkbox
-				path="forum.limitedMinCharacters"
-				id="limited-min-characters" /> <fmt:message
-				key="label.authoring.advance.min.limited.input" /> </label> <input
+	<div class="togglebutton">
+		<label for="limited-min-characters">
+		<form:checkbox	path="forum.limitedMinCharacters" 	id="limited-min-characters" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.min.limited.input" /> </label>
+		<input
 			type="number" name="forum.minCharacters" id="min-characters"
 			onchange="validatePostings(true);"
 			value="${forumForm.forum.minCharacters}"
 			class="form-control form-control-inline input-sm" min="0" />
 	</div>
 
-	<div class="checkbox">
-		<label for="limited-max-characters"><form:checkbox
-				path="forum.limitedMaxCharacters"
-				id="limited-max-characters" /> <fmt:message
-				key="label.authoring.advance.limited.input" /></label> <input type="number"
+	<div class="togglebutton">
+		<label for="limited-max-characters">
+		<form:checkbox path="forum.limitedMaxCharacters" id="limited-max-characters" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.limited.input" /></label>
+		<input type="number"
 			name="forum.maxCharacters" id="max-characters"
 			onchange="validatePostings(true);"
 			value="${forumForm.forum.maxCharacters}"
@@ -53,23 +59,24 @@
 	</div>
 
 	<lams:SimplePanel cardBodyClass="card-body-sm">
-		<div class="checkbox">
-			<label for="allowRateMessages"><form:checkbox
-					path="forum.allowRateMessages" id="allowRateMessages"
-					onclick="checkRating()" /> <fmt:message
-					key="label.authoring.advance.allow.rate.postings" /></label>
+		<div class="togglebutton">
+			<label for="allowRateMessages">
+			<form:checkbox	path="forum.allowRateMessages" id="allowRateMessages"	onclick="checkRating()" />
+			<span class="toggle"></span>
+			<fmt:message key="label.authoring.advance.allow.rate.postings" /></label>
 		</div>
 
 		<div class="form-inline loffset20">
 			<div class="form-group">
-				<label for="minimumRate"><fmt:message
+				<label for="minimumRate">
+				<fmt:message
 						key="label.authoring.advance.minimum.reply" /></label> <input
 					type="number" name="forum.minimumRate" id="minimumRate"
 					value="${forumForm.forum.minimumRate}"
 					onchange="validateRatings(true);" class="form-control input-sm"
 					min="0" />
 			</div>
-			<div class="form-group">
+			<div class="form-group  loffset20">
 				<label for="maximumRate"><fmt:message
 						key="label.authoring.advance.maximum.reply" /></label> <input
 					type="number" name="forum.maximumRate" id="maximumRate"
@@ -82,21 +89,21 @@
 
 	<lams:SimplePanel cardBodyClass="card-body-sm">
 		<fmt:message key="message.posting.limiting" />
-		<div class="radio">
-			<label for="allowNewTopic1"> <form:radiobutton
-					path="forum.allowNewTopic" value="true"
-					onclick="allowNewTopic()" id="allowNewTopic1" /> <fmt:message
-					key="label.authoring.advance.allow.new.topics" />
+        <div class="form-check">
+			<label class="form-check-label" for="allowNewTopic1"> 
+			<form:radiobutton class="form-check-input" path="forum.allowNewTopic" value="true" onclick="allowNewTopic()" id="allowNewTopic1" /> 
+			 <span class="circle"><span class="check"></span></span>
+			<fmt:message key="label.authoring.advance.allow.new.topics" />
 			</label>
 		</div>
 
-		<div class="radio">
-			<label for="allowNewTopic2"> <form:radiobutton
-					path="forum.allowNewTopic" value="false"
-					onclick="allowNewTopic()" id="allowNewTopic2" /> <fmt:message
-					key="label.authoring.advance.number.reply" />
+		<div class="form-check">
+			<label class="form-check-label"  for="allowNewTopic2"> 
+			<form:radiobutton class="form-check-input" path="forum.allowNewTopic" value="false" onclick="allowNewTopic()" id="allowNewTopic2" />
+			 <span class="circle"><span class="check"></span></span>
+			<fmt:message key="label.authoring.advance.number.reply" />
 			</label>
-		</div>
+		</div> 
 
 		<div class="form-inline loffset20">
 			<div class="form-group">
@@ -107,7 +114,7 @@
 					onchange="validateReply(true);" class="form-control input-sm"
 					min="0" />
 			</div>
-			<div class="form-group">
+			<div class="form-group loffset20">
 				<label for="maximumReply"><fmt:message
 						key="label.authoring.advance.maximum.reply" /></label> <input
 					type="number" name="forum.maximumReply" id="maximumReply"
@@ -124,42 +131,44 @@
 		<label><fmt:message
 				key="label.authoring.advanced.send.emails.to" /></label>
 		<div class="form-inline">
-			<div class="checkbox loffset20">
-				<label for="notifyLearnersOnForumPosting"><form:checkbox
-						path="forum.notifyLearnersOnForumPosting"
-						id="notifyLearnersOnForumPosting" />&nbsp; <fmt:message
-						key="label.authoring.advanced.learners" /></label>
+			<div class="togglebutton loffset20">
+				<label for="notifyLearnersOnForumPosting">
+				<form:checkbox path="forum.notifyLearnersOnForumPosting" id="notifyLearnersOnForumPosting" />
+				<span class="toggle"></span>
+				<fmt:message 	key="label.authoring.advanced.learners" /></label>
 			</div>
-			<div class="checkbox loffset10">
-				<label for="notifyTeachersOnForumPosting"><form:checkbox
-						path="forum.notifyTeachersOnForumPosting"
-						id="notifyTeachersOnForumPosting" />&nbsp; <fmt:message
-						key="label.authoring.advanced.teachers" /></label>
+			<div class="togglebutton loffset10">
+				<label for="notifyTeachersOnForumPosting">
+				<form:checkbox path="forum.notifyTeachersOnForumPosting" id="notifyTeachersOnForumPosting" />
+				<span class="toggle"></span>
+				<fmt:message key="label.authoring.advanced.teachers" /></label>
 			</div>
 		</div>
 	</div>
 
-	<div class="checkbox">
-		<label for="notifyLearnersOnMarkRelease"><form:checkbox
-				path="forum.notifyLearnersOnMarkRelease"
-				id="notifyLearnersOnMarkRelease" /> <fmt:message
-				key="label.authoring.advanced.notify.mark.release" /></label>
+	<div class="togglebutton">
+		<label for="notifyLearnersOnMarkRelease">
+		<form:checkbox path="forum.notifyLearnersOnMarkRelease" id="notifyLearnersOnMarkRelease" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advanced.notify.mark.release" /></label>
 	</div>
 </lams:SimplePanel>
 
 <lams:OutcomeAuthor toolContentId="${forumForm.toolContentID}" />
 
 <lams:SimplePanel titleKey="label.activity.completion">
-	<div class="checkbox">
-		<label for="lockWhenFinished"><form:checkbox
-				path="forum.lockWhenFinished" id="lockWhenFinished" /> <fmt:message
-				key="label.authoring.advance.lock.on.finished" /></label>
+	<div class="togglebutton">
+		<label for="lockWhenFinished">
+		<form:checkbox path="forum.lockWhenFinished" id="lockWhenFinished" />
+		<span class="toggle"></span>
+		<fmt:message key="label.authoring.advance.lock.on.finished" /></label>
 	</div>
 
-	<div class="checkbox">
-		<label for="reflectOn"><form:checkbox
-				path="forum.reflectOnActivity" id="reflectOn" /> <fmt:message
-				key="advanced.reflectOnActivity" /></label>
+	<div class="togglebutton">
+		<label for="reflectOn">
+		<form:checkbox path="forum.reflectOnActivity" id="reflectOn" />
+		<span class="toggle"></span>
+		<fmt:message key="advanced.reflectOnActivity" /></label>
 	</div>
 	<div class="form-group">
 		<textarea name="forum.reflectInstructions"

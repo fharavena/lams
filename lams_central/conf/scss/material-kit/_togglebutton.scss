@@ -1,3 +1,8 @@
+//  LAMS Modification Togglebuttons originally defined using the "+" sibling selector but this fails as we have a 
+// hidden field between the checkbox class and the toggle class,  put there by Spring MVC. So changed
+// the "+" to the more general "~" sibling selector. So it is very important that each togglebutton is in its own 
+// togglebutton div otherwise toggling may change the wrong value!
+	
 .togglebutton {
   vertical-align: middle;
   &, label, input, .toggle {
@@ -21,7 +26,7 @@
     }
     // Switch bg off and disabled
     .toggle,
-    input[type=checkbox][disabled] + .toggle {
+    input[type=checkbox][disabled] ~ .toggle {
       content: "";
       display: inline-block;
       width: 30px;
@@ -50,34 +55,34 @@
     input[type=checkbox] {
       // Handle disabled
       &[disabled] {
-        & + .toggle:after,
-        &:checked + .toggle:after {
+        & ~ .toggle:after,
+        &:checked ~ .toggle:after {
           background-color: #BDBDBD;
         }
       }
 
-      & + .toggle:active:after,
-      &[disabled] + .toggle:active:after {
+      & ~ .toggle:active:after,
+      &[disabled] ~ .toggle:active:after {
         box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.1);
       }
 
       // Ripple off and disabled
-      &:checked + .toggle:after {
+      &:checked ~ .toggle:after {
         left: 15px;
       }
     }
 
     // set bg when checked
     input[type=checkbox]:checked {
-      + .toggle {
+      ~ .toggle {
         background-color: rgba($brand-primary, (70/100)); // Switch bg on
       }
 
-      + .toggle:after {
+      ~ .toggle:after {
         border-color: $brand-primary; // Handle on
       }
 
-      + .toggle:active:after {
+      ~ .toggle:active:after {
         box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba($brand-primary, (10/100)); // Ripple on
       }
     }

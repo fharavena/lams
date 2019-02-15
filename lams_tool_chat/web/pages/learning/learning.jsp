@@ -11,11 +11,8 @@
 		<title>
 			<fmt:message key="activity.title" />
 		</title>
+		<lams:headItems minimal="true"/> 
 		<link href="${tool}includes/css/chat.css" rel="stylesheet" type="text/css">
-		<link href="<lams:LAMSURL/>css/defaultHTML_learner.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"></script>
-		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"></script>
-		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"></script>
 		<script type="text/javascript">
 		var MODE = "${MODE}", TOOL_SESSION_ID = '${param.toolSessionID}', APP_URL = '<lams:WebAppURL />', LEARNING_ACTION = "<c:url value='learning/learning.do'/>", LAMS_URL = '<lams:LAMSURL/>';
 		</script>
@@ -91,7 +88,7 @@
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-4">
 						<div id="sendMessageButtonCell" class="voffset5">
-							<input id="sendMessageButton" class="btn btn-autoresize btn-default" type="button" onclick="javascript:sendChatToolMessage()"
+							<input id="sendMessageButton" class="btn btn-autoresize btn-default" type="btn btn-primary" onclick="javascript:sendChatToolMessage()"
 								value='<fmt:message key="button.send"/>' />
 						</div>
 					</div>

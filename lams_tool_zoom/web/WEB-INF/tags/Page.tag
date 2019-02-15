@@ -53,11 +53,12 @@
 		<%-- Links placed in body instead of head. Ugly, but it works. --%>
 		<lams:css suffix="progressBar"/>
 		<script type="text/javascript">
-			// Adding jquery-ui.js if it hasn't been loaded already
-			jQuery.ui || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery-ui.js"><\/script>');
+		debugger;
+			// Adding jquery.js if it hasn't been loaded already
+			(typeof(jQuery) != 'undefined') || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"><\/script>');
 		
 			// Adding bootstrap.js if it hasn't been loaded already
-			(typeof($.fn.modal) != 'undefined') || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/popper.min.js"><\/script><script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"><\/script>');
+			(typeof(materialKit) != 'undefined') || 	document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/popper.min.js"><\/script><script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/bootstrap-material-design.min.js"><\/script> <script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/material-kit.js?v=2.0.5"><\/script>');
 		</script>
 		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/dialog.js"></script>
 		<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/snap.svg.js"></script>

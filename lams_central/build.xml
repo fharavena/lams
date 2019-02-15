@@ -73,37 +73,37 @@
 	
 	<target name="explode-war" depends="_target-not-available" description="Explodes deployed WAR to folder." />
 
-	<target name="compile-material-kit-extras" description="Creates customised material-kit css files from scss (sass) files"  depends="_sass.build.clean.material.kit.extras">
+	<target name="compile-material-kit-styles" description="Creates customised material-kit css files from scss (sass) files"  depends="_sass.build.clean.material.kit">
 			<echo>Compiling customised Material Kit style files files from ${scss.common.variables} using ${sass_exec_file}</echo>
 			<mkdir dir="${basedir}/build/css" />
 			<touch verbose="true">
 		        <fileset dir="${scss.common.variables}" erroronmissingdir="false">
-			        <include name="material-kit.scss"/>
+			        <include name="material-kit*.scss"/>
 	 	        </fileset>
 	   	 	</touch>
-	  	  	<ant target="_sass.do.compile.material.kit.extras"/>
+	  	  	<ant target="_sass.do.compile.material.kit"/>
 	</target>
 		
-		<target name="_sass.do.compile.material.kit.extras">
+		<target name="_sass.do.compile.material.kit">
 	        <apply dest="${basedir}/build/css" executable="${sass_exec_file}" failonerror="true" verbose="true">
 	        	<arg value="--sourcemap=none"/>
 	        	<arg value="--load-path=${scss.common.variables}"/>
 	            <srcfile/>
 	            <targetfile/>
 		        <fileset dir="${scss.common.variables}/" erroronmissingdir="false">
-			        <include name="material-kit-blue-primary.scss"/>
+			        <include name="material-kit*.scss"/>
 	 	        </fileset>
 	            <mapper from="*.scss" to="*.css" type="glob"/>
 	        </apply>
-		    <ant target="_css.minify.copy.material.kit.extras"/>
-		    <ant target="_css.nominify.copy.material.kit.extras"/>
+		    <ant target="_css.minify.copy.material.kit"/>
+		    <ant target="_css.nominify.copy.material.kit"/>
 		</target>
 		
-		<target name="_css.minify.copy.material.kit.extras"  if="${css.minify}">
+		<target name="_css.minify.copy.material.kit"  if="${css.minify}">
 			<echo> Minifying Files </echo>
 		    <apply executable="java" parallel="false">
 		        <fileset dir="${basedir}/build/css">
-			        	<include name="material-kit-blue-primary.css"/>
+		        	<include name="material-kit*.css"/>
 			    </fileset>
 		        <arg line="-jar"/>
 		        <arg path="${yuicompressor}"/>
@@ -112,29 +112,31 @@
 		        <mapper type="glob" from="*.css" to="${basedir}/build/css/*-min.css"/>
 		        <targetfile/>
 		    </apply>
-	    		<echo>Copying css files from build area to web/css directory. The .map files are not copied. </echo>
+    		<echo>Copying css and map files from build area to web/css directory. </echo>
 		 	<copy todir="${scss.css.dir}">
 				<fileset dir="${basedir}/build/css" erroronmissingdir="false">
-					<include name="material-kit-blue-primary.css"/>
+					<include name="material-kit*.css"/>
+					<include name="material-kit*.map"/>
 				</fileset>
 			    <mapper type="glob" from="*-min.css" to="*.css"/>
+			    <mapper type="glob" from="*.map" to="*.map"/>
 		 	</copy>
 		</target>
 
-		<target name="_css.nominify.copy.material.kit.extras" unless="${css.minify}">
+		<target name="_css.nominify.copy.material.kit" unless="${css.minify}">
 	    		<echo>Copying css files from build area to web/css directory. The .map files are not copied. </echo>
 		 	<copy todir="${scss.css.dir}" verbose="true">
 				<fileset dir="${basedir}/build/css" erroronmissingdir="false">
-					<include name="material-kit-blue-primary.css"/>
+					<include name="material-kit*.css"/>
 			        	<exclude name="*-min.css"/>
 				</fileset>
 			    <mapper type="glob" from="*.css" to="*.css"/>
 		 	</copy>
 		</target>
 
-		<target name="_sass.build.clean.material.kit.extras">
+		<target name="_sass.build.clean.material.kit">
 			<delete quiet="true">
-	    			<fileset dir="${basedir}/build/css" includes="material-kit-blue-primary.css"/>
+    			<fileset dir="${basedir}/build/css" includes="material-kit*.*"/>
 			</delete>
 		</target>
 

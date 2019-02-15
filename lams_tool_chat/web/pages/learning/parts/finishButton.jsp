@@ -23,7 +23,7 @@
 				</c:choose>
 			</p>
 
-			<input type="submit" class="button" value="<fmt:message key="button.edit" />">
+			<input type="submit" class="btn btn-default" value="<fmt:message key="button.edit" />">
 		</div>
 	</c:if>
 </form>
@@ -56,7 +56,7 @@
 			<form:form action="finishActivity.do" method="post"
 			onsubmit="disableFinishButton();"  modelAttribute="learningForm" id="learningForm">
 			<form:hidden path="chatUserUID" value="${chatUserDTO.uid}" />
-			<a href="#nogo" type="button" class="btn btn-primary pull-right voffset10 na btn-autoresize" id="finishButton"  onclick="submitForm('finishActivity')">
+			<a href="#nogo" role="button" class="btn btn-primary pull-right voffset10 na btn-autoresize" id="finishButton"  onclick="submitForm('finishActivity')">
 						 <span class="nextActivity">
 							 <c:choose>
 							 	<c:when test="${isLastActivity}">
