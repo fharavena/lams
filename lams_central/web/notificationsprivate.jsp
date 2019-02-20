@@ -54,9 +54,9 @@
 		// table header
 		headerRow = $('<tr />').appendTo(table);
 	
-		$('<td />').text(PRIVATE_NOTIFICATIONS_MESSAGES).appendTo(headerRow);
+		$('<th />').text(PRIVATE_NOTIFICATIONS_MESSAGES).appendTo(headerRow);
 		// click it to mark all notifications as read
-		$('<td class="notificationsClickableCell"/>').text(PRIVATE_NOTIFICATIONS_READ)
+		$('<th class="notificationsClickableCell"/>').text(PRIVATE_NOTIFICATIONS_READ)
 													 .attr('title', PRIVATE_NOTIFICATIONS_READ_ALL_HINT)
 													 .click(markAllPrivateNotificationsAsRead)
 													 .appendTo(headerRow);
@@ -117,8 +117,8 @@
 <div style="clear: both;"></div>
 <div class="container">
 	<div class="row vertical-center-row">
-		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-		<div class="card card-plain">
+		<div class="col-sm-12 col-md-10 offset-md-1">
+		<div class="card card-no-border">
 		<table id="tablePrivateNotifications" class="table table-sm table-striped">
 		</table>			
 		</div>

@@ -7,18 +7,16 @@
 <div id="favorite-organisations-container" class="tour-organisations-favorites">
 
 	<c:if test="${not empty favoriteOrganisations}">
-		<ul class="nav" id="favorite-organisations">
+		<div class="list-group" id="favorite-organisations">
 			<c:forEach var="favoriteOrganisation" items="${favoriteOrganisations}">
-				<li id="favorite-li-${favoriteOrganisation.organisationId}" 
-						<c:if test="${favoriteOrganisation.organisationId == activeOrgId}">class="active"</c:if>>
-					<a data-id="${favoriteOrganisation.organisationId}" href="#nogo" 
-							onClick="javascript:selectOrganisation(${favoriteOrganisation.organisationId})">
-						${favoriteOrganisation.name}
-						<span class="pull-right"><i class="fa fa-star"></i></span>
-					</a>
-				</li>
+				<a data-id="${favoriteOrganisation.organisationId}" href="#nogo" id="favorite-li-${favoriteOrganisation.organisationId}"  
+					class="list-group-item <c:if test="${favoriteOrganisation.organisationId == activeOrgId}">active"</c:if>"
+						onClick="javascript:selectOrganisation(${favoriteOrganisation.organisationId})">
+					${favoriteOrganisation.name}
+					<span class="pull-right"><i class="fa fa-star"></i></span>
+				</a>
 			</c:forEach>
-		</ul>
+		</div>
 	</c:if>
-            
 </div>
+

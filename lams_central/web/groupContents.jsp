@@ -4,7 +4,8 @@
 <%@ taglib uri="tags-core" prefix="c"%>
 
 <c:forEach var="lesson" items="${org.lessons}">
-	<div id="${lesson.id}" class="j-single-lesson">
+	<div id="${lesson.id}" class="j-single-lesson d-flex">
+		<div>
 		<c:choose>
 			<c:when test="${empty lesson.url}">
 				<a class="text-danger"> <c:out value="${lesson.name}" />
@@ -27,8 +28,9 @@
 		<c:if test="${lesson.completed}">
 			<i class="fa fa-check-circle text-success loffset10" title="<fmt:message key="label.completed"/>"></i>
 		</c:if>
-
-		<div class="lesson-actions" style="transform: rotate(180deg);">
+		</div>
+		
+		<div class="lesson-actions ml-auto flex-row" style="transform: rotate(180deg);">
 			<c:forEach var="lessonlink" items="${lesson.links}">
 				<c:choose><c:when test="${addTourClass}"><c:set var="tourClass">class="tour-${lessonlink.id}"</c:set></c:when>
 				<c:otherwise><c:set var="tourClass"></c:set></c:otherwise></c:choose>

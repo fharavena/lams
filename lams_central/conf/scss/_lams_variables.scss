@@ -11,8 +11,7 @@ $gray-light-mid:  $grey-300; // #dddddd
 $gray-lightest:  $grey-100; // #f5f5f5 or whitesmoke
  
 // Primary colour shades
-$brand-primary-darkest: $blue-a700; // used for main page offcanvas course list
-$brand-primary-darker: $blue-a400;  // used for main page offcanvas course list
+$brand-primary-darker: darken($blue-a400, 15%);  // used for main page offcanvas course list
 $brand-primary-mid: $blue-a200;
 $brand-primary-light: $blue-a100;
 $brand-primary-bright: $blue-500;   // used when we need a primary standout, such as the right hand bar indicating the current org in the offcanvas course list.
@@ -75,15 +74,18 @@ $complex-activity-fill: $grey;
 $not-started-activity-fill: $green;
 
 // Used just for main.css - the main page
-$main_default_link: #5A738E;
-$main_blue_light_highlight: #A6E5FD;
-$main_fav_org_link: #A7B1C2;
-$main_offcanvas_link: #2B5B95;
-$main_offcanvas_link_color: $gray-lightest;
-$main_offcanvas_background: $brand-primary;
-$main_offcanvas_color: $gray-lightest;
-$main_offcanvas_logo_background: $brand-primary-darkest;
-$main_offcanvas_search_background: $brand-primary-darkest;
+$main_default_link: $brand-primary;
+$main_blue_light_highlight: $brand-info;
+$main_fav_org_link: $brand-primary;
+$main_offcanvas_link_color: $brand-primary;
+$main_offcanvas_hover_color: $brand-primary-darker;
+$main_offcanvas_contrast_color: $white;
+$main_topnav_background: linear-gradient(60deg, $blue-50, $grey-100);
+$main_offcanvas_background: linear-gradient(60deg, $grey-100, $blue-50);
+$main_menu_background: $grey-100;
+$main_offcanvas_color: inherit;
+$main_offcanvas_logo_background: $brand-primary;
+$main_offcanvas_search_background: $brand-primary;
 $main_dropdown_border: #D9DEE4;
 $main_navbar_link: #515356;
 $main_singlelesson_hover_border: #9be0f9;

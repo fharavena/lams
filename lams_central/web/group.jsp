@@ -4,7 +4,7 @@
 <%@ taglib uri="tags-core" prefix="c"%>
 <%@ taglib uri="tags-lams" prefix="lams"%>
 
-<div class="course-header card-header">
+<div class="course-header card-header card-header-primary">
 	<span class="lead">
 		<strong><c:out value="${orgBean.name}" /></strong>
 	</span>
@@ -26,27 +26,27 @@
 </div>
 
 <!-- Group contents -->
-<div class="j-course-contents card-body card-plain">
+<div class="j-course-contents card-body">
 	<div class="sequence-list">
-		<div id="${orgBean.id}-lessons" class="lesson-table">
+		<div id="${orgBean.id}-lessons" class="lesson-table d-flex flex-column">
 			<%@ include file="groupContents.jsp"%>
 		</div>
 	</div>
 	
 	<!-- Child organisations -->
 	<c:forEach var="childOrg" items="${orgBean.childIndexOrgBeans}">
-		<div class="group-name">
-			<div class="child-org-name">
+		<div class="group-name card">
+			<div class="child-org-name card-header">
 				<strong><c:out value="${childOrg.name}" /></strong>
 				<c:if test="${not empty childOrg.archivedDate}">
 					<small>(<fmt:message key="label.archived"/> <lams:Date value="${childOrg.archivedDate}"/>)</small>
 				</c:if>
+
+				<c:set var="org" value="${childOrg}" />
+				<%@ include file="groupHeader.jsp"%>
 			</div>
 			
-			<c:set var="org" value="${childOrg}" />
-			<%@ include file="groupHeader.jsp"%>
-
-			<div id="${childOrg.id}-lessons" class="lesson-table subgroup-lesson-table">
+			<div id="${childOrg.id}-lessons" class="lesson-table subgroup-lesson-table card-body">
 				<%@ include file="groupContents.jsp"%>
 			</div>
 		</div>

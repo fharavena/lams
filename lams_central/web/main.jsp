@@ -17,22 +17,18 @@
 	<lams:css/>
 	<lams:css suffix="main"/>
 	<link rel="stylesheet" href="/lams/css/jquery.tablesorter.theme.bootstrap.css">
-	<link rel="stylesheet" href="/lams/css/jquery-ui-bootstrap-theme.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="/lams/css/bootstrap-tour.min.css" type="text/css" media="screen">
 
 	<script type="text/javascript" src="${lams}includes/javascript/getSysInfo.js"></script>
 	<script type="text/javascript" src="${lams}loadVars.jsp"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/openUrls.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-pager.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.tablesorter-widgets.js"></script> 	
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.dialogextend.js"></script>	
 	<script type="text/javascript" src="${lams}includes/javascript/dialog.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/jquery.ui.touch-punch.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/jquery.slimscroll.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/main.js"></script>
@@ -142,7 +138,7 @@
 
 	</script>
 </lams:head>
-<body <c:if test="${not empty activeOrgId}">class="offcanvas-hidden"</c:if>>
+<body class="fixed-footer <c:if test="${not empty activeOrgId}">offcanvas-hidden</c:if>">
 
 <!-- Offcanvas Bar -->
     <nav id="offcanvas" role="navigation">
@@ -162,13 +158,13 @@
         
 			<%@ include file="favoriteOrganisations.jsp"%>
             
-            <c:if test="${isCourseSearchOn}">
-				<div class="form-group offcanvas-search">
-					<input type="text" id="offcanvas-search-input" class="form-control input-sm" placeholder="<fmt:message key="label.search.for.courses" />..."
-							data-column="1" type="search">
-				</div>
-			</c:if>
-            
+             <c:if test="${isCourseSearchOn}">
+ 			<div class="input-group offcanvas-search">
+	                	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div>
+						<input type="text" id="offcanvas-search-input" class="form-control input-sm" placeholder="<fmt:message key="label.search.for.courses" />..." data-column="1" type="search">
+	                </div>
+ 			</c:if>
+             
             <div class="tour-organisations">
 				<lams:TSTable numColumns="2">
 				</lams:TSTable>
@@ -178,9 +174,9 @@
     </nav>
 <!-- /Offcanvas Bar -->
 
-<div class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar" id="mainNavBar">
+<div class="navbar navbar-expand flex-column flex-md-row bd-navbar top-nav" id="mainNavBar">
 	<!-- header -->
-	<div class="container-fluid top-nav">
+	<div class="container-fluid">
 	
 		<div class="offcanvas-toggle offcanvas-toggle-header">
 			<i class="fa fa-bars tour-course-reveal"></i>
@@ -295,8 +291,9 @@
 	<!-- /header -->
 
 <div id="page-wrapper">
-
+	
 			<!-- content -->      
+	<main>
 		<div id="messageCell">
 			<%--
 				<div id="message">Important annoucements might be posted here...</div>
@@ -304,25 +301,24 @@
 		</div>
 		
 		<div class="row no-gutter">
-			<div class="col-sm-12">
+			<div class="col-12">
 	        	<div id="org-container" class="card tour-org-container"></div>
 			</div>
 		</div>
-	</main>
+		</main>
 	<!-- /content -->
 	        
 	<!-- footer -->
 	<footer class="footer">
-		<div class="container">
-			<p>
+		<div class="card">
+			<div class="card-body">
 				<fmt:message key="msg.LAMS.version" />&nbsp;<%=Configuration.get(ConfigurationKeys.VERSION)%>
 				<a href="<lams:LAMSURL/>/www/copyright.jsp" target='copyright' onClick="openCopyRight()">
 					&copy; <fmt:message key="msg.LAMS.copyright.short" /> 
 				</a>
 				<span class="text-danger" id="timezoneWarning"></span>
-			</p>
 		</div>
-		<div class="clearfix"></div>
+		</div>
 	</footer>
 	<!-- /footer -->
 
