@@ -138,7 +138,7 @@
 					height: 'auto',
 					autowidth: true,
 					shrinkToFit: false,
-					guiStyle: "bootstrap",
+					guiStyle: "bootstrap4",
 					iconSet: 'fontAwesome',
 				   	colNames:[
 						'#',
@@ -247,7 +247,7 @@
 				height: 'auto',
 				autowidth: true,
 				shrinkToFit: false,
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 			   	colNames:[
 				   	'#',

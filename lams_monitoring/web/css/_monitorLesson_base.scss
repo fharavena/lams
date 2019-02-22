@@ -3,6 +3,8 @@
 	border: none;
 }
 
+$button-row-height:40px; // use same value in gradebook
+
 /********** GENERAL/DIALOG STYLES **********/
 #loadingOverlay {
 	width: 100%;
@@ -159,7 +161,7 @@ td.sectionHeader {
 }
 
 .topButtonsContainer {
-	height: 30px;
+	height: $button-row-height;
 	padding: 0px !important;
 }
 

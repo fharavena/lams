@@ -26,7 +26,7 @@
 	<%-- Combined tab and navigation bar used in authoring and monitoring --%>
 		<div class="row no-gutter no-margin">
 		<div class="col-sm-12">
-		<div class="container" id="content">
+		<div class="container-fluid" id="content">
 			<jsp:doBody />
 		</div>
 		</div>
@@ -396,15 +396,28 @@
 	</c:when>
 
 	<c:otherwise>
+	
 	<!-- Standard Screens  --> 
-  
 	  <div class="container-fluid">
-	    <div class="row flex-xl-nowrap">
-	    	<main class="col-sm-12">
-		 	<h4 class="bd-title" id="content">${title}</h4>
+	  		<c:choose>
+	  		<c:when test="${not empty title}">
+	  			<main class="card voffset40">
+	  			<div class="card-header card-header-primary" id="content">
+	  				<span class="lead"><c:out value="${title}" escapeXml="true" /></span>
+	  				<c:if test="${not empty titleHelpURL}">
+						<span class="pull-right">${titleHelpURL}</span>
+					</c:if>
+	  			</div>
+	  		</c:when>
+	  		<c:otherwise>
+	  			<main class="card">
+	  		</c:otherwise>
+	  		</c:choose>
+
+    		<div class="card-body">
 				<jsp:doBody />
+			</div>
 			</main>
-		</div>
 	</div>
 		
 	<footer></footer>

@@ -28,7 +28,7 @@
 			    url				   : "<lams:LAMSURL />learning/kumalive/getReportOrganisationData.do?organisationID=${param.organisationID}",
 			    height			   : "100%",
 			    // use new theme
-			    guiStyle 		   : "bootstrap",
+			    guiStyle: "bootstrap4",
 			    iconSet 		   : 'fontAwesome',
 			    autowidth		   : true,
 			    shrinkToFit 	   : true,
@@ -105,7 +105,7 @@
 											   }
 									    	  ].concat(columnModel),
 							    height      : "100%",
-							    guiStyle 	: "bootstrap",
+							    guiStyle: "bootstrap4",
 							    iconSet 	: 'fontAwesome',
 							    autowidth   : true,
 							    shrinkToFit : true,
@@ -139,7 +139,7 @@
 													   }
 											    	  ].concat(columnModel),
 									    height      : "100%",
-									    guiStyle 	: "bootstrap",
+									    guiStyle: "bootstrap4",
 									    iconSet 	: 'fontAwesome',
 									    autowidth   : true,
 									    shrinkToFit : true,

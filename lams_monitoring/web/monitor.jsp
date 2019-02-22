@@ -308,7 +308,8 @@
 				<lams:TabBody id="1" titleKey="label.basic">
 					<div class="row">
 						<div class="col-sm-12">
-							<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
+							<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"
+								title="<fmt:message key='label.tour'/>">  
 							<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 							
 							<a id="tour-refresh-button" class="btn btn-sm btn-default pull-right roffset10" title="<fmt:message key='button.refresh.tooltip'/>"
@@ -572,7 +573,8 @@
 					<span class="pull-left" style="display:none" id="liveEditWarning"></span>
 					
 					<div id="sequenceTopButtonsContainer" class="topButtonsContainer">
-						<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
+						<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"
+							title="<fmt:message key='label.tour'/>">  
 						<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 
 						<a id="refreshButton" class="btn btn-sm btn-default" title="<fmt:message key='button.refresh.tooltip'/>"
@@ -638,7 +640,8 @@
 									   onChange="javascript:loadLearnerProgressPage()" />
 							</td>
 							<td class="topButtonsContainer">
-								<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
+								<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"
+									title="<fmt:message key='label.tour'/>"> 
 								<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 							
 								<a class="btn btn-sm btn-default" title="<fmt:message key='button.refresh.tooltip'/>"
@@ -660,12 +663,13 @@
 				</lams:TabBody>
 				<lams:TabBody id="4" titleKey="label.gradebook">
 					<div id="gradebookTopButtonsContainer" class="topButtonsContainer pull-right">
-						<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"> 
+						<button onclick="javascript:startTour();return false;" class="btn btn-sm btn-default pull-right roffset10 tour-button"
+							title="<fmt:message key='label.tour'/>"> 
 						<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="label.tour"/></span></button>
 
 						<a id="refreshButton" class="btn btn-sm btn-default" title="<fmt:message key='button.refresh.tooltip'/>"
 						   href="#" onClick="javascript:refreshMonitor('gradebook')">
-							<i class="fa fa-refresh"></i> <span class="d-none d-sm-inline"><fmt:message key="button.refresh"/></span>
+							<i class="fa fa-refresh"></i> <span class="d-none d-xl-inline"><fmt:message key="button.refresh"/></span>
 						</a>
 					</div>
 					<div id="gradebookDiv"></div>

@@ -141,11 +141,14 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 	background: linear-gradient(60deg, $green-400, $green-700);
 }
 .card-plain {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  .card-header:not(.card-avatar) {
+	background: $white;
+  	.card-header:not(.card-avatar) {
     	margin-top: 0px; 
     	padding: .4rem 10px;
 	}
+}
+.card-transparent {
+    background: transparent;
 }
 .card-no-border {
   box-shadow: none;
@@ -807,6 +810,44 @@ $portrait-size-image-xl: 400px;
 	margin-left: -20px;
 }
 
+// jqgrid. Use guiStyle: "bootstrap4" as a start but the Material Kit definitions cause spacing issues for the jqgrid bootstrap4 support so override again!
+.ui-jqgrid.ui-jqgrid-bootstrap {
+	.card {
+	    margin-bottom: 0;
+	    margin-top: 0; 
+	    box-shadow: none;
+	}
+	.ui-jqgrid-titlebar>.ui-jqgrid-titlebar-close>span.fa {
+		margin-bottom: 1em;
+	}
+	.ui-search-table .ui-search-input>input[type=text], .ui-search-table .ui-search-input>select {
+		background-color: $white;
+	}
+ 	tr.jqgrow .sgbutton-div .sgbutton.btn {
+		// based on _misc.scss
+		color: white;
+		&:hover,
+		&:focus{
+			color: darken($link-color, 5%);
+			text-decoration: none;
+		}
+		&.text-info{
+			&:hover, &:focus{
+				color: darken($brand-info, 5%);
+			}
+		}
+	}
+    >.ui-jqgrid-pager .fa, >.ui-jqgrid-view .fa {
+    	margin-top: 0;
+		margin-bottom: 0;
+		&:hover,
+		&:focus{
+			color: darken($link-color, 5%);
+			text-decoration: none;
+		}
+	}
+}
+
 // Reformat the spinner used by Mottie tablesorter to use fa-refresh. The spinner appears on every column and if you only want one column
 // make the other columns <th class="no-spinner"
 .tablesorter-bootstrap .tablesorter-processing {
@@ -843,6 +884,11 @@ $portrait-size-image-xl: 400px;
 
 .tablesorter-bootstrap .tablesorter-processing.no-spinner  .tablesorter-header-inner {
     margin-left: 0px; 
+}
+
+// Use with toggleclass("hidden") to switch between flex and none, rather than toggle() which does block and none
+.hidden {
+  display: none;
 }
 
 // Full screen sizing - expects the div to be fullscreened to be called fullPageContentDiv, which contains a flexDiv and a mainDiv

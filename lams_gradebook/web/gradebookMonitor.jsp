@@ -126,7 +126,7 @@
 			
 			// Create the user view grid with sub grid for activities	
 			jQuery("#userView").jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 				autoencode:false,
 				caption: "<fmt:message key="gradebook.gridtitle.usergrid"/>",
@@ -185,7 +185,7 @@
 				   	   hasArchivedMarks = rowData["hasArchivedMarks"] == "true";
 					 jQuery("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 					 jQuery("#"+subgrid_table_id).jqGrid({
-							 guiStyle: "bootstrap",
+							 guiStyle: "bootstrap4",
 							 iconSet: 'fontAwesome',
 							 autoencode:false,
 						     datatype: "xml",
@@ -381,7 +381,7 @@
 							   	    activityID = rowData["id"].split("_")[0];
 								jQuery("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll archive'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 								jQuery("#"+subgrid_table_id).jqGrid({
-										 guiStyle: "bootstrap",
+										 guiStyle: "bootstrap4",
 										 iconSet: 'fontAwesome',
 										 autoencode:false,
 										 autowidth: true,
@@ -434,7 +434,7 @@
 
 				// Creating activity view with sub learner view
 				jQuery("#activityView").jqGrid({
-					guiStyle: "bootstrap",
+					guiStyle: "bootstrap4",
 					iconSet: 'fontAwesome',
 					autoencode:false,
 					caption: "<fmt:message key="gradebook.gridtitle.activitygrid"/>",
@@ -479,7 +479,7 @@
 					   
 					   jQuery("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 					   jQuery("#"+subgrid_table_id).jqGrid({
- 							 guiStyle: "bootstrap",
+ 							 guiStyle: "bootstrap4",
 							 iconSet: 'fontAwesome',
 							 autoencode:false,
 						     datatype: "xml",
@@ -610,7 +610,7 @@
 							   	    userID = nameParts[3];
 								jQuery("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll archive'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 								jQuery("#"+subgrid_table_id).jqGrid({
-										 guiStyle: "bootstrap",
+										 guiStyle: "bootstrap4",
 										 iconSet: 'fontAwesome',
 										 autoencode:false,
 									     datatype: "xml",
@@ -732,89 +732,7 @@
 		</div>
 	</c:set>
 			
-			
-	<c:set var="chartButtonCode">
-		<div id="tour-mark-chart-button">
-			<div id="markChartShown" style="display:none">
-			<a href="javascript:toggleMarkChart()" class="${btnclass}" title="<fmt:message key='label.hide.marks.chart'/>" >
-				<i class="fa fa-bar-chart"></i> <span class="d-none d-sm-inline">
-				<fmt:message key="label.hide.marks.chart"/>
-				</span>
-			</a> 
-		</div>
-		<div id="markChartHidden">
-			<a href="javascript:toggleMarkChart()" class="${btnclass}" title="<fmt:message key='label.show.marks.chart'/>" >
-				<i class="fa fa-bar-chart"></i> <span class="d-none d-sm-inline">
-				<fmt:message key="label.show.marks.chart"/>
-				</span>
-			</a> 
-		</div>
-		</div>
-	</c:set>
-	
-	<c:if test="${usesWeights}">
-		<c:set var="weightButtonCode">
-			<div id="tour-weight-button">
-				<div id="weightShown" style="display:none">
-				<a href="javascript:toggleWeight()" class="${btnclass}" title="<fmt:message key='label.button.hide.weights'/>" >
-					<i class="fa fa-balance-scale"></i> <span class="d-none d-sm-inline">
-					<fmt:message key="label.button.hide.weights"/>
-					</span>
-				</a> 
-				</div>
-				<div id="weightHidden">
-					<a href="javascript:toggleWeight()" class="${btnclass}" title="<fmt:message key='label.button.show.weights'/>" >
-						<i class="fa fa-balance-scale"></i> <span class="d-none d-sm-inline">
-						<fmt:message key="label.button.show.weights"/>
-						</span>
-					</a> 
-				</div>
-			</div>
-		</c:set>
-	</c:if>
-	
-	<c:choose>
-	<c:when test="${!isInTabs}">
-		<%-- replacement for Page type admin --%>
-		<div class="row no-gutter no-margin">
-		<div class="col-sm-12">
-		<div class="container" id="content">
-
-		<div class="card card-plain card-admin-page">
-		<div class="card-body card-admin-body">
-
-		<h4><fmt:message key="gradebook.title.lessonGradebook">
-					<fmt:param>
-						<c:out value="${lessonDetails.lessonName}" escapeXml="true"/>
-					</fmt:param>
-				</fmt:message></h4>
-		
-		<div id="gbButtons">
-		<div class="gbTopButtonsContainer pull-right">
-			${chartButtonCode}
-			${weightButtonCode}
-			<a target="_blank" class="${btnclass}" title="<fmt:message key='button.help.tooltip'/>"
-				   href="http://wiki.lamsfoundation.org/display/lamsdocs/Gradebook+Lesson+Marking">
-			<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span></a>
-		</div>
-
-		<div class="gbTopButtonsContainer pull-left" id="export-link-area">
-			${padlockCode}
-		
-	</c:when>
-	
-	<c:otherwise>
-	 	
-		<div id="gbButtons">
-		<div class="gbTopButtonsContainer pull-left">
-			${padlockCode}
-		</div>
-		
-		<div class="gbTopButtonsContainer pull-right" id="export-link-area">
-	 	
-	</c:otherwise>
-	</c:choose>
-
+	<c:set var="exportReleaseCode">
 			<div>
 				<a href="#nogo" id="export-grades-button" class="${btnclass}" title="<fmt:message key='gradebook.export.excel'/>" >
 					<i class="fa fa-download"></i><span id="exportSpan" class="d-none d-sm-inline">
@@ -840,10 +758,91 @@
 				</a> 
 			</div>
 			</div>
+		</c:set>			
+	<c:set var="chartButtonCode">
+		<div id="tour-mark-chart-button">
+			<div id="markChartShown" style="display:none">
+			<a href="javascript:toggleMarkChart()" class="${btnclass}" title="<fmt:message key='label.hide.marks.chart'/>" >
+				<i class="fa fa-bar-chart"></i> <span class="d-none ${usesWeights ? 'd-md-inline' : 'd-sm-inline'}">
+				<fmt:message key="label.hide.marks.chart"/>
+				</span>
+			</a> 
+		</div>
+		<div id="markChartHidden">
+			<a href="javascript:toggleMarkChart()" class="${btnclass}" title="<fmt:message key='label.show.marks.chart'/>" >
+				<i class="fa fa-bar-chart"></i> <span class="d-none ${usesWeights ? 'd-md-inline' : 'd-sm-inline'}">
+				<fmt:message key="label.show.marks.chart"/>
+				</span>
+			</a> 
+		</div>
+		</div>
+	</c:set>
+	
+	<c:if test="${usesWeights}">
+		<c:set var="weightButtonCode">
+			<div id="tour-weight-button">
+				<div id="weightShown" style="display:none">
+				<a href="javascript:toggleWeight()" class="${btnclass}" title="<fmt:message key='label.button.hide.weights'/>" >
+					<i class="fa fa-balance-scale"></i> <span class="d-none d-md-inline">
+					<fmt:message key="label.button.hide.weights"/>
+					</span>
+				</a> 
+				</div>
+				<div id="weightHidden">
+					<a href="javascript:toggleWeight()" class="${btnclass}" title="<fmt:message key='label.button.show.weights'/>" >
+						<i class="fa fa-balance-scale"></i> <span class="d-none d-md-inline">
+						<fmt:message key="label.button.show.weights"/>
+						</span>
+					</a> 
+				</div>
+			</div>
+		</c:set>
+	</c:if>
+	
+	<c:set var="helpURL"><a target="_blank" class="${btnclass}" title="<fmt:message key='button.help.tooltip'/>"
+					   href="http://wiki.lamsfoundation.org/display/lamsdocs/Gradebook+Lesson+Marking">
+					<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span></a></c:set>
+					
+	<c:choose>
+	<c:when test="${!isInTabs}">
+		<%-- replacement for Page type admin --%>
+		  <div class="container-fluid">
+	  		<main class="card">
+	  		<div class="card-header card-header-primary">
+	  				<span class="lead"><fmt:message key="gradebook.title.lessonGradebook">
+					<fmt:param><c:out value="${lessonDetails.lessonName}" escapeXml="true"/></fmt:param>
+					</fmt:message></span>
+					<span class="pull-right">${helpURL}</span>
+	  		</div>
+	    	<div class="card-body">
+		
+		<div id="gbButtons">
+		<div class="gbTopButtonsContainer pull-right">
+			${chartButtonCode}
+			${weightButtonCode}
+		</div>
+
+		<div class="gbTopButtonsContainer pull-left" id="export-link-area">
+			${padlockCode}
+		
+	</c:when>
+	
+	<c:otherwise>
+	 	
+		<div id="gbButtons">
+		<div class="gbTopButtonsContainer">
+			${padlockCode}
+		</div>
+		
+		<div class="gbTopButtonsContainer pull-left" id="export-link-area">
+	</c:otherwise>
+	</c:choose>
+			${exportReleaseCode }
 
 		<c:if test="${isInTabs}">
 	 		${chartButtonCode}
 	 		${weightButtonCode}
+		 	${helpURL}
 		</c:if>
 		
 		</div> <!-- Closes gbTopButtonsContainer pull-right  -->
@@ -858,7 +857,7 @@
 			</div>
 
 			<c:if test="${usesWeights}">
-			<div id="weights" class="grid-holder voffset40" style="display:none" >
+			<div id="weights" class="grid-holder" style="display:none" >
 			<div class="card card-plain">
 				<div class="card-header">
 					<fmt:message key="label.weights.title"/>
@@ -878,23 +877,18 @@
 			</div>	
 			</c:if>
 			
-			<div id="userActivityViewsHolder" class="grid-holder ${usesWeights?'voffset20':'voffset40'}">
+			<div id="userActivityViewsHolder" class="grid-holder">
 				<table id="userView" class="scroll" ></table>
 				<div id="userViewPager" class="scroll" ></div>
-				
 				<br />
-				<br />
-				
 				<table id="activityView" class="scroll" ></table>
 				<div id="activityViewPager" class="scroll" ></div>
 			</div>
 	 
 	<c:if test="not isInTabs">
- 		</div>
- 		</div>
- 		</div>
+			</div>
+			</main>
 		</div>
-		</div>	
 	</c:if>
 
 </body>

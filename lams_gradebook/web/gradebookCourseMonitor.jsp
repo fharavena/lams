@@ -53,7 +53,7 @@
 			
 			// Create the lesson view grid with sub grid for users	
 			jQuery("#organisationGrid").jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 				autoencode:false,
 				caption: "<fmt:message key="gradebook.gridtitle.lesson.view"/>",
@@ -97,7 +97,7 @@
 				   subgrid_table_id = subgrid_id+"_t";
 				   jQuery("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 				   jQuery("#"+subgrid_table_id).jqGrid({
-						 guiStyle: "bootstrap",
+						 guiStyle: "bootstrap4",
 						 iconSet: 'fontAwesome',
 						 autoencode:false,
 					     datatype: "xml",
@@ -185,7 +185,7 @@
 
 			// Create the user view grid with sub grid for lessons
 			jQuery("#userView").jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 				autoencode:false,
 				caption: "<fmt:message key="gradebook.gridtitle.learner.view"/>",
@@ -221,7 +221,7 @@
 					subgrid_table_id = subgrid_id+"_t";
 					jQuery("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 					jQuery("#"+subgrid_table_id).jqGrid({
-							 guiStyle: "bootstrap",
+							 guiStyle: "bootstrap4",
 							 iconSet: 'fontAwesome',
 							 autoencode:false,
 						     datatype: "xml",
@@ -389,7 +389,7 @@
 		});
 		
 		function openSelectLessonsArea() {
-			$("#select-lessons-area").toggle();
+			$("#select-lessons-area").toggleclass("hidden");
 			if ( hideShowLessonCheckboxes() ) {
 				document.getElementById("selectLessonsShown").style.display="inline";
 				document.getElementById("selectLessonsNotShown").style.display="none";
@@ -401,7 +401,7 @@
 		}
 				
 		// only show the selection checkboxes when the select lesson for export is shown
-		// returns true if checkboxes are shown
+		// returns true if checkboxes are shown. Relies on the .hidden class.
 		function hideShowLessonCheckboxes() {
 			if ( $("#select-lessons-area").css('display') == 'none' ) {
 				jQuery("#organisationGrid").jqGrid('hideCol', 'cb');
@@ -431,22 +431,24 @@
 
 <body class="stripes">
 
-	<lams:Page type="admin">
-
-		<h4>
-			<fmt:message key="gradebook.title.courseMonitor">
+	<c:set var="title">
+		<fmt:message key="gradebook.title.courseMonitor">
 				<fmt:param>
 					<c:out value="${organisationName}" escapeXml="true"/>
 				</fmt:param>
 			</fmt:message>
-		</h4>
-		
-		<c:set var="btnclass" value="btn btn-xs btn-default"/>
-
-		<a target="_blank" class="${btnclass} pull-right loffset5" title="<fmt:message key='button.help.tooltip'/>"
+	</c:set>
+	
+	<c:set var="titleHelpURL">
+		<a target="_blank" class="btn btn-sm btn-default pull-right loffset5" title="<fmt:message key='button.help.tooltip'/>"
 		   href="http://wiki.lamsfoundation.org/display/lamsdocs/Gradebook+Course+Monitor">
 			<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span>
 		</a>
+	</c:set>
+	
+	<lams:Page type="admin" title="${title}" titleHelpURL="${titleHelpURL}">
+
+		<c:set var="btnclass" value="btn btn-sm btn-default"/>
 
 		<div id="datesNotShown">
 			<a class="${btnclass} pull-right btn-primary" href="javascript:toggleLessonDates()" title="<fmt:message key="gradebook.monitor.show.dates" />">
@@ -491,7 +493,15 @@
 
 		<div id="select-lessons-area" class="voffset5 form-inline">
 			<input class="${btnclass}" type="button" value="<fmt:message key="label.button.export"/>" id="export-selected-lessons-button" />
-			<div class="checkbox input-sm loffset5"><label><input type="checkbox" id="export-selected-simplified">&nbsp;<fmt:message key="label.simplified.export"/></label></div>
+
+			<div class="form-check">
+				<label class="form-check-label" for="export-selected-simplified">
+        		<input type="checkbox" class="form-check-input" id="export-selected-simplified" />
+        		<span class="form-check-sign"><span class="check"></span></span>
+        		<fmt:message key="label.simplified.export"/>
+    			</label>
+    		</div>
+    
 			<div><fmt:message key="gradebook.export.desc"/></div>
 		</div>
 

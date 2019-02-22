@@ -31,7 +31,7 @@
 			$(link).closest('td').empty()
 							     .append($('<table />').attr('id', 'grid' + notificationUid));
 			$("#grid" + notificationUid).jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 			   	url: "<c:url value='/emailNotifications/getArchivedRecipients.do'/>?emailNotificationUid=" + notificationUid,
 				datatype: "json",

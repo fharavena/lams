@@ -194,7 +194,7 @@
 					datatype		   : "json",
 				    height			   : "100%",
 				    // use new theme
-				    guiStyle 		   : "bootstrap",
+				    guiStyle: "bootstrap4",
 				    iconSet 		   : 'fontAwesome',
 				    autowidth		   : true,
 				    shrinkToFit 	   : true,

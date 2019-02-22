@@ -22,7 +22,7 @@
   
 			// for the ipad, we seem to need to force the grid to a sensible size to start
 			$("#consents-grid").jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 				autoencode:false,
 				caption: "${organisationName}",

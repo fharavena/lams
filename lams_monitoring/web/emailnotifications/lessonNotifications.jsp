@@ -45,7 +45,7 @@
 			
 			//initialize user list 
 			jQuery("#list3").jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 			   	url: "<c:url value='/emailNotifications/getUsers.do?'/>" + getSearchParams(),
 				datatype: "json",

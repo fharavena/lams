@@ -99,7 +99,7 @@ License Information: http://lamsfoundation.org/licensing/lams/2.0/
 				    url				   : "<lams:LAMSURL />gradebook/gradebook/getLessonCompleteGridData.do?lessonID=${lessonID}",
 				    height			   : "100%",
 				    // use new theme
-				    guiStyle 		   : "bootstrap",
+				    guiStyle: "bootstrap4",
 				    iconSet 		   : 'fontAwesome',
 				    autoencode		   : false,
 					colNames : [

@@ -20,7 +20,7 @@
   
 			// for the ipad, we seem to need to force the grid to a sensible size to start
 			$("#organisationGrid").jqGrid({
-				guiStyle: "bootstrap",
+				guiStyle: "bootstrap4",
 				iconSet: 'fontAwesome',
 				autoencode:false,
 				caption: "${organisationName}",
@@ -71,7 +71,7 @@
 					subgrid_table_id = subgrid_id+"_t";
 					$("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><div id='"+subgrid_table_id+"_pager' class='scroll' ></div>");
 					$("#"+subgrid_table_id).jqGrid({
-							 guiStyle: "bootstrap",
+							 guiStyle: "bootstrap4",
 							 iconSet: 'fontAwesome',
 							 autoencode:false,
 						     datatype: "xml",
@@ -137,26 +137,28 @@
 
 <body class="stripes">
 
-	<lams:Page type="admin">
-
-		<a target="_blank" class="btn btn-sm btn-default pull-right" title="<fmt:message key='button.help.tooltip'/>"
-		   href="http://wiki.lamsfoundation.org/display/lamsdocs/My+Grades">
-		<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span></a>
-
-		<h4><fmt:message key="gradebook.title.myGradebook">
+	<c:set var="title">
+		<fmt:message key="gradebook.title.myGradebook">
 				<fmt:param>
 					<c:out value="${fullName}" escapeXml="true"/>
 				</fmt:param>
-			</fmt:message>
-		</h4>
+		</fmt:message>
+	</c:set>
 
- 		<div class="grid-holder">
- 			<table id="organisationGrid" class="scroll"></table>
+	<c:set var="titleHelpURL">
+		<a target="_blank" class="btn btn-sm btn-default pull-right" title="<fmt:message key='button.help.tooltip'/>"
+		   href="http://wiki.lamsfoundation.org/display/lamsdocs/My+Grades">
+		<i class="fa fa-question-circle"></i> <span class="d-none d-sm-inline"><fmt:message key="button.help"/></span></a>
+	</c:set>
+
+	<lams:Page type="admin" title="${title}" titleHelpURL="${titleHelpURL}">
+
+		<div class="grid-holder">
+			<table id="organisationGrid" class="scroll"></table>
 			<div id="organisationGridPager" class="scroll"></div>
- 			<div class="tooltip-lg" id="tooltip"></div>
+			<div class="tooltip-lg" id="tooltip"></div>
 		</div>
- 		<div id="footer">
-		</div> <!--Closes footer-->
+		<div id="footer"></div> <!--Closes footer-->
 		
 	</lams:Page>
 
