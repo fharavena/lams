@@ -1,9 +1,6 @@
 // Import this file into all LAMS scss files to get the consistent definitions
 // Based on $brand-primary:              $blue-a400 !default;
 @import "material-kit/variables-blue.scss";
-@import "material-kit/bootstrap/scss/mixins/float.scss";
-@import "material-kit/bootstrap/scss/mixins/breakpoints.scss";
-@import "material-kit/bootstrap/scss/mixins/buttons.scss";
 @import "mixins.scss";
 
 // LAMS SASS Global Variables

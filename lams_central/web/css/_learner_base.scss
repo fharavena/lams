@@ -142,6 +142,7 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 }
 .card-plain {
 	background: $white;
+	@include box-shadow($bmd-shadow-2dp);
   	.card-header:not(.card-avatar) {
     	margin-top: 0px; 
     	padding: .4rem 10px;
@@ -156,8 +157,43 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
   margin-bottom: 15px;
 }
 
-.card-accordian .card-collapse, .card-statistics .card-collapse {
-  margin-top: 15px;
+.card.card-no-border .card-body {
+	padding: 0; 
+}
+
+// Collapsable cards/accordians - margins made bigger to support the large header.
+// Show a bit of the card when collapsed or it looks out of proportion with the header.
+// Icons to show panel is collapsed
+.card.card-accordian, .card.card-statistics {
+	padding-bottom: 15px;
+	.collapse {
+		margin-top: 15px;
+	}
+}
+
+div.accordian .card {
+	margin-top: 45px; 
+}
+
+.collapsable-icon-right a:after {
+    font-family: FontAwesome;
+    content:"\f078";
+    float: right;
+    color: $gray-light;
+	margin-right: 5px;
+}
+.collapsable-icon-right a.collapsed:after {
+    content:"\f054";
+}
+.collapsable-icon-left a:after {
+    font-family: FontAwesome;
+    content:"\f078";
+    float: left;
+    color: $gray-light;
+	margin-right: 5px;
+}
+.collapsable-icon-left a.collapsed:after {
+    content:"\f054";
 }
 
 // Reduce the gap between the nav bar and the content for authoring and monitoring.
@@ -166,10 +202,11 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 .card-monitor-page .navbar {
 	margin-bottom: 10px;
 }
-.card-monitor-body {
-	margin-top: 0px;
-}
 
+.card-body.card-body-monitor {
+	padding: 0;
+}
+	
 /* Comments/Forum classes */
 .msg .panel-heading {
   padding: 3px 5px 3px 5px;
@@ -509,11 +546,6 @@ div.growlUI h1,div.growlUI h2 {
 	margin: 5px;
 	text-align: center;
 	font-size: medium;
-}
-
-// offset 30px margin on top of card header
-div.accordian .card {
-	margin-top: 45px; 
 }
 
 // Tooltips used for learner progress and gradebook (large version)

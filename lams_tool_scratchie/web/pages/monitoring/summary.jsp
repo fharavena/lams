@@ -249,14 +249,14 @@
 </script>
 <script type="text/javascript" src="<lams:LAMSURL/>/includes/javascript/monitorToolSummaryAdvanced.js" ></script>
 
-	<c:if test="${not empty summaryList}">
-		<button onclick="return exportExcel();" class="btn btn-default btn-sm btn-disable-on-submit pull-right">
-			<i class="fa fa-download" aria-hidden="true"></i> 
-			<fmt:message key="label.export.excel" />
-		</button>
-	</c:if>
-
-	<div class="card card-no-border">
+	<div class="card card-no-border"><div class="card-body">
+		<c:if test="${not empty summaryList}">
+			<button onclick="return exportExcel();" class="btn btn-default btn-sm btn-disable-on-submit pull-right">
+				<i class="fa fa-download" aria-hidden="true"></i> 
+				<fmt:message key="label.export.excel" />
+			</button>
+		</c:if>
+	
 		<h4>
 		    <c:out value="${scratchie.title}" escapeXml="true"/>
 		</h4>
@@ -273,29 +273,27 @@
 		<lams:WaitingSpinner id="messageArea_Busy"></lams:WaitingSpinner>
 		<div class="voffset5 help-block" id="messageArea"></div>
 	
-	</div>
-
 	<div class="form-group">
 		<!-- Dropdown menu for choosing scratchie item -->
-		<label for="item-uid"><h4><fmt:message key="label.monitoring.summary.report.by.scratchie" /></h4></label>
-		<select id="item-uid" class="form-control">
+		<label for="item-uid"><fmt:message key="label.monitoring.summary.report.by.scratchie" /></label>
+		<select id="item-uid" class="form-control form-control-inline voffset10">
 			<option selected="selected" value="-1"><fmt:message key="label.monitoring.summary.choose" /></option>
    			<c:forEach var="item" items="${scratchie.scratchieItems}">
 				<option value="${item.uid}"><c:out value="${item.title}" escapeXml="true"/></option>
 		   	</c:forEach>
 		</select>
 		<a href="#nogo" class="thickbox" id="item-summary-href" style="display: none;"></a>
-	</div>
-	<div class="form-group">
+
 		<!-- Dropdown menu for choosing user -->
-		<label for="userid-dropdown"><h4><fmt:message key="label.monitoring.summary.report.by.user" /></h4></label>
-		<select id="userid-dropdown" class="form-control">
+		<label class="voffset10" for="userid-dropdown"><fmt:message key="label.monitoring.summary.report.by.user" /></label>
+		<select id="userid-dropdown" class="form-control form-control-inline voffset10">
 			<option selected="selected" value="-1"><fmt:message key="label.monitoring.summary.choose" /></option>
    			<c:forEach var="learner" items="${sessionMap.learners}">
 				<option value="${learner.userId}" alt="${learner.session.sessionId}"><c:out value="${learner.firstName} ${learner.lastName} (${learner.session.sessionName})" escapeXml="true"/></option>
 		   	</c:forEach>
 		</select>
 	</div>
+	</div></div>
 
 	<c:set var="summaryTitle"><fmt:message key="label.monitoring.summary.summary" /></c:set>
 	<c:if test="${sessionMap.isGroupedActivity}">
@@ -319,7 +317,7 @@
 			</span>
         </div>
         
-        <div id="collapse${summary.sessionId}" class="card-collapse collapse ${status.first ? 'in' : ''}" role="tabcard" aria-labelledby="heading${summary.sessionId}">
+        <div id="collapse${summary.sessionId}" class="card-collapse collapse ${status.first ? 'show' : ''}" role="tabcard" aria-labelledby="heading${summary.sessionId}">
 
 		<table id="list${summary.sessionId}" class="scroll" cellpadding="0" cellspacing="0"></table>
 		
@@ -340,7 +338,7 @@
 		      		</span>
 		        </div>
 		
-		        <div id="collapseBurning" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingBurning">
+		        <div id="collapseBurning" class="card-collapse collapse show" role="tabcard" aria-labelledby="headingBurning">
 					<c:forEach var="burningQuestionItemDto" items="${sessionMap.burningQuestionItemDtos}" varStatus="i">
 						<div class="voffset5"><strong>${burningQuestionItemDto.scratchieItem.title}</strong></div>
 						<table id="burningQuestions${burningQuestionItemDto.scratchieItem.uid}" class="scroll" cellpadding="0" cellspacing="0"></table>
