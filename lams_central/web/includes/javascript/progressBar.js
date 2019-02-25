@@ -1156,7 +1156,7 @@ function fillProgressBar(barId) {
 				var svgheight = 17 + 33 * result.support.length;
 				// separate paper for Support Activities frame
 				var supportPaper = Snap();
-				$('#supportPart').height(svgheight+5)
+				$('#supportPart').height(svgheight+10)
 								 .append(supportPaper.node)
 								 .show();
 				$.each(result.support, function(activityIndex,

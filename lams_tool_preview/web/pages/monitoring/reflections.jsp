@@ -11,7 +11,7 @@
 <lams:head>
 	<title><fmt:message key="label.monitoring.heading" />
 	</title>
-	<%@ include file="/common/header.jsp"%>
+	<lams:headItems minimal="true"/>
 	
 	<link type="text/css" href="${lams}css/jquery-ui-bootstrap-theme.css" rel="stylesheet">
 	<link type="text/css" href="${lams}css/jquery.jqGrid.css" rel="stylesheet" />

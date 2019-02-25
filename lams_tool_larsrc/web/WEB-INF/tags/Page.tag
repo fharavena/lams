@@ -53,7 +53,6 @@
 		<%-- Links placed in body instead of head. Ugly, but it works. --%>
 		<lams:css suffix="progressBar"/>
 		<script type="text/javascript">
-		debugger;
 			// Adding jquery.js if it hasn't been loaded already
 			(typeof(jQuery) != 'undefined') || document.write('<script type="text/javascript" src="<lams:LAMSURL/>includes/javascript/jquery.js"><\/script>');
 		
@@ -364,7 +363,7 @@
 					<div class="card card-${type}-page">
 						<c:if test="${not empty title}">
 							<div class="card-header">
-									<c:out value="${title}" escapeXml="true" />
+									<span class="lead"><c:out value="${title}" escapeXml="true" /></span>
 									<c:if test="${not empty titleHelpURL}">
 										<span class="pull-right">${titleHelpURL}</span>
 									</c:if>

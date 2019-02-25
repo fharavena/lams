@@ -180,7 +180,7 @@
 				</h4>
 			</div>
 	
-			<div id="collapse-${groupDto.groupID}" class="card-collapse collapse in">
+			<div id="collapse-${groupDto.groupID}" class="card-collapse collapse show">
 				<div class="card-body">
 	
 					<div class="table-responsive">

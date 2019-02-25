@@ -32,7 +32,7 @@ $(document).ready(function(){
 				</span>
        		</div>
        
-        	<div id="collapse${session.sessionID}" class="card-collapse collapse in" role="tabcard" aria-labelledby="heading${session.sessionID}">
+        	<div id="collapse${session.sessionID}" class="card-collapse collapse show" role="tabcard" aria-labelledby="heading${session.sessionID}">
 	</c:if>
 
 	<table class="table table-sm table-striped">

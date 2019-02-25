@@ -389,7 +389,8 @@
 		});
 		
 		function openSelectLessonsArea() {
-			$("#select-lessons-area").toggleclass("hidden");
+			debugger;
+			$("#select-lessons-area").toggleClass("hidden");
 			if ( hideShowLessonCheckboxes() ) {
 				document.getElementById("selectLessonsShown").style.display="inline";
 				document.getElementById("selectLessonsNotShown").style.display="none";
@@ -403,7 +404,7 @@
 		// only show the selection checkboxes when the select lesson for export is shown
 		// returns true if checkboxes are shown. Relies on the .hidden class.
 		function hideShowLessonCheckboxes() {
-			if ( $("#select-lessons-area").css('display') == 'none' ) {
+			if ( $("#select-lessons-area").css('display') == 'hidden' ) {
 				jQuery("#organisationGrid").jqGrid('hideCol', 'cb');
 				return false;
 			}
@@ -414,7 +415,7 @@
 		// the location of the subgrids "look into here" arrow is thrown out by showing/hiding checkboxes
 		// so show/hide the first column in the subgrid to match
 		function fixArrowColumn(subgridName) {
-			if ( $("#select-lessons-area").css('display') == 'none' ) {
+			if ( $("#select-lessons-area").css('display') == 'hidden' ) {
 				jQuery("#"+subgridName).parent().siblings("td:first").css( "display", "none" );
 			} 		
 		}
@@ -491,10 +492,10 @@
 
 		</div>
 
-		<div id="select-lessons-area" class="voffset5 form-inline">
+		<div id="select-lessons-area" class="hidden">
 			<input class="${btnclass}" type="button" value="<fmt:message key="label.button.export"/>" id="export-selected-lessons-button" />
 
-			<div class="form-check">
+			<div class="form-check loffset10">
 				<label class="form-check-label" for="export-selected-simplified">
         		<input type="checkbox" class="form-check-input" id="export-selected-simplified" />
         		<span class="form-check-sign"><span class="check"></span></span>

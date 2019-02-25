@@ -3,7 +3,7 @@
 
 <lams:html>
 <lams:head>
-	<%@ include file="/common/header.jsp"%>
+	<lams:headItems minimal="true"/>
 		<c:choose>
 		<c:when test="${creatingUsers == 'true'}"><meta http-equiv="refresh" content="2"></c:when>
 		<c:otherwise><meta http-equiv="refresh" content="60"></c:otherwise>

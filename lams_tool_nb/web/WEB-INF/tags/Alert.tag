@@ -29,7 +29,7 @@
 
 <div class="row no-gutter">
 	<div class="col-sm-12">
-		<div id="${idName}" class="alert alert-${alertType}" style="margin-bottom: 10px; padding: 8px">
+		<div id="${idName}" class="alert alert-${alertType} alert-box">
 			<div class="media">
 				<div class="media-left">
 					<i class="fa fa-lg fa-${iconType} text-muted"></i>

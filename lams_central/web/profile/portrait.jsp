@@ -165,7 +165,7 @@
 				    	</div>
 				    </div>
 				    
-				    <div id="collapseOne" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingOne">
+				    <div id="collapseOne" class="card-collapse collapse show" role="tabcard" aria-labelledby="headingOne">
 				    	<div class="card-body">
 				      			
 							<div>

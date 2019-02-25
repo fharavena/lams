@@ -7,7 +7,7 @@
 
 <lams:html>
 	<lams:head>
-		<%@ include file="/common/tabbedheader.jsp" %>
+		<lams:headItems/>
 		 
 		<script>
 			var initialTabId = "${initialTabId}";

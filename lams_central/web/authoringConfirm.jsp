@@ -42,8 +42,9 @@
 		<fmt:message key="authoring.msg.save.success" />
 	</c:set>
 	
-	<lams:Page type="admin" title="${title}">
+	<lams:Page type="admin">
 
+		<h3 class="text-center">${title}</h3>
 		<div class="voffset10 text-center">
 			<a href="javascript:;" onclick="javascript:location.href='${param.reEditUrl}'"
 				name="reedit" class="btn btn-primary roffset10">

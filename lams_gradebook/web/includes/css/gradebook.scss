@@ -3,14 +3,13 @@
 $button-row-height:40px; // use same value in monitoring
 
 #select-lessons-area {
-	display: none;
+	display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    &.hidden {
+    	display:none;
+    }
 }
-
-// .ui-jqgrid.ui-jqgrid-bootstrap .ui-th-column .cbox,
-// .ui-jqgrid.ui-jqgrid-bootstrap .jqgrow>td>.cbox {
-//     height: 14px !important;
-//     width: 14px !important;
-// }
 
 /* Formatting buttons on the Gradebook Lesson screen */
 #gbButtons {

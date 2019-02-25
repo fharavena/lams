@@ -3,7 +3,7 @@
 
 <lams:html>
 <lams:head>
-	<%@ include file="/common/header.jsp"%>
+	<lams:headItems minimal="true"/>
 	<meta http-equiv="refresh" content="60">
 	
 	<script type="text/javascript">

@@ -15,11 +15,8 @@
 <lams:head>
 	<title><fmt:message key="label.learning.title" />
 	</title>
-	<%@ include file="/common/header.jsp"%>
-
+	<lams:headItems minimal="true"/>
 	<lams:css suffix="jquery.jRating"/>
-	<link rel="stylesheet" href="${lams}css/jquery.tablesorter.theme.bootstrap.css">
-	<link rel="stylesheet" href="${lams}css/jquery.tablesorter.pager.css">
 	<link rel="stylesheet" href="<lams:WebAppURL/>includes/css/learning.css">
 
 	<script type="text/javascript">

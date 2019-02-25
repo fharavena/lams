@@ -100,7 +100,7 @@
 					//use jqeury toggle instead of bootstrap collapse 
 					$(".burning-question-title").on('click', function () {
 						var div =  $("#collapse-" + $(this).data("itemuid"));
-						div.toggleClass("in");
+						div.toggleClass("show");
 						$(this).toggleClass("collapsed");
 					});
 				}

@@ -14,7 +14,7 @@
 			</span>
        	</div>
        
-        <div id="collapseStats${session.sessionID}" class="card-collapse collapse in" role="tabcard" aria-labelledby="headingStats${session.sessionID}">
+        <div id="collapseStats${session.sessionID}" class="card-collapse collapse show" role="tabcard" aria-labelledby="headingStats${session.sessionID}">
 	</c:if>
 
 		<table class="table table-sm">

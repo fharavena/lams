@@ -207,6 +207,22 @@ div.accordian .card {
 	padding: 0;
 }
 	
+// Alert Boxes
+.alert.alert-box {
+	margin-bottom: 10px; 
+	padding: 8px; 
+	border-radius: $border-radius-large;
+	
+	.media-left {
+		padding-right: 0.5rem; // Space between the icon and the text
+	}
+
+	&.alert-info .media-body {
+		color: $mdb-text-color-primary; // Material Kit defaults to white on a light blue which is too hard to read.
+	}
+	
+}
+
 /* Comments/Forum classes */
 .msg .panel-heading {
   padding: 3px 5px 3px 5px;
@@ -365,6 +381,13 @@ a.button-add-item:before {
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 
+nav.sidebar {
+	font-size: $font-size-sm;
+	.fa {
+		font-size: $font-size-base;
+	}
+}
+
 /*small/medium side display*/
 @media (min-width: 768px) {
 
@@ -372,7 +395,7 @@ a.button-add-item:before {
 	.navcontent{
 		position: absolute;
 		width: calc(100% - 40px); /*keeps 100% minus nav size*/
-		margin-left: 20px;
+		margin-left: 35px;
 		float: right;
 		min-height:100%;
 	}
@@ -416,6 +439,7 @@ a.button-add-item:before {
 
 	/*allows nav box to use 100% width, style to be like panel */
 	nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+		flex-direction: column;
 		padding: 0 0px 0 0px;
 		border:2px solid transparent;
 	}
@@ -424,7 +448,7 @@ a.button-add-item:before {
 	nav.sidebar{
 		width: 155px;
 		height: 100%;
-		margin-left: -135px;
+		margin-left: -115px;
 		float: left;
 		z-index: 1000;
 		margin-top: 0px;
@@ -452,13 +476,10 @@ a.button-add-item:before {
 		opacity: 0;
 	}
 	
-	nav.sidebar .fa{
-		font-size: 18px;
-	}
-	
+
 }
 
-/*alter portrait for displaying it in collapsed pregress bar*/
+// Alter portrait for displaying it in collapsed pregress bar, tweak the icons to line up
 @media (min-width: 768px) and (max-width: 1329px) {
 	
 	nav.sidebar:not(.expandmenu) #navbar-portrait {
@@ -478,6 +499,19 @@ a.button-add-item:before {
 	nav.sidebar:not(.expandmenu) p{
 		padding-right: 35px;
 	}
+
+	nav.sidebar:not(.expandmenu) #navbar-portrait {
+		float: right;
+    		padding: 5px 0 0;
+	}
+
+	nav.sidebar:not(.expandmenu) i.pull-right.fa {
+	    margin-right: 10px;
+ 	}    
+ 
+	 nav.sidebar:not(.expandmenu) li.nav-item span, li.nav-item #supportPart {
+	 	display:none;
+	 }
 }
 
 /*in case when portrait is not shown in a progress bar - give extra space to hamburger button*/
@@ -549,32 +583,32 @@ div.growlUI h1,div.growlUI h2 {
 }
 
 // Tooltips used for learner progress and gradebook (large version)
-// .tooltip {
-// 	position: absolute;
-// 	border: $border-thin-default;
-// 	background-color: $gray-light-mid;
-// 	padding: 3px;
-// 	z-index: 5;
-// 	width: 150px;
-// 	font-size: 0.9em;
-// 	word-wrap: break-word;
-//     border-radius: $border-radius-large;
-//     @include box-shadow(0 5px 10px rgba(0,0,0,.2));
-// }
-// 
-// .tooltip-lg{
-// 	display: none;
-//     position:absolute;
-// 	border: $border-thin-default;
-//     background-color:$gray-light-mid;
-//     padding:5px;
-//     width:250px;
-//     font-size: 1.1em;
-// 	font-weight: bold;
-// 	word-wrap: break-word;
-//     border-radius: $border-radius-large;
-//     @include box-shadow(0 5px 10px rgba(0,0,0,.2));
-// }
+.tooltip {
+	position: absolute;
+	border: $border-thin-default;
+	background-color: $gray-light-mid;
+	padding: 3px;
+	z-index: 5;
+	width: 150px;
+	font-size: 0.9em;
+	word-wrap: break-word;
+    border-radius: $border-radius-large;
+    @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+}
+
+.tooltip-lg{
+	display: none;
+    position:absolute;
+	border: $border-thin-default;
+    background-color:$gray-light-mid;
+    padding:5px;
+    width:250px;
+    font-size: 1.1em;
+	font-weight: bold;
+	word-wrap: break-word;
+    border-radius: $border-radius-large;
+    @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+}
 
 
 // clickable panel created in CKEditor
@@ -880,6 +914,41 @@ $portrait-size-image-xl: 400px;
 	}
 }
 
+// Tablesorter. Tweak the bootstrap 4 css that comes with it to match jqgrid and the material kit look.
+.tablesorter-bootstrap:not(.table-dark) thead:not(.thead-dark) .tablesorter-header {
+	background-color: $grey-300 !important;
+}
+
+.tablesorter-bootstrap:not(.table-dark) thead:not(.thead-dark) .tablesorter-header {
+	background-color: $grey-300 !important;
+}
+
+.tablesorter-bootstrap:not(.table-dark) tfoot th,
+.tablesorter-bootstrap:not(.table-dark) tfoot td {
+	background-color: $white !important;
+}
+
+.card [class*="tablesorter-header-inner"] {
+	color: $mdb-text-color-primary;
+}
+	
+.tablesorter-bootstrap thead th,
+.tablesorter-bootstrap thead td {
+	font-family: $font-family-base !important;
+	font-size: $font-size-sm !important;
+}
+
+.tablesorter-bootstrap tfoot th,
+.tablesorter-bootstrap tfoot td {
+	font-family: $font-family-base !important;
+	font-size: $font-size-sm !important;
+	font-weight: normal !important;
+}
+
+.tablesorter-bootstrap .ts-pager {
+    text-align: center !important;
+}
+
 // Reformat the spinner used by Mottie tablesorter to use fa-refresh. The spinner appears on every column and if you only want one column
 // make the other columns <th class="no-spinner"
 .tablesorter-bootstrap .tablesorter-processing {
@@ -918,7 +987,7 @@ $portrait-size-image-xl: 400px;
     margin-left: 0px; 
 }
 
-// Use with toggleclass("hidden") to switch between flex and none, rather than toggle() which does block and none
+// Use with toggleClass("hidden") to switch between flex and none, rather than toggle() which does block and none
 .hidden {
   display: none;
 }

@@ -282,7 +282,7 @@
 			</span>
         </div>
         
-        <div id="collapse${groupSummary.sessionId}" class="card-collapse collapse in" role="tabcard" aria-labelledby="heading${groupSummary.sessionId}">
+        <div id="collapse${groupSummary.sessionId}" class="card-collapse collapse show" role="tabcard" aria-labelledby="heading${groupSummary.sessionId}">
 	</c:if>
 
 		<table id="group${groupSummary.sessionId}" class="scroll" cellpadding="0" cellspacing="0"></table>

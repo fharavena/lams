@@ -33,7 +33,9 @@
 	
 	<script type="text/javascript" src="${lams}includes/javascript/common.js"></script>
 	<script src="${lams}includes/javascript/jquery.js" type="text/javascript"></script>
+	<script src="${lams}includes/javascript/popper.min.js" type="text/javascript"></script>
 	<script src="${lams}includes/javascript/bootstrap-material-design.min.js" type="text/javascript"></script>
+	<script src="${lams}includes/javascript/material-kit.js?v=2.0.5" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 
@@ -94,14 +96,14 @@
 			</lams:Alert>
 		</c:if>
 
-		<div class="card card-plain">
+		<div class="card card-no-border">
 			<p><c:out value="${peerreview.instructions}" escapeXml="false"/><p>
 			<c:if test="${numCriteria > 1}">
 				<p><fmt:message key="label.step"><fmt:param>${stepNumber}</fmt:param><fmt:param>${numCriteria}</fmt:param></fmt:message></p>
 		 	</c:if> 
 		</div>
 			
-		<div class="card card-plain">
+		<div class="card card-no-border">
 			<h4><c:out value="${criteriaRatings.ratingCriteria.title}" escapeXml="true"/></h4>
 		<c:choose>
 		<c:when test="${criteriaRatings.ratingCriteria.ratingStyle == isComment}">

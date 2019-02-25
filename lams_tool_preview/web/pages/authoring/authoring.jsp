@@ -6,7 +6,7 @@
 <lams:html>
 <lams:head>
 	<title><fmt:message key="activity.title" /></title>
-
+	<lams:headItems/>
 	<%@ include file="/common/tabbedheader.jsp"%>
 	<link href="${lams}css/jquery-ui-bootstrap-theme.css" rel="stylesheet" type="text/css" >
 	<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.js"></script>
