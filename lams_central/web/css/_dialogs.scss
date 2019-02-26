@@ -1,8 +1,12 @@
 /*DIALOGS*/
 
-// must make this bigger or it will restrict authoring to a width of 836px
+// must make this bigger or it will restrict authoring/monitoring to a width of 836px (lg) / 500px (md)
 @include media-breakpoint-up(lg) {
-  .modal-lg { max-width: $authoring-width-lg; }
+	.modal-dialog { max-width: $dialog-width-lg; }
+	.modal-lg { max-width: $dialog-width-lg; }
+}
+@include media-breakpoint-only(md) {
+	.modal-dialog { max-width: $dialog-width-md; }
 }
 
 .dialogContainer {

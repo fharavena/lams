@@ -32,6 +32,7 @@
 	<script type="text/javascript" src="${lams}includes/javascript/dialog.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
+	<script type="text/javascript" src="${lams}includes/javascript/material-kit.js?v=2.0.5" type="text/javascript"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/jquery.slimscroll.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/main.js"></script>
 	<script type="text/javascript" src="${lams}includes/javascript/bootstrap-tour.min.js"></script>
@@ -160,12 +161,12 @@
         
 			<%@ include file="favoriteOrganisations.jsp"%>
             
-<%--              <c:if test="${isCourseSearchOn}"> --%>
+             <c:if test="${isCourseSearchOn}">
  			<div class="input-group offcanvas-search">
 	                	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div>
 						<input type="text" id="offcanvas-search-input" class="form-control input-sm" placeholder="<fmt:message key="label.search.for.courses" />..." data-column="1" type="search">
 	                </div>
- 			<%-- </c:if> --%>
+ 			</c:if>
              
             <div class="tour-organisations">
 				<lams:TSTable numColumns="2">

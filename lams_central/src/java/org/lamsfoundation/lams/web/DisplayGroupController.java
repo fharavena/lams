@@ -226,6 +226,8 @@ public class DisplayGroupController {
 		    "fa fa-fw fa-bolt" + (disabled ? " disabled" : ""), "index.kumalive.tooltip"));
 	}
 
+	Collections.reverse(links); // UI no longer reversing the order using pull-right
+	
 	orgBean.setLinks(links);
 	orgBean.setMoreLinks(moreLinks);
 

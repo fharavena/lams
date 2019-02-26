@@ -13,10 +13,28 @@
    	}
 }
 
-.top-nav .dropdown-menu {
-	background: $main_menu_background;
-	margin-top: -3px;
-	padding: 0px;
+// needed to override material kits setting it to transparent, extra long, for smaller screen
+@include media-breakpoint-down(sm) {
+	.top-nav .dropdown-menu {
+		background-color: $main_menu_background !important;
+		margin-top: -3px;
+		padding: 0px;
+		height: auto !important; 
+		transition: transform $bmd-menu-expand-duration $bmd-animation-curve-default,
+              opacity $bmd-menu-fade-duration $bmd-animation-curve-default !important;
+  		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+	}
+}
+@include media-breakpoint-up(sm) {
+	.top-nav .dropdown-menu {
+		background-color: $main_menu_background !important;
+		margin-top: -3px;
+		padding: 0px;
+		height: auto !important; 
+		transition: transform $bmd-menu-expand-duration $bmd-animation-curve-default,
+              opacity $bmd-menu-fade-duration $bmd-animation-curve-default !important;
+  		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+	}
 }
 
 #offcanvas {
@@ -354,9 +372,13 @@
 }
 
 .course-right-buttons {
-	padding-right: 20px;
+	padding-right: 10px;
+	display: inline-flex;
 	>.btn-group {
 		margin: 5px 1px;
+		> .btn:not(.dropdown-toggle){
+			padding-right: 0;
+		}
 	}
 	.a {
 		color: #fff;

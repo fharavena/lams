@@ -1,7 +1,8 @@
 @import "material-kit/bootstrap/scss/mixins/float.scss";
 @import "material-kit/bootstrap/scss/mixins/breakpoints.scss";
 @import "material-kit/bootstrap/scss/mixins/buttons.scss";
-@import "material-kit/bootstrap/scss/mixins/_box-shadow.scss";
+@import "material-kit/bootstrap/scss/mixins/box-shadow.scss";
+@import "material-kit/mixins/animations.scss";
 
 	@mixin form-control-focus() {
   &:focus {

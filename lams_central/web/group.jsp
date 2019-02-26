@@ -4,7 +4,8 @@
 <%@ taglib uri="tags-core" prefix="c"%>
 <%@ taglib uri="tags-lams" prefix="lams"%>
 
-<div class="course-header card-header card-header-primary">
+<div class="course-header card-header card-header-primary d-flex align-items-center">
+	<div>
 	<span class="lead">
 		<strong><c:out value="${orgBean.name}" /></strong>
 	</span>
@@ -18,6 +19,7 @@
 			</c:otherwise>
 		</c:choose>
 	</a>
+	</div>
 	
 	<!-- Group header -->
 	<c:set var="org" value="${orgBean}" />
@@ -36,7 +38,7 @@
 	<!-- Child organisations -->
 	<c:forEach var="childOrg" items="${orgBean.childIndexOrgBeans}">
 		<div class="group-name card">
-			<div class="child-org-name card-header">
+			<div class="child-org-name card-header d-flex align-items-center">
 				<strong><c:out value="${childOrg.name}" /></strong>
 				<c:if test="${not empty childOrg.archivedDate}">
 					<small>(<fmt:message key="label.archived"/> <lams:Date value="${childOrg.archivedDate}"/>)</small>

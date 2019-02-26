@@ -7,9 +7,11 @@
 
 <lams:css/>
 <lams:css suffix="main"/>
-
 <script type="text/javascript" src="${lams}includes/javascript/jquery.js"></script>
-<script type="text/javascript" src="${lams}/includes/javascript/bootstrap-material-design.min.js"></script>
+<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
+<script type="text/javascript" src="${lams}includes/javascript/bootstrap-material-design.min.js"></script>
+<script type="text/javascript" src="${lams}includes/javascript/material-kit.js?v=2.0.5" type="text/javascript"></script>
+
 <script type="text/javascript">
 
 	var LAMS_URL = '<lams:LAMSURL/>',

@@ -53,16 +53,18 @@
 <div class="card card-default card-monitor-page">
 <div class="card-heading navbar-heading">
 	<nav class="navbar navbar-expand-md bg-primary">
- 		<div class="container-fluid">
-       		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+ 		<div class="container-fluid" style="flex-wrap: nowrap;">
+       		<span class="navbar-brand"><c:if test="${not empty title}">${title}</c:if></span> <%-- Need span to keep the correct layout for small windows --%>
+       		
+	 		<div class="navbar-translate">
+       		<button class="ml-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="sr-only">Toggle navigation</span>
       					<span class="navbar-toggler-icon"></span>
       					<span class="navbar-toggler-icon"></span>
       					<span class="navbar-toggler-icon"></span>
             		</button>
-			<c:if test="${not empty title}">
-          		<span class="navbar-brand">${title}</span>
-            </c:if>
+	       	</div>
+	       	
             <div class="collapse navbar-collapse" id="navbarNav">
             	<ul class="nav navbar-nav nav-tabs"  id="page-tabs" role="tablist">
                 	<jsp:doBody />

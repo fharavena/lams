@@ -4,32 +4,11 @@
 <%@ taglib uri="tags-core" prefix="c"%>
 <%@ taglib uri="tags-function" prefix="fn"%>
 
-<!-- Add More options menu drop down first (if it contains links) -->
-<c:if test="${not empty org.moreLinks}">
-	<!-- bootstrap More options dropdown -->
-	<div class="course-right-buttons pull-right">
-	<div class="btn-group">
-	  <button type="button" class="btn btn-default btn-sm dropdown-toggle ${addTourClass?'tour-more-options':''}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-sliders" title="<fmt:message key="index.moreActions" />"></i> <span class="d-none d-sm-inline"><fmt:message key="index.moreActions" /></span> <span class="caret"></span></button>
-	  <ul id="more-links-menu" class="dropdown-menu">
-		<c:forEach var="link" items="${org.moreLinks}">
-			 <li onClick="${link.url}"
-	                      <c:if test="${not empty link.tooltip}">
-	                          title="<fmt:message key='${link.tooltip}'/>"
-	                      </c:if>
-	         >
-             	<a href="#"><i class="${link.style}"></i> <fmt:message key="${link.name}" /></a>
-             </li>
-        </c:forEach>
-  	 </ul>
-	</div>
-	</div>
-	<!-- end bootstrap More options dropdown -->
-</c:if> 
-
+<div id="course-buttons-${org.id}" class="ml-auto" >
 <c:forEach var="link" items="${org.links}">
 	<c:choose>
 		<c:when test="${link.name eq 'index.addlesson.single'}">
-			<div class="course-right-buttons pull-right">
+			<div class="course-right-buttons ">
 				<div class="btn-group" role="group">
 					<button onClick="<c:out value='${link.url}'/>" type="button" class="btn btn-default btn-sm ${addTourClass?'tour-add-lesson':''}">
 						<i class="${link.style}" title="<fmt:message key="index.addlesson" />"></i>
@@ -52,7 +31,7 @@
 			</div>
 		</c:when>
 		<c:when test="${link.name eq 'index.kumalive.teacher'}">
-			<div class="course-right-buttons pull-right">
+			<div class="course-right-buttons ">
 				<div class="btn-group" role="group" title="<fmt:message key="${link.tooltip}" />">
 					<button onClick="<c:out value='${link.url}'/>" type="button" class="btn btn-default btn-sm">
 						<i class="${link.style}"></i>
@@ -78,7 +57,7 @@
 			</div>
 		</c:when>
 		<c:when test="${link.name eq 'index.kumalive'}">
-			<div class="course-right-buttons pull-right">
+			<div class="course-right-buttons ">
                  <c:choose>
 	                <c:when test="${fn:contains(link.style, 'disabled')}">
                         <c:set var="kumaliveState" value="disabled"/>
@@ -101,7 +80,7 @@
 			</div>
 		</c:when>
 		<c:otherwise>
-			<div class="course-right-buttons pull-right">
+			<div class="course-right-buttons ">
 				<button class="btn btn-default btn-sm tour-${link.id}" onClick="<c:out value='${link.url}'/>"  type="button" 
                      <c:if test="${not empty link.tooltip}">
                      	title="<fmt:message key='${link.tooltip}'/>"
@@ -114,3 +93,27 @@
 		</c:otherwise>
 	</c:choose>
 </c:forEach>
+
+<!-- Add More options menu drop down. Appears last on screen. -->
+<c:if test="${not empty org.moreLinks}">
+	<!-- bootstrap More options dropdown -->
+	<div class="course-right-buttons ">
+	<div class="btn-group">
+	  <button type="button" class="btn btn-default btn-sm dropdown-toggle ${addTourClass?'tour-more-options':''}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-sliders" title="<fmt:message key="index.moreActions" />"></i> <span class="d-none d-sm-inline"><fmt:message key="index.moreActions" /></span> <span class="caret"></span></button>
+	  <ul id="more-links-menu" class="dropdown-menu">
+		<c:forEach var="link" items="${org.moreLinks}">
+			 <li onClick="${link.url}"
+	                      <c:if test="${not empty link.tooltip}">
+	                          title="<fmt:message key='${link.tooltip}'/>"
+	                      </c:if>
+	         >
+             	<a href="#"><i class="${link.style}"></i> <fmt:message key="${link.name}" /></a>
+             </li>
+        </c:forEach>
+  	 </ul>
+	</div>
+	</div>
+	<!-- end bootstrap More options dropdown -->
+</c:if> 
+
+</div>

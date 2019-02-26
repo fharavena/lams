@@ -337,6 +337,65 @@ td.arrows{
   }
 }
 
+// Material Kit does not support the combination of nav-tabs on a dark background and a collapsable menu 
+// so tweak the nav-tab settings when the collapsable is shown and then we can see the buttons! Code
+// is based on _responsive.scss. Also nav tabs sets the <a class="nav-link"> to active, whereas the non nav 
+// tabs sets the <li class="nav-item"> to active. So I have added the .nav-link.active entry.
+@media all and (max-width: 767px) {
+	
+ 	   .navbar-collapse{
+			// material kit has the pull out as the whole height of the window. Make it shorter so we can see more screen contents.
+   			height: auto;
+
+	        .navbar-nav.nav-tabs{
+            position: relative;
+            z-index: 3;
+
+            .nav-item{
+                .nav-link{
+                  color: $black-color !important;
+                  margin: 5px 15px;
+                }
+
+                &.active .nav-link,
+                &.active .nav-link:hover,
+                &.active .nav-link:focus,
+                &.active .nav-link:active,
+                .nav-link.active{
+                  background-color: rgba(236, 237, 239, 1)  !important;
+                  color: $black-color  !important;
+                }
+
+                &.button-container .nav-link{
+                  margin: 15px;
+                }
+
+                &:after{
+                  width: calc(100% - 30px);
+                  content: "";
+                  display: block;
+                  height: 1px;
+                  margin-left: 15px;
+                  background-color: #e5e5e5  !important;
+                }
+
+                &:last-child {
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+   
+	.nav-open{
+    	.navbar-translate{
+            @include transform-translate-x(-200px);
+        }
+    }
+}
+
+
 /** Authoring */
 /*layout of adding a topic button */
 a.button-add-item:before {
