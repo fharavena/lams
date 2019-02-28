@@ -64,7 +64,7 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
     margin-left: 1rem;
 }
 
-/* Spacer classes */
+//  Spacer classes 
 
 .offset2 {
 	margin: 2px;
@@ -124,16 +124,16 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
 .clear-both {
 	clear: both;
 }
-/* Eliminate the scrollbar on learner popup windows, monitoring windows */
+//  Eliminate the scrollbar on learner popup windows, monitoring windows 
 .no-margin{
 	margin-left: 0px;
 	margin-right: 0px;
 }
 
-/* Tweak the class names to add .card-warning, etc for the card level etc to make 
- * conversion of code from the panel classes.
- * Override the card definition for material to give a plain panel like card - if there
- * is no header then do not have an outline but if there is a header then outline it. */
+//  Tweak the class names to add .card-warning, etc for the card level etc to make 
+// conversion of code from the panel classes.
+// Override the card definition for material to give a plain panel like card - if there
+// is no header then do not have an outline but if there is a header then outline it. 
 .card-warning .card-header {
 	background: linear-gradient(60deg, $orange-400, $orange-700);
 }
@@ -224,7 +224,7 @@ div.accordian .card {
 	
 }
 
-/* Comments/Forum classes */
+//  Comments/Forum classes 
 .msg .panel-heading {
   padding: 3px 5px 3px 5px;
 }
@@ -306,10 +306,9 @@ div.accordian .card {
   text-decoration: inherit;
   margin-left: 5px;
   color: inherit;
-  /*float: right;*/
 }
 
-/* Restrict the width of the up and down arrows so they do not grow wider when the screen is enlarged. td needs to be 5px wider than div. */
+// Restrict the width of the up and down arrows so they do not grow wider when the screen is enlarged. td needs to be 5px wider than div.
 div.arrows{
 	display:inline-block;
 	width:30px;
@@ -320,24 +319,23 @@ td.arrows{
 	text-align: center;
 }
 
-@media (max-width: 500px) {  
-  .file-input-name {
-  	height: 22px; /* match height of btn */
-    padding:4px 9px;
-    font-size:90%;
-    line-height: 1.2;		
-  }
-}
+// FileUpload tag support
+#addfile {
+	align-items: center;
+	
+	.input-group-btn {
+		position: relative;
+		padding-left: 6px;
+	}
 
-@media (min-width: 501px ) and (max-width: 992px) {  
-  .file-input-name {
-  	height: 25px; /* match height of btn */
-    padding:4px 9px;
-    font-size:90%;
-    line-height: 1.2;		
-  }
+	.file-input-name {
+		border-radius: 0.25rem;
+	    padding-left: 5px;
+	    margin-left: 5px;
+	    height: 30px; // match button height
+    }
 }
-
+ 
 // Material Kit does not support the combination of nav-tabs on a dark background and a collapsable menu 
 // so tweak the nav-tab settings when the collapsable is shown and then we can see the buttons! Code
 // is based on _responsive.scss. Also nav tabs sets the <a class="nav-link"> to active, whereas the non nav 
@@ -397,7 +395,7 @@ td.arrows{
 }
 
 
-/** Authoring */
+// * Authoring *
 // Toggle buttons that are on but disabled are usually forced on for leader selection so don't show with grey in the 
 // dot but with the primary colour as this reinforces the on and wanted on status.
 .togglebutton {
@@ -417,7 +415,7 @@ td.arrows{
 	}
 }
 
-/*layout of adding a topic button */
+// layout of adding a topic button 
 a.button-add-item:before {
   content: "\f067";
   font-family: FontAwesome;
@@ -458,8 +456,7 @@ a.button-add-item:before {
 	vertical-align:middle;
 }
 
-/* .....NavBar: Icon only with coloring/layout.....*/
-
+// * NavBar: Icon only with coloring/layout *
 nav.sidebar {
 	font-size: $font-size-sm;
 	.fa {
@@ -467,32 +464,30 @@ nav.sidebar {
 	}
 }
 
-/*small/medium side display*/
+// small/medium side display
 @media (min-width: 768px) {
 
-	/*Allow content to be next to Nav*/
+	// Allow content to be next to Nav
 	.navcontent{
 		position: absolute;
-		width: calc(100% - 40px); /*keeps 100% minus nav size*/
+		width: calc(100% - 40px); // keeps 100% minus nav size
 		margin-left: 35px;
 		float: right;
 		min-height:100%;
 	}
 	
-	/* darker outline than usual */
-	 
-	/*Center Brand*/
+	// Center Brand
 	nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
 		margin-left: 0px;
 	}
-	/*Center Brand*/
+	// Center Brand
 	nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
 		text-align: center;
 		width: 100%;
 		margin-left: 0px;
 	}
 
-	/*Format Icons*/
+	// Format Icons
 	nav.sidebar a{
 		padding:10px 10px 10px 12px;
 	}
@@ -501,12 +496,12 @@ nav.sidebar {
 		padding:10px 10px 10px 12px;
 	}
  
-	/* colour in top box to match panel heading */
+	// colour in top box to match panel heading 
 	nav.sidebar .navbar-nav > li:first-child{
 		background-color: $gray-lightest !important;
 	}
 
-	/*adds border to bottom nav boxes except for the last box */
+	// adds border to bottom nav boxes except for the last box 
 	nav.sidebar .navbar-nav > li{
 		border-bottom: $border-thin-default-light;
 		background-color: $body-bg;
@@ -516,14 +511,14 @@ nav.sidebar {
 		border-bottom: 0px;
 	}
 
-	/*allows nav box to use 100% width, style to be like panel */
+	// allows nav box to use 100% width, style to be like panel 
 	nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
 		flex-direction: column;
 		padding: 0 0px 0 0px;
 		border:2px solid transparent;
 	}
 
-	/*gives sidebar width/height*/
+	// gives sidebar width/height
 	nav.sidebar{
 		width: 155px;
 		height: 100%;
@@ -534,23 +529,19 @@ nav.sidebar {
 		margin-bottom: 0px;
 	}
 
-	/*give sidebar 100% width;*/
+	// give sidebar 100% width;
 	nav.sidebar li {
 		width: 100%;
 		margin-top: 3px;
 		margin-bottom: 3px;
 	}
 
- 	/* Move nav to full on mouse over*/
+ 	//  Move nav to full on mouse over
  	nav.sidebar.expandmenu {
 		margin-left: 0;
 	}
-	 
-/* 	nav.sidebar:hover{
-		margin-left: 0px;
-	}
- */
- 	/*for hiden things when navbar hidden*/
+ 
+ 	// for hiden things when navbar hidden
 	.forAnimate{
 		opacity: 0;
 	}
@@ -593,35 +584,35 @@ nav.sidebar {
 	 }
 }
 
-/*in case when portrait is not shown in a progress bar - give extra space to hamburger button*/
+// in case when portrait is not shown in a progress bar - give extra space to hamburger button
 nav.sidebar p.no-portrait{
 	padding-right: 35px;
 }
 
-/* .....NavBar: Fully showing nav bar..... */
+//  .....NavBar: Fully showing nav bar..... 
 
 @media (min-width: 1330px) {
 
-	/*Allow content to be next to Nav*/
+	// Allow content to be next to Nav
 	.navcontent{
 		position: absolute;
-		width: calc(100% - 155px); /*keeps 100% minus nav size*/
+		width: calc(100% - 155px); // keeps 100% minus nav size
 		margin-left: 150px;
 		float: right;
 	}
 
-	/*Show all nav*/
+	// Show all nav
 	nav.sidebar{
 		margin-left: 0px;
 		float: left;
 	}
-	/*Show hidden items on nav*/
+	// Show hidden items on nav
 	nav.sidebar .forAnimate{
 		opacity: 1;
 	}
 }
 
-/* center portrait */
+//  center portrait 
 nav.sidebar .navbar-nav > li:first-child{
 	text-align: center;
 }
@@ -642,7 +633,7 @@ section{
     color: white;
 }
 
-/* fontawesome icon x-small */
+//  fontawesome icon x-small 
 .fa-xs {
 	font-size: smaller;
 }
@@ -737,7 +728,7 @@ section{
 }
 
 
-/* Growl functionality, jquery.blockUI (version: 2.38) */
+//  Growl functionality, jquery.blockUI (version: 2.38) 
 .growlUI {
 	width: auto;
 	padding: 0px;
@@ -1139,7 +1130,7 @@ $portrait-size-image-xl: 400px;
   position: relative;
   overflow: hidden;
   left: calc(50% + 14px);
-  /* 14px = 1/2 of 18px padding for sort arrows + 1/2 of 10px width of this block */
+  //  14px = 1/2 of 18px padding for sort arrows + 1/2 of 10px width of this block 
   display: inline-block;
 }
 

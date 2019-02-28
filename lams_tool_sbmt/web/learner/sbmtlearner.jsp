@@ -125,7 +125,7 @@
 <body class="stripes">
 
 	<lams:Page type="learner" title="${sessionMap.title}" formID="learnerForm">
-		<div class="card card-plain">
+		<div class="card card-no-border">
 			<c:out value="${sessionMap.instruction}" escapeXml="false" />
 		</div>
 
