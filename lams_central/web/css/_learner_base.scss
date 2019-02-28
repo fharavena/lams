@@ -155,6 +155,7 @@ $input-btn-line-height-sm, $btn-border-radius-xs);
   box-shadow: none;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-size: $font-size-base;
 }
 
 .card.card-no-border .card-body {
@@ -397,6 +398,25 @@ td.arrows{
 
 
 /** Authoring */
+// Toggle buttons that are on but disabled are usually forced on for leader selection so don't show with grey in the 
+// dot but with the primary colour as this reinforces the on and wanted on status.
+.togglebutton {
+	input[type=checkbox] {
+		&[disabled] {
+        &:checked ~ .toggle:after {
+          background-color: $brand-primary !important;
+        }
+      }
+     }
+}
+
+// selects followed by a button look too close together so add some more padding here
+.form-group {
+	select + a {
+		margin-left:5px;
+	}
+}
+
 /*layout of adding a topic button */
 a.button-add-item:before {
   content: "\f067";
@@ -626,6 +646,96 @@ section{
 .fa-xs {
 	font-size: smaller;
 }
+
+// Autocomplete. Removing the jquery-ui css file but keeping the javascript requires copying some styles 
+// Combined these with the current styles.
+.ui-autocomplete { 
+	position: absolute; 
+	top: 0;
+	left: 0;
+	cursor: default; 
+	font-size: $font-size-small;
+
+	&.ui-menu {
+		padding: $bmd-dropdown-margin-y 0;
+		  transform: scale(0);
+		  transform-origin: 0 0;
+		  will-change: transform, opacity;
+		  transition: transform $bmd-menu-expand-duration $bmd-animation-curve-default,
+		              opacity $bmd-menu-fade-duration $bmd-animation-curve-default;
+ 	  	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+ 	    animation-name: bmd-dropdown-animation;
+ 	    animation-duration: $bmd-menu-expand-duration;
+ 	    animation-fill-mode: forwards;
+ 	    animation-timing-function: $bmd-animation-curve-default;
+	    margin: 0;
+	    float: left;
+	    outline: none;
+	    border-radius: 0.25rem;
+		}
+    &.ui-widget-content {
+	    background-color: white;
+	    color: $text-color;
+	}
+	&.ui-front {
+	    z-index: 100;
+	}
+
+	li.ui-menu-item {
+	    position: relative;
+	    width: auto;
+		list-style: none;
+
+	    display: flex;
+	    flex-flow: nowrap;
+	    align-items: center;
+	    color: $bmd-dropdown-link-color;
+	    font-weight: normal;
+	    text-decoration: none;
+	
+	    font-size: .8125rem;
+	    border-radius: $border-radius / 2;
+	    margin: 0 $bmd-dropdown-margin-y;
+	    @include transitions($fast-transition-time, $transition-linear);
+	
+	    min-width: $bmd-menu-item-min-width;
+	
+	    padding: $dropdown-item-padding-y  $dropdown-item-padding-x;
+	
+	    overflow: hidden;
+	    line-height: $bmd-line-height;
+	    text-overflow: ellipsis;
+	    word-wrap: break-word;
+	
+	    @include media-breakpoint-up(md) {
+	      padding-right: $bmd-menu-item-padding-right-md;
+	      padding-left: $bmd-menu-item-padding-left-md;
+	    }
+
+		&:hover,
+		&:focus,
+		&:active {
+			@include shadow-small-color($brand-primary);
+			background-color: $brand-primary;
+			color: #FFFFFF;
+		}
+	
+		.ui-menu-item-wrapper {
+			border: 0;
+		}
+	}
+}
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 
 /* Growl functionality, jquery.blockUI (version: 2.38) */
 .growlUI {

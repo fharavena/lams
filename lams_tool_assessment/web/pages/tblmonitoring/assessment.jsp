@@ -89,7 +89,7 @@
 
 <!-- Header -->
 <div class="row no-gutter">
-	<div class="col-xs-12 col-md-12 col-lg-8">
+	<div class="col-12 col-md-12 col-lg-8">
 		<h3>
 			<c:choose>
 				<c:when test="${isIraAssessment}">
@@ -106,7 +106,7 @@
 
 <!-- Notifications -->  
 <div class="row no-gutter">
-	<div class="col-xs-6 col-md-4 col-lg-4 ">
+	<div class="col-6 col-md-4 col-lg-4 ">
 		<div class="card card-plain">
 			<div class="card-header">
 				<h4 class="card-title">
@@ -117,7 +117,7 @@
 		</div>
 	</div>
 
-	<div class="col-xs-6 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-2">
+	<div class="col-6 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-2">
 		<a href="#nogo" type="button" class="btn btn-sm btn-default buttons_column"
 				onclick="javascript:loadTab('${method}', document.getElementById('selected-content-id').value); return false;">
 			<i class="fa fa-file"></i>
@@ -156,7 +156,7 @@
 			<c:if test="${assessmentDto.assessment.allowDiscloseAnswers}">
 				<%-- Release correct/groups answers for all questions in this assessment --%>
 				<div class="row no-gutter">
-					<div class="col-xs-12 col-md-12 col-lg-12">
+					<div class="col-12 col-md-12 col-lg-12">
 						<div class="btn-group-sm pull-right disclose-all-button-group">
 							<div class="btn btn-default disclose-all-correct-button">
 								<fmt:message key="label.disclose.all.correct.answers"/>
@@ -171,7 +171,7 @@
 			
 			<c:forEach var="question" items="${assessmentDto.questions}" varStatus="i">
 				<div class="row no-gutter">
-				<div class="col-xs-12 col-md-12 col-lg-12">
+				<div class="col-12 col-md-12 col-lg-12">
 				<div class="card card-plain">
 					<div class="card-header">
 						<div class="card-title">

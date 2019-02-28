@@ -101,7 +101,7 @@
 			</tr>
  		</table>
  		<div class="row">
-			 <div class="col-xs-12"></div>
+			 <div class="col-12"></div>
 				 <div id="chartDivLeader${sessionMap.toolContentID}" class="markChartDiv"></div>
 		</div>
 		</div>
@@ -152,7 +152,7 @@
 				</tr>
 			</table>
 			<div class="row">
-				 <div class="col-xs-12"></div>
+				 <div class="col-12"></div>
  				 <div id="chartDivSession${sessionDto.sessionId}" class="markChartDiv"></div>
 				</div>
 			</div>

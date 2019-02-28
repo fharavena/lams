@@ -7,7 +7,7 @@
 
 <!-- Header -->
 <div class="row no-gutter">
-	<div class="col-xs-12 col-md-12 col-lg-8">
+	<div class="col--12 col-md-12 col-lg-8">
 		<h3>
 			<fmt:message key="label.ae.questions.marks"/>
 		</h3>
@@ -20,7 +20,7 @@
 	<div class="col-md-6 col-lg-4 ">
 	</div>
 	
-	<div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2">
+	<div class="col--12 col-md-6 col-lg-4 col-lg-offset-2">
 		<a href="#nogo" type="button" class="btn btn-sm btn-default buttons_column"
 				onclick="javascript:loadTab('aes', ${toolContentID}); return false;">
 			<i class="fa fa-undo"></i>
@@ -41,7 +41,7 @@
 
 <!-- Table --> 
 <div class="row no-gutter">
-<div class="col-xs-12 col-md-12 col-lg-12">
+<div class="col--12 col-md-12 col-lg-12">
 <div class="card card-plain">
 <div class="card-body table-responsive">
           

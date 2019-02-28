@@ -2,6 +2,7 @@
 @import "material-kit/bootstrap/scss/mixins/breakpoints.scss";
 @import "material-kit/bootstrap/scss/mixins/buttons.scss";
 @import "material-kit/bootstrap/scss/mixins/box-shadow.scss";
+@import "material-kit/mixins/_colored-shadows.scss";
 @import "material-kit/mixins/animations.scss";
 
 	@mixin form-control-focus() {

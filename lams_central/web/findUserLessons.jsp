@@ -15,11 +15,8 @@
 	<lams:css />
 	<title><fmt:message key="index.searchlesson" /></title>
 
-	<link rel="stylesheet" href="${lams}/css/jquery-ui-bootstrap-theme.css" type="text/css" media="screen">
 	<style media="screen,projection" type="text/css">
-		li.ui-menu-item {
-			list-style: none;
-		}
+		#query {	width: 200px; }
 	</style>
 
 	<script type="text/javascript" src="${lams}/includes/javascript/getSysInfo.js"></script>
@@ -50,14 +47,14 @@
 	
 	<lams:Page type="admin" title="${title}">
 
-		<div class="card card-plain">
+		<div class="card card-no-border">
 			<fmt:message key="lessonsearch.instuctions" />
 		</div>
 
-		<form action="${lams}/findUserLessons/getResults.do">
-			<input type="text" id="query" name="query" />
+		<form action="${lams}/findUserLessons/getResults.do" class="form form-inline">
+			<input type="text" id="query" name="query" class="form-control" />
 			<input type="hidden" name="courseID" value="${courseID}" />
-			<button type="submit" class="btn btn-sm btn-primary">
+			<button type="submit" class="loffset5 btn btn-sm btn-primary">
 				<i class="fa fa-sm fa-search"></i>
 			</button>
 		</form>

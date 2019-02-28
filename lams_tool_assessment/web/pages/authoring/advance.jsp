@@ -54,9 +54,10 @@
 <!-- Advance Tab Content -->
 
 <lams:SimplePanel titleKey="label.select.leader">
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="useSelectLeaderToolOuput">
 		<form:checkbox path="assessment.useSelectLeaderToolOuput" value="1" id="useSelectLeaderToolOuput"/>
+		 <span class="toggle"></span>
 		<fmt:message key="label.use.select.leader.tool.output" />
 	</label>
 </div>
@@ -85,16 +86,18 @@
 	</label>
 </div>
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="shuffled">
 		<form:checkbox path="assessment.shuffled" id="shuffled"/>
+		 <span class="toggle"></span>
 		<fmt:message key="label.authoring.advance.shuffle.questions" />
 	</label>
 </div>
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="questions-numbering">
 		<form:checkbox path="assessment.numbered" id="questions-numbering"/>
+		<span class="toggle"></span>
 		<fmt:message key="label.authoring.advance.numbered.questions" />
 	</label>
 </div>
@@ -149,9 +152,10 @@
 
 <lams:SimplePanel cardBodyClass="card-body-sm">
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="display-summary">
 		<form:checkbox path="assessment.displaySummary" id="display-summary"/>
+		<span class="toggle"></span>
 		<fmt:message key="label.authoring.advance.display.summary" />
 	</label>
 </div>
@@ -159,59 +163,67 @@
 <div id="display-summary-area" class="loffset20" 
 		<c:if test="${!assessmentForm.assessment.displaySummary}">style="display:none;"</c:if>>
 
-	<div class="checkbox">
+	<div class="togglebutton">
 		<label for="allowQuestionFeedback">
 			<form:checkbox path="assessment.allowQuestionFeedback" id="allowQuestionFeedback"/>
+			<span class="toggle"></span>
 			<fmt:message key="label.authoring.advance.allow.students.question.feedback" />
 		</label>
 	</div>
 	
-	<div class="checkbox">
+	<div class="togglebutton">
 		<label for="allowDiscloseAnswers">
 			<form:checkbox path="assessment.allowDiscloseAnswers" id="allowDiscloseAnswers"/>
+			<span class="toggle"></span>
 			<fmt:message key="label.authoring.advance.disclose.answers" />
 		</label>
 	</div>
 
-	<div class="checkbox">
+	<div class="togglebutton">
 		<label for="allowRightAnswersAfterQuestion">
 			<form:checkbox path="assessment.allowRightAnswersAfterQuestion" id="allowRightAnswersAfterQuestion"/>
+			<span class="toggle"></span>
 			<fmt:message key="label.authoring.advance.allow.students.right.answers" />
 		</label>
 	</div>
 
-	<div class="checkbox">
+	<div class="togglebutton">
 		<label for="allowWrongAnswersAfterQuestion">
 			<form:checkbox path="assessment.allowWrongAnswersAfterQuestion" id="allowWrongAnswersAfterQuestion"/>
+			<span class="toggle"></span>
 			<fmt:message key="label.authoring.advance.allow.students.wrong.answers" />
 		</label>
 	</div>
 
-	<div class="checkbox">
+	<div class="togglebutton">
 		<label for="allowHistoryResponsesAfterAttempt">
 			<form:checkbox path="assessment.allowHistoryResponses" id="allowHistoryResponsesAfterAttempt"/>
+			<span class="toggle"></span>
 			<fmt:message key="label.authoring.advance.allow.students.history.responses" />
 		</label>
 	</div>
 </div>
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="allowOverallFeedbackAfterQuestion">
 		<form:checkbox path="assessment.allowOverallFeedbackAfterQuestion" id="allowOverallFeedbackAfterQuestion"/>
+		<span class="toggle"></span>
 		<fmt:message key="label.authoring.advance.allow.students.overall.feedback" />
 	</label>
 </div>
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="allowGradesAfterAttempt">
 		<form:checkbox path="assessment.allowGradesAfterAttempt" id="allowGradesAfterAttempt"/>
+		<span class="toggle"></span>
 		<fmt:message key="label.authoring.advance.allow.students.grades" />
 	</label>
 </div>
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="enable-confidence-levels">
 		<form:checkbox path="assessment.enableConfidenceLevels" id="enable-confidence-levels"/>
+		<span class="toggle"></span>
 		<fmt:message key="label.enable.confidence.levels" />
 	</label>
 </div>
@@ -220,9 +232,10 @@
 </lams:SimplePanel>
 
 <lams:SimplePanel titleKey="label.notifications">
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="notifyTeachersOnAttemptCompletion">
 		<form:checkbox path="assessment.notifyTeachersOnAttemptCompletion" id="notifyTeachersOnAttemptCompletion"/>
+		<span class="toggle"></span>
 		<fmt:message key="label.authoring.advanced.notify.on.attempt.completion" />
 	</label>
 </div>
@@ -241,9 +254,10 @@
 
 <lams:SimplePanel titleKey="label.activity.completion">
 
-<div class="checkbox">
+<div class="togglebutton">
 	<label for="reflectOnActivity">
 		<form:checkbox path="assessment.reflectOnActivity" id="reflectOnActivity"/>
+		<span class="toggle"></span>
 		<fmt:message key="advanced.reflectOnActivity" />
 	</label>
 </div>
