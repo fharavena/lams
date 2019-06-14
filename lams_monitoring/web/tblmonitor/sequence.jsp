@@ -222,7 +222,7 @@
 <c:if test="${(lesson.lessonStateId == 3) || (lesson.lessonStateId == 4) }">
 	<div class="row no-gutter">
 		<div class="col-sm-6 col-md-4 col-lg-4 ">
-			<a href="#nogo" type="button" id="disable-sequence-button" class="btn btn-sm btn-default">
+			<button type="button" id="disable-sequence-button" class="btn btn-sm btn-default">
 				<span id="disable-sequence-label">
 					<c:choose>
 						<c:when test="${lesson.lessonStateId == 4}">
@@ -233,7 +233,7 @@
 						</c:otherwise>
 					</c:choose>
 				</span>
-			</a>
+			</button>
 		</div>                                 
 	</div>
 	<br>

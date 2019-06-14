@@ -9,7 +9,7 @@
 	<title><fmt:message key="label.monitoring.heading" /></title>
 	<lams:headItems minimal="true"/>
 	<link type="text/css" href="${lams}css/jquery-ui-bootstrap-theme.css" rel="stylesheet">
-	<link type="text/css" href="${lams}css/jquery.jqGrid.css" rel="stylesheet" />
+	<link type="text/css" href="${lams}css/free.ui.jqgrid.min.css" rel="stylesheet">
 	<link type="text/css" href="<lams:WebAppURL/>includes/css/learning.css" rel="stylesheet" />
 	<style type="text/css">
 		.ui-jqgrid-labels {
@@ -20,8 +20,7 @@
 		}	
 	</style>
 
-	<script type="text/javascript" src="${lams}includes/javascript/jquery.jqGrid.locale-en.js"></script>
-	<script type="text/javascript" src="${lams}includes/javascript/jquery.jqGrid.js"></script>
+	<script type="text/javascript" src="${lams}includes/javascript/free.jquery.jqgrid.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 
@@ -35,6 +34,8 @@
 				height: 'auto',
 				autowidth: true,
 				shrinkToFit: false,
+				guiStyle: "bootstrap",
+				iconSet: 'fontAwesome',
 			   	colNames:[
 					'userUid',
 			   		'<fmt:message key="label.user.hidden" />',

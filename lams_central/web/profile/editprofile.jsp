@@ -8,7 +8,16 @@
 <%@ page import="org.lamsfoundation.lams.usermanagement.AuthenticationMethod"
 	import="org.lamsfoundation.lams.util.Configuration"
 	import="org.lamsfoundation.lams.util.ConfigurationKeys"%>
-<c:set var="lams"><lams:LAMSURL/></c:set>
+<c:set var="lams"><lams:LAMSURL/></c:set>	
+<c:set var="profileEditEnabled"><%=Configuration.get(ConfigurationKeys.PROFILE_EDIT_ENABLE)%></c:set>
+<c:set var="partialProfileEditEnabled"><%=Configuration.get(ConfigurationKeys.PROFILE_PARTIAL_EDIT_ENABLE)%></c:set>
+<c:set var="authenticationMethodId">
+	<lams:user property="authenticationMethodId" />
+</c:set>
+<c:set var="dbId"><%=AuthenticationMethod.DB%></c:set>
+<%-- This gets overwritten for a client during build process (SP-3) --%>
+<c:set var="editOnlyName" value="false" />
+							
 <lams:html>
 <lams:head>
 	<lams:css/>
@@ -40,9 +49,8 @@
 		<form:hidden path="userId" />
 		<form:hidden path="login" />
 		<form:hidden path="password" />
+		<input type="hidden" name="editNameOnly" value="${editOnlyName}" />
 
-		<c:set var="profileEditEnabled"><%=Configuration.get(ConfigurationKeys.PROFILE_EDIT_ENABLE)%></c:set>
-		<c:set var="partialProfileEditEnabled"><%=Configuration.get(ConfigurationKeys.PROFILE_PARTIAL_EDIT_ENABLE)%></c:set>
 		<div style="clear: both;"></div>
 		<div class="container-fluid">
 			<div class="row vertical-center-row justify-content-center">
@@ -50,20 +58,21 @@
 					<div class="card card-plain">
 					<div class="card-body card-plain">
 							<lams:errors path="*"/>
-							<c:set var="authenticationMethodId">
-								<lams:user property="authenticationMethodId" />
-							</c:set>
-							<c:set var="dbId"><%=AuthenticationMethod.DB%></c:set>
 							<c:if test="${authenticationMethodId eq dbId}">
 
 								<div class="form-group">
-									<span class="lead"><label class="bmd-label-static"><fmt:message
-												key="label.username" /></label>: ${UserForm.login}</span>
+									<span class="lead">
+										<label class="bmd-label-static">
+											<fmt:message key="label.username" />
+										</label>: 
+										${newForm.login}
+									</span>
 								</div>
+								
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.title" />:</label>
 									<form:input path="title" size="32" maxlength="32"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 
 								<div class="form-group bmd-form-group">
@@ -84,46 +93,46 @@
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.email" /> *:</label>
 									<form:input path="email" size="50" maxlength="128"
-										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
+										disabled="${!profileEditEnabled and !partialProfileEditEnabled or editOnlyName}"
 										cssClass="form-control" />
 								</div>
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.address_line_1" />:</label>
 									<form:input path="addressLine1" size="50" maxlength="64"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.address_line_2" />:</label>
 									<form:input path="addressLine2" size="50" maxlength="64"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.address_line_3" />:</label>
 									<form:input path="addressLine3" size="50" maxlength="64"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.city" />:</label>
 									<form:input path="city" size="50" maxlength="64"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.state" />:</label>
 									<form:input path="state" size="50" maxlength="64"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.postcode" />:</label>
 									<form:input path="postcode" size="10" maxlength="10"
-										disabled="${!profileEditEnabled}" cssClass="form-control" />
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control" />
 								</div>
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-static"><fmt:message key="label.country" /> *:</label>
 
-									<form:select path="country" disabled="${!profileEditEnabled}" cssClass="form-control">
+									<form:select path="country" disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control">
 										<form:option value="0">
 											<fmt:message key="label.select.country" />
 										</form:option>
@@ -137,33 +146,33 @@
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.day_phone" />:</label>
 									<form:input path="dayPhone" size="50" maxlength="64"
-										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
+										disabled="${!profileEditEnabled and !partialProfileEditEnabled or editOnlyName}"
 										cssClass="form-control" />
 								</div>
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.evening_phone" />:</label>
 									<form:input path="eveningPhone" size="50" maxlength="64"
-										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
+										disabled="${!profileEditEnabled and !partialProfileEditEnabled or editOnlyName}"
 										cssClass="form-control" />
 								</div>
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.mobile_phone" />:</label>
 									<form:input path="mobilePhone" size="50" maxlength="64"
-										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
+										disabled="${!profileEditEnabled and !partialProfileEditEnabled or editOnlyName}"
 										cssClass="form-control" />
 								</div>
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-floating"><fmt:message key="label.fax" />:</label>
 									<form:input path="fax" size="50" maxlength="64"
-										disabled="${!profileEditEnabled and !partialProfileEditEnabled}"
+										disabled="${!profileEditEnabled and !partialProfileEditEnabled or editOnlyName}"
 										cssClass="form-control" />
 								</div>
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-static"><fmt:message key="label.language" />:</label>
 									<form:select path="localeId"
-										disabled="${!profileEditEnabled}" cssClass="form-control">
+										disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control">
 										<c:forEach items="${locales}" var="locale">
 											<form:option value="${locale.localeId}">
 												<c:out value="${locale.description}" />
@@ -174,7 +183,7 @@
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-static"><fmt:message key="label.timezone.title" />:</label>
-									<form:select path="timeZone" disabled="${!profileEditEnabled}" cssClass="form-control">
+									<form:select path="timeZone" disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control">
 										<c:forEach items="${timezoneDtos}" var="timezoneDto">
 											<form:option value="${timezoneDto.timeZoneId}">
 												${timezoneDto.timeZoneId} - ${timezoneDto.displayName}
@@ -185,7 +194,7 @@
 
 								<div class="form-group bmd-form-group">
 									<label class="bmd-label-static"><fmt:message key="label.theme" />:</label>
-									<form:select path="userTheme" disabled="${!profileEditEnabled}" cssClass="form-control">
+									<form:select path="userTheme" disabled="${!profileEditEnabled or editOnlyName}" cssClass="form-control">
 										<c:forEach items="${themes}" var="theme">
 											<form:option value="${theme.themeId}">${theme.name}</form:option>
 										</c:forEach>

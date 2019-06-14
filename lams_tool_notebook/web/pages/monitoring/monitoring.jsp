@@ -15,8 +15,7 @@
 		<script type="text/javascript" src="${lams}includes/javascript/jquery-ui.timepicker.js"></script>
 		<script type="text/javascript" src="${lams}includes/javascript/jquery.blockUI.js"></script>
 		
-		<script type="text/javascript" src="${lams}includes/javascript/jquery.jqGrid.locale-en.js"></script>
-		<script type="text/javascript" src="${lams}includes/javascript/jquery.jqGrid.js"></script>
+		<script type="text/javascript" src="${lams}includes/javascript/free.jquery.jqgrid.min.js"></script>
 		<script type="text/javascript" src="${lams}includes/javascript/jinplace-1.0.1.js"></script>
 		
 		<script type="text/javascript" src="${lams}includes/javascript/popper.min.js"></script>
@@ -30,6 +29,7 @@
 		
 		<script type="text/javascript" src="${tool}includes/javascript/monitoring.js"></script>
 	</lams:head>
+
 	<body class="stripes">
 		<script type="text/javascript">
 		var statisticsURL = "<c:url value='/monitoring/getStatistics.do' />?toolContentID="+${notebookDTO.toolContentId}+"&reqID=";
@@ -57,5 +57,3 @@
 		<div class="footer"></div>					
 	</body>
 </lams:html>
-
-
